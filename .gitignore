@@ -7,8 +7,6 @@ s3/
 .snakemake
 *stderr
 
-# the following may go soon once we commit the JSONs to github #
-auspice/
 
 # For Python #
 ##############
