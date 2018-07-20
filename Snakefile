@@ -1,7 +1,7 @@
 rule all:
     input:
-        auspice_tree = "auspice/WNV_NA_tree.json",
-        auspice_meta = "auspice/WNV_NA_meta.json"
+        auspice_tree = "auspice/wnv_na_tree.json",
+        auspice_meta = "auspice/wnv_na_meta.json"
 
 rule files:
     params:
