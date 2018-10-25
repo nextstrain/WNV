@@ -150,15 +150,6 @@ def addAuthorInfoViaEntrez(metadata):
         else:
             metadata[accession]["url"] = "https://www.ncbi.nlm.nih.gov/pubmed/" + entrezData.pubmed_id
 
-def filterByAuthor(seqs, metadata, authorToExclude):
-    strains = list(seqs.keys())
-    count = 0
-    for strain in strains:
-        if metadata[strain]["authors"] == authorToExclude:
-            del metadata[strain]
-            del seqs[strain]
-            count += 1
-    print("removed {} sequences from {}".format(count, authorToExclude))
 
 def filterByGenomeLength(seqs, metadata, minLength):
     strains = list(seqs.keys())
@@ -187,13 +178,11 @@ if __name__ == "__main__":
     fasta_in, meta_in, fasta_out, meta_out = sys.argv[1:]
     print("Custom WNV parser which converts {} & {} -> {} & {}".format(fasta_in, meta_in, fasta_out, meta_out))
     print("queries ENTREZ for author information as this isn't included in {}".format(meta_in))
-    print("also filters out sequences less than 10kb or those from Shabman et al.\n\n\n")
 
     seqs, metadata = parseFasta(fasta_in)
     addMetadataFromInputCSV(metadata, meta_in)
     addHardcodedAuthoInfo(metadata)
     addAuthorInfoViaEntrez(metadata)
-    filterByAuthor(seqs, metadata, "Shabman et al")
     filterByGenomeLength(seqs, metadata, 10000)
     try:
         os.mkdir("results")
