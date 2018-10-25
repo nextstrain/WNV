@@ -41,6 +41,7 @@ state = [
     "NV",
     "AZ",
     "CA",
+    "WA",
     "Chihuahua",
     "Sopnora",
     "Tamaulipas",
