@@ -45,7 +45,7 @@ state = [
     "Chihuahua",
     "Sopnora",
     "Tamaulipas",
-    "Baja California"
+    "BajaCalifornia"
 ]
 
 state_colours = [mpl.colors.rgb2hex(mpl.cm.viridis(i)) for i in np.linspace(0,1,len(state))]
