@@ -36,6 +36,16 @@ rule create_colors:
     shell:
         """
         python ./scripts/make_colors.py {output.colors}
+rule create_lat_longs:
+    message:
+        "Creating lat/longs in {output.lat_longs}"
+    input:
+        metadata = rules.parse.output.metadata,
+    output:
+        lat_longs = "results/lat_longs.tsv"
+    shell:
+        """
+        python ./scripts/create_lat_longs.py {input.metadata} {output.lat_longs}
         """
 
 rule align:
@@ -170,7 +180,7 @@ rule export:
         nt_muts = rules.ancestral.output.node_data,
         aa_muts = rules.translate.output.node_data,
         colors = rules.create_colors.output.colors,
-        lat_longs = files.lat_longs,
+        lat_longs = rules.create_lat_longs.output.lat_longs,
         auspice_config = files.auspice_config
     output:
         auspice_tree = rules.all.input.auspice_tree,
