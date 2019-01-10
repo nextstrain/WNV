@@ -31,11 +31,15 @@ rule parse:
 rule create_colors:
     message:
         "Creating custom color scale in {output.colors}"
+    input:
+        metadata = rules.parse.output.metadata,
     output:
         colors = "results/colors.tsv"
     shell:
         """
-        python ./scripts/make_colors.py {output.colors}
+        python ./scripts/make_colors.py {input.metadata} {output.colors}
+        """
+
 rule create_lat_longs:
     message:
         "Creating lat/longs in {output.lat_longs}"

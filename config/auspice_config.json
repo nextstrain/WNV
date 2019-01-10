@@ -4,13 +4,15 @@
     "gt": {"menuItem": "genotype", "legendTitle": "Genotype", "type": "discrete"},
     "num_date": {"menuItem": "date", "legendTitle": "Sampling date", "type": "continuous"},
     "country": {"legendTitle":"Country", "type":"discrete"},
-    "lineage": {"legendTitle":"Strain", "menuItem":"strain", "type":"discrete"},
     "state": {"type":"discrete"},
+    "division": {"legendTitle":"division", "menuItem":"division", "type":"discrete"},
+    "lineage": {"legendTitle":"Strain", "menuItem":"strain", "type":"discrete"},
     "authors": {"legendTitle":"Authors", "type":"discrete"},
     "host": {"legendTitle":"Host Species", "type":"discrete"}
   },
   "geo": [
-    "state"
+    "state",
+    "division"
   ],
   "maintainer": [
     "Nate Grubaugh",
