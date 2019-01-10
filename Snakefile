@@ -24,7 +24,7 @@ rule parse:
         metadata = "results/metadata.tsv"
     shell:
         """
-        python ./scripts/parse_fasta_csv_query_entrez.py {input.sequences} {input.metadata} {output.sequences} {output.metadata}
+        python ./scripts/parse_fasta_csv.py {input.sequences} {input.metadata} {output.sequences} {output.metadata}
         """
 
 
