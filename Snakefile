@@ -190,7 +190,7 @@ rule export:
     message: "Exporting data files for for auspice"
     input:
         tree = rules.refine.output.tree,
-        metadata = rules.parse.output.metadata,
+        metadata = rules.add_authors.output.metadata,
         branch_lengths = rules.refine.output.node_data,
         traits = rules.traits.output.node_data,
         nt_muts = rules.ancestral.output.node_data,
@@ -219,7 +219,7 @@ rule export2:
     message: "Exporting v2.0 JSONs for auspice. Currently unused."
     input:
         tree = rules.refine.output.tree,
-        metadata = rules.parse.output.metadata,
+        metadata = rules.add_authors.output.metadata,
         branch_lengths = rules.refine.output.node_data,
         traits = rules.traits.output.node_data,
         nt_muts = rules.ancestral.output.node_data,
