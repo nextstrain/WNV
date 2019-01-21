@@ -1,8 +1,7 @@
 rule all:
     input:
-        auspice_tree = "auspice/WNV-nextstrain_NA_tree.json",
-        auspice_meta = "auspice/WNV-nextstrain_NA_meta.json",
-        auspice_unified = "auspice/WNV-nextstrain_NA.json"
+        auspice_tree = "auspice/WNV_NA_tree.json",
+        auspice_meta = "auspice/WNV_NA_meta.json",
 
 rule files:
     params:
@@ -94,7 +93,8 @@ rule tree:
         """
         augur tree \
             --alignment {input.alignment} \
-            --output {output.tree}
+            --output {output.tree} \
+            --nthreads auto
         """
 
 rule refine:
@@ -212,7 +212,7 @@ rule export:
             --lat-longs {input.lat_longs} \
             --output-tree {output.auspice_tree} \
             --output-meta {output.auspice_meta}
-        augur validate --json {output.auspice_meta} {output.auspice_tree}
+        #augur validate --json {output.auspice_meta} {output.auspice_tree}
         """
 
 rule export2:
