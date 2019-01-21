@@ -1,7 +1,8 @@
 rule all:
     input:
         auspice_tree = "auspice/WNV-nextstrain_NA_tree.json",
-        auspice_meta = "auspice/WNV-nextstrain_NA_meta.json"
+        auspice_meta = "auspice/WNV-nextstrain_NA_meta.json",
+        auspice_unified = "auspice/WNV-nextstrain_NA.json"
 
 rule files:
     params:
@@ -15,18 +16,29 @@ files = rules.files.params
 
 rule parse:
     message:
-        "Parsing {input.sequences}, {input.metadata} and collecting info from ENTREZ"
+        "Parsing {input.sequences}, {input.metadata} and forming FASTA + metadata TSV"
     input:
         sequences = files.input_fasta,
         metadata = files.input_metadata
     output:
         sequences = "results/sequences.fasta",
-        metadata = "results/metadata.tsv"
+        metadata = "results/metadata_sans_authors.tsv"
     shell:
         """
         python ./scripts/parse_fasta_csv.py {input.sequences} {input.metadata} {output.sequences} {output.metadata}
         """
 
+rule add_authors:
+    message:
+        "Adding authors to {input.metadata} -> {output.metadata} by collecting info from ENTREZ"
+    input:
+        metadata = rules.parse.output.metadata
+    output:
+        metadata = "results/metadata.tsv"
+    shell:
+        """
+        python ./scripts/add_authors.py {input.metadata} {output.metadata}
+        """
 
 rule create_colors:
     message:
@@ -201,6 +213,34 @@ rule export:
             --output-tree {output.auspice_tree} \
             --output-meta {output.auspice_meta}
         augur validate --json {output.auspice_meta} {output.auspice_tree}
+        """
+
+rule export2:
+    message: "Exporting v2.0 JSONs for auspice. Currently unused."
+    input:
+        tree = rules.refine.output.tree,
+        metadata = rules.parse.output.metadata,
+        branch_lengths = rules.refine.output.node_data,
+        traits = rules.traits.output.node_data,
+        nt_muts = rules.ancestral.output.node_data,
+        aa_muts = rules.translate.output.node_data,
+        colors = rules.create_colors.output.colors,
+        lat_longs = rules.create_lat_longs.output.lat_longs,
+        auspice_config = files.auspice_config
+    output:
+        auspice = "auspice/WNV-nextstrain_NA.json"
+    shell:
+        """
+        augur export \
+            --new-schema \
+            --tree {input.tree} \
+            --metadata {input.metadata} \
+            --node-data {input.branch_lengths} {input.traits} {input.nt_muts} {input.aa_muts} \
+            --colors {input.colors} \
+            --auspice-config {input.auspice_config} \
+            --lat-longs {input.lat_longs} \
+            --output-main {output.auspice}
+        #augur validate --json {output.auspice_meta} {output.auspice_tree}
         """
 
 rule clean:

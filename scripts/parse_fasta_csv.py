@@ -1,83 +1,5 @@
 import os, sys, re
-from Bio import Entrez
 from Bio import SeqIO
-
-def choose_best_reference(record):
-    if len(record.annotations["references"]):
-        # is there a reference which is not a "Direct Submission"?
-        titles = [reference.title for reference in record.annotations["references"]]
-        try:
-            idx = [i for i, j in enumerate(titles) if j is not None and j != "Direct Submission"][0]
-        except IndexError: # fall back to direct submission
-            idx = [i for i, j in enumerate(titles) if j is not None][0]
-        return record.annotations["references"][idx] # <class 'Bio.SeqFeature.Reference'>
-    print("\tskipping attribution as no suitable reference found")
-    return False
-
-
-def query_genbank(accessions, email=None, retmax=10, n_entrez=10, gbdb="nuccore", **kwargs):
-    store = {}
-    # https://www.biostars.org/p/66921/
-    if len(accessions) > 10:
-        print("Querying genbank accessions {}...".format(accessions[:10]))
-    else:
-        print("Querying genbank accessions {}".format(accessions))
-    if not email:
-        email = os.environ['NCBI_EMAIL']
-    Entrez.email = email
-
-    # prepare queries for download in chunks no greater than n_entrez
-    queries = []
-    for i in sorted(range(0, len(accessions), n_entrez)):
-        queries.append(set(accessions[i:i+n_entrez]))
-
-    def esearch(accs):
-        if len(accs) == 0:
-            return
-        list_accs = list(accs)
-        res = Entrez.read(Entrez.esearch(db=gbdb, term=" ".join(list_accs), retmax=retmax))
-        if "ErrorList" in res:
-            not_found = res["ErrorList"]["PhraseNotFound"][0]
-            accs.remove(not_found)
-            esearch(accs)
-        else: # success :)
-            for i, x in enumerate(list_accs):
-                acc_gi_map[x] = res["IdList"][i]
-
-    # populate Accession -> GI number via entrez esearch
-    acc_gi_map = {x:None for x in accessions}
-    for qq in queries:
-        esearch(qq)
-    gi_numbers = [x for x in acc_gi_map.values() if x != None]
-    gi_acc_map = {v:k for k, v in acc_gi_map.items()}
-
-    # get entrez data vie efetch
-    try:
-        search_handle = Entrez.epost(db=gbdb, id=",".join(gi_numbers))
-        search_results = Entrez.read(search_handle)
-        webenv, query_key = search_results["WebEnv"], search_results["QueryKey"]
-    except:
-        print("ERROR: Couldn't connect with entrez, please run again")
-        sys.exit(2)
-    for start in range(0, len(gi_numbers), retmax):
-        #fetch entries in batch
-        try:
-            handle = Entrez.efetch(db=gbdb, rettype="gb", retstart=start, retmax=retmax, webenv=webenv, query_key=query_key)
-        except IOError:
-            print("ERROR: Couldn't connect with entrez, please run again")
-        else:
-            SeqIO_records = SeqIO.parse(handle, "genbank")
-            gi_numbers_pos = start
-            for record in SeqIO_records:
-                accession_wanted = gi_acc_map[gi_numbers[gi_numbers_pos]]
-                accession_received = re.match(r'^([^.]*)', record.id).group(0).upper()
-                gi_numbers_pos += 1
-                if accession_received != accession_wanted:
-                    print("Accession mismatch. Skipping.")
-                else:
-                    store[accession_wanted] = record
-    return store
-
 
 def fix_date(date_in):
   match = re.match(r"([0-9]{4})[/-]([0-9X]{2})[/-]([0-9X]{2})", date_in)
@@ -130,11 +52,7 @@ def parseFasta(path, sep="_", unknown="Unknown"):
                 'longitude': unknown
             }
             try:
-              date = fix_date(header[1])
-              metadata[strain]['date'] = date
-              metadata[strain]['country']   = header[2] if header[2] else unknown
-              metadata[strain]['state']     = header[3] if header[3] else unknown
-              metadata[strain]['division']  = header[4] if header[4] else unknown
+              # most information will be extracted from the CSV file
               metadata[strain]['longitude'] = header[5] if header[5] else unknown
               metadata[strain]['latitude']  = header[6] if header[6] else unknown
             except IndexError:
@@ -191,29 +109,6 @@ def addMetadataFromInputCSV(metadata, path, unknown="Unknown"):
                 elif metadata[strain][name] != fields[idx]:
                   print("CHECK: {} {} mismatch: {} - {}".format(strain, name, metadata[strain][name], fields[idx]))
 
-def addHardcodedAuthorInfo(metadata):
-    for accession, data in metadata.items():
-        if re.match(r'^W\d+$', accession):
-            data["authors"] = "Grubaugh et al"
-            data["journal"] = "Unpublished"
-            data["title"] = "West Nile virus genomic data from California"
-            data["url"] = "https://andersen-lab.com/secrets/data/west-nile-genomics/"
-
-
-def addAuthorInfoViaEntrez(metadata):
-    accessions = [acc for acc, data in metadata.items() if data["authors"] == "Unknown"]
-    gb = query_genbank([x for x in accessions if len(x) > 5]) # don't query obviously non-accession strings
-    refs = {accession: choose_best_reference(record) for accession, record in gb.items()}
-    for accession, entrezData in refs.items():
-        metadata[accession]["authors"] = re.match(r'^([^,]*)', entrezData.authors).group(0) + " et al"
-        metadata[accession]["journal"] = entrezData.journal
-        metadata[accession]["title"] = entrezData.title
-        if not entrezData.pubmed_id:
-            # print("no pubmed_id for ", metadata[accession]["authors"], metadata[accession]["title"], ". Falling back to nuccore/accession")
-            metadata[accession]["url"] = "https://www.ncbi.nlm.nih.gov/nuccore/" + accession
-        else:
-            metadata[accession]["url"] = "https://www.ncbi.nlm.nih.gov/pubmed/" + entrezData.pubmed_id
-
 
 def filterByGenomeLength(seqs, metadata, minLength):
     strains = list(seqs.keys())
@@ -255,16 +150,13 @@ if __name__ == "__main__":
     print("")
     print("Step1: collects fasta and CSV metadata")
     print("Step2: cleans up FASTA header")
-    print("Step3: queries ENTREZ for author information (not included in input files)")
-    print("Step4: subsamples out sequences less than 10kb")
-    print("Step5: adds state to division label to avoid ambiguity")
+    print("Step3: subsamples out sequences less than 7kb")
+    print("Step4: adds state to division label to avoid ambiguity")
     print("\n")
 
     seqs, metadata = parseFasta(fasta_in)
     addMetadataFromInputCSV(metadata, meta_in)
-    addHardcodedAuthorInfo(metadata)
-    addAuthorInfoViaEntrez(metadata)
-    filterByGenomeLength(seqs, metadata, 10000)
+    filterByGenomeLength(seqs, metadata, 7000)
     add_state_to_division(metadata)
 
     try:
