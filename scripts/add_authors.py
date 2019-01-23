@@ -104,7 +104,7 @@ def add_hardcoded_authors(metadata, missing):
 
 def add_authors_using_entrez(metadata, cache, missing):
     accessions = [x for x in list(missing) if len(x) > 5] # prune short strings which are obviously non-accession strings
-    gb = query_genbank(accessions[])
+    gb = query_genbank(accessions)
     refs = {accession: choose_best_reference(record) for accession, record in gb.items()}
     for accession, entrezData in refs.items():
         metadata[accession]["authors"] = re.match(r'^([^,]*)', entrezData.authors).group(0) + " et al"
