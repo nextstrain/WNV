@@ -37,28 +37,29 @@ for pair in zip(wnv_strain, wnv_strain_cols):
 
 #########################################################################################
 # STATES
-# we (roughly) use time zones to form different colour scales for better resolution
+# different colour scales where used to colour states based on five main US geographic regions
 states = {
-  "other": ["HI", "AK"],
-  "pacific": ["CA", "NV", "OR", "WA"],
-  "mountain": ["AZ", "CO", "ID", "MT", "NM", "ND", "UT", "WY"],
-  "central": ["AL", "AR", "IL", "IA", "KY", "LA", "KA", "MN", "MS", "MO", "NE", "ND", "OK", "SD", "TN", "TX", "WI"],
-  "eastern": ["CE", "DE", "FL", "GA", "IN", "ME", "MD", "MA", "MI", "NH", "NJ", "NY", "NC", "OH", "PA", "RI", "SC", "VT", "VA", "DC", "WV"],
-  "mexico": ["Chihuahua", "Sopnora", "Tamaulipas", "BajaCalifornia"]
+  "west": ["AK", "WA", "ID", "MT", "OR", "NV", "WY", "CA", "UT", "CO", "HI"],
+  "southwest": ["AZ", "NM", "OK", "TX"],
+  "midwest": ["ND", "MN", "IL", "WI", "MI", "SD", "IA", "IN", "OH", "NE", "MO", "KS"],
+  "southeast": ["KY", "WV", "VA", "AR", "TN", "NC", "SC", "LA", "MS", "AL", "GA", "FL"],
+  "northeast": ["ME", "VT", "NH", "NY", "MA", "RI", "PA", "NJ", "CT", "MD", "DC", "DE"],
+  "mexico": ["Chihuahua", "Sonora", "Tamaulipas", "BajaCalifornia"]
 }
 # prune out the states that _aren't_ in the metadata (before we create the colour scale)
-states_present = set([x["state"] for x in metadata])
-for key, values in states.items():
-  states[key] = list(filter(lambda x: x in states_present, values))
+# states_present = set([x["state"] for x in metadata])
+# for key, values in states.items():
+#   states[key] = list(filter(lambda x: x in states_present, values))
   # generate color maps
 states_cols = {
-  "other":     ["#bdbdbd", "#636363"],
-  "pacific":   [mpl.colors.rgb2hex(mpl.cm.YlOrRd(i)) for i in np.linspace(0.3,1,len(states["pacific"]))],
-  "mountain":  [mpl.colors.rgb2hex(mpl.cm.YlGn(i)) for i in np.linspace(0.3,1,len(states["mountain"]))],
-  "central":   [mpl.colors.rgb2hex(mpl.cm.GnBu(i)) for i in np.linspace(0.3,1,len(states["central"]))],
-  "eastern":   [mpl.colors.rgb2hex(mpl.cm.BuPu(i)) for i in np.linspace(0.3,1,len(states["eastern"]))],
-  "mexico":    [mpl.colors.rgb2hex(mpl.cm.bone(i)) for i in np.linspace(0,0.7,len(states["mexico"]))]
+  "west": ["#590000", "#690909", "#7A1515", "#8A2424", "#9B3636", "#AB4B4B", "#BC6363", "#CD7E7E", "#DD9C9C", "#EEBDBD", "#FFE1E1"],
+  "southwest": ["#E79000", "#EFB034", "#F7D169", "#FFF29E"],
+  "midwest": ["#001C00", "#033003", "#0B450B", "#155915", "#236E23", "#348334", "#499749", "#60AC60", "#7BC17B", "#9AD59A", "#BBEABB", "#E1FFE1"],
+  "southeast": ["#001833", "#052445", "#0C3258", "#17416A", "#24527D", "#34658F", "#4678A2", "#5C8DB4", "#73A3C7", "#8EBAD9", "#ABD2EC", "#CCEBFF"],
+  "northeast": ["#1C001C", "#2E0330", "#3F0B45", "#501559", "#60236E", "#713483", "#824997", "#9460AC", "#A77BC1", "#BD9AD5", "#D5BBEA", "#F0E1FF"],
+  "mexico":    [mpl.colors.rgb2hex(mpl.cm.Greys(i)) for i in np.linspace(0,0.7,len(states["mexico"]))]
 }
+
 fh.write("## STATES ##\n")
 for category, names in states.items():
   for pair in zip(names, states_cols[category]):
