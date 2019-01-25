@@ -25,7 +25,8 @@
     "lineage"
   ],
   "defaults": {
-    "colorBy":	"state",
-    "mapTriplicate":	false
-  }
+   "colorBy": "state",
+   "mapTriplicate": false,
+   "geoResolution": "state"
+ }
 }
