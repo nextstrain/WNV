@@ -62,10 +62,165 @@
     }
   },
   "author_info": {
-    "Unknown": {
-      "journal": "Unknown",
-      "n": 2259,
-      "title": "Unknown"
+    "Anderson et al": {
+      "journal": "Science 286 (5448), 2331-2333 (1999)",
+      "n": 1,
+      "title": "Isolation of West Nile virus from mosquitoes, crows, and a Cooper's hawk in Connecticut"
+    },
+    "Andrade et al": {
+      "journal": "J. Gen. Virol. 92 (PT 11), 2523-2533 (2011)",
+      "n": 4,
+      "title": "North American West Nile virus genotype isolates demonstrate differential replicative capacities in response to temperature"
+    },
+    "Anez et al": {
+      "journal": "PLoS Negl Trop Dis 7 (5), E2245 (2013)",
+      "n": 32,
+      "title": "Evolutionary dynamics of west nile virus in the United States, 1999-2011: phylogeny, selection pressure and evolutionary time-scale analysis"
+    },
+    "Armstrong et al": {
+      "journal": "Virology 417 (1), 203-210 (2011)",
+      "n": 103,
+      "title": "Molecular evolution of West Nile virus in a northern temperate region: Connecticut, USA 1999-2008"
+    },
+    "Aroh et al": {
+      "journal": "Unpublished",
+      "n": 70,
+      "title": "2012 West Nile Virus differ in frequency of introductions into Texas and ability to overwinter, 2012-2015"
+    },
+    "Baronti et al": {
+      "journal": "Unpublished",
+      "n": 1,
+      "title": "Assessment of the antiviral activity of the FDA approved molecules against an extended panel of Flaviviruses"
+    },
+    "Bowen et al": {
+      "journal": "Unpublished",
+      "n": 1,
+      "title": "Complete genomic sequence of West Nile virus equine isolate New York 1999"
+    },
+    "Davis et al": {
+      "journal": "Virology 330 (1), 342-350 (2004)",
+      "n": 25,
+      "title": "Emergence of attenuated West Nile virus variants in Texas, 2003"
+    },
+    "Deardorff et al": {
+      "journal": "Emerging Infect. Dis. 12 (2), 314-318 (2006)",
+      "n": 22,
+      "title": "Introductions of West Nile virus strains to Mexico"
+    },
+    "Doumbouya et al": {
+      "journal": "Unpublished",
+      "n": 1,
+      "title": "The sequence of a West Nile virus from Florida"
+    },
+    "Duggal et al": {
+      "journal": "Virology 485, 79-85 (2015)",
+      "n": 132,
+      "title": "Genotype-specific variation in West Nile virus dispersal in California"
+    },
+    "Ehrbar et al": {
+      "journal": "Infect. Genet. Evol. 51 (2017) In press",
+      "n": 14,
+      "title": "High levels of local inter- and intra-host genetic variation of West Nile virus and evidence of fine-scale evolutionary pressures"
+    },
+    "Granwehr et al": {
+      "journal": "J. Clin. Microbiol. 42 (11), 5375-5377 (2004)",
+      "n": 1,
+      "title": "Characterization of a West Nile virus isolate from a human on the Gulf Coast of Texas"
+    },
+    "Grinev et al": {
+      "journal": "PLoS Negl Trop Dis 10 (5), E0004717 (2016)",
+      "n": 27,
+      "title": "Genetic Variability of West Nile Virus in U.S. Blood Donors from the 2012 Epidemic Season"
+    },
+    "Grubaugh et al": {
+      "journal": "Open Forum Infect Dis 3 (1), OFV182 (2015)",
+      "n": 2,
+      "title": "West Nile Virus Population Structure, Injury, and Interferon-Stimulated Gene Expression in the Brain From a Fatal Case of Encephalitis"
+    },
+    "Henn et al": {
+      "journal": "Submitted (01-JUL-2011) Broad Institute of MIT and Harvard, 320 Charles Street, Cambridge, MA 02141, USA",
+      "n": 166,
+      "title": "Direct Submission"
+    },
+    "Hepp et al": {
+      "journal": "Unpublished",
+      "n": 14,
+      "title": "Evidence for persistent establishment of West Nile Virus in the Phoenix Metropolitan area"
+    },
+    "Herring et al": {
+      "journal": "Virology 363 (1), 220-228 (2007)",
+      "n": 20,
+      "title": "Phylogenetic analysis of WNV in North American blood donors during the 2003-2004 epidemic seasons"
+    },
+    "Huang et al": {
+      "journal": "Emerging Infect. Dis. 8 (12), 1367-1371 (2002)",
+      "n": 1,
+      "title": "First Isolation of West Nile virus from a patient with encephalitis in the United States"
+    },
+    "Jia et al": {
+      "journal": "Lancet 354 (9194), 1971-1972 (1999)",
+      "n": 1,
+      "title": "Genetic analysis of West Nile New York 1999 encephalitis virus"
+    },
+    "Keller et al": {
+      "journal": "J. Virol. 80 (19), 9424-9434 (2006)",
+      "n": 1,
+      "title": "Resistance to alpha/beta interferon is a determinant of West Nile virus replication fitness and virulence"
+    },
+    "Lanciotti et al": {
+      "journal": "Science 286 (5448), 2333-2337 (1999)",
+      "n": 5,
+      "title": "Origin of the West Nile virus responsible for an outbreak of encephalitis in the northeastern United States"
+    },
+    "Mann et al": {
+      "journal": "Virology 436 (1), 75-80 (2013)",
+      "n": 28,
+      "title": "Dynamic transmission of West Nile virus across the United States-Mexican border"
+    },
+    "May et al": {
+      "journal": "Virology 405 (1), 8-14 (2010)",
+      "n": 7,
+      "title": "Multiple pathways to the attenuation of West Nile virus in South-East Texas in 2003"
+    },
+    "McMullen et al": {
+      "journal": "Emerging Infect. Dis. 17 (5), 785-793 (2011)",
+      "n": 17,
+      "title": "Evolution of new genotype of West Nile virus in North America"
+    },
+    "Newman et al": {
+      "journal": "Submitted (24-FEB-2014) Broad Institute of MIT & Harvard, 7 Cambridge Center, Cambridge, MA 02142, USA",
+      "n": 378,
+      "title": "Direct Submission"
+    },
+    "Plante et al": {
+      "journal": "Emerging Infect. Dis. 20 (2), 272-275 (2014)",
+      "n": 3,
+      "title": "Co-circulation of West Nile Virus Variants, Arizona, USA, 2010"
+    },
+    "Pybus et al": {
+      "journal": "Proc. Natl. Acad. Sci. U.S.A. 109 (37), 15066-15071 (2012)",
+      "n": 17,
+      "title": "Unifying the spatial epidemiology and molecular evolution of emerging epidemics"
+    },
+    "Schlick et al": {
+      "journal": "J. Virol. 83 (11), 5581-5591 (2009)",
+      "n": 1,
+      "title": "Helices alpha2 and alpha3 of West Nile virus capsid protein are dispensable for assembly of infectious virions"
+    },
+    "Shabman et al": {
+      "journal": "Submitted (12-JUL-2016) J. Craig Venter Institute, 9704 Medical Center Drive, Rockville, MD 20850, USA",
+      "n": 458,
+      "title": "Direct Submission"
+    },
+    "Swetnam et al": {
+      "journal": "Emerging Infect. Dis. 24 (12) (2018) In press",
+      "n": 91,
+      "title": "Terrestrial Bird Migration and West Nile Virus Circulation, United States"
+    },
+    "WestNile4K": {
+      "journal": "Unpublished",
+      "n": 615,
+      "title": "WestNile 4K Project"
     }
   },
   "color_options": {
@@ -966,7 +1121,7 @@
           "#9dd93b"
         ],
         [
-          "Sopnora/Sopnora",
+          "Sonora/Sonora",
           "#a0da39"
         ],
         [
@@ -1206,180 +1361,184 @@
     "state": {
       "color_map": [
         [
-          "CA",
-          "#feca66"
-        ],
-        [
-          "NV",
-          "#f74327"
-        ],
-        [
           "WA",
-          "#800026"
-        ],
-        [
-          "AZ",
-          "#c8e99b"
-        ],
-        [
-          "CO",
-          "#a2d88a"
+          "#690909"
         ],
         [
           "ID",
-          "#77c679"
+          "#7A1515"
         ],
         [
           "MT",
-          "#4cb063"
+          "#8A2424"
         ],
         [
-          "NM",
-          "#2f934d"
-        ],
-        [
-          "ND",
-          "#2182b9"
-        ],
-        [
-          "UT",
-          "#006034"
+          "NV",
+          "#AB4B4B"
         ],
         [
           "WY",
-          "#004529"
+          "#BC6363"
         ],
         [
-          "AL",
-          "#bee6bf"
+          "CA",
+          "#CD7E7E"
         ],
         [
-          "AR",
-          "#b1e0b9"
+          "UT",
+          "#DD9C9C"
         ],
         [
-          "IL",
-          "#a3dbb7"
+          "CO",
+          "#EEBDBD"
         ],
         [
-          "IA",
-          "#94d5bc"
+          "AZ",
+          "#E79000"
         ],
         [
-          "KY",
-          "#84cfc1"
-        ],
-        [
-          "LA",
-          "#75c8c6"
-        ],
-        [
-          "KA",
-          "#64bfcc"
-        ],
-        [
-          "MN",
-          "#54b6d1"
-        ],
-        [
-          "MS",
-          "#47abcf"
-        ],
-        [
-          "MO",
-          "#3b9dc7"
-        ],
-        [
-          "NE",
-          "#2f90c0"
+          "NM",
+          "#EFB034"
         ],
         [
           "OK",
-          "#1576b3"
-        ],
-        [
-          "SD",
-          "#0969ad"
-        ],
-        [
-          "TN",
-          "#085c9f"
+          "#F7D169"
         ],
         [
           "TX",
-          "#084e90"
+          "#FFF29E"
+        ],
+        [
+          "ND",
+          "#001C00"
+        ],
+        [
+          "MN",
+          "#033003"
+        ],
+        [
+          "IL",
+          "#0B450B"
         ],
         [
           "WI",
-          "#084081"
-        ],
-        [
-          "FL",
-          "#b2cae1"
-        ],
-        [
-          "GA",
-          "#a3bfdc"
-        ],
-        [
-          "IN",
-          "#98b0d3"
-        ],
-        [
-          "MD",
-          "#909eca"
-        ],
-        [
-          "MA",
-          "#8c8bc0"
+          "#155915"
         ],
         [
           "MI",
-          "#8c76b7"
+          "#236E23"
         ],
         [
-          "NJ",
-          "#8b62ad"
+          "SD",
+          "#348334"
         ],
         [
-          "NY",
-          "#894fa3"
+          "IA",
+          "#499749"
         ],
         [
-          "NC",
-          "#873a98"
+          "IN",
+          "#60AC60"
         ],
         [
           "OH",
-          "#842289"
+          "#7BC17B"
         ],
         [
-          "PA",
-          "#7c0e78"
+          "NE",
+          "#9AD59A"
+        ],
+        [
+          "MO",
+          "#BBEABB"
+        ],
+        [
+          "KA",
+          "#E1FFE1"
+        ],
+        [
+          "KY",
+          "#001833"
         ],
         [
           "VA",
-          "#640761"
+          "#0C3258"
+        ],
+        [
+          "AR",
+          "#17416A"
+        ],
+        [
+          "TN",
+          "#24527D"
+        ],
+        [
+          "NC",
+          "#34658F"
+        ],
+        [
+          "LA",
+          "#5C8DB4"
+        ],
+        [
+          "MS",
+          "#73A3C7"
+        ],
+        [
+          "AL",
+          "#8EBAD9"
+        ],
+        [
+          "GA",
+          "#ABD2EC"
+        ],
+        [
+          "FL",
+          "#CCEBFF"
+        ],
+        [
+          "NY",
+          "#501559"
+        ],
+        [
+          "MA",
+          "#60236E"
+        ],
+        [
+          "PA",
+          "#824997"
+        ],
+        [
+          "NJ",
+          "#9460AC"
+        ],
+        [
+          "CT",
+          "#A77BC1"
+        ],
+        [
+          "MD",
+          "#BD9AD5"
         ],
         [
           "DC",
-          "#4d004b"
+          "#D5BBEA"
         ],
         [
           "Chihuahua",
-          "#000000"
+          "#ffffff"
         ],
         [
-          "Sopnora",
-          "#343448"
+          "Sonora",
+          "#dcdcdc"
         ],
         [
           "Tamaulipas",
-          "#687188"
+          "#a0a0a0"
         ],
         [
           "BajaCalifornia",
-          "#9db9bc"
+          "#5f5f5f"
         ]
       ],
       "key": "state",
@@ -1390,6 +1549,7 @@
   },
   "defaults": {
     "colorBy": "state",
+    "geoResolution": "state",
     "mapTriplicate": false
   },
   "filters": [
@@ -1905,16 +2065,16 @@
         "longitude": -98.9588
       },
       "NE": {
-        "latitude": 43.6211955,
-        "longitude": -84.6824345
+        "latitude": 41.525,
+        "longitude": -99.861667
       },
       "NE/Douglas": {
         "latitude": 41.2628,
         "longitude": -96.1193
       },
       "NE/Dundy": {
-        "latitude": 43.6211955,
-        "longitude": -84.6824345
+        "latitude": 41.525,
+        "longitude": -99.861667
       },
       "NE/Knox": {
         "latitude": 42.6363,
@@ -2272,7 +2432,7 @@
         "latitude": 43.009,
         "longitude": -97.3946
       },
-      "Sopnora/Sopnora": {
+      "Sonora/Sonora": {
         "latitude": 29.3524,
         "longitude": -111.6824
       },
@@ -2527,8 +2687,8 @@
         "longitude": -100.5407369
       },
       "NE": {
-        "latitude": 43.6211955,
-        "longitude": -84.6824345
+        "latitude": 41.525,
+        "longitude": -99.861667
       },
       "NJ": {
         "latitude": 40.0757384,
@@ -2562,7 +2722,7 @@
         "latitude": 44.6471761,
         "longitude": -100.3487609
       },
-      "Sopnora": {
+      "Sonora": {
         "latitude": 29.4,
         "longitude": -111.7
       },
@@ -2601,7 +2761,7 @@
     }
   },
   "maintainer": [
-    "Nate Grubaugh",
+    "Grubaugh Lab & James Hadfield",
     "http://grubaughlab.com/"
   ],
   "panels": [
@@ -2610,6 +2770,6 @@
     "entropy"
   ],
   "title": "Twenty years of West Nile Virus in North America",
-  "updated": "21 Jan 2019",
+  "updated": "24 Jan 2019",
   "virus_count": 2255
 }
