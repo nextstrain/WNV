@@ -1,5 +1,5 @@
 {
-  "title": "Twenty years of West Nile Virus in North America",
+  "title": "Twenty years of West Nile Virus in the Americas",
   "color_options": {
     "gt": {"menuItem": "genotype", "legendTitle": "Genotype", "type": "discrete"},
     "num_date": {"menuItem": "date", "legendTitle": "Sampling date", "type": "continuous"},
