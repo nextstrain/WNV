@@ -94,6 +94,7 @@ rule tree:
         augur tree \
             --alignment {input.alignment} \
             --output {output.tree} \
+            --method raxml \
             --nthreads auto
         """
 
@@ -128,8 +129,7 @@ rule refine:
             --timetree \
             --coalescent {params.coalescent} \
             --date-confidence \
-            --date-inference {params.date_inference} \
-            --clock-filter-iqd {params.clock_filter_iqd}
+            --root AF481864
         """
 
 rule ancestral:
