@@ -21,16 +21,16 @@ fh = open(sys.argv[2], "w")
 
 #########################################################################################
 # COUNTRIES
-countries    = ["USA",      "Mexico"]
-country_cols = ["#511ea8",  "#dc2f24"]
+countries    = ["USA", "Mexico", "Israel", "British-Virgin-Islands", "Colombia", "Brazil", "Argentina"]
+country_cols = ["#969696", "#7E00A8", "#0054A8", "#00A800", "#E5C800", "#FF7F00", "#A80000"]
 fh.write("## COUNTRIES ##\n")
 for pair in zip(countries, country_cols):
   fh.write("{}\t{}\t{}\n".format("country", pair[0], pair[1]))
 
 #########################################################################################
 # LINEAGES / STRAINS / CLADES (they're not monophyletic)
-wnv_strain       = ["NY99",    "SW03",    "WN02"]
-wnv_strain_cols  = ["#CBB742", "#7EB876", "#4988C5"]
+wnv_strain       = ["NY99",    "SW03",    "WN02", "pre-NY"]
+wnv_strain_cols  = ["#CBB742", "#7EB876", "#4988C5", "#A80000"]
 fh.write("## WNV STRAINS / LINEAGES ##\n")
 for pair in zip(wnv_strain, wnv_strain_cols):
   fh.write("{}\t{}\t{}\n".format("lineage", pair[0], pair[1]))
@@ -39,12 +39,17 @@ for pair in zip(wnv_strain, wnv_strain_cols):
 # STATES
 # different colour scales where used to colour states based on five main US geographic regions
 states = {
-  "west": ["AK", "WA", "ID", "MT", "OR", "NV", "WY", "CA", "UT", "CO", "HI"],
-  "southwest": ["AZ", "NM", "OK", "TX"],
-  "midwest": ["ND", "MN", "IL", "WI", "MI", "SD", "IA", "IN", "OH", "NE", "MO", "KS"],
-  "southeast": ["KY", "WV", "VA", "AR", "TN", "NC", "SC", "LA", "MS", "AL", "GA", "FL"],
-  "northeast": ["ME", "VT", "NH", "NY", "MA", "RI", "PA", "NJ", "CT", "MD", "DC", "DE"],
-  "mexico": ["Chihuahua", "Sonora", "Tamaulipas", "BajaCalifornia"]
+	"west": ["AK", "WA", "ID", "MT", "OR", "NV", "WY", "CA", "UT", "CO", "HI"],
+	"southwest": ["AZ", "NM", "OK", "TX"],
+	"midwest": ["ND", "MN", "IL", "WI", "MI", "SD", "IA", "IN", "OH", "NE", "MO", "KS"],
+	"southeast": ["KY", "WV", "VA", "AR", "TN", "NC", "SC", "LA", "MS", "AL", "GA", "FL"],
+	"northeast": ["ME", "VT", "NH", "NY", "MA", "RI", "PA", "NJ", "CT", "MD", "DC", "DE"],
+	"israel": ["Israel"],
+	"mexico": ["Mexico"],
+	"british-virgin-islands": ["British-Virgin-Islands"],
+	"colombia": ["Colombia"],
+	"brazil": ["Brazil"],
+	"argentina": ["Argentina"]
 }
 # prune out the states that _aren't_ in the metadata (before we create the colour scale)
 # states_present = set([x["state"] for x in metadata])
@@ -52,12 +57,17 @@ states = {
 #   states[key] = list(filter(lambda x: x in states_present, values))
   # generate color maps
 states_cols = {
-  "west": ["#590000", "#690909", "#7A1515", "#8A2424", "#9B3636", "#AB4B4B", "#BC6363", "#CD7E7E", "#DD9C9C", "#EEBDBD", "#FFE1E1"],
-  "southwest": ["#E79000", "#EFB034", "#F7D169", "#FFF29E"],
-  "midwest": ["#001C00", "#033003", "#0B450B", "#155915", "#236E23", "#348334", "#499749", "#60AC60", "#7BC17B", "#9AD59A", "#BBEABB", "#E1FFE1"],
-  "southeast": ["#001833", "#052445", "#0C3258", "#17416A", "#24527D", "#34658F", "#4678A2", "#5C8DB4", "#73A3C7", "#8EBAD9", "#ABD2EC", "#CCEBFF"],
-  "northeast": ["#1C001C", "#2E0330", "#3F0B45", "#501559", "#60236E", "#713483", "#824997", "#9460AC", "#A77BC1", "#BD9AD5", "#D5BBEA", "#F0E1FF"],
-  "mexico":    [mpl.colors.rgb2hex(mpl.cm.Greys(i)) for i in np.linspace(0,0.7,len(states["mexico"]))]
+	"west": ["#590000", "#690909", "#7A1515", "#8A2424", "#9B3636", "#AB4B4B", "#BC6363", "#CD7E7E", "#DD9C9C", "#EEBDBD", "#FFE1E1"],
+	"southwest": ["#AD4700", "#C36A11", "#D98D22", "#EFB034"],
+	"midwest": ["#001C00", "#022B02", "#063906", "#0C480C", "#145814", "#1D671D", "#297529", "#358535", "#449344", "#54A354", "#67B267", "#7BC17B"],
+	"southeast": ["#001833", "#032142", "#092C51", "#113860", "#1A466F", "#25547E", "#32638D", "#41729C", "#5183AB", "#6495BA", "#78A7C9", "#8EBAD9"],
+	"northeast": ["#1C001C", "#2E0330", "#3F0B45", "#501559", "#60236E", "#713483", "#824997", "#9460AC", "#A77BC1", "#BD9AD5", "#D5BBEA", "#F0E1FF"],
+	"israel": ["#4FE7E7"],	
+	"mexico": ["#38CDCD"],
+	"british-virgin-islands": ["#25B3B3"],
+	"colombia": ["#159999"],
+	"brazil": ["#087F7F"],
+	"argentina": ["#006666"]
 }
 
 fh.write("## STATES ##\n")
@@ -68,9 +78,9 @@ for category, names in states.items():
 #########################################################################################
 # HOSTS
 # use the tab20c scale - https://matplotlib.org/examples/color/colormaps_reference.html
-tab20     = [mpl.colors.rgb2hex(mpl.cm.tab20c(i)) for i in range(0,20)]
-host      = ["Bird-crow", "Bird-other", "Human",  "Mosquito-Aedes", "Mosquito-Culex", "Mosquito-Culiseta", "Mosquito-other", "Horse",   "Squirrel", "Unknown", "Bird-unknown", "Mosquito-unknown" ]
-host_cols = [tab20[0],     tab20[1],    tab20[4],  tab20[8],        tab20[9],         tab20[10],           tab20[11],        tab20[12], tab20[13],  "#DDDDDD",  tab20[2],      tab20[11]         ]
+# tab20     = [mpl.colors.rgb2hex(mpl.cm.tab20c(i)) for i in range(0,20)]
+host      = ["Bird-crow", "Bird-other", "Bird-unknown", "Mosquito-Aedes", "Mosquito-Culex", "Mosquito-Culiseta", "Mosquito-other", "Mosquito-unknown", "Human", "Horse", "Squirrel", "Unknown"]
+host_cols = ["#000000", "#41ab5d", "#addd8e","#969696", "#8c96c6", "#8c6bb1","#88419d", "#810f7c", "#B20023","#D86239", "#FEC34F", "#00E5E5"]
 fh.write("## HOSTS ##\n")
 for pair in zip(host, host_cols):
   fh.write("{}\t{}\t{}\n".format("host", pair[0], pair[1]))
