@@ -1,0 +1,32 @@
+{
+  "title": "Twenty years of West Nile Virus in the Americas",
+  "color_options": {
+    "gt": {"menuItem": "genotype", "legendTitle": "Genotype", "type": "discrete"},
+    "num_date": {"menuItem": "date", "legendTitle": "Sampling date", "type": "continuous"},
+    "country": {"legendTitle":"Country", "type":"discrete"},
+    "state": {"type":"discrete"},
+    "division": {"legendTitle":"division", "menuItem":"division", "type":"discrete"},
+    "lineage": {"legendTitle":"Strain", "menuItem":"strain", "type":"discrete"},
+    "authors": {"legendTitle":"Authors", "type":"discrete"},
+    "host": {"legendTitle":"Host Species", "type":"discrete"}
+  },
+  "geo": [
+    "state",
+    "division"
+  ],
+  "maintainer": [
+    "Grubaugh Lab & James Hadfield",
+    "http://grubaughlab.com/"
+  ],
+  "filters": [
+    "country",
+    "state",
+    "authors",
+    "lineage"
+  ],
+  "defaults": {
+   "colorBy": "state",
+   "mapTriplicate": false,
+   "geoResolution": "state"
+ }
+}
