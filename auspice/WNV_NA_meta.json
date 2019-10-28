@@ -78,9 +78,9 @@
       "title": "Evolutionary dynamics of west nile virus in the United States, 1999-2011: phylogeny, selection pressure and evolutionary time-scale analysis"
     },
     "Anthony et al": {
-      "journal": "Ecohealth (2014) In press",
+      "journal": "Submitted (06-JUL-2013) Center for Infection and Immunity, Columbia University, 722 West 168th Street, New York, NY 10032, USA",
       "n": 1,
-      "title": "West Nile Virus in the British Virgin Islands"
+      "title": "Direct Submission"
     },
     "Armstrong et al": {
       "journal": "Virology 417 (1), 203-210 (2011)",
@@ -128,9 +128,9 @@
       "title": "High levels of local inter- and intra-host genetic variation of West Nile virus and evidence of fine-scale evolutionary pressures"
     },
     "Fabbri et al": {
-      "journal": "Unpublished",
+      "journal": "Submitted (13-JUL-2009) DRS, ADB, CDC, 3150 Rampart Road (CSU Foothills Campus), Fort Collins, CO 80521, USA",
       "n": 1,
-      "title": "Complete genome sequences and phylogenetic analysis of two West Nile virus strains isolated from equines in Argentina in 2006"
+      "title": "Direct Submission"
     },
     "Granwehr et al": {
       "journal": "J. Clin. Microbiol. 42 (11), 5375-5377 (2004)",
@@ -153,7 +153,7 @@
       "title": "Direct Submission"
     },
     "Henn et al": {
-      "journal": "Submitted (01-JUL-2011) Broad Institute of MIT and Harvard, 320 Charles Street, Cambridge, MA 02141, USA",
+      "journal": "Submitted (06-MAY-2011) Broad Institute of MIT and Harvard, 320 Charles Street, Cambridge, MA 02141, USA",
       "n": 166,
       "title": "Direct Submission"
     },
@@ -183,9 +183,14 @@
       "title": "Resistance to alpha/beta interferon is a determinant of West Nile virus replication fitness and virulence"
     },
     "Lanciotti et al": {
-      "journal": "Science 286 (5448), 2333-2337 (1999)",
+      "journal": "Virology 298 (1), 96-105 (2002)",
       "n": 5,
-      "title": "Origin of the West Nile virus responsible for an outbreak of encephalitis in the northeastern United States"
+      "title": "Complete genome sequences and phylogenetic analysis of West Nile virus strains isolated from the United States, Europe, and the Middle East"
+    },
+    "Lopera et al": {
+      "journal": "Submitted (26-SEP-2011) Dept. of Pathobiological Sciences, University of Wisconsin, 1656 Linden Drive, Madison, WI 53706, USA",
+      "n": 2,
+      "title": "Direct Submission"
     },
     "Malkinson et al": {
       "journal": "Emerging Infect. Dis. 8 (4), 392-397 (2002)",
@@ -198,9 +203,9 @@
       "title": "Dynamic transmission of West Nile virus across the United States-Mexican border"
     },
     "Martins et al": {
-      "journal": "Mem. Inst. Oswaldo Cruz (2019) In press",
+      "journal": "Submitted (16-JUL-2018) Department of Arbovirology and Hemorrhagic Fevers, Evandro Chagas Institute, Rodovia BR-316 km 7 s/n, Levilandia, Ananindeua, Para 67030000, Brazil",
       "n": 1,
-      "title": "First isolation of west nile virus in Brazil"
+      "title": "Direct Submission"
     },
     "May et al": {
       "journal": "Virology 405 (1), 8-14 (2010)",
@@ -213,14 +218,9 @@
       "title": "Evolution of new genotype of West Nile virus in North America"
     },
     "Newman et al": {
-      "journal": "Submitted (24-FEB-2014) Broad Institute of MIT & Harvard, 7 Cambridge Center, Cambridge, MA 02142, USA",
+      "journal": "Submitted (06-JAN-2014) Broad Institute of MIT & Harvard, 7 Cambridge Center, Cambridge, MA 02142, USA",
       "n": 378,
       "title": "Direct Submission"
-    },
-    "Osorio et al": {
-      "journal": "Am. J. Trop. Med. Hyg. 87 (3), 565-572 (2012)",
-      "n": 2,
-      "title": "Characterization of West Nile Viruses Isolated from Captive American Flamingoes (Phoenicopterus ruber) in Medellin, Colombia"
     },
     "Plante et al": {
       "journal": "Emerging Infect. Dis. 20 (2), 272-275 (2014)",
@@ -247,9 +247,14 @@
       "n": 91,
       "title": "Terrestrial Bird Migration and West Nile Virus Circulation, United States"
     },
+    "Therrien et al": {
+      "journal": "Virology. 2019 Aug 21;537:65-98",
+      "n": 26,
+      "title": "Phylogenetic analysis of West Nile virus in Quebec, Canada, 2004\u20132016: Co-circulation of distinct variants harbouring conserved amino acid motifs in North America"
+    },
     "WestNile4K": {
       "journal": "Unpublished",
-      "n": 615,
+      "n": 834,
       "title": "WestNile 4K Project"
     }
   },
@@ -263,7 +268,7 @@
     "country": {
       "color_map": [
         [
-          "USA",
+          "United-States",
           "#969696"
         ],
         [
@@ -277,6 +282,10 @@
         [
           "British-Virgin-Islands",
           "#00A800"
+        ],
+        [
+          "Canada",
+          "#7BDE00"
         ],
         [
           "Colombia",
@@ -324,727 +333,875 @@
         ],
         [
           "AR/Sebastian",
-          "#46085c"
+          "#46075a"
         ],
         [
           "AR/Union",
+          "#46085c"
+        ],
+        [
+          "ARG/B/San-Antonio-De-Areco",
           "#460a5d"
         ],
         [
-          "Argentina/San-Antonio-de-Areco",
+          "AZ",
           "#460b5e"
         ],
         [
-          "AZ",
+          "AZ/Apache",
           "#470d60"
         ],
         [
-          "AZ/Apache",
+          "AZ/Cochise",
           "#470e61"
         ],
         [
-          "AZ/Cochise",
-          "#471063"
-        ],
-        [
           "AZ/Coconino",
-          "#471164"
+          "#470e61"
         ],
         [
           "AZ/Maricopa",
-          "#471365"
+          "#471063"
         ],
         [
           "AZ/Maricopoa",
-          "#481467"
+          "#471164"
         ],
         [
           "AZ/Pima",
-          "#481668"
+          "#471365"
         ],
         [
           "AZ/Yavapai",
-          "#481769"
+          "#481467"
         ],
         [
-          "Brazil/Sao-Mateus",
-          "#48186a"
-        ],
-        [
-          "British-Virgin-Islands/British-Virgin-Islands",
-          "#481a6c"
+          "BRA/ES/Sao-Mateus",
+          "#481668"
         ],
         [
           "CA",
-          "#481b6d"
+          "#481668"
         ],
         [
           "CA/Alameda",
-          "#481c6e"
+          "#481769"
         ],
         [
           "CA/Butte",
-          "#481d6f"
+          "#48186a"
         ],
         [
           "CA/Calaveras",
-          "#481f70"
+          "#481a6c"
         ],
         [
-          "CA/Contra_Costa",
-          "#482071"
+          "CA/Contra-Costa",
+          "#481b6d"
+        ],
+        [
+          "CA/Contracosta",
+          "#481b6d"
         ],
         [
           "CA/Fresno",
-          "#482173"
+          "#481c6e"
         ],
         [
           "CA/Glenn",
-          "#482374"
+          "#481d6f"
         ],
         [
           "CA/Imperial",
-          "#482475"
+          "#481f70"
         ],
         [
           "CA/Inyo",
-          "#482576"
+          "#482071"
         ],
         [
           "CA/Kern",
-          "#482677"
+          "#482173"
         ],
         [
           "CA/Kings",
-          "#482878"
+          "#482173"
         ],
         [
           "CA/Lake",
-          "#482979"
+          "#482374"
         ],
         [
-          "CA/Los_Angeles",
-          "#472a7a"
+          "CA/Lassen",
+          "#482475"
+        ],
+        [
+          "CA/Los-Angeles",
+          "#482576"
+        ],
+        [
+          "CA/Losangeles",
+          "#482677"
         ],
         [
           "CA/Madera",
-          "#472c7a"
+          "#482878"
         ],
         [
           "CA/Merced",
-          "#472d7b"
+          "#482878"
         ],
         [
           "CA/Orange",
-          "#472e7c"
+          "#482979"
         ],
         [
           "CA/Placer",
-          "#472f7d"
+          "#472a7a"
         ],
         [
           "CA/Riverside",
-          "#46307e"
+          "#472c7a"
         ],
         [
           "CA/Sacramento",
+          "#472d7b"
+        ],
+        [
+          "CA/San-Bernardino",
+          "#472e7c"
+        ],
+        [
+          "CA/San-Diego",
+          "#472e7c"
+        ],
+        [
+          "CA/San-Fransisco",
+          "#472f7d"
+        ],
+        [
+          "CA/San-Joaquin",
+          "#46307e"
+        ],
+        [
+          "CA/Sanbernardino",
           "#46327e"
         ],
         [
-          "CA/San_Bernardino",
+          "CA/Shasta",
           "#46337f"
         ],
         [
-          "CA/San_Diego",
-          "#463480"
-        ],
-        [
-          "CA/San_Fransisco",
-          "#453581"
-        ],
-        [
-          "CA/San_Joaquin",
-          "#453781"
-        ],
-        [
-          "CA/Shasta",
-          "#453882"
-        ],
-        [
           "CA/Solano",
-          "#443983"
+          "#46337f"
         ],
         [
           "CA/Stanislaus",
-          "#443a83"
+          "#463480"
         ],
         [
           "CA/Sutter",
-          "#443b84"
+          "#453581"
         ],
         [
           "CA/Tulare",
-          "#433d84"
+          "#453781"
+        ],
+        [
+          "CA/Ventura",
+          "#453882"
         ],
         [
           "CA/Yolo",
-          "#433e85"
+          "#443983"
         ],
         [
           "CA/Yuba",
+          "#443983"
+        ],
+        [
+          "CAN/QC/Blainville",
+          "#443a83"
+        ],
+        [
+          "CAN/QC/Boucherville",
+          "#443b84"
+        ],
+        [
+          "CAN/QC/Chateauguay",
+          "#433d84"
+        ],
+        [
+          "CAN/QC/Cote-St-Luc-Hamstead",
+          "#433e85"
+        ],
+        [
+          "CAN/QC/Dorval",
           "#423f85"
         ],
         [
-          "CO",
+          "CAN/QC/Laval",
+          "#423f85"
+        ],
+        [
+          "CAN/QC/Longueuil",
           "#424086"
         ],
         [
-          "CO/Larimer",
+          "CAN/QC/Mirabel",
           "#424186"
         ],
         [
-          "CO/Mesa",
+          "CAN/QC/Montr\u00e9al",
           "#414287"
         ],
         [
-          "CO/Park",
+          "CAN/QC/Pointe-Claire",
           "#414487"
         ],
         [
-          "CO/Weld",
+          "CAN/QC/Rosemont",
           "#404588"
         ],
         [
-          "Colombia/Medellin",
+          "CAN/QC/Saint-Bruno",
+          "#404588"
+        ],
+        [
+          "CAN/QC/Saint-Hyacinthe",
           "#404688"
         ],
         [
-          "CT",
+          "CAN/QC/Saint-Lambert",
           "#3f4788"
         ],
         [
-          "CT/Fairfield",
+          "CAN/QC/Sainte-Anne-Des-Plaines",
           "#3f4889"
         ],
         [
-          "CT/Hartford",
+          "CAN/QC/Sainte-Julie",
           "#3e4989"
         ],
         [
-          "CT/Middlesex",
+          "CAN/QC/St-Jean-Sur-Richelieu",
+          "#3e4989"
+        ],
+        [
+          "CAN/QC/Varennes",
           "#3e4a89"
         ],
         [
-          "CT/New_Haven",
+          "CAN/QC/Villeray-St-Michel",
           "#3e4c8a"
         ],
         [
-          "CT/New_London",
+          "CO",
           "#3d4d8a"
         ],
         [
-          "CT/Windham",
+          "CO/Larimer",
           "#3d4e8a"
         ],
         [
-          "DC/District_of_Columbia",
+          "CO/Mesa",
           "#3c4f8a"
         ],
         [
-          "FL/Hillsborough",
+          "CO/Park",
+          "#3c4f8a"
+        ],
+        [
+          "CO/Weld",
           "#3c508b"
         ],
         [
-          "FL/Indian_River",
+          "COL/ANT/Medellin",
           "#3b518b"
         ],
         [
-          "FL/Palm_Beach",
+          "CT",
           "#3b528b"
         ],
         [
-          "FL/Seminole",
+          "CT/Fairfield",
           "#3a538b"
         ],
         [
-          "FL/Sumter",
+          "CT/Hartford",
           "#3a548c"
         ],
         [
-          "GA",
+          "CT/Middlesex",
+          "#3a548c"
+        ],
+        [
+          "CT/New-Haven",
           "#39558c"
         ],
         [
-          "GA/Chatham",
+          "CT/New-London",
           "#39568c"
         ],
         [
-          "GA/Chattron",
+          "CT/Windham",
           "#38588c"
         ],
         [
-          "GA/Dekalb",
+          "DC/District-Of-Columbia",
           "#38598c"
         ],
         [
-          "GA/Fulton",
+          "FL/Hillsborough",
           "#375a8c"
         ],
         [
-          "GA/Gwinnett",
+          "FL/Indian-River",
+          "#375a8c"
+        ],
+        [
+          "FL/Palm-Beach",
           "#375b8d"
         ],
         [
-          "GA/Henry",
+          "FL/Seminole",
           "#365c8d"
         ],
         [
-          "GA/Lawnder",
+          "FL/Sumter",
           "#365d8d"
         ],
         [
-          "GA/Lowndes",
+          "GA",
           "#355e8d"
         ],
         [
-          "GA/Muscogee",
+          "GA/Chatham",
+          "#355e8d"
+        ],
+        [
+          "GA/Chattron",
           "#355f8d"
         ],
         [
-          "GA/Wane",
+          "GA/Dekalb",
           "#34608d"
         ],
         [
-          "GA/Wilkinson",
+          "GA/Fulton",
           "#34618d"
         ],
         [
-          "IA/Kossuth",
+          "GA/Gwinnett",
           "#33628d"
         ],
         [
-          "ID",
+          "GA/Henry",
           "#33638d"
         ],
         [
-          "IL",
+          "GA/Lawnder",
+          "#33638d"
+        ],
+        [
+          "GA/Lowndes",
           "#32648e"
         ],
         [
-          "IL/Cook",
+          "GA/Muscogee",
           "#32658e"
         ],
         [
-          "IL/Dupage",
+          "GA/Wane",
           "#31668e"
         ],
         [
-          "IL/Will",
+          "GA/Wilkinson",
           "#31678e"
         ],
         [
-          "IN/Hendricks",
+          "IA",
           "#31688e"
         ],
         [
-          "Israel/Israel/Eilat",
+          "IA/Kossuth",
           "#31688e"
         ],
         [
-          "KS",
+          "ID",
           "#30698e"
         ],
         [
-          "KY",
+          "IL",
           "#306a8e"
         ],
         [
-          "KY/Boone",
+          "IL/Cook",
           "#2f6b8e"
         ],
         [
-          "LA",
+          "IL/Dupage",
           "#2f6c8e"
         ],
         [
-          "LA/Iberia",
+          "IL/Will",
           "#2e6d8e"
         ],
         [
-          "MA",
+          "IN/Hendricks",
+          "#2e6d8e"
+        ],
+        [
+          "ISR/D/Eilat",
           "#2e6e8e"
         ],
         [
-          "MD",
+          "KS",
           "#2e6f8e"
         ],
         [
-          "MD/Anne_Arundel",
+          "KY",
           "#2d708e"
         ],
         [
-          "MD/Baltimore",
+          "KY/Boone",
           "#2d718e"
         ],
         [
-          "MD/Prince_George's",
+          "LA",
+          "#2d718e"
+        ],
+        [
+          "LA/Allen",
           "#2c718e"
         ],
         [
-          "MD/Talbot",
+          "LA/Ascension",
           "#2c728e"
         ],
         [
-          "Mexico/Baja_California",
+          "LA/Bossier",
           "#2c738e"
         ],
         [
-          "Mexico/Ciudad_Juarez",
+          "LA/Caddo",
           "#2b748e"
         ],
         [
-          "Mexico/Sonora",
+          "LA/Calcasieu",
           "#2b758e"
         ],
         [
-          "Mexico/Tamaulipas",
+          "LA/Eastbatonrouge",
+          "#2b758e"
+        ],
+        [
+          "LA/Iberia",
           "#2a768e"
         ],
         [
-          "Mexico/unknown",
+          "LA/Ouachita",
           "#2a778e"
         ],
         [
-          "MI",
+          "LA/Sttammany",
           "#2a788e"
         ],
         [
-          "MI/Isabella",
+          "LA/Tangipahioa",
           "#29798e"
         ],
         [
-          "MI/Lapeer",
+          "LA/Westbatonrouge",
           "#297a8e"
         ],
         [
-          "MI/Lenawee",
+          "MA",
+          "#297a8e"
+        ],
+        [
+          "MD",
           "#297b8e"
         ],
         [
-          "MI/Oakland",
+          "MD/Anne-Arundel",
           "#287c8e"
         ],
         [
-          "MI/Wayne",
+          "MD/Baltimore",
           "#287d8e"
         ],
         [
-          "MN",
+          "MD/Prince-George's",
           "#277e8e"
         ],
         [
-          "MN/Lacqui_Parle",
+          "MD/Talbot",
           "#277f8e"
         ],
         [
-          "MN/Marshall",
+          "MEX/BCN",
+          "#277f8e"
+        ],
+        [
+          "MEX/CHH/Ciudad-Juarez",
           "#27808e"
         ],
         [
-          "MN/Otter_Tail",
+          "MEX/SON",
           "#26818e"
         ],
         [
-          "MN/Swift",
+          "MEX/TAM",
           "#26828e"
         ],
         [
-          "MO",
+          "MI",
           "#26828e"
         ],
         [
-          "MO/Holt",
+          "MI/Isabella",
+          "#26828e"
+        ],
+        [
+          "MI/Lapeer",
           "#25838e"
         ],
         [
-          "MO/Saint_Louis",
+          "MI/Lenawee",
           "#25848e"
         ],
         [
-          "MS",
+          "MI/Oakland",
           "#25858e"
         ],
         [
-          "MS/Adams",
+          "MI/Wayne",
           "#24868e"
         ],
         [
-          "MT",
+          "MN",
           "#24878e"
         ],
         [
-          "MT/Flathead",
+          "MN/Lacqui-Parle",
+          "#24878e"
+        ],
+        [
+          "MN/Marshall",
           "#23888e"
         ],
         [
-          "MT/Phillips",
+          "MN/Otter-Tail",
           "#23898e"
         ],
         [
-          "MT/Sheridan",
+          "MN/Swift",
           "#238a8d"
         ],
         [
-          "NC",
+          "MO",
           "#228b8d"
         ],
         [
-          "ND/Burleigh",
+          "MO/Holt",
           "#228c8d"
         ],
         [
-          "ND/Grand_Forks",
+          "MO/Saint-Louis",
+          "#228c8d"
+        ],
+        [
+          "MS",
           "#228d8d"
         ],
         [
-          "ND/Logan",
+          "MS/Adams",
           "#218e8d"
         ],
         [
-          "ND/McLean",
+          "MT",
           "#218f8d"
         ],
         [
-          "ND/Morton",
+          "MT/Flathead",
           "#21908d"
         ],
         [
-          "ND/Mountrail",
+          "MT/Phillips",
           "#21918c"
         ],
         [
-          "ND/Sargent",
+          "MT/Sheridan",
+          "#21918c"
+        ],
+        [
+          "NC",
           "#20928c"
         ],
         [
-          "ND/Stutsman",
+          "ND/Burleigh",
           "#20928c"
         ],
         [
-          "NE",
+          "ND/Grand-Forks",
           "#20938c"
         ],
         [
-          "NE/Douglas",
+          "ND/Logan",
           "#1f948c"
         ],
         [
-          "NE/Dundy",
+          "ND/Mclean",
+          "#1f948c"
+        ],
+        [
+          "ND/Morton",
           "#1f958b"
         ],
         [
-          "NE/Knox",
+          "ND/Mountrail",
           "#1f968b"
         ],
         [
-          "NJ",
+          "ND/Sargent",
           "#1f978b"
         ],
         [
-          "NJ/Bergen",
+          "ND/Stutsman",
           "#1f988b"
         ],
         [
-          "NJ/Mercer",
+          "NE",
           "#1f998a"
         ],
         [
-          "NJ/Middlesex",
+          "NE/Douglas",
+          "#1f998a"
+        ],
+        [
+          "NE/Dundy",
           "#1f9a8a"
         ],
         [
-          "NJ/Ocean",
+          "NE/Knox",
           "#1e9b8a"
         ],
         [
-          "NJ/Union",
+          "NH/Cheshire",
           "#1e9c89"
         ],
         [
-          "NM",
+          "NH/Hillsborough",
           "#1e9d89"
         ],
         [
-          "NM/Bernalillo",
+          "NH/Rockingham",
           "#1f9e89"
         ],
         [
-          "NM/Dona_Ana",
+          "NH/Strafford",
+          "#1f9e89"
+        ],
+        [
+          "NJ",
           "#1f9f88"
         ],
         [
-          "NM/Socorro",
+          "NJ/Bergen",
           "#1fa088"
         ],
         [
-          "NV",
+          "NJ/Mercer",
           "#1fa188"
         ],
         [
-          "NV/Churchill",
+          "NJ/Middlesex",
           "#1fa187"
         ],
         [
-          "NV/Pershing",
+          "NJ/Ocean",
+          "#1fa187"
+        ],
+        [
+          "NJ/Union",
           "#1fa287"
         ],
         [
-          "NY",
+          "NM",
           "#20a386"
         ],
         [
-          "NY/Albany",
+          "NM/Bernalillo",
           "#20a486"
         ],
         [
-          "NY/Bronx",
+          "NM/Dona-Ana",
           "#21a585"
         ],
         [
-          "NY/Broome",
+          "NM/Socorro",
           "#21a685"
         ],
         [
-          "NY/Cattaraugus",
+          "NV",
+          "#21a685"
+        ],
+        [
+          "NV/Churchill",
           "#22a785"
         ],
         [
-          "NY/Cayuga",
+          "NV/Pershing",
           "#22a884"
         ],
         [
-          "NY/Chautauqua",
+          "NY",
           "#23a983"
         ],
         [
-          "NY/Chemung",
+          "NY/Albany",
           "#24aa83"
         ],
         [
-          "NY/Clinton",
+          "NY/Bronx",
           "#25ab82"
         ],
         [
-          "NY/Columbia",
+          "NY/Broome",
+          "#25ab82"
+        ],
+        [
+          "NY/Cattaraugus",
           "#25ac82"
         ],
         [
-          "NY/Cortland",
+          "NY/Cayuga",
           "#26ad81"
         ],
         [
-          "NY/Dutchess",
+          "NY/Chautauqua",
           "#27ad81"
         ],
         [
-          "NY/Erie",
+          "NY/Chemung",
           "#28ae80"
         ],
         [
-          "NY/Essex",
+          "NY/Clinton",
           "#29af7f"
         ],
         [
-          "NY/Fulton",
+          "NY/Columbia",
+          "#29af7f"
+        ],
+        [
+          "NY/Cortland",
           "#2ab07f"
         ],
         [
-          "NY/Genesee",
+          "NY/Dutchess",
           "#2cb17e"
         ],
         [
-          "NY/Greene",
+          "NY/Erie",
           "#2db27d"
         ],
         [
-          "NY/Herkimer",
+          "NY/Essex",
           "#2eb37c"
         ],
         [
-          "NY/Jefferson",
+          "NY/Fulton",
+          "#2eb37c"
+        ],
+        [
+          "NY/Genesee",
           "#2fb47c"
         ],
         [
-          "NY/Kings",
+          "NY/Greene",
           "#31b57b"
         ],
         [
-          "NY/Lewis",
+          "NY/Herkimer",
           "#32b67a"
         ],
         [
-          "NY/Livingston",
+          "NY/Jefferson",
           "#34b679"
         ],
         [
-          "NY/Madison",
+          "NY/Kings",
           "#35b779"
         ],
         [
-          "NY/Monroe",
+          "NY/Lewis",
           "#35b779"
         ],
         [
-          "NY/Montgomery",
+          "NY/Livingston",
           "#37b878"
         ],
         [
-          "NY/Nassau",
+          "NY/Madison",
           "#38b977"
         ],
         [
-          "NY/New_York",
+          "NY/Monroe",
           "#3aba76"
         ],
         [
-          "NY/Niagara",
+          "NY/Montgomery",
           "#3bbb75"
         ],
         [
-          "NY/Oneida",
+          "NY/Nassau",
           "#3dbc74"
         ],
         [
-          "NY/Onondaga",
+          "NY/New-York",
+          "#3dbc74"
+        ],
+        [
+          "NY/Niagara",
           "#3fbc73"
         ],
         [
-          "NY/Ontario",
+          "NY/Oneida",
           "#40bd72"
         ],
         [
-          "NY/Orange",
+          "NY/Onondaga",
           "#42be71"
         ],
         [
-          "NY/Orleans",
+          "NY/Ontario",
           "#44bf70"
         ],
         [
-          "NY/Oswego",
+          "NY/Orange",
           "#46c06f"
         ],
         [
-          "NY/Otsego",
+          "NY/Orleans",
+          "#46c06f"
+        ],
+        [
+          "NY/Oswego",
           "#48c16e"
         ],
         [
-          "NY/Putnam",
+          "NY/Otsego",
           "#4ac16d"
         ],
         [
-          "NY/Queens",
+          "NY/Putnam",
           "#4cc26c"
+        ],
+        [
+          "NY/Queens",
+          "#4ec36b"
         ],
         [
           "NY/Rensselaer",
@@ -1059,7 +1216,7 @@
           "#52c569"
         ],
         [
-          "NY/Saint_Lawrence",
+          "NY/Saint-Lawrence",
           "#54c568"
         ],
         [
@@ -1072,115 +1229,143 @@
         ],
         [
           "NY/Schoharie",
-          "#5ac864"
+          "#58c765"
         ],
         [
           "NY/Schuyler",
-          "#5cc863"
+          "#5ac864"
         ],
         [
           "NY/Seneca",
-          "#5ec962"
+          "#5cc863"
         ],
         [
           "NY/Steuben",
-          "#60ca60"
+          "#5ec962"
         ],
         [
           "NY/Suffolk",
-          "#63cb5f"
+          "#60ca60"
         ],
         [
           "NY/Tompkins",
-          "#65cb5e"
+          "#63cb5f"
         ],
         [
           "NY/Ulster",
-          "#67cc5c"
+          "#63cb5f"
         ],
         [
           "NY/Warren",
-          "#69cd5b"
+          "#65cb5e"
         ],
         [
           "NY/Washington",
-          "#6ccd5a"
+          "#67cc5c"
         ],
         [
           "NY/Westchester",
-          "#6ece58"
+          "#69cd5b"
         ],
         [
           "NY/Wyoming",
-          "#70cf57"
+          "#6ccd5a"
         ],
         [
           "OH",
-          "#73d056"
+          "#6ece58"
         ],
         [
           "OH/Allen",
-          "#75d054"
+          "#6ece58"
         ],
         [
           "OH/Cuyahoga",
-          "#77d153"
+          "#70cf57"
         ],
         [
           "OH/Franklin",
-          "#7ad151"
+          "#73d056"
         ],
         [
           "OH/Hancock",
-          "#7cd250"
+          "#75d054"
         ],
         [
           "OH/Knox",
-          "#7fd34e"
+          "#77d153"
         ],
         [
           "OH/Licking",
-          "#81d34d"
+          "#77d153"
         ],
         [
           "OH/Medina",
-          "#84d44b"
+          "#7ad151"
         ],
         [
           "OH/Montgomery",
-          "#86d549"
+          "#7cd250"
         ],
         [
           "OH/Wood",
-          "#89d548"
+          "#7fd34e"
         ],
         [
           "OK",
-          "#8bd646"
+          "#81d34d"
         ],
         [
           "OK/Payne",
+          "#84d44b"
+        ],
+        [
+          "OR/Benton",
+          "#84d44b"
+        ],
+        [
+          "OR/Jackson",
+          "#86d549"
+        ],
+        [
+          "OR/Josephine",
+          "#89d548"
+        ],
+        [
+          "OR/Klamath",
+          "#8bd646"
+        ],
+        [
+          "OR/Malheur",
           "#8ed645"
         ],
         [
-          "PA",
+          "OR/Morrow",
           "#90d743"
         ],
         [
-          "PA/Bucks",
+          "OR/Umatilla",
+          "#90d743"
+        ],
+        [
+          "PA",
           "#93d741"
         ],
         [
-          "PA/Philadelphia",
+          "PA/Bucks",
           "#95d840"
         ],
         [
-          "SD",
+          "PA/Philadelphia",
           "#98d83e"
         ],
         [
-          "SD/Bennett",
+          "SD",
           "#9bd93c"
+        ],
+        [
+          "SD/Bennett",
+          "#9dd93b"
         ],
         [
           "SD/Day",
@@ -1204,102 +1389,126 @@
         ],
         [
           "TX",
-          "#aadc32"
+          "#a8db34"
         ],
         [
           "TX/Collin",
-          "#addc30"
+          "#aadc32"
         ],
         [
           "TX/Colllin",
-          "#b0dd2f"
+          "#addc30"
         ],
         [
           "TX/Concho",
-          "#b2dd2d"
+          "#b0dd2f"
         ],
         [
           "TX/Dallas",
-          "#b5de2b"
+          "#b2dd2d"
         ],
         [
           "TX/Denton",
-          "#b8de29"
+          "#b5de2b"
         ],
         [
-          "TX/El_Paso",
-          "#bade28"
+          "TX/El-Paso",
+          "#b5de2b"
         ],
         [
           "TX/Ellis",
-          "#bddf26"
+          "#b8de29"
         ],
         [
-          "TX/Fort_Bend",
-          "#c0df25"
+          "TX/Fort-Bend",
+          "#bade28"
         ],
         [
           "TX/Hall",
-          "#c2df23"
+          "#bddf26"
         ],
         [
           "TX/Harris",
-          "#c5e021"
+          "#c0df25"
         ],
         [
           "TX/Jefferson",
-          "#c8e020"
+          "#c2df23"
         ],
         [
           "TX/Montgomery",
-          "#cae11f"
+          "#c2df23"
         ],
         [
           "TX/Montogmery",
-          "#cde11d"
+          "#c5e021"
         ],
         [
           "TX/Potter",
-          "#d0e11c"
+          "#c8e020"
         ],
         [
           "TX/Tarrant",
-          "#d2e21b"
+          "#cae11f"
         ],
         [
           "TX/Travis",
-          "#d5e21a"
+          "#cde11d"
         ],
         [
           "TX/Williamson",
-          "#d8e219"
+          "#d0e11c"
         ],
         [
           "UT",
-          "#dae319"
+          "#d0e11c"
         ],
         [
           "UT/Sanpete",
-          "#dde318"
+          "#d2e21b"
         ],
         [
           "UT/Weber",
-          "#dfe318"
+          "#d5e21a"
         ],
         [
           "VA",
-          "#e2e418"
+          "#d8e219"
         ],
         [
           "VA/Arlington",
-          "#e5e419"
+          "#dae319"
         ],
         [
           "VA/Norfolk",
-          "#e7e419"
+          "#dae319"
+        ],
+        [
+          "VGB",
+          "#dde318"
+        ],
+        [
+          "VI/US-Virgin-Islands",
+          "#dfe318"
         ],
         [
           "WA",
+          "#e2e418"
+        ],
+        [
+          "WA/Franklin",
+          "#e5e419"
+        ],
+        [
+          "WA/Grant",
+          "#e7e419"
+        ],
+        [
+          "WA/Kittitas",
+          "#e7e419"
+        ],
+        [
+          "WA/Lincoln",
           "#eae51a"
         ],
         [
@@ -1311,8 +1520,12 @@
           "#efe51c"
         ],
         [
-          "WI",
+          "WA/Walla",
           "#f1e51d"
+        ],
+        [
+          "WI",
+          "#f4e61e"
         ],
         [
           "WI/Dane",
@@ -1451,6 +1664,10 @@
           "#8A2424"
         ],
         [
+          "OR",
+          "#9B3636"
+        ],
+        [
           "NV",
           "#AB4B4B"
         ],
@@ -1575,6 +1792,10 @@
           "#8EBAD9"
         ],
         [
+          "NH",
+          "#3F0B45"
+        ],
+        [
           "NY",
           "#501559"
         ],
@@ -1603,28 +1824,48 @@
           "#D5BBEA"
         ],
         [
-          "Israel",
-          "#4FE7E7"
+          "VI",
+          "#4C2F00"
         ],
         [
-          "Mexico",
-          "#38CDCD"
+          "VGB",
+          "#7F6233"
         ],
         [
-          "British-Virgin-Islands",
-          "#25B3B3"
+          "CAN/QC",
+          "#7FD000"
         ],
         [
-          "Colombia",
-          "#159999"
+          "MEX/BCN",
+          "#4E5900"
         ],
         [
-          "Brazil",
-          "#087F7F"
+          "MEX/SON",
+          "#7D882E"
         ],
         [
-          "Argentina",
-          "#006666"
+          "MEX/CHH",
+          "#ACB75C"
+        ],
+        [
+          "MEX/TAM",
+          "#DBE78A"
+        ],
+        [
+          "COL/ANT",
+          "#00594E"
+        ],
+        [
+          "BRA/ES",
+          "#00A08C"
+        ],
+        [
+          "ARG/B",
+          "#00E7CA"
+        ],
+        [
+          "ISR/D",
+          "#E533E5"
         ]
       ],
       "key": "state",
@@ -1651,272 +1892,364 @@
         "longitude": -86.8295336
       },
       "AL/Calhoun": {
-        "latitude": 33.7714,
-        "longitude": -85.8261
+        "latitude": -85.8261,
+        "longitude": 33.7714
       },
       "AL/Madison": {
-        "latitude": 34.7631,
-        "longitude": -86.5501
+        "latitude": -86.5501,
+        "longitude": 34.7631
       },
       "AL/Montgomery": {
-        "latitude": 32.2202,
-        "longitude": -86.2076
+        "latitude": -86.2076,
+        "longitude": 32.2202
       },
       "AR": {
         "latitude": 35.2048883,
         "longitude": -92.4479107
       },
       "AR/Saline": {
-        "latitude": 34.6466,
-        "longitude": -92.6766
+        "latitude": -92.6766,
+        "longitude": 34.6466
       },
       "AR/Sebastian": {
-        "latitude": 35.1995,
-        "longitude": -94.2738
+        "latitude": -94.2738,
+        "longitude": 35.1995
       },
       "AR/Union": {
-        "latitude": 33.1714,
-        "longitude": -92.5973
+        "latitude": -92.5973,
+        "longitude": 33.1714
+      },
+      "ARG/B/San-Antonio-De-Areco": {
+        "latitude": -59.466667,
+        "longitude": -34.25
       },
       "AZ": {
         "latitude": 34.395342,
         "longitude": -111.7632754
       },
       "AZ/Apache": {
-        "latitude": 35.6053,
-        "longitude": -109.4589
+        "latitude": -109.4589,
+        "longitude": 35.6053
       },
       "AZ/Cochise": {
-        "latitude": 31.7487,
-        "longitude": -110.024
+        "latitude": -110.024,
+        "longitude": 31.7487
       },
       "AZ/Coconino": {
-        "latitude": 35.8387,
-        "longitude": -111.7705
+        "latitude": -111.7705,
+        "longitude": 35.8387
       },
       "AZ/Maricopa": {
-        "latitude": 33.41803,
-        "longitude": -111.98733999999999
+        "latitude": -111.98733999999999,
+        "longitude": 33.41803
       },
       "AZ/Maricopoa": {
-        "latitude": 33.3813,
-        "longitude": -112.5735
+        "latitude": -112.5735,
+        "longitude": 33.3813
       },
       "AZ/Pima": {
-        "latitude": 32.2778,
-        "longitude": -111.06715
+        "latitude": -111.06715,
+        "longitude": 32.2778
       },
       "AZ/Yavapai": {
-        "latitude": 34.1698,
-        "longitude": -111.9337
+        "latitude": -111.9337,
+        "longitude": 34.1698
       },
-      "Argentina/San-Antonio-de-Areco": {
-        "latitude": -34.25,
-        "longitude": -59.466667
-      },
-      "Brazil/Sao-Mateus": {
-        "latitude": -18.715833,
-        "longitude": -39.858889
-      },
-      "British-Virgin-Islands/British-Virgin-Islands": {
-        "latitude": 18.43596,
-        "longitude": -64.616942
+      "BRA/ES/Sao-Mateus": {
+        "latitude": -39.858889,
+        "longitude": -18.715833
       },
       "CA": {
         "latitude": 36.7014631,
         "longitude": -118.7559973
       },
       "CA/Alameda": {
-        "latitude": 37.6095,
-        "longitude": -121.909
+        "latitude": -121.909,
+        "longitude": 37.6095
       },
       "CA/Butte": {
-        "latitude": 39.734857142857145,
-        "longitude": -121.79057142857144
+        "latitude": -85.94777777777779,
+        "longitude": 3.883777777777782
       },
       "CA/Calaveras": {
-        "latitude": 38.235,
-        "longitude": -120.712
+        "latitude": -120.712,
+        "longitude": 38.235
       },
-      "CA/Contra_Costa": {
-        "latitude": 37.97456363636364,
-        "longitude": -121.76312727272726
+      "CA/Contra-Costa": {
+        "latitude": -121.76312727272729,
+        "longitude": 37.974563636363634
+      },
+      "CA/Contracosta": {
+        "latitude": 37.9785,
+        "longitude": -122.07050000000001
       },
       "CA/Fresno": {
-        "latitude": 36.75884615384616,
-        "longitude": -119.89646153846154
+        "latitude": -83.02129411764706,
+        "longitude": -0.15270588235293972
       },
       "CA/Glenn": {
-        "latitude": 39.599,
-        "longitude": -122.3915
+        "latitude": -122.3915,
+        "longitude": 39.599
       },
       "CA/Imperial": {
-        "latitude": 33.033090909090916,
-        "longitude": -115.27457272727274
+        "latitude": -115.27457272727271,
+        "longitude": 33.03309090909091
       },
       "CA/Inyo": {
-        "latitude": 37.3494,
-        "longitude": -118.3681
+        "latitude": -118.3681,
+        "longitude": 37.3494
       },
       "CA/Kern": {
-        "latitude": 35.35242827225131,
-        "longitude": -119.08628167539267
+        "latitude": -105.78659712918662,
+        "longitude": 22.05683636363636
       },
       "CA/Kings": {
-        "latitude": 36.324625,
-        "longitude": -119.72524999999999
+        "latitude": -102.387,
+        "longitude": 18.97811111111112
       },
       "CA/Lake": {
-        "latitude": 39.00233333333333,
-        "longitude": -122.824
+        "latitude": -122.824,
+        "longitude": 39.00233333333333
       },
-      "CA/Los_Angeles": {
-        "latitude": 34.101426315789475,
-        "longitude": -118.2838736842105
+      "CA/Lassen": {
+        "latitude": 40.018,
+        "longitude": -120.124
+      },
+      "CA/Los-Angeles": {
+        "latitude": -118.2838736842105,
+        "longitude": 34.101426315789475
+      },
+      "CA/Losangeles": {
+        "latitude": 34.0543,
+        "longitude": -118.17080000000001
       },
       "CA/Madera": {
-        "latitude": 37.026,
-        "longitude": -120.118
+        "latitude": -41.573499999999996,
+        "longitude": -41.489999999999995
       },
       "CA/Merced": {
-        "latitude": 37.3245,
-        "longitude": -120.59549999999999
+        "latitude": -41.622499999999995,
+        "longitude": -41.653
       },
       "CA/Orange": {
-        "latitude": 33.8143,
-        "longitude": -117.8277
+        "latitude": -117.8277,
+        "longitude": 33.8143
       },
       "CA/Placer": {
-        "latitude": 38.75866666666667,
-        "longitude": -121.25533333333334
+        "latitude": -121.25533333333334,
+        "longitude": 38.75866666666667
       },
       "CA/Riverside": {
-        "latitude": 33.59178333333333,
-        "longitude": -116.20247916666666
+        "latitude": -94.76894642857143,
+        "longitude": 12.05313571428571
       },
       "CA/Sacramento": {
-        "latitude": 38.50209743589743,
-        "longitude": -121.36721025641026
+        "latitude": -109.06967337278105,
+        "longitude": 26.204930177514793
       },
-      "CA/San_Bernardino": {
-        "latitude": 34.15793333333333,
-        "longitude": -117.07095555555556
+      "CA/San-Bernardino": {
+        "latitude": -117.07095555555556,
+        "longitude": 34.157933333333325
       },
-      "CA/San_Diego": {
-        "latitude": 32.69561329479769,
-        "longitude": -116.421023699422
+      "CA/San-Diego": {
+        "latitude": -96.20680035522388,
+        "longitude": 11.996216521890545
       },
-      "CA/San_Fransisco": {
-        "latitude": 37.7817,
-        "longitude": -122.4615
+      "CA/San-Fransisco": {
+        "latitude": -122.4615,
+        "longitude": 37.7817
       },
-      "CA/San_Joaquin": {
-        "latitude": 37.971,
-        "longitude": -121.302
+      "CA/San-Joaquin": {
+        "latitude": -121.302,
+        "longitude": 37.971
+      },
+      "CA/Sanbernardino": {
+        "latitude": 34.071,
+        "longitude": -117.673
       },
       "CA/Shasta": {
-        "latitude": 40.489471428571434,
-        "longitude": -122.31922857142855
+        "latitude": -101.95807500000001,
+        "longitude": 20.1387875
       },
       "CA/Solano": {
-        "latitude": 38.5,
-        "longitude": -121.7529
+        "latitude": -81.717175,
+        "longitude": -1.6084999999999994
       },
       "CA/Stanislaus": {
-        "latitude": 37.5552,
-        "longitude": -120.9299
+        "latitude": -84.35423076923077,
+        "longitude": 0.994846153846151
       },
       "CA/Sutter": {
-        "latitude": 39.1386,
-        "longitude": -121.69885
+        "latitude": -41.37017499999999,
+        "longitude": -41.22545
       },
       "CA/Tulare": {
-        "latitude": 36.1625,
-        "longitude": -119.26916666666666
+        "latitude": -80.37075,
+        "longitude": -2.7104999999999997
+      },
+      "CA/Ventura": {
+        "latitude": 34.239000000000004,
+        "longitude": -118.7575
       },
       "CA/Yolo": {
-        "latitude": 38.635963157894736,
-        "longitude": -121.7954394736842
+        "latitude": -96.84079333333335,
+        "longitude": 13.685991111111104
       },
       "CA/Yuba": {
-        "latitude": 39.205999999999996,
-        "longitude": -121.55233333333332
+        "latitude": -81.37299999999999,
+        "longitude": -0.9864999999999995
+      },
+      "CAN/QC/Blainville": {
+        "latitude": -73.87619,
+        "longitude": 45.67932
+      },
+      "CAN/QC/Boucherville": {
+        "latitude": -73.4526144,
+        "longitude": 45.6050197
+      },
+      "CAN/QC/Chateauguay": {
+        "latitude": -73.7524319,
+        "longitude": 45.3619066
+      },
+      "CAN/QC/Cote-St-Luc-Hamstead": {
+        "latitude": -73.636528,
+        "longitude": 45.47675
+      },
+      "CAN/QC/Dorval": {
+        "latitude": -73.7510888,
+        "longitude": 45.4453082
+      },
+      "CAN/QC/Laval": {
+        "latitude": -73.7344173056906,
+        "longitude": 45.60558895
+      },
+      "CAN/QC/Longueuil": {
+        "latitude": -73.4467466,
+        "longitude": 45.5172382
+      },
+      "CAN/QC/Mirabel": {
+        "latitude": -74.012489,
+        "longitude": 45.623402
+      },
+      "CAN/QC/Montr\u00e9al": {
+        "latitude": -73.6103642,
+        "longitude": 45.49721590000001
+      },
+      "CAN/QC/Pointe-Claire": {
+        "latitude": -73.8067442,
+        "longitude": 45.4566767
+      },
+      "CAN/QC/Rosemont": {
+        "latitude": -73.5974076,
+        "longitude": 45.5315669
+      },
+      "CAN/QC/Saint-Bruno": {
+        "latitude": -71.653028,
+        "longitude": 48.4719308
+      },
+      "CAN/QC/Saint-Hyacinthe": {
+        "latitude": -72.940636,
+        "longitude": 45.627484
+      },
+      "CAN/QC/Saint-Lambert": {
+        "latitude": -73.5102981,
+        "longitude": 45.5016203
+      },
+      "CAN/QC/Sainte-Anne-Des-Plaines": {
+        "latitude": -73.818855,
+        "longitude": 45.76417
+      },
+      "CAN/QC/Sainte-Julie": {
+        "latitude": -73.3395943,
+        "longitude": 45.5930624
+      },
+      "CAN/QC/St-Jean-Sur-Richelieu": {
+        "latitude": -73.2533401,
+        "longitude": 45.3056879
+      },
+      "CAN/QC/Varennes": {
+        "latitude": -73.4362737,
+        "longitude": 45.6834691
+      },
+      "CAN/QC/Villeray-St-Michel": {
+        "latitude": -73.60386,
+        "longitude": 45.561064
       },
       "CO": {
         "latitude": 38.7251776,
         "longitude": -105.6077166
       },
       "CO/Larimer": {
-        "latitude": 40.5592,
-        "longitude": -105.0781
+        "latitude": -105.0781,
+        "longitude": 40.5592
       },
       "CO/Mesa": {
-        "latitude": 39.0723,
-        "longitude": -108.5429
+        "latitude": -108.5429,
+        "longitude": 39.0723
       },
       "CO/Park": {
-        "latitude": 38.9962,
-        "longitude": -105.5465
+        "latitude": -105.5465,
+        "longitude": 38.9962
       },
       "CO/Weld": {
         "latitude": 38.7251776,
         "longitude": -105.6077166
+      },
+      "COL/ANT/Medellin": {
+        "latitude": -75.58,
+        "longitude": 6.223333
       },
       "CT": {
         "latitude": 41.6500201,
         "longitude": -72.7342162
       },
       "CT/Fairfield": {
-        "latitude": 41.198814705882356,
-        "longitude": -73.18032794117647
+        "latitude": -73.1803279411765,
+        "longitude": 41.198814705882356
       },
       "CT/Hartford": {
-        "latitude": 41.64595,
-        "longitude": -72.71195
+        "latitude": -72.71195,
+        "longitude": 41.64595
       },
       "CT/Middlesex": {
-        "latitude": 41.37436666666667,
-        "longitude": -72.52681666666668
+        "latitude": -72.52681666666668,
+        "longitude": 41.374366666666674
       },
-      "CT/New_Haven": {
-        "latitude": 41.326905555555555,
-        "longitude": -72.94363333333334
+      "CT/New-Haven": {
+        "latitude": -72.94363333333334,
+        "longitude": 41.326905555555555
       },
-      "CT/New_London": {
-        "latitude": 41.40235,
-        "longitude": -71.96085
+      "CT/New-London": {
+        "latitude": -71.96085,
+        "longitude": 41.40235
       },
       "CT/Windham": {
-        "latitude": 41.64165,
-        "longitude": -71.86664999999999
+        "latitude": -71.86664999999999,
+        "longitude": 41.64165
       },
-      "Colombia/Medellin": {
-        "latitude": 6.223333,
-        "longitude": -75.58
-      },
-      "DC/District_of_Columbia": {
-        "latitude": 38.9102,
-        "longitude": -77.0145
+      "DC/District-Of-Columbia": {
+        "latitude": -77.0145,
+        "longitude": 38.9102
       },
       "FL/Hillsborough": {
-        "latitude": 27.9826,
-        "longitude": -82.3401
+        "latitude": -82.3401,
+        "longitude": 27.9826
       },
-      "FL/Indian_River": {
-        "latitude": 27.6393,
-        "longitude": -80.6822
+      "FL/Indian-River": {
+        "latitude": -80.6822,
+        "longitude": 27.6393
       },
-      "FL/Palm_Beach": {
-        "latitude": 26.6941,
-        "longitude": -80.0379
+      "FL/Palm-Beach": {
+        "latitude": -80.0379,
+        "longitude": 26.6941
       },
       "FL/Seminole": {
-        "latitude": 28.7174,
-        "longitude": -81.2363
+        "latitude": -81.2363,
+        "longitude": 28.7174
       },
       "FL/Sumter": {
-        "latitude": 28.6964,
-        "longitude": -82.0038
+        "latitude": -82.0038,
+        "longitude": 28.6964
       },
       "GA": {
         "latitude": 32.3293809,
@@ -1935,8 +2268,8 @@
         "longitude": -83.1137365
       },
       "GA/Fulton": {
-        "latitude": 33.7903,
-        "longitude": -84.4671
+        "latitude": -84.4671,
+        "longitude": 33.7903
       },
       "GA/Gwinnett": {
         "latitude": 32.3293809,
@@ -1963,12 +2296,16 @@
         "longitude": -83.1137365
       },
       "GA/Wilkinson": {
-        "latitude": 32.6808,
-        "longitude": -83.2519
+        "latitude": -83.2519,
+        "longitude": 32.6808
+      },
+      "IA": {
+        "latitude": 41.9216734,
+        "longitude": -93.3122704
       },
       "IA/Kossuth": {
-        "latitude": 43.2041,
-        "longitude": -94.2067
+        "latitude": -94.2067,
+        "longitude": 43.2041
       },
       "ID": {
         "latitude": 43.93,
@@ -1979,24 +2316,24 @@
         "longitude": -89.4339808
       },
       "IL/Cook": {
-        "latitude": 41.95915,
-        "longitude": -87.82045
+        "latitude": -87.82045,
+        "longitude": 41.95915
       },
       "IL/Dupage": {
-        "latitude": 41.852,
-        "longitude": -88.0856
+        "latitude": -88.0856,
+        "longitude": 41.852
       },
       "IL/Will": {
-        "latitude": 41.445,
-        "longitude": -87.9787
+        "latitude": -87.9787,
+        "longitude": 41.445
       },
       "IN/Hendricks": {
-        "latitude": 39.7709,
-        "longitude": -86.4445
+        "latitude": -86.4445,
+        "longitude": 39.7709
       },
-      "Israel/Israel/Eilat": {
-        "latitude": 31.0,
-        "longitude": 35.0
+      "ISR/D/Eilat": {
+        "latitude": 35.0,
+        "longitude": 31.0
       },
       "KS": {
         "latitude": 38.65,
@@ -2007,16 +2344,56 @@
         "longitude": -85.155141
       },
       "KY/Boone": {
-        "latitude": 38.97,
-        "longitude": -84.728
+        "latitude": -84.728,
+        "longitude": 38.97
       },
       "LA": {
         "latitude": 30.8703881,
         "longitude": -92.0071259
       },
+      "LA/Allen": {
+        "latitude": -92.85769600000002,
+        "longitude": 30.588696
+      },
+      "LA/Ascension": {
+        "latitude": -90.940703,
+        "longitude": 30.203611
+      },
+      "LA/Bossier": {
+        "latitude": -93.59597860000001,
+        "longitude": 32.6676663
+      },
+      "LA/Caddo": {
+        "latitude": -93.8931785,
+        "longitude": 32.529173
+      },
+      "LA/Calcasieu": {
+        "latitude": -93.3434067,
+        "longitude": 30.2232015
+      },
+      "LA/Eastbatonrouge": {
+        "latitude": -91.0899217,
+        "longitude": 30.5254797
+      },
       "LA/Iberia": {
-        "latitude": 29.9366,
-        "longitude": -91.8695
+        "latitude": -91.8695,
+        "longitude": 29.9366
+      },
+      "LA/Ouachita": {
+        "latitude": -92.16150040000001,
+        "longitude": 32.4790511
+      },
+      "LA/Sttammany": {
+        "latitude": -89.9730381,
+        "longitude": 30.424390900000002
+      },
+      "LA/Tangipahioa": {
+        "latitude": -90.374812,
+        "longitude": 30.6211
+      },
+      "LA/Westbatonrouge": {
+        "latitude": -91.32618820000002,
+        "longitude": 30.451462299999996
       },
       "MA": {
         "latitude": 42.34,
@@ -2026,525 +2403,565 @@
         "latitude": 39.5162234,
         "longitude": -76.9382068
       },
-      "MD/Anne_Arundel": {
-        "latitude": 39.0052,
-        "longitude": -76.6117
+      "MD/Anne-Arundel": {
+        "latitude": -76.6117,
+        "longitude": 39.0052
       },
       "MD/Baltimore": {
-        "latitude": 39.425,
-        "longitude": -76.7779
+        "latitude": -76.7779,
+        "longitude": 39.425
       },
-      "MD/Prince_George's": {
-        "latitude": 38.8325,
-        "longitude": -76.8445
+      "MD/Prince-George's": {
+        "latitude": -76.8445,
+        "longitude": 38.8325
       },
       "MD/Talbot": {
-        "latitude": 38.7761,
-        "longitude": -76.0876
+        "latitude": -76.0876,
+        "longitude": 38.7761
+      },
+      "MEX/BCN": {
+        "latitude": 30.0,
+        "longitude": -115.166667
+      },
+      "MEX/CHH/Ciudad-Juarez": {
+        "latitude": -106.4869,
+        "longitude": 31.7394
+      },
+      "MEX/SON": {
+        "latitude": 29.646111,
+        "longitude": -110.868889
+      },
+      "MEX/TAM": {
+        "latitude": 24.283333,
+        "longitude": -98.566667
       },
       "MI": {
         "latitude": 43.6211955,
         "longitude": -84.6824345
       },
       "MI/Isabella": {
-        "latitude": 43.7389,
-        "longitude": -84.6273
+        "latitude": -84.6273,
+        "longitude": 43.7389
       },
       "MI/Lapeer": {
-        "latitude": 43.0902,
-        "longitude": -83.2218
+        "latitude": -83.2218,
+        "longitude": 43.0902
       },
       "MI/Lenawee": {
-        "latitude": 41.895,
-        "longitude": -84.0663
+        "latitude": -84.0663,
+        "longitude": 41.895
       },
       "MI/Oakland": {
-        "latitude": 42.6604,
-        "longitude": -83.3858
+        "latitude": -83.3858,
+        "longitude": 42.6604
       },
       "MI/Wayne": {
-        "latitude": 42.2865,
-        "longitude": -83.2895
+        "latitude": -83.2895,
+        "longitude": 42.2865
       },
       "MN": {
         "latitude": 45.9896587,
         "longitude": -94.6113287
       },
-      "MN/Lacqui_Parle": {
-        "latitude": 44.9955,
-        "longitude": -96.1734
+      "MN/Lacqui-Parle": {
+        "latitude": -96.1734,
+        "longitude": 44.9955
       },
       "MN/Marshall": {
-        "latitude": 48.3581,
-        "longitude": -96.3686
+        "latitude": -96.3686,
+        "longitude": 48.3581
       },
-      "MN/Otter_Tail": {
-        "latitude": 46.4088,
-        "longitude": -95.708
+      "MN/Otter-Tail": {
+        "latitude": -95.708,
+        "longitude": 46.4088
       },
       "MN/Swift": {
-        "latitude": 45.2827,
-        "longitude": -95.6814
+        "latitude": -95.6814,
+        "longitude": 45.2827
       },
       "MO": {
         "latitude": 38.7604815,
         "longitude": -92.5617874
       },
       "MO/Holt": {
-        "latitude": 40.0946,
-        "longitude": -95.2164
+        "latitude": -95.2164,
+        "longitude": 40.0946
       },
-      "MO/Saint_Louis": {
-        "latitude": 38.6361,
-        "longitude": -90.2449
+      "MO/Saint-Louis": {
+        "latitude": -90.2449,
+        "longitude": 38.6361
       },
       "MS": {
         "latitude": 32.9715645,
         "longitude": -89.7348496
       },
       "MS/Adams": {
-        "latitude": 31.4829,
-        "longitude": -91.3533
+        "latitude": -91.3533,
+        "longitude": 31.4829
       },
       "MT": {
         "latitude": 47.3752671,
         "longitude": -109.6387578
       },
       "MT/Flathead": {
-        "latitude": 48.2952,
-        "longitude": -114.0498
+        "latitude": -114.0498,
+        "longitude": 48.2952
       },
       "MT/Phillips": {
-        "latitude": 44.872083333333336,
-        "longitude": -103.71436666666669
+        "latitude": -103.71436666666669,
+        "longitude": 44.872083333333336
       },
       "MT/Sheridan": {
-        "latitude": 48.7212,
-        "longitude": -104.5047
-      },
-      "Mexico/Baja_California": {
-        "latitude": 30.297699999999995,
-        "longitude": -114.93989999999998
-      },
-      "Mexico/Ciudad_Juarez": {
-        "latitude": 31.7394,
-        "longitude": -106.4869
-      },
-      "Mexico/Sonora": {
-        "latitude": 29.3524,
-        "longitude": -111.6824
-      },
-      "Mexico/Tamaulipas": {
-        "latitude": 24.9314,
-        "longitude": -98.6356
-      },
-      "Mexico/unknown": {
-        "latitude": 30.2977,
-        "longitude": -114.9399
+        "latitude": -104.5047,
+        "longitude": 48.7212
       },
       "NC": {
         "latitude": 35.58,
         "longitude": -80.1
       },
       "ND/Burleigh": {
-        "latitude": 46.009366666666665,
-        "longitude": -101.3809
+        "latitude": -101.3809,
+        "longitude": 46.009366666666665
       },
-      "ND/Grand_Forks": {
-        "latitude": 47.922,
-        "longitude": -97.457
+      "ND/Grand-Forks": {
+        "latitude": -97.457,
+        "longitude": 47.922
       },
       "ND/Logan": {
-        "latitude": 46.4574,
-        "longitude": -99.4775
+        "latitude": -99.4775,
+        "longitude": 46.4574
       },
-      "ND/McLean": {
-        "latitude": 47.6068,
-        "longitude": -101.3217
+      "ND/Mclean": {
+        "latitude": -101.3217,
+        "longitude": 47.6068
       },
       "ND/Morton": {
-        "latitude": 46.7163,
-        "longitude": -101.2823
+        "latitude": -101.2823,
+        "longitude": 46.7163
       },
       "ND/Mountrail": {
-        "latitude": 48.2014,
-        "longitude": -102.3556
+        "latitude": -102.3556,
+        "longitude": 48.2014
       },
       "ND/Sargent": {
-        "latitude": 46.1079,
-        "longitude": -97.6307
+        "latitude": -97.6307,
+        "longitude": 46.1079
       },
       "ND/Stutsman": {
-        "latitude": 46.9793,
-        "longitude": -98.9588
+        "latitude": -98.9588,
+        "longitude": 46.9793
       },
       "NE": {
         "latitude": 43.6211955,
         "longitude": -84.6824345
       },
       "NE/Douglas": {
-        "latitude": 41.2628,
-        "longitude": -96.1193
+        "latitude": -96.1193,
+        "longitude": 41.2628
       },
       "NE/Dundy": {
         "latitude": 43.6211955,
         "longitude": -84.6824345
       },
       "NE/Knox": {
-        "latitude": 42.6363,
-        "longitude": -97.8921
+        "latitude": -97.8921,
+        "longitude": 42.6363
+      },
+      "NH/Cheshire": {
+        "latitude": -72.2834412,
+        "longitude": 42.9525022
+      },
+      "NH/Hillsborough": {
+        "latitude": -71.751376,
+        "longitude": 42.9373379
+      },
+      "NH/Rockingham": {
+        "latitude": -71.10031430000001,
+        "longitude": 42.996667500000015
+      },
+      "NH/Strafford": {
+        "latitude": -71.0399927,
+        "longitude": 43.3312505
       },
       "NJ": {
         "latitude": 40.0757384,
         "longitude": -74.4041621
       },
       "NJ/Bergen": {
-        "latitude": 40.9453,
-        "longitude": -74.0713
+        "latitude": -74.0713,
+        "longitude": 40.9453
       },
       "NJ/Mercer": {
-        "latitude": 40.2833,
-        "longitude": -74.7017
+        "latitude": -74.7017,
+        "longitude": 40.2833
       },
       "NJ/Middlesex": {
-        "latitude": 40.4384,
-        "longitude": -74.413
+        "latitude": -74.413,
+        "longitude": 40.4384
       },
       "NJ/Ocean": {
-        "latitude": 39.914,
-        "longitude": -74.3001
+        "latitude": -74.3001,
+        "longitude": 39.914
       },
       "NJ/Union": {
-        "latitude": 40.6601,
-        "longitude": -74.3107
+        "latitude": -74.3107,
+        "longitude": 40.6601
       },
       "NM": {
         "latitude": 34.5708167,
         "longitude": -105.9930069
       },
       "NM/Bernalillo": {
-        "latitude": 35.1995,
-        "longitude": -106.6442
+        "latitude": -106.6442,
+        "longitude": 35.1995
       },
-      "NM/Dona_Ana": {
-        "latitude": 32.2825,
-        "longitude": -106.737
+      "NM/Dona-Ana": {
+        "latitude": -106.737,
+        "longitude": 32.2825
       },
       "NM/Socorro": {
-        "latitude": 34.0072,
-        "longitude": -106.9303
+        "latitude": -106.9303,
+        "longitude": 34.0072
       },
       "NV": {
         "latitude": 39.5158825,
         "longitude": -116.8537226
       },
       "NV/Churchill": {
-        "latitude": 39.5809,
-        "longitude": -118.3358
+        "latitude": -118.3358,
+        "longitude": 39.5809
       },
       "NV/Pershing": {
-        "latitude": 40.4404,
-        "longitude": -118.4044
+        "latitude": -118.4044,
+        "longitude": 40.4404
       },
       "NY": {
         "latitude": 40.7642499,
         "longitude": -73.9545249
       },
       "NY/Albany": {
-        "latitude": 42.59695882352941,
-        "longitude": -73.97085882352941
+        "latitude": -73.97085882352941,
+        "longitude": 42.596958823529405
       },
       "NY/Bronx": {
-        "latitude": 40.8430375,
-        "longitude": -73.8818125
+        "latitude": -73.8818125,
+        "longitude": 40.8430375
       },
       "NY/Broome": {
-        "latitude": 42.16468571428571,
-        "longitude": -75.82841428571429
+        "latitude": -75.82841428571429,
+        "longitude": 42.16468571428571
       },
       "NY/Cattaraugus": {
-        "latitude": 42.2484,
-        "longitude": -78.6795
+        "latitude": -78.6795,
+        "longitude": 42.2484
       },
       "NY/Cayuga": {
-        "latitude": 42.9159,
-        "longitude": -76.5537
+        "latitude": -76.5537,
+        "longitude": 42.9159
       },
       "NY/Chautauqua": {
-        "latitude": 42.22837,
-        "longitude": -79.38244999999999
+        "latitude": -79.38244999999999,
+        "longitude": 42.22837
       },
       "NY/Chemung": {
-        "latitude": 42.1422,
-        "longitude": -76.7607
+        "latitude": -76.7607,
+        "longitude": 42.1422
       },
       "NY/Clinton": {
-        "latitude": 44.800250000000005,
-        "longitude": -73.67175
+        "latitude": -73.67175,
+        "longitude": 44.800250000000005
       },
       "NY/Columbia": {
-        "latitude": 42.2497,
-        "longitude": -73.63268000000001
+        "latitude": -73.63268000000001,
+        "longitude": 42.249700000000004
       },
       "NY/Cortland": {
-        "latitude": 42.595,
-        "longitude": -76.0709
+        "latitude": -76.0709,
+        "longitude": 42.595
       },
       "NY/Dutchess": {
-        "latitude": 41.765100000000004,
-        "longitude": -73.7437
+        "latitude": -73.7437,
+        "longitude": 41.765100000000004
       },
       "NY/Erie": {
-        "latitude": 42.754799999999996,
-        "longitude": -78.72392352941176
+        "latitude": -78.72392352941176,
+        "longitude": 42.754799999999996
       },
       "NY/Essex": {
-        "latitude": 44.1175,
-        "longitude": -73.7744
+        "latitude": -73.7744,
+        "longitude": 44.1175
       },
       "NY/Fulton": {
-        "latitude": 43.1134,
-        "longitude": -74.4255
+        "latitude": -74.4255,
+        "longitude": 43.1134
       },
       "NY/Genesee": {
-        "latitude": 43.001200000000004,
-        "longitude": -78.1943
+        "latitude": -78.1943,
+        "longitude": 43.001200000000004
       },
       "NY/Greene": {
-        "latitude": 42.2774,
-        "longitude": -74.1218
+        "latitude": -74.1218,
+        "longitude": 42.2774
       },
       "NY/Herkimer": {
-        "latitude": 43.4174,
-        "longitude": -74.9634
+        "latitude": -74.9634,
+        "longitude": 43.4174
       },
       "NY/Jefferson": {
-        "latitude": 44.0378,
-        "longitude": -75.9071
+        "latitude": -75.9071,
+        "longitude": 44.0378
       },
       "NY/Kings": {
-        "latitude": 40.64508000000001,
-        "longitude": -73.94916
+        "latitude": -73.94916,
+        "longitude": 40.64508
       },
       "NY/Lewis": {
-        "latitude": 43.7854,
-        "longitude": -75.4498
+        "latitude": -75.4498,
+        "longitude": 43.7854
       },
       "NY/Livingston": {
-        "latitude": 42.7278,
-        "longitude": -77.7748
+        "latitude": -77.7748,
+        "longitude": 42.7278
       },
       "NY/Madison": {
-        "latitude": 42.860366666666664,
-        "longitude": -75.71841666666667
+        "latitude": -75.71841666666667,
+        "longitude": 42.860366666666664
       },
       "NY/Monroe": {
-        "latitude": 43.1463,
-        "longitude": -77.69712857142856
+        "latitude": -77.69712857142856,
+        "longitude": 43.1463
       },
       "NY/Montgomery": {
-        "latitude": 42.901,
-        "longitude": -74.4403
+        "latitude": -74.4403,
+        "longitude": 42.901
       },
       "NY/Nassau": {
-        "latitude": 40.74682,
-        "longitude": -73.58880000000002
+        "latitude": -73.5888,
+        "longitude": 40.74682
       },
-      "NY/New_York": {
-        "latitude": 40.7759,
-        "longitude": -73.97135999999999
+      "NY/New-York": {
+        "latitude": -73.97135999999999,
+        "longitude": 40.7759
       },
       "NY/Niagara": {
-        "latitude": 43.20179333333335,
-        "longitude": -78.74228666666667
+        "latitude": -78.74228666666667,
+        "longitude": 43.20179333333335
       },
       "NY/Oneida": {
-        "latitude": 43.2417,
-        "longitude": -75.4362
+        "latitude": -75.4362,
+        "longitude": 43.2417
       },
       "NY/Onondaga": {
-        "latitude": 43.00686944444445,
-        "longitude": -76.19449444444444
+        "latitude": -76.19449444444444,
+        "longitude": 43.00686944444445
       },
       "NY/Ontario": {
-        "latitude": 42.8519,
-        "longitude": -77.2998
+        "latitude": -77.2998,
+        "longitude": 42.8519
       },
       "NY/Orange": {
-        "latitude": 41.402,
-        "longitude": -74.30580769230768
+        "latitude": -74.30580769230768,
+        "longitude": 41.402
       },
       "NY/Orleans": {
-        "latitude": 43.2529,
-        "longitude": -78.2322
+        "latitude": -78.2322,
+        "longitude": 43.2529
       },
       "NY/Oswego": {
-        "latitude": 43.428663157894746,
-        "longitude": -76.14743157894738
+        "latitude": -76.14743157894738,
+        "longitude": 43.428663157894746
       },
       "NY/Otsego": {
-        "latitude": 42.6327,
-        "longitude": -75.0315
+        "latitude": -75.0315,
+        "longitude": 42.6327
       },
       "NY/Putnam": {
-        "latitude": 41.426,
-        "longitude": -73.7498
+        "latitude": -73.7498,
+        "longitude": 41.426
       },
       "NY/Queens": {
-        "latitude": 40.722141666666666,
-        "longitude": -73.81720833333333
+        "latitude": -73.81720833333333,
+        "longitude": 40.72214166666666
       },
       "NY/Rensselaer": {
-        "latitude": 42.71189999999999,
-        "longitude": -73.5099
+        "latitude": -73.5099,
+        "longitude": 42.71189999999999
       },
       "NY/Richmond": {
-        "latitude": 40.58069999999999,
-        "longitude": -74.15329999999997
+        "latitude": -74.15329999999997,
+        "longitude": 40.58069999999999
       },
       "NY/Rockland": {
-        "latitude": 41.15268484848485,
-        "longitude": -74.02310909090907
+        "latitude": -74.02310909090907,
+        "longitude": 41.152684848484846
       },
-      "NY/Saint_Lawrence": {
-        "latitude": 44.489200000000004,
-        "longitude": -75.0641
+      "NY/Saint-Lawrence": {
+        "latitude": -75.0641,
+        "longitude": 44.489200000000004
       },
       "NY/Saratoga": {
-        "latitude": 43.1076,
-        "longitude": -73.8666
+        "latitude": -73.8666,
+        "longitude": 43.1076
       },
       "NY/Schenectady": {
-        "latitude": 42.81810000000001,
-        "longitude": -74.05848333333333
+        "latitude": -74.05848333333333,
+        "longitude": 42.81810000000001
       },
       "NY/Schoharie": {
-        "latitude": 42.5874,
-        "longitude": -74.4425
+        "latitude": -74.4425,
+        "longitude": 42.5874
       },
       "NY/Schuyler": {
-        "latitude": 42.3945,
-        "longitude": -76.8751
+        "latitude": -76.8751,
+        "longitude": 42.3945
       },
       "NY/Seneca": {
-        "latitude": 42.7806,
-        "longitude": -76.8222
+        "latitude": -76.8222,
+        "longitude": 42.7806
       },
       "NY/Steuben": {
-        "latitude": 42.268,
-        "longitude": -77.384
+        "latitude": -77.384,
+        "longitude": 42.268
       },
       "NY/Suffolk": {
-        "latitude": 40.876485,
-        "longitude": -72.8644875
+        "latitude": -72.8644875,
+        "longitude": 40.876485
       },
       "NY/Tompkins": {
-        "latitude": 42.4516,
-        "longitude": -76.474
+        "latitude": -76.474,
+        "longitude": 42.4516
       },
       "NY/Ulster": {
-        "latitude": 41.88819999999999,
-        "longitude": -74.25868333333334
+        "latitude": -74.25868333333334,
+        "longitude": 41.88819999999999
       },
       "NY/Warren": {
-        "latitude": 43.5613,
-        "longitude": -73.8525
+        "latitude": -73.8525,
+        "longitude": 43.5613
       },
       "NY/Washington": {
-        "latitude": 43.3152,
-        "longitude": -73.4354
+        "latitude": -73.4354,
+        "longitude": 43.3152
       },
       "NY/Westchester": {
-        "latitude": 41.16146,
-        "longitude": -73.75698333333335
+        "latitude": -73.75698333333335,
+        "longitude": 41.161460000000005
       },
       "NY/Wyoming": {
-        "latitude": 42.7023,
-        "longitude": -78.223
+        "latitude": -78.223,
+        "longitude": 42.7023
       },
       "OH": {
         "latitude": 40.2253569,
         "longitude": -82.6881394
       },
       "OH/Allen": {
-        "latitude": 40.7715,
-        "longitude": -84.1058
+        "latitude": -84.1058,
+        "longitude": 40.7715
       },
       "OH/Cuyahoga": {
-        "latitude": 41.4243,
-        "longitude": -81.6586
+        "latitude": -81.6586,
+        "longitude": 41.4243
       },
       "OH/Franklin": {
-        "latitude": 39.9695,
-        "longitude": -83.0093
+        "latitude": -83.0093,
+        "longitude": 39.9695
       },
       "OH/Hancock": {
-        "latitude": 41.0019,
-        "longitude": -83.6665
+        "latitude": -83.6665,
+        "longitude": 41.0019
       },
       "OH/Knox": {
-        "latitude": 40.3988,
-        "longitude": -82.4215
+        "latitude": -82.4215,
+        "longitude": 40.3988
       },
       "OH/Licking": {
-        "latitude": 40.1937,
-        "longitude": -82.666
+        "latitude": -82.666,
+        "longitude": 40.1937
       },
       "OH/Medina": {
-        "latitude": 41.1176,
-        "longitude": -81.8997
+        "latitude": -81.8997,
+        "longitude": 41.1176
       },
       "OH/Montgomery": {
-        "latitude": 39.7546,
-        "longitude": -84.2906
+        "latitude": -84.2906,
+        "longitude": 39.7546
       },
       "OH/Wood": {
-        "latitude": 41.3617,
-        "longitude": -83.623
+        "latitude": -83.623,
+        "longitude": 41.3617
       },
       "OK": {
         "latitude": 34.9550817,
         "longitude": -97.2684062
       },
       "OK/Payne": {
-        "latitude": 36.0773,
-        "longitude": -96.9758
+        "latitude": -96.9758,
+        "longitude": 36.0773
+      },
+      "OR/Benton": {
+        "latitude": -123.4065679,
+        "longitude": 44.494937
+      },
+      "OR/Jackson": {
+        "latitude": -122.7540948,
+        "longitude": 42.398015
+      },
+      "OR/Josephine": {
+        "latitude": -123.5602707,
+        "longitude": 42.3554368
+      },
+      "OR/Klamath": {
+        "latitude": -121.739544,
+        "longitude": 42.6052565
+      },
+      "OR/Malheur": {
+        "latitude": -117.6916892,
+        "longitude": 43.1023481
+      },
+      "OR/Morrow": {
+        "latitude": -119.6052459,
+        "longitude": 45.360901
+      },
+      "OR/Umatilla": {
+        "latitude": -118.7671122,
+        "longitude": 45.6416995
       },
       "PA": {
         "latitude": 40.9699889,
         "longitude": -77.727883
       },
       "PA/Bucks": {
-        "latitude": 40.3369,
-        "longitude": -75.1068
+        "latitude": -75.1068,
+        "longitude": 40.3369
       },
       "PA/Philadelphia": {
-        "latitude": 40.0097,
-        "longitude": -75.1337
+        "latitude": -75.1337,
+        "longitude": 40.0097
       },
       "SD": {
         "latitude": 44.6471761,
         "longitude": -100.3487609
       },
       "SD/Bennett": {
-        "latitude": 43.195,
-        "longitude": -101.6642
+        "latitude": -101.6642,
+        "longitude": 43.195
       },
       "SD/Day": {
-        "latitude": 45.3672,
-        "longitude": -97.6074
+        "latitude": -97.6074,
+        "longitude": 45.3672
       },
       "SD/Pennington": {
-        "latitude": 44.0037,
-        "longitude": -102.8238
+        "latitude": -102.8238,
+        "longitude": 44.0037
       },
       "SD/Stanley": {
-        "latitude": 44.216,
-        "longitude": -100.2502
+        "latitude": -100.2502,
+        "longitude": 44.216
       },
       "SD/Yankton": {
-        "latitude": 43.009,
-        "longitude": -97.3946
+        "latitude": -97.3946,
+        "longitude": 43.009
       },
       "TN": {
         "latitude": 35.84,
@@ -2555,60 +2972,60 @@
         "longitude": -99.5120985
       },
       "TX/Collin": {
-        "latitude": 33.082499999999996,
-        "longitude": -96.6515
+        "latitude": -96.6515,
+        "longitude": 33.082499999999996
       },
       "TX/Colllin": {
         "latitude": 31.8160381,
         "longitude": -99.5120985
       },
       "TX/Concho": {
-        "latitude": 31.1697,
-        "longitude": -100.0787
+        "latitude": -100.0787,
+        "longitude": 31.1697
       },
       "TX/Dallas": {
-        "latitude": 32.825785714285715,
-        "longitude": -96.76052857142857
+        "latitude": -96.76052857142858,
+        "longitude": 32.825785714285715
       },
       "TX/Denton": {
-        "latitude": 33.2164,
-        "longitude": -97.1292
+        "latitude": -97.1292,
+        "longitude": 33.2164
       },
-      "TX/El_Paso": {
-        "latitude": 31.78197,
-        "longitude": -106.32427
+      "TX/El-Paso": {
+        "latitude": -106.32427,
+        "longitude": 31.78197
       },
       "TX/Ellis": {
         "latitude": 31.8160381,
         "longitude": -99.5120985
       },
-      "TX/Fort_Bend": {
+      "TX/Fort-Bend": {
         "latitude": 31.8160381,
         "longitude": -99.5120985
       },
       "TX/Hall": {
-        "latitude": 34.4489,
-        "longitude": -100.6899
+        "latitude": -100.6899,
+        "longitude": 34.4489
       },
       "TX/Harris": {
-        "latitude": 29.82540681818182,
-        "longitude": -95.42535227272725
+        "latitude": -95.42535227272728,
+        "longitude": 29.825406818181808
       },
       "TX/Jefferson": {
-        "latitude": 29.9782,
-        "longitude": -94.13499999999999
+        "latitude": -94.13499999999999,
+        "longitude": 29.9782
       },
       "TX/Montgomery": {
-        "latitude": 30.3011,
-        "longitude": -95.5054
+        "latitude": -95.5054,
+        "longitude": 30.3011
       },
       "TX/Montogmery": {
-        "latitude": 30.1775,
-        "longitude": -95.50390000000002
+        "latitude": -95.50390000000002,
+        "longitude": 30.1775
       },
       "TX/Potter": {
-        "latitude": 34.86525,
-        "longitude": -102.39670000000001
+        "latitude": -102.39670000000001,
+        "longitude": 34.86525
       },
       "TX/Tarrant": {
         "latitude": 31.8160381,
@@ -2627,60 +3044,88 @@
         "longitude": -111.7143583
       },
       "UT/Sanpete": {
-        "latitude": 39.497,
-        "longitude": -111.5452
+        "latitude": -111.5452,
+        "longitude": 39.497
       },
       "UT/Weber": {
-        "latitude": 41.2699,
-        "longitude": -111.9133
+        "latitude": -111.9133,
+        "longitude": 41.2699
       },
       "VA": {
         "latitude": 37.1232245,
         "longitude": -78.492772
       },
       "VA/Arlington": {
-        "latitude": 38.8787,
-        "longitude": -77.1012
+        "latitude": -77.1012,
+        "longitude": 38.8787
       },
       "VA/Norfolk": {
         "latitude": 37.1232245,
         "longitude": -78.492772
       },
+      "VGB": {
+        "latitude": 18.43596,
+        "longitude": -64.616942
+      },
+      "VI/US-Virgin-Islands": {
+        "latitude": -64.7080574,
+        "longitude": 17.789187
+      },
       "WA": {
         "latitude": 47.6,
         "longitude": -122.33
       },
+      "WA/Franklin": {
+        "latitude": -118.867182,
+        "longitude": 46.493587
+      },
+      "WA/Grant": {
+        "latitude": -119.4904332,
+        "longitude": 47.119015
+      },
+      "WA/Kittitas": {
+        "latitude": -120.5849305,
+        "longitude": 47.1057471
+      },
+      "WA/Lincoln": {
+        "latitude": -118.3588615,
+        "longitude": 47.5664588
+      },
       "WA/Pierce": {
-        "latitude": 47.251,
-        "longitude": -122.412
+        "latitude": -122.412,
+        "longitude": 47.251
       },
       "WA/Spokane": {
-        "latitude": 47.627,
-        "longitude": -117.384
+        "latitude": -117.39338696,
+        "longitude": 47.59039856
+      },
+      "WA/Walla": {
+        "latitude": -118.342928,
+        "longitude": 46.06474
       },
       "WI": {
         "latitude": 44.4308975,
         "longitude": -89.6884636
       },
       "WI/Dane": {
-        "latitude": 43.0673,
-        "longitude": -89.4182
+        "latitude": -89.4182,
+        "longitude": 43.0673
       },
       "WI/Dodge": {
-        "latitude": 43.4163,
-        "longitude": -88.7075
+        "latitude": -88.7075,
+        "longitude": 43.4163
       },
       "WI/Milwaukee": {
-        "latitude": 43.0149,
-        "longitude": -87.9517
+        "latitude": -87.9517,
+        "longitude": 43.0149
       },
       "WI/Racine": {
-        "latitude": 42.7475,
-        "longitude": -88.0613
+        "latitude": -88.0613,
+        "longitude": 42.7475
       },
       "WI/Waushara": {
-        "latitude": 44.1131,
-        "longitude": -89.2429
+        "latitude": -89.2429,
+        "longitude": 44.1131
       },
       "WY": {
         "latitude": 42.83,
@@ -2696,37 +3141,37 @@
         "latitude": 35.2048883,
         "longitude": -92.4479107
       },
+      "ARG/B": {
+        "latitude": -34.25,
+        "longitude": -59.466667
+      },
       "AZ": {
         "latitude": 34.395342,
         "longitude": -111.7632754
       },
-      "Argentina": {
-        "latitude": -34.25,
-        "longitude": -59.466667
-      },
-      "Brazil": {
+      "BRA/ES": {
         "latitude": -18.715833,
         "longitude": -39.858889
-      },
-      "British-Virgin-Islands": {
-        "latitude": 18.43596,
-        "longitude": -64.616942
       },
       "CA": {
         "latitude": 36.7014631,
         "longitude": -118.7559973
       },
+      "CAN/QC": {
+        "latitude": 45.508889,
+        "longitude": -73.561667
+      },
       "CO": {
         "latitude": 38.7251776,
         "longitude": -105.6077166
       },
+      "COL/ANT": {
+        "latitude": 6.223333,
+        "longitude": -75.58
+      },
       "CT": {
         "latitude": 41.6500201,
         "longitude": -72.7342162
-      },
-      "Colombia": {
-        "latitude": 6.223333,
-        "longitude": -75.58
       },
       "DC": {
         "latitude": 38.9,
@@ -2756,7 +3201,7 @@
         "latitude": 40.3270127,
         "longitude": -86.1746932
       },
-      "Israel": {
+      "ISR/D": {
         "latitude": 31.0,
         "longitude": 35.0
       },
@@ -2780,6 +3225,22 @@
         "latitude": 39.5162234,
         "longitude": -76.9382068
       },
+      "MEX/BCN": {
+        "latitude": 30.0,
+        "longitude": -115.166667
+      },
+      "MEX/CHH": {
+        "latitude": 28.816667,
+        "longitude": -106.433333
+      },
+      "MEX/SON": {
+        "latitude": 29.646111,
+        "longitude": -110.868889
+      },
+      "MEX/TAM": {
+        "latitude": 24.283333,
+        "longitude": -98.566667
+      },
       "MI": {
         "latitude": 43.6211955,
         "longitude": -84.6824345
@@ -2800,10 +3261,6 @@
         "latitude": 47.3752671,
         "longitude": -109.6387578
       },
-      "Mexico": {
-        "latitude": 28.637829,
-        "longitude": -106.075213
-      },
       "NC": {
         "latitude": 35.58,
         "longitude": -80.1
@@ -2815,6 +3272,10 @@
       "NE": {
         "latitude": 43.6211955,
         "longitude": -84.6824345
+      },
+      "NH": {
+        "latitude": 44.0,
+        "longitude": -71.5
       },
       "NJ": {
         "latitude": 40.0757384,
@@ -2840,6 +3301,10 @@
         "latitude": 34.9550817,
         "longitude": -97.2684062
       },
+      "OR": {
+        "latitude": 44.0,
+        "longitude": -120.5
+      },
       "PA": {
         "latitude": 40.9699889,
         "longitude": -77.727883
@@ -2863,6 +3328,14 @@
       "VA": {
         "latitude": 37.1232245,
         "longitude": -78.492772
+      },
+      "VGB": {
+        "latitude": 18.43596,
+        "longitude": -64.616942
+      },
+      "VI": {
+        "latitude": 17.789187,
+        "longitude": -64.7080574
       },
       "WA": {
         "latitude": 47.6,
@@ -2888,6 +3361,6 @@
     "entropy"
   ],
   "title": "Twenty years of West Nile Virus in the Americas",
-  "updated": "20 May 2019",
-  "virus_count": 2267
+  "updated": "28 Oct 2019",
+  "virus_count": 2512
 }

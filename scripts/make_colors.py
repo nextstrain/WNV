@@ -21,8 +21,8 @@ fh = open(sys.argv[2], "w")
 
 #########################################################################################
 # COUNTRIES
-countries    = ["USA", "Mexico", "Israel", "British-Virgin-Islands", "Colombia", "Brazil", "Argentina"]
-country_cols = ["#969696", "#7E00A8", "#0054A8", "#00A800", "#E5C800", "#FF7F00", "#A80000"]
+countries    = ["United-States", "Mexico", "Israel", "British-Virgin-Islands", "Canada", "Colombia", "Brazil", "Argentina"]
+country_cols = ["#969696", "#7E00A8", "#0054A8", "#00A800", "#7BDE00", "#E5C800", "#FF7F00", "#A80000"]
 fh.write("## COUNTRIES ##\n")
 for pair in zip(countries, country_cols):
   fh.write("{}\t{}\t{}\n".format("country", pair[0], pair[1]))
@@ -44,12 +44,12 @@ states = {
 	"midwest": ["ND", "MN", "IL", "WI", "MI", "SD", "IA", "IN", "OH", "NE", "MO", "KS"],
 	"southeast": ["KY", "WV", "VA", "AR", "TN", "NC", "SC", "LA", "MS", "AL", "GA", "FL"],
 	"northeast": ["ME", "VT", "NH", "NY", "MA", "RI", "PA", "NJ", "CT", "MD", "DC", "DE"],
-	"israel": ["Israel"],
-	"mexico": ["Mexico"],
-	"british-virgin-islands": ["British-Virgin-Islands"],
-	"colombia": ["Colombia"],
-	"brazil": ["Brazil"],
-	"argentina": ["Argentina"]
+	"caribbean": ["VI", "VGB"],
+	"canada": ["CAN/QC"],
+	"mexico": ["MEX/BCN", "MEX/SON", "MEX/CHH", "MEX/TAM"],
+	"southamerica": ["COL/ANT", "BRA/ES", "ARG/B"],
+	"israel": ["ISR/D"]
+
 }
 # prune out the states that _aren't_ in the metadata (before we create the colour scale)
 # states_present = set([x["state"] for x in metadata])
@@ -62,12 +62,11 @@ states_cols = {
 	"midwest": ["#001C00", "#022B02", "#063906", "#0C480C", "#145814", "#1D671D", "#297529", "#358535", "#449344", "#54A354", "#67B267", "#7BC17B"],
 	"southeast": ["#001833", "#032142", "#092C51", "#113860", "#1A466F", "#25547E", "#32638D", "#41729C", "#5183AB", "#6495BA", "#78A7C9", "#8EBAD9"],
 	"northeast": ["#1C001C", "#2E0330", "#3F0B45", "#501559", "#60236E", "#713483", "#824997", "#9460AC", "#A77BC1", "#BD9AD5", "#D5BBEA", "#F0E1FF"],
-	"israel": ["#4FE7E7"],	
-	"mexico": ["#38CDCD"],
-	"british-virgin-islands": ["#25B3B3"],
-	"colombia": ["#159999"],
-	"brazil": ["#087F7F"],
-	"argentina": ["#006666"]
+	"caribbean": ["#4C2F00", "#7F6233"],
+	"canada": ["#7FD000"],
+	"mexico": ["#4E5900", "#7D882E", "#ACB75C", "#DBE78A"],
+	"southamerica": ["#00594E", "#00A08C", "#00E7CA"],
+	"israel": ["#E533E5"]
 }
 
 fh.write("## STATES ##\n")

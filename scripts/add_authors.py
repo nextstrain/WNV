@@ -1,6 +1,8 @@
 import os, sys, re
 from Bio import Entrez
 from Bio import SeqIO
+from datetime import datetime
+import time
 
 def choose_best_reference(record):
     if len(record.annotations["references"]):
@@ -182,6 +184,7 @@ def fill_in_using_cache(meta, cache, missing):
         meta[acc][key] = value
   print("Cache used for {} strains".format(count))
 
+previous = 1
 if __name__ == "__main__":
     meta_in,  meta_out = sys.argv[1:]
     cache_path = "results/author_cache.tsv"
@@ -192,6 +195,12 @@ if __name__ == "__main__":
     cache = read_cache(cache_path)
     fill_in_using_cache(meta, cache, missing)
     add_hardcoded_authors(meta, missing)
+    
+    current = time.time()
+    delay = 0.4
+    elapsed = current - previous
+    wait = delay - elapsed
+    
     add_authors_using_entrez(meta, cache, missing)
     write_cache(cache, cache_path)
     write_metadata(meta, header, meta_out)
