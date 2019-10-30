@@ -21,8 +21,8 @@ fh = open(sys.argv[2], "w")
 
 #########################################################################################
 # COUNTRIES
-countries    = ["United-States", "Mexico", "Israel", "British-Virgin-Islands", "Canada", "Colombia", "Brazil", "Argentina"]
-country_cols = ["#969696", "#7E00A8", "#0054A8", "#00A800", "#7BDE00", "#E5C800", "#FF7F00", "#A80000"]
+countries    = ["United-States", "Mexico", "Israel", "British-Virgin-Islands", "Canada", "Colombia", "Brazil", "Argentina", "US-Virgin-Islands",]
+country_cols = ["#969696", "#7E00A8", "#0054A8", "#387A47", "#7BDE00", "#E5C800", "#FF7F00", "#A80000", "#4C2F00"]
 fh.write("## COUNTRIES ##\n")
 for pair in zip(countries, country_cols):
   fh.write("{}\t{}\t{}\n".format("country", pair[0], pair[1]))
@@ -33,7 +33,7 @@ wnv_strain       = ["NY99",    "SW03",    "WN02", "pre-NY"]
 wnv_strain_cols  = ["#CBB742", "#7EB876", "#4988C5", "#A80000"]
 fh.write("## WNV STRAINS / LINEAGES ##\n")
 for pair in zip(wnv_strain, wnv_strain_cols):
-  fh.write("{}\t{}\t{}\n".format("lineage", pair[0], pair[1]))
+	fh.write("{}\t{}\t{}\n".format("lineage", pair[0], pair[1]))
 
 #########################################################################################
 # STATES
@@ -44,12 +44,11 @@ states = {
 	"midwest": ["ND", "MN", "IL", "WI", "MI", "SD", "IA", "IN", "OH", "NE", "MO", "KS"],
 	"southeast": ["KY", "WV", "VA", "AR", "TN", "NC", "SC", "LA", "MS", "AL", "GA", "FL"],
 	"northeast": ["ME", "VT", "NH", "NY", "MA", "RI", "PA", "NJ", "CT", "MD", "DC", "DE"],
-	"caribbean": ["VI", "VGB"],
+	"caribbean": ["US-VI", "VGB"],
 	"canada": ["CAN/QC"],
 	"mexico": ["MEX/BCN", "MEX/SON", "MEX/CHH", "MEX/TAM"],
 	"southamerica": ["COL/ANT", "BRA/ES", "ARG/B"],
 	"israel": ["ISR/D"]
-
 }
 # prune out the states that _aren't_ in the metadata (before we create the colour scale)
 # states_present = set([x["state"] for x in metadata])
