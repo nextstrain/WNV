@@ -1,0 +1,33 @@
+{
+  "title": "Twenty years of West Nile Virus in the Americas",
+  "colorings": [
+    {"key": "gt", "title": "Genotype", "type": "categorical"},
+    {"key": "num_date", "title": "Sampling Date", "type": "continuous"},
+    {"key": "country", "title": "Country", "type": "categorical"},
+    {"key": "state", "title": "State", "type": "categorical"},
+    {"key": "division", "title": "Division", "type": "categorical"},
+    {"key": "lineage", "title": "Strain", "type": "categorical"},
+    {"key": "author", "title": "Authors", "type": "categorical"},
+    {"key": "host", "title": "Host Species", "type": "categorical"}
+  ],
+  "geo_resolutions": [
+    "state",
+    "division"
+  ],
+  "maintainers": [
+    {"name": "Anderson Brito", "url": "http://grubaughlab.com/team/anderson-brito/"},
+    {"name": "James Hadfield", "url": "https://twitter.com/hamesjadfield"},
+    {"name": "Grubaugh Lab", "url": "http://grubaughlab.com/"}
+  ],
+  "filters": [
+    "country",
+    "state",
+    "authors",
+    "lineage"
+  ],
+  "display_defaults": {
+    "color_by": "state",
+    "map_triplicate": false,
+    "geo_resolution": "state"
+ }
+}

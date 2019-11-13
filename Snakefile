@@ -187,7 +187,7 @@ rule traits:
         """
 
 rule export:
-    message: "Exporting data files for for auspice"
+    message: "Exporting data files for for auspice using V1 JSON schema"
     input:
         tree = rules.refine.output.tree,
         metadata = rules.add_authors.output.metadata,
@@ -203,7 +203,7 @@ rule export:
         auspice_meta = rules.all.input.auspice_meta
     shell:
         """
-        augur export \
+        augur export v1\
             --tree {input.tree} \
             --metadata {input.metadata} \
             --node-data {input.branch_lengths} {input.traits} {input.nt_muts} {input.aa_muts} \
@@ -212,11 +212,10 @@ rule export:
             --lat-longs {input.lat_longs} \
             --output-tree {output.auspice_tree} \
             --output-meta {output.auspice_meta}
-        #augur validate --json {output.auspice_meta} {output.auspice_tree}
         """
 
-rule export2:
-    message: "Exporting v2.0 JSONs for auspice. Currently unused."
+rule export_v2:
+    message: "Exporting data files for for auspice using V2 JSON schema"
     input:
         tree = rules.refine.output.tree,
         metadata = rules.add_authors.output.metadata,
@@ -226,21 +225,19 @@ rule export2:
         aa_muts = rules.translate.output.node_data,
         colors = rules.create_colors.output.colors,
         lat_longs = rules.create_lat_longs.output.lat_longs,
-        auspice_config = files.auspice_config
+        auspice_config = "config/auspice_config_v2.json"
     output:
         auspice = "auspice/WNV-nextstrain_NA.json"
     shell:
         """
-        augur export \
-            --new-schema \
+        augur export v2 \
             --tree {input.tree} \
             --metadata {input.metadata} \
             --node-data {input.branch_lengths} {input.traits} {input.nt_muts} {input.aa_muts} \
             --colors {input.colors} \
             --auspice-config {input.auspice_config} \
             --lat-longs {input.lat_longs} \
-            --output-main {output.auspice}
-        #augur validate --json {output.auspice_meta} {output.auspice_tree}
+            --output {output.auspice}
         """
 
 rule clean:
