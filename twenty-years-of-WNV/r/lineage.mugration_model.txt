@@ -1,0 +1,29 @@
+Map from character to field name
+A:	NY99
+B:	SW03
+C:	WN02
+D:	pre-NY
+E:	?
+
+
+Substitution rate (mu): 0.760002
+
+Equilibrium frequencies (pi_i):
+  A: 0.2081
+  B: 0.2289
+  C: 0.3364
+  D: 0.2267
+
+Symmetrized rates from j->i (W_ij):
+	A	B	C	D
+  A	0	1.2188	1.474	1.9796
+  B	1.2188	0	1.357	1.2497
+  C	1.474	1.357	0	0.9984
+  D	1.9796	1.2497	0.9984	0
+
+Actual rates from j->i (Q_ij):
+	A	B	C	D
+  A	0	0.2536	0.3067	0.4119
+  B	0.2789	0	0.3106	0.286
+  C	0.4959	0.4565	0	0.3359
+  D	0.4487	0.2833	0.2263	0
