@@ -100,4 +100,4 @@ From within the current directory, simply run `auspice view --datasetDir ./auspi
 
 
 #### Deploy the JSONs to nextstrain.org
-_Currently this has to be done from the bedford lab_
+_Currently this has to be done from the Bedford Lab_
