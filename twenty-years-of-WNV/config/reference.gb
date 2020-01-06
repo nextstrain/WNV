@@ -36,7 +36,7 @@ REFERENCE   4  (bases 1 to 11029)
             Kansas, 1200 Sunnyside Ave, Lawrence, KS 66045, USA
 COMMENT     VALIDATED REFSEQ: This record has undergone validation or
             preliminary review. The reference sequence was derived from
-            DQ211652.
+            DQ211652
             COMPLETENESS: full length.
 FEATURES             Location/Qualifiers
      source          1..11029
