@@ -36,7 +36,7 @@ def query_genbank(accessions, email=None, retmax=10, n_entrez=10, gbdb="nuccore"
         if len(accs) == 0:
             return
         list_accs = list(accs)
-        res = Entrez.read(Entrez.esearch(db=gbdb, term=" ".join(list_accs), retmax=retmax))
+        res = Entrez.read(Entrez.esearch(db=gbdb, term=" OR ".join(list_accs), retmax=retmax))
         if "ErrorList" in res:
             not_found = res["ErrorList"]["PhraseNotFound"][0]
             accs.remove(not_found)
@@ -190,17 +190,17 @@ if __name__ == "__main__":
     cache_path = "results/author_cache.tsv"
     print("Custom WNV script to add authors to metadata TSV via ENTREZ query")
     print("Input : {}, Cache: {}, Output: {}".format(meta_in, cache_path, meta_out))
-    
+
     header, meta, missing = parse_TSV(meta_in)
     cache = read_cache(cache_path)
     fill_in_using_cache(meta, cache, missing)
     add_hardcoded_authors(meta, missing)
-    
+
     current = time.time()
     delay = 0.4
     elapsed = current - previous
     wait = delay - elapsed
-    
+
     add_authors_using_entrez(meta, cache, missing)
     write_cache(cache, cache_path)
     write_metadata(meta, header, meta_out)
