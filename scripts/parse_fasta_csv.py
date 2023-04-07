@@ -78,7 +78,7 @@ def addMetadataFromInputCSV(metadata, path, unknown="Unknown"):
             if strain not in metadata:
               print("WARNING: Strain {} in CSV not found in FASTA".format(strain))
               continue
-            
+
             # DATE
             csv_date = fix_date(fields[1])
             if metadata[strain]["date"] == unknown:
@@ -99,7 +99,9 @@ def addMetadataFromInputCSV(metadata, path, unknown="Unknown"):
               ("state", 3),
               ("division", 4),
               ("host", 5),
-              ("lineage", 6)
+              ("lineage", 6),
+              ("latitude", 7),
+              ("longitude", 8)
             )
             for pair in pairs:
               name, idx = pair
