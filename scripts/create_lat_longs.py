@@ -7,7 +7,7 @@ import numpy as np
 ## this allows the division lat/long to be dynamically generated from GPS points in the metadata
 
 with open(sys.argv[1], 'r') as f:
-  raw = f.read().splitlines() 
+  raw = f.read().splitlines()
   header = raw[0].split("\t")
   metadata = []
   for line in raw[1:]:
@@ -69,7 +69,7 @@ states = {
 	"COL/ANT": (6.223333, -75.58),
 	"BRA/ES": (-18.715833, -39.858889),
 	"ARG/B": (-34.25, -59.466667),
-	"ISR/D": (31, 35)
+	"Israel": (31, 35)
 }
 
 for key, value in states.items():
@@ -92,6 +92,7 @@ for x in metadata:
 divisions_gps = defaultdict(lambda: [])
 for x in metadata:
   if x["division"] != "Unknown":
+      #print("lat longs! {} - {} - {}".format(x["division"],x["latitude"], x["longitude"]))
     divisions_gps[x["division"]].append( [ x["latitude"], x["longitude"] ] )
 
 # step 3: average the lat/longs:
@@ -109,5 +110,3 @@ for key, value in divisions.items():
   f.write("{}\t{}\t{}\t{}\n".format("division", key, value[0], value[1]))
 for key, value in states.items():
   f.write("{}\t{}\t{}\t{}\n".format("division", key, value[0], value[1]))
-
-
