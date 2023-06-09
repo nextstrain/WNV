@@ -69,5 +69,8 @@ transform:
     'authors',
     'institution',
     'title',
-    'publications'
+    'journal',
+    'publications',
+    'paper_url',
+    'url',
   ]
