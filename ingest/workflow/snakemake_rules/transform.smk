@@ -85,6 +85,7 @@ rule transform:
                 --abbr-authors-field {params.abbr_authors_field} \
             | ./bin/apply-geolocation-rules \
                 --geolocation-rules {input.all_geolocation_rules} \
+            | ./bin/transform-state-names \
             | ./bin/post_process_metadata.py \
             | ./bin/merge-user-metadata \
                 --annotations {params.annotations} \
