@@ -131,10 +131,10 @@ def writeMetadataTSV(metadata, path):
 
 def parse_TSV(path):
   with open(path, 'r') as fh:
-    header = fh.readline().strip().split("\t")
+    header = fh.readline().strip().split(",")
     meta = {}
     for line in fh:
-      fields = line.strip().split("\t")
+      fields = line.strip().split(",")
       try:
         assert(len(fields) == len(header))
       except AssertionError:
@@ -149,7 +149,7 @@ def read_cache(path):
     try:
       with open(path, "r") as f:
         for line in f:
-          fields = line.strip().split("\t")
+          fields = line.strip().split(",")
           cache[fields[0]] = {
             "authors": fields[1],
             "journal": fields[2],
