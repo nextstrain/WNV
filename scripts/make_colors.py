@@ -11,11 +11,11 @@ import sys
 # ARG1: METADATA ARG2: OUTPUT
 
 with open(sys.argv[1], 'r') as f:
-  raw = f.read().splitlines() 
-  header = raw[0].split("\t")
+  raw = f.read().splitlines()
+  header = raw[0].split(",")
   metadata = []
   for line in raw[1:]:
-    metadata.append({header[i]:data for i, data in enumerate(line.split("\t"))})
+    metadata.append({header[i]:data for i, data in enumerate(line.split(","))})
 
 fh = open(sys.argv[2], "w")
 
