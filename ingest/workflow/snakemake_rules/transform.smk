@@ -81,7 +81,7 @@ rule transform:
                 --abbreviations {params.abbreviations} \
             | ./bin/transform-authors \
                 --authors-field {params.authors_field} \
-                --default-value {params.authors_default_value} \
+                --default-value {params.authors_default_value:q} \
                 --abbr-authors-field {params.abbr_authors_field} \
             | ./bin/apply-geolocation-rules \
                 --geolocation-rules {input.all_geolocation_rules} \
