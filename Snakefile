@@ -6,8 +6,8 @@ rule all:
 
 rule files:
     params:
-        input_fasta = "data/full_dataset.fasta",
-        input_metadata = "data/headers.csv",
+        input_fasta = "ingest/data/sequences_all.fasta",
+        input_metadata = "ingest/data/metadata_all.tsv",
         reference = "config/reference.gb",
         auspice_config = "config/auspice_config.json",
         lat_longs = "config/lat_longs.tsv"
@@ -32,8 +32,7 @@ rule add_authors:
     message:
         "Adding authors to {input.metadata} -> {output.metadata} by collecting info from ENTREZ"
     input:
-        #metadata = data/headers.csv
-        metadata = "data/headers.csv"
+        metadata = "ingest/data/metadata_all.tsv"
     output:
         metadata = "results/metadata.tsv"
     shell:
@@ -46,7 +45,7 @@ rule create_colors:
         "Creating custom color scale in {output.colors}"
     input:
         #metadata = rules.parse.output.metadata,
-        metadata = "data/headers.csv"
+        metadata = "ingest/data/metadata_all.tsv"
     output:
         colors = "results/colors.tsv"
     shell:
@@ -59,7 +58,7 @@ rule create_lat_longs:
         "Creating lat/longs in {output.lat_longs}"
     input:
         #metadata = rules.parse.output.metadata,
-        metadata = "data/headers.csv"
+        metadata = "ingest/data/metadata_all.tsv"
     output:
         lat_longs = "results/lat_longs.tsv"
     shell:
@@ -75,7 +74,7 @@ rule align:
         """
     input:
         #sequences = rules.parse.output.sequences,
-        sequences = "data/full_dataset.fasta",
+        sequences = "ingest/data/sequences_all.fasta",
         reference = files.reference
     output:
         alignment = "results/aligned.fasta"
