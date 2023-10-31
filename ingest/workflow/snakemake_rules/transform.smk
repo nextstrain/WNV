@@ -38,7 +38,8 @@ rule concat_geolocation_rules:
 
 rule transform:
     input:
-        sequences_ndjson="data/sequences_{serotype}.ndjson",
+        #sequences_ndjson="data/sequences_{serotype}.ndjson",
+        sequences_ndjson="data/genbank_all.ndjson",
         all_geolocation_rules="data/all-geolocation-rules.tsv",
     output:
         metadata="data/metadata_{serotype}.tsv",

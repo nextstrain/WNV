@@ -44,12 +44,12 @@ def _set_paper_url(record):
 
 def main():
     args = parse_args()
-    
+
     for index, record in enumerate(stdin):
         record = json.loads(record)
         record["strain"] = _set_strain_name(record)
         record["url"] = _set_url(record)
-        record["paper_url"] = _set_paper_url(record)
+        #record["paper_url"] = _set_paper_url(record)
         # record["serotype"] = _set_dengue_serotype(record) # WNV
         record["authors"] = record["abbr_authors"]
         stdout.write(json.dumps(record) + "\n")

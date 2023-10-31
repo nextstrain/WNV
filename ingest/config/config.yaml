@@ -72,5 +72,6 @@ transform:
     #'journal',
     #'publications',
     #'paper_url',
-    #'url',
+    'url',
+    'length',
   ]
