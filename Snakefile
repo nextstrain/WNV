@@ -119,7 +119,7 @@ rule refine:
         #alignment = rules.align.output,
         alignment = "results/aligned.fasta",
         #metadata = rules.parse.output.metadata
-        metadata = "data/headers.csv"
+        metadata = "ingest/data/metadata_all.tsv"
     output:
         tree = "results/tree.nwk",
         node_data = "results/branch_lengths.json"
@@ -186,7 +186,7 @@ rule traits:
         #tree = rules.refine.output.tree,
         tree = "results/tree.nwk",
         #metadata = rules.parse.output.metadata
-        metadata = "data/headers.csv"
+        metadata = "ingest/data/metadata_all.tsv"
     output:
         node_data = "results/traits.json",
     params:
@@ -235,7 +235,7 @@ rule export_v2:
         # tree = rules.refine.output.tree,
         tree = "results/tree.nwk",
         # metadata = rules.add_authors.output.metadata,
-        metadata = "data/headers.csv",
+        metadata = "ingest/data/metadata_all.tsv",
         # branch_lengths = rules.refine.output.node_data,
         branch_lengths = "results/branch_lengths.json",
         # traits = rules.traits.output.node_data,
