@@ -12,7 +12,7 @@ import sys
 
 with open(sys.argv[1], 'r') as f:
   raw = f.read().splitlines()
-  header = raw[0].split(",")
+  header = raw[0].split("\t")
   metadata = []
   for line in raw[1:]:
     metadata.append({header[i]:data for i, data in enumerate(line.split(","))})
