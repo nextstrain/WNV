@@ -73,27 +73,27 @@ states = {
 }
 
 for key, value in states.items():
-  f.write("{}\t{}\t{}\t{}\n".format("state", key, value[0], value[1]))
+  f.write("{}\t{}\t{}\t{}\n".format("division", key, value[0], value[1]))
 
 ## DIVISIONS
 
 # step 1: quick check to make sure there are no divisions of the same name in different states
 div_state = {}
 for x in metadata:
-  div = x["division"]
+  div = x["location"]
   if div != "Unknown":
     if div in div_state:
-      if div_state[div] != x["state"]:
-        print("PROBLEM! {} - {} & {}".format(x["state"], div, div_state[div]))
+      if div_state[div] != x["division"]:
+        print("PROBLEM! {} - {} & {}".format(x["division"], div, div_state[div]))
     else:
-      div_state[div] = x["state"]
+      div_state[div] = x["division"]
 
 # step 2: what are all the divisions and their corresponding GPS co-ords?
 divisions_gps = defaultdict(lambda: [])
 for x in metadata:
-  if x["division"] != "Unknown":
+  if x["location"] != "Unknown":
       #print("lat longs! {} - {} - {}".format(x["division"],x["latitude"], x["longitude"]))
-    divisions_gps[x["division"]].append( [ x["latitude"], x["longitude"] ] )
+    divisions_gps[x["location"]].append( [ x["latitude"], x["longitude"] ] )
 
 # step 3: average the lat/longs:
 divisions = {}
@@ -107,6 +107,6 @@ for key, values in divisions_gps.items():
     divisions[key] = ( np.mean([float(x[0]) for x in ll]), np.mean([float(x[1]) for x in ll]) )
 
 for key, value in divisions.items():
-  f.write("{}\t{}\t{}\t{}\n".format("division", key, value[0], value[1]))
+  f.write("{}\t{}\t{}\t{}\n".format("location", key, value[0], value[1]))
 for key, value in states.items():
-  f.write("{}\t{}\t{}\t{}\n".format("division", key, value[0], value[1]))
+  f.write("{}\t{}\t{}\t{}\n".format("location", key, value[0], value[1]))
