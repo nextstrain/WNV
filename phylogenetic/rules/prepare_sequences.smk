@@ -25,24 +25,25 @@ rule filter:
         metadata = "data/metadata_all.tsv",
         sequences = "data/sequences_all.fasta"
     output:
-        sequences = "results/sequences_filtered.fasta"
+        sequences = "results/sequences_filtered.fasta",
+        metadata = "results/metadata_filtered.tsv"
     shell:
         """
         augur filter \
             --sequences {input.sequences} \
             --metadata {input.metadata} \
             --metadata-id-columns "accession" \
+            --min-length '9800' \
             --output {output.sequences} \
-            --group-by "country" \
-            --sequences-per-group 30 \
-            --include-where strain="NC_009942"
+            --query "country == 'USA' & accession != 'NC_009942'"  \
+            --output-metadata {output.metadata}
         """
-        
+
 rule add_authors:
     message:
         "Adding authors to {input.metadata} -> {output.metadata} by collecting info from ENTREZ"
     input:
-        metadata = "data/metadata_all.tsv"
+        metadata = "results/metadata_filtered.tsv"
     output:
         metadata = "results/metadata.tsv"
     shell:
@@ -54,8 +55,7 @@ rule create_colors:
     message:
         "Creating custom color scale in {output.colors}"
     input:
-        #metadata = rules.parse.output.metadata,
-        metadata = "data/metadata_all.tsv"
+        metadata = "results/metadata_filtered.tsv"
     output:
         colors = "results/colors.tsv"
     shell:
@@ -82,7 +82,6 @@ rule align:
           - filling gaps with N
         """
     input:
-        #sequences = rules.parse.output.sequences,
         sequences = "results/sequences_filtered.fasta",
         reference = files.reference
     output:
@@ -91,8 +90,7 @@ rule align:
         """
         augur align \
             --sequences {input.sequences} \
-            --reference-name "NC_009942" \
             --output {output.alignment} \
-            --fill-gaps
-            #--reference-sequence {input.reference} \
+            --fill-gaps \
+            --reference-sequence {input.reference}
         """

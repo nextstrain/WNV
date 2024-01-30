@@ -74,19 +74,18 @@ rule translate:
 rule traits:
     message: "Inferring ancestral traits for {params.columns!s}"
     input:
-        #tree = rules.refine.output.tree,
         tree = "results/tree.nwk",
-        #metadata = rules.parse.output.metadata
-        metadata = "data/metadata_all.tsv"
+        metadata = "results/metadata_filtered.tsv"
     output:
         node_data = "results/traits.json",
     params:
-        columns = "state lineage"
+        columns = "country division"
     shell:
         """
         augur traits \
             --tree {input.tree} \
             --metadata {input.metadata} \
+            --metadata-id-columns "accession" \
             --output {output.node_data} \
             --columns {params.columns} \
             --confidence

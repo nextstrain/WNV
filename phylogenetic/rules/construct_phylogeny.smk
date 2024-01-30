@@ -46,12 +46,9 @@ rule refine:
           - filter tips more than {params.clock_filter_iqd} IQDs from clock expectation
         """
     input:
-        #tree = rules.tree.output.tree,
         tree = "results/tree_raw.nwk",
-        #alignment = rules.align.output,
         alignment = "results/aligned.fasta",
-        #metadata = rules.parse.output.metadata
-        metadata = "data/metadata_all.tsv"
+        metadata = "results/metadata_filtered.tsv"
     output:
         tree = "results/tree.nwk",
         node_data = "results/branch_lengths.json"
@@ -65,10 +62,11 @@ rule refine:
             --tree {input.tree} \
             --alignment {input.alignment} \
             --metadata {input.metadata} \
+            --metadata-id-columns "accession" \
             --output-tree {output.tree} \
             --output-node-data {output.node_data} \
             --timetree \
             --coalescent {params.coalescent} \
             --date-confidence \
-            --root AF481864
+            #--root NC_009942
         """
