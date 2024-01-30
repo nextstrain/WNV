@@ -11,7 +11,7 @@ with open(sys.argv[1], 'r') as f:
   header = raw[0].split("\t")
   metadata = []
   for line in raw[1:]:
-    metadata.append({header[i]:data for i, data in enumerate(line.split(","))})
+    metadata.append({header[i]:data for i, data in enumerate(line.split("\t"))})
 
 f = open(sys.argv[2], "w")
 
