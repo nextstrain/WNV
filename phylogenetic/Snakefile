@@ -38,7 +38,7 @@ rule files:
 
 files = rules.files.params
 
-
+include: "rules/subsampling_manual.smk"
 include: "rules/prepare_sequences.smk"
 include: "rules/construct_phylogeny.smk"
 include: "rules/annotate_phylogeny.smk"
