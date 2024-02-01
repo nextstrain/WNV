@@ -1,10 +1,11 @@
-# Nextstrain build pipeline for the [WestNile 4K Project](https://westnile4k.org/)
-
-**This is the repository used to build [nextstrain.org/WNV/NA](https://nextstrain.org/WNV/NA)**
-
+# About
 ---
 
-This repository contains the steps to use [augur]() to build the WNV/NA dataset. 
+This repository analyzes West Nile Viral (WNV) genomes using [Nextstrain](https://nextstrain.org/) to understand the circulation and transmission of WNV within the United States. This repository was developed based on the WNV repository used for the Twenty years of West Nile Virus in the Americas [Nextstrain Narrative](https://nextstrain.org/WNV/NA)
+
+## Data
+
+This build pulls WNV genomes that are publicly available from NCBI.
 
 ## Installation / Set-Up
 
