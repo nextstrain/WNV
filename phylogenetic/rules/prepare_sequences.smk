@@ -20,24 +20,6 @@ This part of the workflow usually includes the following steps:
 
 See Augur's usage docs for these commands for more details.
 """
-rule filter:
-    input:
-        metadata = "data/metadata_all.tsv",
-        sequences = "data/sequences_all.fasta"
-    output:
-        sequences = "results/sequences_filtered.fasta",
-        metadata = "results/metadata_filtered.tsv"
-    shell:
-        """
-        augur filter \
-            --sequences {input.sequences} \
-            --metadata {input.metadata} \
-            --metadata-id-columns "accession" \
-            --min-length '9800' \
-            --output {output.sequences} \
-            --query "country == 'USA' & accession != 'NC_009942'"  \
-            --output-metadata {output.metadata}
-        """
 
 rule add_authors:
     message:

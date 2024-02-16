@@ -38,6 +38,10 @@ rule files:
 
 files = rules.files.params
 
+include: "rules/subsampling_manual.smk"
+
+if config.get("subsampling", False):
+    include: "rules/subsampling_configurable.smk"
 
 include: "rules/prepare_sequences.smk"
 include: "rules/construct_phylogeny.smk"

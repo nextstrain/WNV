@@ -1,1 +1,12 @@
 strain_id_field: "accession"
+# root: "A/Sample/2009"
+
+#subsampling:
+  #all: --min-length '9800' --query "country == 'USA' & accession != 'NC_009942'"
+
+subsampling:
+   state: --query "division == 'WA'" --min-length '9800' --subsample-max-sequences 5000
+   neighboring_state: --query "division in ['CA', 'ID', 'OR', 'NV']" --group-by division year --min-length '9800' --subsample-max-sequences 5000
+   region: --query "division in ['AZ','NM', 'CO', 'UT', 'WY', 'MT']" --group-by division year --min-length '9800' --subsample-max-sequences 5000
+   country: --query "country == 'USA' and division not in ['WA', 'CA', 'ID', 'OR', 'NV','AZ','NM', 'CO', 'UT', 'WY', 'MT'] and accession != 'NC_009942'" --group-by division year --subsample-max-sequences 300 --min-length '9800'
+   #global: --query "country != 'USA'" --group-by country year --subsample-max-sequences 200
