@@ -41,7 +41,7 @@ curate:
   # Local rules can overwrite the general geolocation rules provided above
   local_geolocation_rules: 'source-data/geolocation-rules.tsv'
   # User annotations file
-  annotations: './source-data/annotations.tsv'
+  annotations: './config/annotations.tsv'
   # ID field used to merge annotations
   annotations_id: 'accession'
   # Field to use as the sequence ID in the FASTA file
@@ -67,6 +67,8 @@ curate:
     #'abbr_authors',
     #'reverse',
     'authors',
+    'latitude',
+    'longitude',
     #'institution',
     #'title',
     #'journal',

@@ -45,17 +45,17 @@ rule create_colors:
         python ./scripts/make_colors.py {input.metadata} {output.colors}
         """
 
-#rule create_lat_longs:
-    #message:
-        #"Creating lat/longs in {output.lat_longs}"
-    #input:
-        #"results/metadata_filtered.tsv"
-    #output:
-        #lat_longs = "results/lat_longs.tsv"
-    #shell:
-        #"""
-        #python ./scripts/create_lat_longs.py {input.metadata} {output.lat_longs}
-        #"""
+rule create_lat_longs:
+    message:
+        "Creating lat/longs in {output.lat_longs}"
+    input:
+        metadata = "results/metadata_filtered.tsv"
+    output:
+        lat_longs = "results/lat_longs.tsv"
+    shell:
+        """
+        python ./scripts/create_lat_longs.py {input.metadata} {output.lat_longs}
+        """
 
 rule align:
     message:

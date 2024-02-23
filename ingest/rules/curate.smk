@@ -41,6 +41,7 @@ rule curate:
         #sequences_ndjson="data/sequences_{serotype}.ndjson",
         sequences_ndjson="data/genbank_all.ndjson",
         all_geolocation_rules="data/all-geolocation-rules.tsv",
+        annotations=config["curate"]["annotations"],
     output:
         metadata="data/metadata_{serotype}.tsv",
         sequences="data/sequences_{serotype}.fasta",
@@ -58,7 +59,6 @@ rule curate:
         authors_field=config["curate"]["authors_field"],
         authors_default_value=config["curate"]["authors_default_value"],
         abbr_authors_field=config["curate"]["abbr_authors_field"],
-        annotations=config["curate"]["annotations"],
         annotations_id=config["curate"]["annotations_id"],
         metadata_columns=config["curate"]["metadata_columns"],
         id_field=config["curate"]["id_field"],
@@ -89,7 +89,7 @@ rule curate:
             | ./bin/transform-state-names \
             | ./bin/post_process_metadata.py \
             | ./bin/merge-user-metadata \
-                --annotations {params.annotations} \
+                --annotations {input.annotations} \
                 --id-field {params.annotations_id} \
             | ./bin/ndjson-to-tsv-and-fasta \
                 --metadata-columns {params.metadata_columns} \
