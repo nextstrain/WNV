@@ -13,4 +13,140 @@ Europe/France/Paris/*	Europe/France/Ile de France/Paris FR
 Europe/Italy/Fvg/Gorizia	Europe/Italy/Friuli Venezia Giulia/Gorizia
 # Unclear which location is the real location
 Europe/Netherlands/Utrecht/Rotterdam	Europe/Netherlands//
-North America/USA/Washington/Dc	North America/USA/Washington DC/
+North America/USA/Washington/Dc        North America/USA/Washington DC/
+North America/USA/Albany Co./Ny	North America/USA/New York/Albany Co.
+North America/USA/Albuquerque Nm/	North America/USA/New Mexico/Albuquerque Nm
+North America/USA/Amarillo Tx/	North America/USA/Texas/Amarillo Tx
+North America/USA/Bethlehem Pa/	North America/USA/Pennsylvania/Bethlehem Pa
+North America/USA/Bismark Nd/	North America/USA/North Dakota/Bismark Nd
+North America/USA/Brandford/Ct	North America/USA/Connecticut/Brandford
+North America/USA/Bronx Co./Ny	North America/USA/New York/Bronx Co.
+North America/USA/Broome Co./Ny	North America/USA/New York/Broome Co.
+North America/USA/Cattaraugus Co./Ny	North America/USA/New York/Cattaraugus Co.
+North America/USA/Cayuga Co./Ny	North America/USA/New York/Cayuga Co.
+North America/USA/Chautauqua Co./Ny	North America/USA/New York/Chautauqua Co.
+North America/USA/Chemung Co./Ny	North America/USA/New York/Chemung Co.
+North America/USA/Cheyenne Wy/	North America/USA/Wyoming/Cheyenne Wy
+North America/USA/Clinton Co./Ny	North America/USA/New York/Clinton Co.
+North America/USA/Collin Co. Tx/	North America/USA/Texas/Collin Co. Tx
+North America/USA/Columbia Co./Ny	North America/USA/New York/Columbia Co.
+North America/USA/Conneticut/*	North America/USA/Connecticut/*
+North America/USA/Cortland Co./Ny	North America/USA/New York/Cortland Co.
+North America/USA/Dallas Co. Tx/	North America/USA/Texas/Dallas Co. Tx
+North America/USA/Dallas Tx/	North America/USA/Texas/Dallas Tx
+North America/USA/Davenport Ia/	North America/USA/Iowa/Davenport Ia
+North America/USA/Denton Co. Tx/	North America/USA/Texas/Denton Co. Tx
+North America/USA/Denton/Denton Co., Texas	North America/USA/Texas/Denton
+North America/USA/Dutchess Co./Ny	North America/USA/New York/Dutchess Co.
+North America/USA/El Paso Co. Tx/	North America/USA/Texas/El Paso Co. Tx
+North America/USA/El Paso Tx/	North America/USA/Texas/El Paso Tx
+North America/USA/Ellis Co. Tx/	North America/USA/Texas/Ellis Co. Tx
+North America/USA/Elyria Oh/	North America/USA/Ohio/Elyria Oh
+North America/USA/Erie Co./Ny	North America/USA/New York/Erie Co.
+North America/USA/Erie County/Ny	North America/USA/New York/Erie County
+North America/USA/Essex Co./Ny	North America/USA/New York/Essex Co.
+North America/USA/Fairview/Collin Co., Texas	North America/USA/Texas/Fairview
+North America/USA/Fort Bend Co. Tx/	North America/USA/Texas/Fort Bend Co. Tx
+North America/USA/Fort Collins/Co	North America/USA/Texas/Fort Collins
+North America/USA/Fulton Co./Ny	North America/USA/Texas/Fulton Co.
+North America/USA/Gainsville Fl/	North America/USA/Florida/Gainsville Fl
+North America/USA/Galveston County/Tx	North America/USA/Texas/Galveston County
+North America/USA/Genesee Co./Ny	North America/USA/New York/Genesee Co.
+North America/USA/Gilbert/Maricopa Co., Az	North America/USA/Arizona/Gilbert
+North America/USA/Glendale/Maricopa Co., Az	North America/USA/Arizona/Glendale
+North America/USA/Glenview Il/	North America/USA/Illinois/Glenview Il
+North America/USA/Goose Creek Sc/	North America/USA/South Carolina/Goose Creek Sc
+North America/USA/Grand Junction Co/	North America/USA/Colorado/Grand Junction Co
+North America/USA/Greene Co./Ny	North America/USA/New York/Greene Co.
+North America/USA/Harris County/Tx	North America/USA/Texas/Harris County
+North America/USA/Herkimer Co./Ny	North America/USA/New York/Herkimer Co.
+North America/USA/Houston Tx/	North America/USA/Texas/Houston Tx
+North America/USA/Houston/Harris Co., Texas	North America/USA/Texas/Houston
+North America/USA/Houston/Harris Co., Tx	North America/USA/Texas/Houston
+North America/USA/Indianapolis In/	North America/USA/Indiana/Indianapolis In
+North America/USA/Jackson Tn/	North America/USA/Tennessee/Jackson Tn
+North America/USA/Jefferson Co./Ny	North America/USA/New York/Jefferson Co.
+North America/USA/Kansas City Mo/	North America/USA/Missouri/Kansas City Mo
+North America/USA/Kathy/Harris Co., Tx	North America/USA/Texas/Kathy
+North America/USA/Katy/Harris Co., Texas	North America/USA/Texas/Katy
+North America/USA/Kings Co./Ny	North America/USA/New York/Kings Co.
+North America/USA/La Habra Ca/	North America/USA/California/La Habra Ca
+North America/USA/Las Vegas Nv/	North America/USA/Nevada/Las Vegas Nv
+North America/USA/Lewis Co./Ny	North America/USA/New York/Lewis Co.
+North America/USA/Lexington/Ma	North America/USA/Massachusetts/Lexington
+North America/USA/Lincoln Ne/	North America/USA/Nebraska/Lincoln Ne
+North America/USA/Little Rock Ak/	North America/USA/Arkansas/Little Rock Ak
+North America/USA/Livingston Co./Ny	North America/USA/New York/Livingston Co.
+North America/USA/Los Angeles Ca/	North America/USA/California/Los Angeles Ca
+North America/USA/Lubbock Tx/	North America/USA/Texas/Lubbock Tx
+North America/USA/Madison Co./Ny	North America/USA/New York/Madison Co.
+North America/USA/Memphis Tn/	North America/USA/Tennessee/Memphis Tn
+North America/USA/Miami Fl/	North America/USA/Florida/Miami Fl
+North America/USA/Miami Florida/	North America/USA/Florida/Miami Florida
+North America/USA/Milwalkee Wi/	North America/USA/Wisconsin/Milwalkee Wi
+North America/USA/Minneapolis Mn/	North America/USA/Minnesota/Minneapolis Mn
+North America/USA/Monroe Co./Ny	North America/USA/New York/Monroe Co.
+North America/USA/Montgomery Co. Tx/	North America/USA/Texas/Montgomery Co. Tx
+North America/USA/Montgomery Co./Ny	North America/USA/New York/Montgomery Co.
+North America/USA/Montgomery County/Tx	North America/USA/Texas/Montgomery County
+North America/USA/Nassau Co./Ny	North America/USA/New York/Nassau Co.
+North America/USA/Nassau County/Ny	North America/USA/New York/Nassau County
+North America/USA/New Orleans la/	North America/USA/Louisiana/New Orleans la
+North America/USA/New York City/	North America/USA/New York/New York City
+North America/USA/New York Co./Ny	North America/USA/New York/New York Co.
+North America/USA/New York Ny/	North America/USA/New York/New York Ny
+North America/USA/Niagara Co./Ny	North America/USA/New York/Niagara Co.
+North America/USA/Oklahoma City Ok/	North America/USA/Oklahoma/Oklahoma City Ok
+North America/USA/Oneida Co./Ny	North America/USA/New York/Oneida Co.
+North America/USA/Onondaga Co./Ny	North America/USA/New York/Onondaga Co.
+North America/USA/Ontario Ca/	North America/USA/California/Ontario Ca
+North America/USA/Ontario Co./Ny	North America/USA/New York/Ontario Co.
+North America/USA/Orange Co./Ny	North America/USA/New York/Orange Co.
+North America/USA/Orlando Fl/	North America/USA/Florida/Orlando Fl
+North America/USA/Orleans Co./Ny	North America/USA/New York/Orleans Co.
+North America/USA/Oswego Co./Ny	North America/USA/New York/Oswego Co.
+North America/USA/Otsego Co./Ny	North America/USA/New York/Otsego Co.
+North America/USA/Pasadena/Harris Co., Texas	North America/USA/Texas/Pasadena
+North America/USA/Penrose Co/	North America/USA/Colorado/Penrose Co
+North America/USA/Phoenix/Maricopa Co., Az	North America/USA/Arizona/Phoenix
+North America/USA/Plano/Collin Co., Texas	North America/USA/Texas/Plano
+North America/USA/Putnam Co./Ny	North America/USA/New York/Putnam Co.
+North America/USA/Queens Co./Ny	North America/USA/New York/Queens Co.
+North America/USA/Rapid City Sd/	North America/USA/South Dakota/Rapid City Sd
+North America/USA/Rapid City/Sd	North America/USA/South Dakota/Rapid City
+North America/USA/Rensselaer Co./Ny	North America/USA/New York/Rensselaer Co.
+North America/USA/Richmond Co./Ny	North America/USA/New York/Richmond Co.
+North America/USA/Rochester Mn/	North America/USA/Minnesota/Rochester Mn
+North America/USA/Rockland Co./Ny	North America/USA/New York/Rockland Co.
+North America/USA/San Antonio Tx/	North America/USA/Texas/San Antonio Tx
+North America/USA/San Diego Ca/	North America/USA/California/San Diego Ca
+North America/USA/San Francisco Ca/	North America/USA/California/San Francisco Ca
+North America/USA/Sanborn Mn/	North America/USA/Minnesota/Sanborn Mn
+North America/USA/Saratoga Co./Ny	North America/USA/New York/Saratoga Co.
+North America/USA/Schenectady Co./Ny	North America/USA/New York/Schenectady Co.
+North America/USA/Schoharie Co./Ny	North America/USA/New York/Schoharie Co.
+North America/USA/Schuyler Co./Ny	North America/USA/New York/Schuyler Co.
+North America/USA/Seneca Co./Ny	North America/USA/New York/Seneca Co.
+North America/USA/Shreveport la/	North America/USA/Iowa/Shreveport la
+North America/USA/Sioux City Ia/	North America/USA/Iowa/Sioux City Ia
+North America/USA/Sioux Falls Sd/	North America/USA/South Dakota/Sioux Falls Sd
+North America/USA/South Bend In/	North America/USA/Indiana/South Bend In
+North America/USA/St. Joseph County/In	North America/USA/Indiana/St. Joseph County
+North America/USA/St. Lawrence Co./Ny	North America/USA/New York/St. Lawrence Co.
+North America/USA/Steuben Co./Ny	North America/USA/New York/Steuben Co.
+North America/USA/Suffolk Co./Ny	North America/USA/New York/Suffolk Co.
+North America/USA/Suffolk Couunty/Ny	North America/USA/New York/Suffolk Couunty
+North America/USA/Sufolk Co./Ny	North America/USA/New York/Sufolk Co.
+North America/USA/Tampa Fl/	North America/USA/Florida/Tampa Fl
+North America/USA/Tarrant Co. Tx/	North America/USA/Texas/Tarrant Co. Tx
+North America/USA/Tempe Az/	North America/USA/Arizona/Tempe Az
+North America/USA/Tompkins Co./Ny	North America/USA/New York/Tompkins Co.
+North America/USA/Travis Co. Tx/	North America/USA/Texas/Travis Co. Tx
+North America/USA/Tyler Tx/	North America/USA/Texas/Tyler Tx
+North America/USA/Ulster Co./Ny	North America/USA/New York/Ulster Co.
+North America/USA/Warren Co./Ny	North America/USA/New York/Warren Co.
+North America/USA/Washington Co./Ny	North America/USA/New York/Washington Co.
+North America/USA/Weschester Co./Ny	North America/USA/New York/Weschester Co.
+North America/USA/Westchester Co./Ny	North America/USA/New York/Westchester Co.
+North America/USA/Williamson Co. Tx/	North America/USA/Texas/Williamson Co. Tx
+North America/USA/Wyoming Co./Ny	North America/USA/New York/Wyoming Co.
