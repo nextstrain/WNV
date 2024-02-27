@@ -36,11 +36,10 @@ rule export_v2:
         nt_muts = "results/nt_muts.json",
         aa_muts = "results/aa_muts.json",
         colors = "results/colors.tsv",
+        lat_longs = "results/lat_longs.tsv",
         auspice_config = "config/auspice_config_v2.json"
     output:
         auspice = "auspice/WNV-nextstrain_NA.json"
-    #Removed lat long from augur shell temporarily
-    #--lat-longs {input.lat_longs} \
     shell:
         """
         augur export v2 \
@@ -49,6 +48,7 @@ rule export_v2:
             --metadata-id-columns "accession" \
             --node-data {input.branch_lengths} {input.traits} {input.nt_muts} {input.aa_muts} \
             --colors {input.colors} \
+            --lat-longs {input.lat_longs} \
             --auspice-config {input.auspice_config} \
             --output {output.auspice}
         """
