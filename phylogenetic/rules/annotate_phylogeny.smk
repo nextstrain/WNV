@@ -79,7 +79,7 @@ rule traits:
     output:
         node_data = "results/traits.json",
     params:
-        columns = "country division"
+        columns = "country division state"
     shell:
         """
         augur traits \
