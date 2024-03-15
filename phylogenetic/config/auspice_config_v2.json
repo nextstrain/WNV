@@ -12,7 +12,8 @@
   ],
   "geo_resolutions": [
     "state",
-    "division"
+    "division",
+    "location"
   ],
   "maintainers": [
     {"name": "Anderson Brito", "url": "http://grubaughlab.com/team/anderson-brito/"},
@@ -22,6 +23,7 @@
   "filters": [
     "country",
     "state",
+    "location",
     "authors",
     "lineage"
   ],

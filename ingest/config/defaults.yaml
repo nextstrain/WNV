@@ -61,6 +61,7 @@ curate:
     'country',
     'division',
     'location',
+    'state',
     'host',
     #'date_submitted',
     #'sra_accession',

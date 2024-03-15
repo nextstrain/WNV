@@ -73,40 +73,42 @@ states = {
 }
 
 for key, value in states.items():
-  f.write("{}\t{}\t{}\t{}\n".format("division", key, value[0], value[1]))
+  f.write("{}\t{}\t{}\t{}\n".format("state", key, value[0], value[1]))
 
 ## DIVISIONS
 
 # step 1: quick check to make sure there are no divisions of the same name in different states
-div_state = {}
+div_state = {} # example: { "New York City": "NY" }
 for x in metadata:
   div = x["location"]
-  if div != "Unknown":
+  if div not in ("Unknown",""):
     if div in div_state:
-      if div_state[div] != x["division"]:
-        print("PROBLEM! {} - {} & {}".format(x["division"], div, div_state[div]))
+      if div_state[div] != x["state"]:
+        print("PROBLEM! {} - {} & {}".format(x["state"], div, div_state[div]))
     else:
-      div_state[div] = x["division"]
+      div_state[div] = x["state"]
 
 # step 2: what are all the divisions and their corresponding GPS co-ords?
-divisions_gps = defaultdict(lambda: [])
+divisions_gps = defaultdict(lambda: []) # example: { "NY/New York City": [ [40.7128, -74.0060], [40, -74] ] }
 for x in metadata:
-  if x["location"] != "Unknown":
+  if x["location"] not in ("Unknown", ""):
       #print("lat longs! {} - {} - {}".format(x["division"],x["latitude"], x["longitude"]))
-    divisions_gps[x["location"]].append( [ x["latitude"], x["longitude"] ] )
+    divisions_gps[x['state'] + "/" + x["location"]].append( [ x["latitude"], x["longitude"] ] )
 
 # step 3: average the lat/longs:
-divisions = {}
+divisions = {} # example: { "New York City": [40.7128, -74.0060] }
 for key, values in divisions_gps.items():
-  ll = list(filter(lambda x: "Unknown" not in x and "XXX" not in x, values))
+  ll = list(filter(lambda x: "Unknown" not in x and "XXX" not in x and "" not in x, values))
   if len(ll) == 0:
     # no lat longs for these isolates, fall back to state instead
-    state = key.split("/")[0]
-    divisions[key] = states[state]
+    state = key.split("/")[0] # example: "NY"
+    loc = key.split("/")[1] # example: "New York City"
+    divisions[loc] = states[state]
   else:
-    divisions[key] = ( np.mean([float(x[0]) for x in ll]), np.mean([float(x[1]) for x in ll]) )
+    loc = key.split("/")[1] # example: "New York City"
+    divisions[loc] = ( np.mean([float(x[0]) for x in ll]), np.mean([float(x[1]) for x in ll]) )
 
 for key, value in divisions.items():
   f.write("{}\t{}\t{}\t{}\n".format("location", key, value[0], value[1]))
-for key, value in states.items():
-  f.write("{}\t{}\t{}\t{}\n".format("location", key, value[0], value[1]))
+#for key, value in states.items():
+#  f.write("{}\t{}\t{}\t{}\n".format("location", key, value[0], value[1]))

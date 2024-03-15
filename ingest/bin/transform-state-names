@@ -66,9 +66,13 @@ state_abbreviations = {
 }
 
 def _set_USAstates(record):
-    """Replace spaces, dashes, and periods with underscores in strain name."""
+    """
+    For USA records, attempts to parse the division field and set the state field. 
+
+    If the division field is not a state, then the location field is checked. If neither are states, then the state field is set to an empty string.
+    """
     if record["country"] != "USA":
-        return record["division"]
+        return ""
     
     if record["division"] in state_abbreviations:
         return state_abbreviations[record["division"]]
@@ -77,14 +81,14 @@ def _set_USAstates(record):
     if record["location"] in state_abbreviations:
         return state_abbreviations[record["location"]]
     
-    return record["division"]
+    return ""
 
 def main():
     args = parse_args()
 
     for index, record in enumerate(stdin):
         record = json.loads(record)
-        record["division"] = _set_USAstates(record)
+        record["state"] = _set_USAstates(record)
         stdout.write(json.dumps(record) + "\n")
 
 
