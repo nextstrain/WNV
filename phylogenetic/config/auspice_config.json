@@ -1,5 +1,5 @@
 {
-  "title": "Twenty years of West Nile Virus in the Americas",
+  "title": "West Nile Virus - Washington State Focused Build",
   "color_options": {
     "gt": {"menuItem": "genotype", "legendTitle": "Genotype", "type": "discrete"},
     "num_date": {"menuItem": "date", "legendTitle": "Sampling date", "type": "continuous"},
@@ -15,8 +15,8 @@
     "division"
   ],
   "maintainer": [
-    "Grubaugh Lab & James Hadfield",
-    "http://grubaughlab.com/"
+    "Marcela Torres, MPH",
+    "https://github.com/NW-PaGe/WNV-nextstrain"
   ],
   "filters": [
     "country",
