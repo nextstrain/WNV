@@ -1,0 +1,65 @@
+accession	lineage	date	region	country	division	location	state	host	authors	latitude	longitude	url	length
+AF481864	pre-NY							Ciconiidae	Malkinson et al			https://www.ncbi.nlm.nih.gov/nuccore/AF481864	11029
+MH166901	NY99	2000-XX-XX	North America	USA	Virginia	Norfolk VA	VA	Aves	Swetnam et al			https://www.ncbi.nlm.nih.gov/nuccore/MH166901	11025
+MH166903	NY99	2000-XX-XX	North America	USA	Virginia	Norfolk VA	VA	Aves	Swetnam et al			https://www.ncbi.nlm.nih.gov/nuccore/MH166903	11026
+MH166904	NY99	2000-XX-XX	North America	USA	Virginia	Norfolk VA	VA	Aves	Swetnam et al			https://www.ncbi.nlm.nih.gov/nuccore/MH166904	11018
+KX547395	NY99	2000-08-31	North America	USA	New York	Suffolk Co.	NY	Culex	Shabman et al			https://www.ncbi.nlm.nih.gov/nuccore/KX547395	10787
+KX547519	NY99	2000-09-01	North America	USA	New York	Westchester Co.	NY	Culex	Shabman et al			https://www.ncbi.nlm.nih.gov/nuccore/KX547519	10787
+KX547602	NY99	2000-09-01	North America	USA	New York	Westchester Co.	NY	Culex	Shabman et al			https://www.ncbi.nlm.nih.gov/nuccore/KX547602	10787
+HM488130	NY99	2000-XX-XX	North America	USA	Connecticut		CT	Culex salinarius	Armstrong et al			https://www.ncbi.nlm.nih.gov/nuccore/HM488130	10621
+HM488132	NY99	2000-XX-XX	North America	USA	Connecticut		CT	Culiseta melanura	Armstrong et al			https://www.ncbi.nlm.nih.gov/nuccore/HM488132	10621
+HQ671707	NY99	1999-XX-XX	North America	USA	Connecticut		CT	Culex pipiens	Henn et al			https://www.ncbi.nlm.nih.gov/nuccore/HQ671707	10607
+AF202541	NY99		North America	USA	New York		NY		Jia et al			https://www.ncbi.nlm.nih.gov/nuccore/AF202541	10945
+AF206518	NY99		North America	USA	Connecticut	Greenwich-Stanford Town Line	CT	Culex pipiens	Anderson et al			https://www.ncbi.nlm.nih.gov/nuccore/AF206518	10975
+HM488127	NY99	1999-XX-XX	North America	USA	Connecticut		CT	Corvus brachyrhynchos	Armstrong et al			https://www.ncbi.nlm.nih.gov/nuccore/HM488127	10625
+HM488126	NY99	1999-XX-XX	North America	USA	Connecticut		CT	Corvus brachyrhynchos	Armstrong et al			https://www.ncbi.nlm.nih.gov/nuccore/HM488126	10598
+KX547410	WN02	2012-07-30	North America	USA	New York	Oswego Co.	NY	Culiseta	Shabman et al			https://www.ncbi.nlm.nih.gov/nuccore/KX547410	10787
+KJ501434	WN02	2012-XX-XX	North America	USA				Pelecanus erythrorhynchos	Newman et al			https://www.ncbi.nlm.nih.gov/nuccore/KJ501434	10979
+KX547456	WN02	2012-07-31	North America	USA	New York	Chautauqua Co.	NY	Culex	Shabman et al			https://www.ncbi.nlm.nih.gov/nuccore/KX547456	10785
+KY216155	WN02	2012-07-31	North America	USA				Culex pipiens	Ehrbar et al			https://www.ncbi.nlm.nih.gov/nuccore/KY216155	11007
+KX547460	WN02	2013-08-06	North America	USA	New York	Madison Co.	NY	Aedes sp.	Shabman et al			https://www.ncbi.nlm.nih.gov/nuccore/KX547460	10787
+MF175829	WN02	2013-08-06	North America	USA	Texas	Dallas Co. Tx	TX	Culex quinquefasciatus	Aroh et al			https://www.ncbi.nlm.nih.gov/nuccore/MF175829	10250
+KX547482	WN02	2013-08-07	North America	USA	New York	Oswego Co.	NY	Culiseta	Shabman et al			https://www.ncbi.nlm.nih.gov/nuccore/KX547482	10787
+MF175827	WN02	2013-08-07	North America	USA	Texas	Dallas Co. Tx	TX	Culex quinquefasciatus	Aroh et al			https://www.ncbi.nlm.nih.gov/nuccore/MF175827	10250
+MF175839	WN02	2014-08-28	North America	USA	Texas	Denton Co. Tx	TX	Culex quinquefasciatus	Aroh et al			https://www.ncbi.nlm.nih.gov/nuccore/MF175839	11031
+KT020853	WN02	2014-10-14	North America	USA				Homo sapiens	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/KT020853	10299
+KX547548	WN02	2014-09-02	North America	USA	New York	Oswego Co.	NY	Culiseta	Shabman et al			https://www.ncbi.nlm.nih.gov/nuccore/KX547548	10786
+MF175863	WN02	2014-09-04	North America	USA	Texas	Denton Co. Tx	TX	Culex quinquefasciatus	Aroh et al			https://www.ncbi.nlm.nih.gov/nuccore/MF175863	11032
+KX547286	WN02	2015-09-03	North America	USA	New York	Chautauqua	NY	Culiseta	Shabman et al	42.209869	-79.470428	https://www.ncbi.nlm.nih.gov/nuccore/KX547286	10785
+MF175873	WN02	2015-09-08	North America	USA	Texas	Dallas Co. Tx	TX	Culex quinquefasciatus	Aroh et al			https://www.ncbi.nlm.nih.gov/nuccore/MF175873	11030
+MF175865	WN02	2015-09-16	North America	USA	Texas	Montgomery Co. Tx	TX	Culex quinquefasciatus	Aroh et al			https://www.ncbi.nlm.nih.gov/nuccore/MF175865	11035
+MF175831	WN02	2015-09-22	North America	USA	Texas	Denton Co. Tx	TX	Culex quinquefasciatus	Aroh et al			https://www.ncbi.nlm.nih.gov/nuccore/MF175831	11032
+MF175858	WN02	2015-09-22	North America	USA	Texas	Collin Co. Tx	TX	Culex quinquefasciatus	Aroh et al			https://www.ncbi.nlm.nih.gov/nuccore/MF175858	11032
+KJ501117	SW03	2010-XX-XX	North America	USA				Culex tarsalis	Newman et al			https://www.ncbi.nlm.nih.gov/nuccore/KJ501117	10954
+KJ501120	SW03	2010-XX-XX	North America	USA				Culex tarsalis	Newman et al			https://www.ncbi.nlm.nih.gov/nuccore/KJ501120	10951
+MF175815	SW03	2012-10-09	North America	USA	Texas	Dallas Co. Tx	TX	Culex quinquefasciatus	Aroh et al			https://www.ncbi.nlm.nih.gov/nuccore/MF175815	10250
+MG004533	SW03	2014-06-03	North America	USA	Arizona		AZ	Culex quinquefasciatus	Hepp et al			https://www.ncbi.nlm.nih.gov/nuccore/MG004533	10803
+KF704147	SW03	2010-08-01	North America	USA	Arizona	Maricopa County AZ	AZ	Culex quinquefasciatus	Plante et al			https://www.ncbi.nlm.nih.gov/nuccore/KF704147	11008
+KF704153	SW03	2010-08-06	North America	USA	Arizona	Maricopa County AZ	AZ	Culex quinquefasciatus	Plante et al			https://www.ncbi.nlm.nih.gov/nuccore/KF704153	11017
+KR348940	SW03	2010-08-06						Culex tarsalis	Duggal et al			https://www.ncbi.nlm.nih.gov/nuccore/KR348940	10299
+KR348937	SW03	2010-08-06						Culex tarsalis	Duggal et al			https://www.ncbi.nlm.nih.gov/nuccore/KR348937	10299
+KX547361	SW03	2010-08-12	North America	USA	New York	Suffolk Co.	NY	Culex	Shabman et al			https://www.ncbi.nlm.nih.gov/nuccore/KX547361	10787
+JX015523	SW03	2010-08-31	North America	USA	Texas	El Paso County TX	TX	Culex tarsalis	Mann et al			https://www.ncbi.nlm.nih.gov/nuccore/JX015523	10997
+KR348944	SW03	2010-09-14						Culex tarsalis	Duggal et al			https://www.ncbi.nlm.nih.gov/nuccore/KR348944	10299
+KJ501124	SW03	2010-XX-XX	North America	USA				Culex tarsalis	Newman et al			https://www.ncbi.nlm.nih.gov/nuccore/KJ501124	11007
+KX547552	SW03	2010-09-16	North America	USA	New York	Kings Co.	NY	Cyanocitta cristata	Shabman et al			https://www.ncbi.nlm.nih.gov/nuccore/KX547552	10787
+KJ145829	SW03	2010-XX-XX	North America	USA				Corvus brachyrhynchos	Newman et al			https://www.ncbi.nlm.nih.gov/nuccore/KJ145829	10455
+KR348981	SW03	2011-01-09						Culex tarsalis	Duggal et al			https://www.ncbi.nlm.nih.gov/nuccore/KR348981	10135
+KJ501118	SW03	2011-XX-XX	North America	USA				Culex tarsalis	Newman et al			https://www.ncbi.nlm.nih.gov/nuccore/KJ501118	11005
+KR348938	SW03	2011-02-15						Culex tarsalis	Duggal et al			https://www.ncbi.nlm.nih.gov/nuccore/KR348938	10263
+KR348976	SW03	2011-07-18						Culex tarsalis	Duggal et al			https://www.ncbi.nlm.nih.gov/nuccore/KR348976	10135
+KJ501170	SW03	2011-XX-XX	North America	USA				Culex tarsalis	Newman et al			https://www.ncbi.nlm.nih.gov/nuccore/KJ501170	10457
+KR348993	SW03	2011-07-21						Culex tarsalis	Duggal et al			https://www.ncbi.nlm.nih.gov/nuccore/KR348993	10260
+JQ700438	SW03	2011-XX-XX	North America	USA				Homo sapiens	Anez et al			https://www.ncbi.nlm.nih.gov/nuccore/JQ700438	11016
+KR348977	SW03	2011-08-15						Culex tarsalis	Duggal et al			https://www.ncbi.nlm.nih.gov/nuccore/KR348977	10216
+KR348942	SW03	2011-08-30						Culex tarsalis	Duggal et al			https://www.ncbi.nlm.nih.gov/nuccore/KR348942	10299
+KR348941	SW03	2011-08-30						Culex tarsalis	Duggal et al			https://www.ncbi.nlm.nih.gov/nuccore/KR348941	10299
+KJ501121	SW03	2011-XX-XX	North America	USA				Culex tarsalis	Newman et al			https://www.ncbi.nlm.nih.gov/nuccore/KJ501121	11031
+KJ501122	SW03	2011-XX-XX	North America	USA				Culex tarsalis	Newman et al			https://www.ncbi.nlm.nih.gov/nuccore/KJ501122	11033
+KX547375	SW03	2011-09-08	North America	USA	New York	Oswego Co.	NY	Culiseta	Shabman et al			https://www.ncbi.nlm.nih.gov/nuccore/KX547375	10787
+KM012172	SW03	2012-XX-XX	North America	USA	Texas		TX	Homo sapiens	Grinev et al			https://www.ncbi.nlm.nih.gov/nuccore/KM012172	11029
+KC333375	SW03	2012-08-04	North America	USA	Texas	Harris Co.	TX	Passer domesticus	Mann et al			https://www.ncbi.nlm.nih.gov/nuccore/KC333375	10932
+KJ501222	SW03	2012-XX-XX	North America	USA				Culex	Newman et al			https://www.ncbi.nlm.nih.gov/nuccore/KJ501222	11029
+MG004537	SW03	2014-08-28	North America	USA	Arizona		AZ	Culex quinquefasciatus	Hepp et al			https://www.ncbi.nlm.nih.gov/nuccore/MG004537	10803
+MF175866	SW03	2014-09-09	North America	USA	Texas	El Paso Co. Tx	TX	Culex tarsalis	Aroh et al			https://www.ncbi.nlm.nih.gov/nuccore/MF175866	11032
+MG004540	SW03	2015-05-12	North America	USA	Arizona		AZ	Culex quinquefasciatus	Hepp et al			https://www.ncbi.nlm.nih.gov/nuccore/MG004540	10803
