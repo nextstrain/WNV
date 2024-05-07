@@ -1,6 +1,6 @@
-if not config:
-
-    configfile: "config/defaults.yaml"
+#if not config:
+# remove this to not overwrite the github actions config flag
+configfile: "config/defaults.yaml"
 
 
 send_slack_notifications = config.get("send_slack_notifications", False)
