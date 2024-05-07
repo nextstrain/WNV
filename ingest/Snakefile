@@ -1,5 +1,3 @@
-#if not config:
-# remove this to not overwrite the github actions config flag
 configfile: "config/defaults.yaml"
 
 
