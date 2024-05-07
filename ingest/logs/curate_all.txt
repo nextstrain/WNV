@@ -1,0 +1,1 @@
+WARNING: Could not decode geolocation rule 'North America/USA/Washington/Dc        North America/USA/Washington DC/\n'. Please make sure rules are formatted as 'region/country/division/location<tab>region/country/division/location'.
