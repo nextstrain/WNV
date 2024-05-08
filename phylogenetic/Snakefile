@@ -48,7 +48,11 @@ include: "rules/construct_phylogeny.smk"
 include: "rules/annotate_phylogeny.smk"
 include: "rules/export.smk"
 
+# Include custom rules defined in the config.
+if "custom_rules" in config:
+    for rule_file in config["custom_rules"]:
 
+        include: rule_file
 
 rule clean:
     message: "Removing directories: {params}"
