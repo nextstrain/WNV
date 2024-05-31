@@ -68,11 +68,14 @@ rule align:
         reference = files.reference
     output:
         alignment = "results/aligned.fasta"
+    params:
+        threads = workflow.cores
     shell:
         """
         augur align \
             --sequences {input.sequences} \
             --output {output.alignment} \
             --fill-gaps \
-            --reference-sequence {input.reference}
+            --reference-sequence {input.reference} \
+            --nthreads {threads}
         """

@@ -27,13 +27,15 @@ rule tree:
         alignment = "results/aligned.fasta"
     output:
         tree = "results/tree_raw.nwk"
+    params:
+        threads = workflow.cores
     shell:
         """
         augur tree \
             --alignment {input.alignment} \
             --output {output.tree} \
             --method raxml \
-            --nthreads auto
+            --nthreads {threads}
         """
 
 rule refine:
