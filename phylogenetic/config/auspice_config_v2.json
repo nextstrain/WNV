@@ -1,11 +1,12 @@
 {
-  "title": "Twenty years of West Nile Virus in the Americas",
+  "title": "Washington Focused West Nile Virus Build",
   "colorings": [
     {"key": "gt", "title": "Genotype", "type": "categorical"},
     {"key": "num_date", "title": "Sampling Date", "type": "continuous"},
     {"key": "country", "title": "Country", "type": "categorical"},
     {"key": "state", "title": "State", "type": "categorical"},
     {"key": "division", "title": "Division", "type": "categorical"},
+    {"key": "location", "title": "Location", "type": "categorical"},
     {"key": "lineage", "title": "Strain", "type": "categorical"},
     {"key": "author", "title": "Authors", "type": "categorical"},
     {"key": "host", "title": "Host Species", "type": "categorical"}
@@ -16,9 +17,9 @@
     "location"
   ],
   "maintainers": [
-    {"name": "Anderson Brito", "url": "http://grubaughlab.com/team/anderson-brito/"},
-    {"name": "James Hadfield", "url": "https://twitter.com/hamesjadfield"},
-    {"name": "Grubaugh Lab", "url": "http://grubaughlab.com/"}
+    {"name": "Marcela Torres", "url": "https://github.com/NW-PaGe/WNV-nextstrain"},
+    {"name": "NW-PaGe", "url": "https://github.com/NW-PaGe/WNV-nextstrain"},
+    {"name": "Nextstrain Team", "url": "https://next.nextstrain.org/"}
   ],
   "filters": [
     "country",
