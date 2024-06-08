@@ -72,7 +72,7 @@ rule all:
 
 include: "rules/fetch_sequences.smk"
 include: "rules/curate.smk"
-
+include: "rules/nextclade.smk"
 
 if config.get("upload"):
 
