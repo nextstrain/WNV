@@ -36,7 +36,7 @@ rule export_v2:
         nt_muts = "results/nt_muts.json",
         aa_muts = "results/aa_muts.json",
         colors = "results/colors.tsv",
-        auspice_config = "../phylogenetic/config/auspice_config_v2.json"
+        auspice_config = "defaults/auspice_config.json"
     output:
         auspice = "auspice/WNV-nextstrain_NA.json"
     shell:

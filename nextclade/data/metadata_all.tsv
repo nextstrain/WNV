@@ -1,4 +1,4 @@
-accession	lineage	date	region	country	division	location	state	host	authors	latitude	longitude	url	length
+accession	clade_membership	date	region	country	division	location	state	host	authors	latitude	longitude	url	length
 AF481864	pre-NY							Ciconiidae	Malkinson et al			https://www.ncbi.nlm.nih.gov/nuccore/AF481864	11029
 MH166901	NY99	2000-XX-XX	North America	USA	Virginia	Norfolk VA	VA	Aves	Swetnam et al			https://www.ncbi.nlm.nih.gov/nuccore/MH166901	11025
 MH166903	NY99	2000-XX-XX	North America	USA	Virginia	Norfolk VA	VA	Aves	Swetnam et al			https://www.ncbi.nlm.nih.gov/nuccore/MH166903	11026
