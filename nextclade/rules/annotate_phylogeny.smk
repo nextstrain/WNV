@@ -35,9 +35,7 @@ to the ones produced by Augur commands.
 rule ancestral:
     message: "Reconstructing ancestral sequences and mutations"
     input:
-        #tree = rules.refine.output.tree,
         tree = "results/tree.nwk",
-        #alignment = rules.align.output
         alignment = "results/aligned.fasta"
     output:
         node_data = "results/nt_muts.json"
@@ -55,9 +53,7 @@ rule ancestral:
 rule translate:
     message: "Translating amino acid sequences"
     input:
-        #tree = rules.refine.output.tree,
         tree = "results/tree.nwk",
-        #node_data = rules.ancestral.output.node_data,
         node_data = "results/nt_muts.json",
         reference = "defaults/reference.gb"
     output:

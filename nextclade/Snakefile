@@ -17,8 +17,6 @@ configfile: "defaults/config.yaml"
 
 rule all:
     input:
-        #auspice_tree = "auspice/WNV_NA_tree.json",
-        #auspice_meta = "auspice/WNV_NA_meta.json",
         auspice = "auspice/WNV-nextstrain_NA.json"
 
 
@@ -32,12 +30,6 @@ rule all:
 # If there are build specific customizations, they should be added with the
 # custom_rules imported below to ensure that the core workflow is not complicated
 # by build specific rules.
-
-rule files:
-    params:
-        auspice_config = "../phylogenetic/config/auspice_config.json"
-
-files = rules.files.params
 
 include: "rules/prepare_sequences.smk"
 include: "rules/construct_phylogeny.smk"
