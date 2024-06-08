@@ -33,7 +33,6 @@ rule tree:
         augur tree \
             --alignment {input.alignment} \
             --output {output.tree} \
-            --method raxml \
             --nthreads {threads}
         """
 
