@@ -38,7 +38,7 @@ rule export_v2:
         colors = "results/colors.tsv",
         auspice_config = "defaults/auspice_config.json"
     output:
-        auspice = "auspice/WNV-nextstrain_NA.json"
+        auspice = "auspice/tree.json"
     shell:
         """
         augur export v2 \
