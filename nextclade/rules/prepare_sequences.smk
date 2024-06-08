@@ -30,7 +30,7 @@ rule create_colors:
         colors = "results/colors.tsv"
     shell:
         """
-        python ./scripts/make_colors.py {input.metadata} {output.colors}
+        python ../phylogenetic/scripts/make_colors.py {input.metadata} {output.colors}
         """
 
 rule align:

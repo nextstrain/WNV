@@ -6,7 +6,7 @@ workflow and define its default output(s).
 workdir: workflow.current_basedir
 
 # Use default configuration values. Override with Snakemake's --configfile/--config options.
-configfile: "config/defaults.yaml"
+configfile: "defaults/config.yaml"
 
 
 # This is the default rule that Snakemake will run when there are no specified targets.
@@ -35,8 +35,8 @@ rule all:
 
 rule files:
     params:
-        reference = "config/reference.gb",
-        auspice_config = "config/auspice_config.json"
+        reference = "../phylogenetic/config/reference.gb",
+        auspice_config = "../phylogenetic/config/auspice_config.json"
 
 files = rules.files.params
 
