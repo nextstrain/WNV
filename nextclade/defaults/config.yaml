@@ -1,0 +1,60 @@
+strain_id_field: "accession"
+# root: "A/Sample/2009"
+
+#subsampling:
+  #all: --min-length '9800' --query "country == 'USA' & accession != 'NC_009942'"
+
+# Define named subsampling groups below (e.g., "state", "country", "region",
+# etc.). The workflow will run an `augur filter` command with the arguments
+# defined by each named group. Each `augur filter` command operates on all
+# available metadata and sequences and produces a text file containing the list
+# of strain names that passed the filters. The workflow will collect the union
+# of all strain names from the subsampling files and output the corresponding
+# subset of metadata and sequences that will be used to build the phylogeny.
+#
+# As an example, we could define two named subsampling groups like the
+# following:
+#
+# ```
+# subsampling:
+#   state: --query "division == 'WA'" --subsample-max-sequences 5000
+#   neighboring_state: --query "division in ['CA', 'ID', 'OR', 'NV']" --subsample-max-sequences 5000
+# ```
+#
+# These named subsampling groups will translate to the following two `augur filter` commands:
+#
+# ```
+# augur filter \
+#   --sequences data/sequences_all.fasta \
+#   --metadata data/metadata_all.tsv \
+#   --query "division == 'WA'" --subsample-max-sequences 5000 \
+#   --output-strains results/subsampled_strains_state.txt
+#
+# augur filter \
+#   --sequences data/sequences_all.fasta \
+#   --metadata data/metadata_all.tsv \
+#   --query "division in ['CA', 'ID', 'OR', 'NV']" --subsample-max-sequences 5000 \
+#   --output-strains results/subsampled_strains_neighboring_state.txt
+# ```
+#
+# Then, the workflow will collect the strains from each command to extract the
+# corresponding metadata and sequences with the following command:
+#
+# ```
+# augur filter \
+#   --sequences data/sequences_all.fasta \
+#   --metadata data/metadata_all.tsv \
+#   --exclude-all \
+#   --include results/subsampled_strains_state.txt results/subsampled_strains_neighboring_state.txt \
+#   --output-sequences results/sequences_filtered.fasta \
+#   --output-metadata results/metadata_filtered.tsv
+# ```
+#
+# This command excludes all strains by default and then forces the inclusion of
+# the strains selected by the subsampling logic defined above.
+subsampling:
+   state: --query "state == 'WA'" --min-length '9800' --subsample-max-sequences 5000
+   neighboring_state: --query "state in ['CA', 'ID', 'OR', 'NV']" --group-by state year --min-length '9800' --subsample-max-sequences 5000
+   region: --query "state in ['AZ','NM', 'CO', 'UT', 'WY', 'MT']" --group-by state year --min-length '9800' --subsample-max-sequences 5000
+   country: --query "country == 'USA' and state not in ['WA', 'CA', 'ID', 'OR', 'NV','AZ','NM', 'CO', 'UT', 'WY', 'MT'] and accession != 'NC_009942'" --group-by state year --subsample-max-sequences 300 --min-length '9800'
+   #global: --query "country != 'USA'" --group-by country year --subsample-max-sequences 200
