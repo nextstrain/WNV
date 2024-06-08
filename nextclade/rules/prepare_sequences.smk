@@ -36,22 +36,22 @@ rule create_colors:
 rule align:
     message:
         """
-        Aligning sequences to {input.reference}
+        Aligning sequences to {params.root}
           - filling gaps with N
         """
     input:
         sequences = "data/sequences_all.fasta",
-        reference = files.reference
     output:
         alignment = "results/aligned.fasta"
     params:
-        threads = workflow.cores
+        threads = workflow.cores,
+        root = "AF481864" # pre-NY99
     shell:
         """
         augur align \
             --sequences {input.sequences} \
             --output {output.alignment} \
             --fill-gaps \
-            --reference-sequence {input.reference} \
+            --reference-name {params.root} \
             --nthreads {threads}
         """

@@ -57,7 +57,8 @@ rule refine:
     params:
         coalescent = "opt",
         date_inference = "marginal",
-        clock_filter_iqd = 4
+        clock_filter_iqd = 4,
+        root = "AF481864" # pre-NY99
     shell:
         """
         augur refine \
@@ -70,5 +71,5 @@ rule refine:
             --timetree \
             --coalescent {params.coalescent} \
             --date-confidence \
-            #--root NC_009942
+            --root {params.root}
         """

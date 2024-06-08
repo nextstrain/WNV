@@ -35,7 +35,6 @@ rule all:
 
 rule files:
     params:
-        reference = "../phylogenetic/config/reference.gb",
         auspice_config = "../phylogenetic/config/auspice_config.json"
 
 files = rules.files.params
