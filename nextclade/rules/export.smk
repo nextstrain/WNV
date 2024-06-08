@@ -30,7 +30,7 @@ rule export_v2:
     message: "Exporting data files for for auspice using V2 JSON schema"
     input:
         tree = "results/tree.nwk",
-        metadata = "results/metadata_filtered.tsv",
+        metadata = "data/metadata_all.tsv",
         branch_lengths = "results/branch_lengths.json",
         traits = "results/traits.json",
         nt_muts = "results/nt_muts.json",

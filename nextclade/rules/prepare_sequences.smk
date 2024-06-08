@@ -25,7 +25,7 @@ rule create_colors:
     message:
         "Creating custom color scale in {output.colors}"
     input:
-        metadata = "results/metadata_filtered.tsv"
+        metadata = "data/metadata_all.tsv"
     output:
         colors = "results/colors.tsv"
     shell:
@@ -40,7 +40,7 @@ rule align:
           - filling gaps with N
         """
     input:
-        sequences = "results/sequences_filtered.fasta",
+        sequences = "data/sequences_all.fasta",
         reference = files.reference
     output:
         alignment = "results/aligned.fasta"
