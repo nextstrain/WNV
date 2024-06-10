@@ -8,6 +8,7 @@
     {"key": "division", "title": "Division", "type": "categorical"},
     {"key": "location", "title": "Location", "type": "categorical"},
     {"key": "lineage", "title": "Strain", "type": "categorical"},
+    {"key": "clade_membership", "title": "Clade", "type": "categorical"},
     {"key": "author", "title": "Authors", "type": "categorical"},
     {"key": "host", "title": "Host Species", "type": "categorical"}
   ],
@@ -26,7 +27,8 @@
     "state",
     "location",
     "authors",
-    "lineage"
+    "lineage",
+    "clade_membership"
   ],
   "display_defaults": {
     "color_by": "state",

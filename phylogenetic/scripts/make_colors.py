@@ -35,6 +35,9 @@ fh.write("## WNV STRAINS / LINEAGES ##\n")
 for pair in zip(wnv_strain, wnv_strain_cols):
 	fh.write("{}\t{}\t{}\n".format("lineage", pair[0], pair[1]))
 
+for pair in zip(wnv_strain, wnv_strain_cols):
+	fh.write("{}\t{}\t{}\n".format("clade_membership", pair[0], pair[1]))
+
 #########################################################################################
 # STATES
 # different colour scales where used to colour states based on five main US geographic regions
