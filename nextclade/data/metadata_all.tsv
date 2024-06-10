@@ -63,102 +63,102 @@ KJ501222	SW03	2012-XX-XX	North America	USA				Culex	Newman et al			https://www.n
 MG004537	SW03	2014-08-28	North America	USA	Arizona		AZ	Culex quinquefasciatus	Hepp et al			https://www.ncbi.nlm.nih.gov/nuccore/MG004537	10803
 MF175866	SW03	2014-09-09	North America	USA	Texas	El Paso Co. Tx	TX	Culex tarsalis	Aroh et al			https://www.ncbi.nlm.nih.gov/nuccore/MF175866	11032
 MG004540	SW03	2015-05-12	North America	USA	Arizona		AZ	Culex quinquefasciatus	Hepp et al			https://www.ncbi.nlm.nih.gov/nuccore/MG004540	10803
-HM488129	NY99	"2000-09-21,2000-XX-XX"	North America	USA	Connecticut	New_Haven	CT	Culex salinarius	Armstrong et al			https://www.ncbi.nlm.nih.gov/nuccore/HM488129	10617
-MH166916	WN02	"2010-08-01,2010-XX-XX"	North America	USA	Virginia	"Norfolk VA,Norfolk"	VA	Culicidae	Swetnam et al			https://www.ncbi.nlm.nih.gov/nuccore/MH166916	11029
-OQ721335	WN02	2010-07-13	North America	USA	California	"Sacramento County,Sacramento"	CA	Culex tarsalis	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721335	10302
-MH508036	WN02	2016-07-28	North America	USA	California	"Kern,Kern County"	CA	Culex quinquefasciatus	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH508036	10302
-MH166897	WN02	"2010-08-01,2010-XX-XX"	North America	USA	Virginia	"Norfolk VA,Norfolk"	VA	Culicidae	Swetnam et al			https://www.ncbi.nlm.nih.gov/nuccore/MH166897	11022
+HM488129	NY99	2000-09-21	North America	USA	Connecticut	New_Haven	CT	Culex salinarius	Armstrong et al			https://www.ncbi.nlm.nih.gov/nuccore/HM488129	10617
+MH166916	WN02	2010-08-01	North America	USA	Virginia	Norfolk	VA	Culicidae	Swetnam et al			https://www.ncbi.nlm.nih.gov/nuccore/MH166916	11029
+OQ721335	WN02	2010-07-13	North America	USA	California	Sacramento	CA	Culex tarsalis	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721335	10302
+MH508036	WN02	2016-07-28	North America	USA	California	Kern	CA	Culex quinquefasciatus	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH508036	10302
+MH166897	WN02	2010-08-01	North America	USA	Virginia	Norfolk	VA	Culicidae	Swetnam et al			https://www.ncbi.nlm.nih.gov/nuccore/MH166897	11022
 OQ721253	WN02	2016-08-22	North America	USA	Colorado	Larimer	CO	Culex pipiens	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721253	10302
 OQ721698	WN02	2014-08-18	North America	USA	Colorado	Larimer	CO	Culex pipiens	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721698	10302
-MH507739	WN02	2013-08-12	North America	USA	California	"Shasta,Shasta County"	CA	Haemorhous mexicanus	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH507739	10302
-OQ721545	SW03	"2014-01-01,2014-08-01"	North America	USA	Oregon	"Malheur County,Malheur"	OR		Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721545	10302
-KJ501230	WN02	"2012-08-15,2012-XX-XX"	North America	USA		Larimer	CO	Culex tarsalis	Newman et al			https://www.ncbi.nlm.nih.gov/nuccore/KJ501230	11029
-OQ721115	WN02	2012-06-07	North America	USA	California	"Sacramento County,Sacramento"	CA	Aphelocoma californica	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721115	10302
-OQ721216	WN02	2015-08-20	North America	USA	California	"Yolo,Yolo County"	CA	Culex tarsalis	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721216	10302
-OQ721478	WN02	2018-07-17	North America	USA	Ohio	"Summit,Summit County OH"	OH		Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721478	10302
-MH507696	WN02	2015-10-02	North America	USA	California	"San_Diego,San Diego County"	CA	Corvus brachyrhynchos	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH507696	10302
-KJ501139	WN02	"2011-XX-XX,2011-09-02"	North America	USA		Unknown	CA	Culex quinquefasciatus	Newman et al			https://www.ncbi.nlm.nih.gov/nuccore/KJ501139	10894
-KC736495	WN02	"2012-XX-XX,2012-08-16"	North America	USA	Texas	Dallas	TX	Culex quinquefasciatus	Duggal et al			https://www.ncbi.nlm.nih.gov/nuccore/KC736495	11029
-KJ501144	WN02	"2011-10-26,2011-XX-XX"	North America	USA		Unknown	CA	Culex quinquefasciatus	Newman et al			https://www.ncbi.nlm.nih.gov/nuccore/KJ501144	10894
-MF175860	WN02	2015-07-22	North America	USA	Texas	"Denton,Denton Co. Tx"	TX	Culex quinquefasciatus	Aroh et al			https://www.ncbi.nlm.nih.gov/nuccore/MF175860	11032
+MH507739	WN02	2013-08-12	North America	USA	California	Shasta	CA	Haemorhous mexicanus	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH507739	10302
+OQ721545	SW03	2014-08-01	North America	USA	Oregon	Malheur	OR		Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721545	10302
+KJ501230	WN02	2012-08-15	North America	USA		Larimer	CO	Culex tarsalis	Newman et al			https://www.ncbi.nlm.nih.gov/nuccore/KJ501230	11029
+OQ721115	WN02	2012-06-07	North America	USA	California	Sacramento	CA	Aphelocoma californica	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721115	10302
+OQ721216	WN02	2015-08-20	North America	USA	California	Yolo	CA	Culex tarsalis	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721216	10302
+OQ721478	WN02	2018-07-17	North America	USA	Ohio	Summit	OH		Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721478	10302
+MH507696	WN02	2015-10-02	North America	USA	California	San_Diego	CA	Corvus brachyrhynchos	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH507696	10302
+KJ501139	WN02	2011-09-02	North America	USA		Unknown	CA	Culex quinquefasciatus	Newman et al			https://www.ncbi.nlm.nih.gov/nuccore/KJ501139	10894
+KC736495	WN02	2012-08-16	North America	USA	Texas	Dallas	TX	Culex quinquefasciatus	Duggal et al			https://www.ncbi.nlm.nih.gov/nuccore/KC736495	11029
+KJ501144	WN02	2011-10-26	North America	USA		Unknown	CA	Culex quinquefasciatus	Newman et al			https://www.ncbi.nlm.nih.gov/nuccore/KJ501144	10894
+MF175860	WN02	2015-07-22	North America	USA	Texas	Denton	TX	Culex quinquefasciatus	Aroh et al			https://www.ncbi.nlm.nih.gov/nuccore/MF175860	11032
 MH507619	SW03	2014-10-28	North America	USA	California	San_Diego	CA	Accipitridae	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH507619	10302
-OQ721542	WN02	2017-09-12	North America	USA	New Hampshire	"Rockingham,Rockingham County NH"	NH	Culex salinarius	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721542	10302
-KJ501226	WN02	"2012-08-21,2012-XX-XX"	North America	USA		Larimer	CO	Culex tarsalis	Newman et al			https://www.ncbi.nlm.nih.gov/nuccore/KJ501226	11033
-MH507719	WN02	2010-07-29	North America	USA	California	"Placer,Placer County"	CA	Aphelocoma californica	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH507719	10302
-KX547324	WN02	2013-08-14	North America	USA	New York	"Oswego Co.,Oswego"	NY	Culiseta	Shabman et al			https://www.ncbi.nlm.nih.gov/nuccore/KX547324	10787
-OQ721369	WN02	2018-08-28	North America	USA	Louisiana	"Ascension Parish,Ascension"	LA	Culex quinquefasciatus	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721369	10302
+OQ721542	WN02	2017-09-12	North America	USA	New Hampshire	Rockingham	NH	Culex salinarius	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721542	10302
+KJ501226	WN02	2012-08-21	North America	USA		Larimer	CO	Culex tarsalis	Newman et al			https://www.ncbi.nlm.nih.gov/nuccore/KJ501226	11033
+MH507719	WN02	2010-07-29	North America	USA	California	Placer	CA	Aphelocoma californica	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH507719	10302
+KX547324	WN02	2013-08-14	North America	USA	New York	Oswego	NY	Culiseta	Shabman et al			https://www.ncbi.nlm.nih.gov/nuccore/KX547324	10787
+OQ721369	WN02	2018-08-28	North America	USA	Louisiana	Ascension	LA	Culex quinquefasciatus	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721369	10302
 OQ721681	WN02	2013-08-12	North America	USA	Colorado	Larimer	CO	Culex tarsalis	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721681	10302
-KX547168	WN02	2012-09-27	North America	USA	New York	"Albany,Albany Co."	NY	Haemorhous mexicanus	Shabman et al			https://www.ncbi.nlm.nih.gov/nuccore/KX547168	10787
-OQ721422	WN02	2020-08-31	North America	USA	Iowa	"Black_Hawk,Black Hawk County"	IA	Culex pipiens	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721422	10302
+KX547168	WN02	2012-09-27	North America	USA	New York	Albany	NY	Haemorhous mexicanus	Shabman et al			https://www.ncbi.nlm.nih.gov/nuccore/KX547168	10787
+OQ721422	WN02	2020-08-31	North America	USA	Iowa	Black_Hawk	IA	Culex pipiens	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721422	10302
 MH507968	SW03	2015-04-28	North America	USA	California	San_Diego	CA	Corvus brachyrhynchos	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH507968	10302
 KY229070	WN02	2012-08-09	North America	USA		Suffolk	NY	Culex pipiens	Ehrbar et al			https://www.ncbi.nlm.nih.gov/nuccore/KY229070	11014
 OQ721165	WN02	2017-09-18	North America	USA	Iowa	Monona	IA	Culex restuans	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721165	10302
 OQ721735	WN02	2018-07-23	North America	USA	Colorado	Larimer	CO	Culex tarsalis	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721735	10302
-OQ721113	WN02	2011-08-29	North America	USA	California	"Sacramento County,Sacramento"	CA	Corvus brachyrhynchos	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721113	10302
-MH507661	SW03	2014-10-03	North America	USA	California	"San_Diego,San Diego County"	CA	Corvus brachyrhynchos	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH507661	10302
-OQ721208	WN02	2017-08-14	North America	USA	Iowa	"Polk County IA,Polk"	IA	Culex restuans	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721208	10302
-KX547177	WN02	2012-07-06	North America	USA	New York	"Rockland Co.,Rockland"	NY	Culex	Shabman et al			https://www.ncbi.nlm.nih.gov/nuccore/KX547177	10794
-OQ721121	WN02	2015-09-09	North America	USA	New Hampshire	"Hillsborough,Hillsborough County NH"	NH	Culex restuans	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721121	10302
-KM012181	WN02	"2012-XX-XX,2012-08-01"	North America	USA	Louisiana	Unknown	LA	Homo sapiens	Grinev et al			https://www.ncbi.nlm.nih.gov/nuccore/KM012181	11029
-MF175842	WN02	2014-10-17	North America	USA	Texas	"Travis Co. Tx,Travis"	TX	Culex quinquefasciatus	Aroh et al			https://www.ncbi.nlm.nih.gov/nuccore/MF175842	11032
-MF175817	WN02	2013-07-30	North America	USA	Texas	"Dallas,Dallas Co. Tx"	TX	Culex quinquefasciatus	Aroh et al			https://www.ncbi.nlm.nih.gov/nuccore/MF175817	10250
-KX547600	WN02	2010-09-13	North America	USA	New York	"Rensselaer Co.,Rensselaer"	NY	Corvus brachyrhynchos	Shabman et al			https://www.ncbi.nlm.nih.gov/nuccore/KX547600	10787
-OQ721454	WN02	2017-07-10	North America	USA	Iowa	"Woodbury,Woodbury County"	IA	Culex restuans	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721454	10302
-OQ721705	WN02	2017-07-24	North America	USA	Iowa	"Polk County IA,Polk"	IA	Culex pipiens	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721705	10302
-MH508018	WN02	2011-07-13	North America	USA	California	"Kern,Kern County"	CA	Culex tarsalis	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH508018	10302
-MH507803	WN02	2015-06-15	North America	USA	California	"Mello,Yuba"	CA	Culex tarsalis	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH507803	10302
+OQ721113	WN02	2011-08-29	North America	USA	California	Sacramento	CA	Corvus brachyrhynchos	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721113	10302
+MH507661	SW03	2014-10-03	North America	USA	California	San_Diego	CA	Corvus brachyrhynchos	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH507661	10302
+OQ721208	WN02	2017-08-14	North America	USA	Iowa	Polk	IA	Culex restuans	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721208	10302
+KX547177	WN02	2012-07-06	North America	USA	New York	Rockland	NY	Culex	Shabman et al			https://www.ncbi.nlm.nih.gov/nuccore/KX547177	10794
+OQ721121	WN02	2015-09-09	North America	USA	New Hampshire	Hillsborough	NH	Culex restuans	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721121	10302
+KM012181	WN02	2012-08-01	North America	USA	Louisiana	Unknown	LA	Homo sapiens	Grinev et al			https://www.ncbi.nlm.nih.gov/nuccore/KM012181	11029
+MF175842	WN02	2014-10-17	North America	USA	Texas	Travis	TX	Culex quinquefasciatus	Aroh et al			https://www.ncbi.nlm.nih.gov/nuccore/MF175842	11032
+MF175817	WN02	2013-07-30	North America	USA	Texas	Dallas	TX	Culex quinquefasciatus	Aroh et al			https://www.ncbi.nlm.nih.gov/nuccore/MF175817	10250
+KX547600	WN02	2010-09-13	North America	USA	New York	Rensselaer	NY	Corvus brachyrhynchos	Shabman et al			https://www.ncbi.nlm.nih.gov/nuccore/KX547600	10787
+OQ721454	WN02	2017-07-10	North America	USA	Iowa	Woodbury	IA	Culex restuans	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721454	10302
+OQ721705	WN02	2017-07-24	North America	USA	Iowa	Polk	IA	Culex pipiens	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721705	10302
+MH508018	WN02	2011-07-13	North America	USA	California	Kern	CA	Culex tarsalis	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH508018	10302
+MH507803	WN02	2015-06-15	North America	USA	California	Yuba	CA	Culex tarsalis	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH507803	10302
 OQ721665	WN02	2014-07-28	North America	USA	Colorado	Larimer	CO	Culex tarsalis	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721665	10302
-MH507781	WN02	2013-08-21	North America	USA	California	"Finley,Lake"	CA	Culex stigmatosoma	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH507781	10302
-MH507680	WN02	2015-08-28	North America	USA	California	"San_Diego,Del_Mar"	CA	Culicidae	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH507680	10302
-OQ721807	WN02	2010-09-28	North America	USA	California	"Yolo,Yolo County"	CA	Culex tarsalis	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721807	10302
-KX547294	"WN02,SW03"	2010-09-30	North America	USA	New York	"Rockland Co.,Rockland"	NY	Culex	Shabman et al			https://www.ncbi.nlm.nih.gov/nuccore/KX547294	10787
-KJ501437	WN02	"2012-08-28,2012-XX-XX"	North America	USA		Unknown	WI	Corvus brachyrhynchos	Newman et al			https://www.ncbi.nlm.nih.gov/nuccore/KJ501437	10978
-KC736500	WN02	"2012-08-28,2012-XX-XX"	North America	USA	Texas	Dallas	TX	Culex quinquefasciatus	Duggal et al			https://www.ncbi.nlm.nih.gov/nuccore/KC736500	11029
-KM012182	WN02	"2012-XX-XX,2012-08-01"	North America	USA	New Mexico	Unknown	NM	Homo sapiens	Grinev et al			https://www.ncbi.nlm.nih.gov/nuccore/KM012182	11029
-KJ501201	WN02	"2011-XX-XX,2011-09-02"	North America	USA		Unknown	CA	Culex quinquefasciatus	Newman et al			https://www.ncbi.nlm.nih.gov/nuccore/KJ501201	10930
-KX547171	WN02	2011-08-03	North America	USA	New York	"Oneida Co.,Oneida"	NY	Culiseta	Shabman et al			https://www.ncbi.nlm.nih.gov/nuccore/KX547171	10787
-MH507822	WN02	2017-06-29	North America	USA	California	"Kings,Kings County CA"	CA	Culex tarsalis	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH507822	10302
-OQ721434	WN02	2017-08-01	North America	USA	New Hampshire	"Hillsborough,Hillsborough County NH"	NH		Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721434	10302
-OQ721329	WN02	2017-09-11	North America	USA	Iowa	"Black_Hawk,Black Hawk County"	IA	Culex restuans	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721329	10302
+MH507781	WN02	2013-08-21	North America	USA	California	Lake	CA	Culex stigmatosoma	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH507781	10302
+MH507680	WN02	2015-08-28	North America	USA	California	San_Diego	CA	Culicidae	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH507680	10302
+OQ721807	WN02	2010-09-28	North America	USA	California	Yolo	CA	Culex tarsalis	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721807	10302
+KX547294	WN02	2010-09-30	North America	USA	New York	Rockland	NY	Culex	Shabman et al			https://www.ncbi.nlm.nih.gov/nuccore/KX547294	10787
+KJ501437	WN02	2012-08-28	North America	USA		Unknown	WI	Corvus brachyrhynchos	Newman et al			https://www.ncbi.nlm.nih.gov/nuccore/KJ501437	10978
+KC736500	WN02	2012-08-28	North America	USA	Texas	Dallas	TX	Culex quinquefasciatus	Duggal et al			https://www.ncbi.nlm.nih.gov/nuccore/KC736500	11029
+KM012182	WN02	2012-08-01	North America	USA	New Mexico	Unknown	NM	Homo sapiens	Grinev et al			https://www.ncbi.nlm.nih.gov/nuccore/KM012182	11029
+KJ501201	WN02	2011-09-02	North America	USA		Unknown	CA	Culex quinquefasciatus	Newman et al			https://www.ncbi.nlm.nih.gov/nuccore/KJ501201	10930
+KX547171	WN02	2011-08-03	North America	USA	New York	Oneida	NY	Culiseta	Shabman et al			https://www.ncbi.nlm.nih.gov/nuccore/KX547171	10787
+MH507822	WN02	2017-06-29	North America	USA	California	Kings	CA	Culex tarsalis	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH507822	10302
+OQ721434	WN02	2017-08-01	North America	USA	New Hampshire	Hillsborough	NH		Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721434	10302
+OQ721329	WN02	2017-09-11	North America	USA	Iowa	Black_Hawk	IA	Culex restuans	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721329	10302
 OQ721817	WN02	2016-08-25	North America	USA	Iowa	Story	IA	Culex pipiens	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721817	10302
 OQ721327	WN02	2016-08-15	North America	USA	Colorado	Larimer	CO	Culex pipiens	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721327	10302
-OQ721167	WN02	2011-08-18	North America	USA	California	"Sacramento County,Sacramento"	CA	Corvus brachyrhynchos	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721167	10302
-KX547485	WN02	2014-06-13	North America	USA	New York	"Rockland Co.,Rockland"	NY	Culex	Shabman et al			https://www.ncbi.nlm.nih.gov/nuccore/KX547485	10787
-MH507976	SW03	"2015-08-28,2015-08-25"	North America	USA	California	San_Diego	CA	Corvus brachyrhynchos	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH507976	10302
+OQ721167	WN02	2011-08-18	North America	USA	California	Sacramento	CA	Corvus brachyrhynchos	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721167	10302
+KX547485	WN02	2014-06-13	North America	USA	New York	Rockland	NY	Culex	Shabman et al			https://www.ncbi.nlm.nih.gov/nuccore/KX547485	10787
+MH507976	SW03	2015-08-25	North America	USA	California	San_Diego	CA	Corvus brachyrhynchos	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH507976	10302
 MH507662	SW03	2014-10-03	North America	USA	California	San_Diego	CA	Corvus brachyrhynchos	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH507662	10302
-MF175812	WN02	2012-09-05	North America	USA	Texas	"Collin Co. Tx,Collin"	TX	Culex quinquefasciatus	Aroh et al			https://www.ncbi.nlm.nih.gov/nuccore/MF175812	10250
-MH507773	WN02	2012-08-27	North America	USA	California	"Mello,Yuba"	CA	Culex tarsalis	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH507773	10302
-KX547612	WN02	2012-08-21	North America	USA	New York	"Suffolk Co.,Suffolk"	NY	Culex	Shabman et al			https://www.ncbi.nlm.nih.gov/nuccore/KX547612	10787
+MF175812	WN02	2012-09-05	North America	USA	Texas	Collin	TX	Culex quinquefasciatus	Aroh et al			https://www.ncbi.nlm.nih.gov/nuccore/MF175812	10250
+MH507773	WN02	2012-08-27	North America	USA	California	Yuba	CA	Culex tarsalis	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH507773	10302
+KX547612	WN02	2012-08-21	North America	USA	New York	Suffolk	NY	Culex	Shabman et al			https://www.ncbi.nlm.nih.gov/nuccore/KX547612	10787
 MG004532	WN02	2015-08-05	North America	USA	Arizona	Maricopa	AZ	Culex quinquefasciatus	Hepp et al			https://www.ncbi.nlm.nih.gov/nuccore/MG004532	10803
-OQ721574	WN02	2017-06-29	North America	USA	California	"Sacramento County,Sacramento"	CA		Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721574	10302
-OQ721795	WN02	2018-08-23	North America	USA	Illinois	"Cook County IL,Cook"	IL	Culex	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721795	10302
-KM012185	WN02	"2012-XX-XX,2012-08-01"	North America	USA	Nebraska	Unknown	NE	Homo sapiens	Grinev et al			https://www.ncbi.nlm.nih.gov/nuccore/KM012185	11029
-OQ721245	SW03	"2017-01-01,2017-08-22"	North America	USA	Washington	Lincoln	WA	Phasianinae	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721245	10302
+OQ721574	WN02	2017-06-29	North America	USA	California	Sacramento	CA		Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721574	10302
+OQ721795	WN02	2018-08-23	North America	USA	Illinois	Cook	IL	Culex	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721795	10302
+KM012185	WN02	2012-08-01	North America	USA	Nebraska	Unknown	NE	Homo sapiens	Grinev et al			https://www.ncbi.nlm.nih.gov/nuccore/KM012185	11029
+OQ721245	SW03	2017-08-22	North America	USA	Washington	Lincoln	WA	Phasianinae	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721245	10302
 KR348956	WN02	2010-12-08	North America	USA		Los_Angeles	CA	Culex quinquefasciatus	Duggal et al			https://www.ncbi.nlm.nih.gov/nuccore/KR348956	10299
-MF175835	WN02	"2014-08-10,2014-09-10"	North America	USA	Texas	"El_Paso,El Paso Co. Tx"	TX	Culex tarsalis	Aroh et al			https://www.ncbi.nlm.nih.gov/nuccore/MF175835	11032
-MH507695	SW03	2015-10-02	North America	USA	California	"San_Diego,San Diego County"	CA	Corvus brachyrhynchos	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH507695	10302
-KX547235	WN02	2015-08-13	North America	USA	New York	"Orange,Orange Co."	NY	Culex	Shabman et al			https://www.ncbi.nlm.nih.gov/nuccore/KX547235	10787
-OQ721837	SW03	2018-08-14	North America	USA	Washington	"Pierce,Pierce County WA"	WA	Culex pipiens	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721837	10302
-OQ721314	WN02	2017-07-08	North America	USA	Louisiana	"Ouachita,Ouachita Parish LA"	LA	Culex quinquefasciatus	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721314	10302
+MF175835	WN02	2014-09-10	North America	USA	Texas	El_Paso	TX	Culex tarsalis	Aroh et al			https://www.ncbi.nlm.nih.gov/nuccore/MF175835	11032
+MH507695	SW03	2015-10-02	North America	USA	California	San_Diego	CA	Corvus brachyrhynchos	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH507695	10302
+KX547235	WN02	2015-08-13	North America	USA	New York	Orange	NY	Culex	Shabman et al			https://www.ncbi.nlm.nih.gov/nuccore/KX547235	10787
+OQ721837	SW03	2018-08-14	North America	USA	Washington	Pierce	WA	Culex pipiens	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721837	10302
+OQ721314	WN02	2017-07-08	North America	USA	Louisiana	Ouachita	LA	Culex quinquefasciatus	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721314	10302
 OQ721256	WN02	2016-08-08	North America	USA	Colorado	Larimer	CO	Culex pipiens	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721256	10302
-MH507792	WN02	2014-06-20	North America	USA	California	"Fresno,Fresno County"	CA	Culex quinquefasciatus	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH507792	10302
+MH507792	WN02	2014-06-20	North America	USA	California	Fresno	CA	Culex quinquefasciatus	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH507792	10302
 OQ721659	WN02	2017-08-14	North America	USA	Iowa	Pottawattamie	IA	Culex restuans	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721659	10302
-OQ721262	WN02	2017-07-17	North America	USA	Iowa	"Polk County IA,Polk"	IA	Culex restuans	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721262	10302
+OQ721262	WN02	2017-07-17	North America	USA	Iowa	Polk	IA	Culex restuans	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721262	10302
 OQ721202	WN02	2016-08-08	North America	USA	Iowa	Story	IA	Culex pipiens	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721202	10302
-OQ721171	WN02	2015-08-03	North America	USA	California	"San_Diego,San Diego County"	CA	Corvus brachyrhynchos	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721171	10302
+OQ721171	WN02	2015-08-03	North America	USA	California	San_Diego	CA	Corvus brachyrhynchos	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721171	10302
 KY216153	WN02	2012-07-25	North America	USA		Suffolk	NY	Culex pipiens	Ehrbar et al			https://www.ncbi.nlm.nih.gov/nuccore/KY216153	11015
-OQ721290	SW03	"2010-08-01,2010-01-01"	North America	USA	Oregon	"Benton County OR,Benton"	OR		Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721290	10302
-KX547220	WN02	2011-08-18	North America	USA	New York	"Suffolk Co.,Suffolk"	NY	Coquillettidia	Shabman et al			https://www.ncbi.nlm.nih.gov/nuccore/KX547220	10787
-MH507975	SW03	"2015-08-19,2015-08-21"	North America	USA	California	"San_Diego,Mira_Mesa"	CA	Corvus brachyrhynchos	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH507975	10302
-KC333376	WN02	2012-06-14	North America	USA	Texas	"Fort Bend County,Harris"	TX	Cyanocitta cristata	Mann et al			https://www.ncbi.nlm.nih.gov/nuccore/KC333376	11009
-OQ721247	WN02	2012-06-14	North America	USA	California	"Sacramento County,Sacramento"	CA	Culex tarsalis	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721247	10302
+OQ721290	SW03	2010-08-01	North America	USA	Oregon	Benton	OR		Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721290	10302
+KX547220	WN02	2011-08-18	North America	USA	New York	Suffolk	NY	Coquillettidia	Shabman et al			https://www.ncbi.nlm.nih.gov/nuccore/KX547220	10787
+MH507975	SW03	2015-08-19	North America	USA	California	San_Diego	CA	Corvus brachyrhynchos	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH507975	10302
+KC333376	WN02	2012-06-14	North America	USA	Texas	Harris	TX	Cyanocitta cristata	Mann et al			https://www.ncbi.nlm.nih.gov/nuccore/KC333376	11009
+OQ721247	WN02	2012-06-14	North America	USA	California	Sacramento	CA	Culex tarsalis	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721247	10302
 OQ721338	WN02	2015-08-31	North America	USA	Colorado	Larimer	CO	Culex tarsalis	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721338	10302
-OQ721789	WN02	"2016-08-01,2016-01-01"	North America	USA	Oregon	"Jackson County OR,Jackson"	OR		Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721789	10302
+OQ721789	WN02	2016-08-01	North America	USA	Oregon	Jackson	OR		Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721789	10302
 MH507967	SW03	2015-04-16	North America	USA	California	San_Diego	CA	Corvus brachyrhynchos	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH507967	10302
 OQ721268	WN02	2013-07-22	North America	USA	Colorado	Larimer	CO	Culex tarsalis	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721268	10302
 OQ721786	WN02	2013-08-12	North America	USA	Colorado	Larimer	CO	Culex tarsalis	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721786	10302
-MH507774	SW03	2012-08-28	North America	USA	California	"Harmony,Tulare"	CA	Culex tarsalis	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH507774	10302
-OQ721144	WN02	2018-08-30	North America	USA	Illinois	"Cook County IL,Cook"	IL	Culex	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721144	10302
+MH507774	SW03	2012-08-28	North America	USA	California	Tulare	CA	Culex tarsalis	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/MH507774	10302
+OQ721144	WN02	2018-08-30	North America	USA	Illinois	Cook	IL	Culex	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721144	10302
 OQ721549	WN02	2013-07-29	North America	USA	Colorado	Larimer	CO	Culex tarsalis	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721549	10302
-KX547562	WN02	2010-07-27	North America	USA	New York	"Erie Co.,Erie"	NY	Culex	Shabman et al			https://www.ncbi.nlm.nih.gov/nuccore/KX547562	10787
-OQ721229	WN02	2020-10-05	North America	USA	Iowa	"Polk County IA,Polk"	IA	Culex pipiens	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721229	10302
+KX547562	WN02	2010-07-27	North America	USA	New York	Erie	NY	Culex	Shabman et al			https://www.ncbi.nlm.nih.gov/nuccore/KX547562	10787
+OQ721229	WN02	2020-10-05	North America	USA	Iowa	Polk	IA	Culex pipiens	Grubaugh et al			https://www.ncbi.nlm.nih.gov/nuccore/OQ721229	10302
