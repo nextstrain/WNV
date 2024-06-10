@@ -1,0 +1,17 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+##sequence-region AF481864.1 1 11029
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=11082
+AF481864.1	Genbank	region	1	11029	.	+	.	ID=AF481864.1:1..11029;Dbxref=taxon:11082;gb-acronym=WNV;gbkey=Src;mol_type=genomic RNA;nat-host=sick stork;note=isolated in Israel in 1998;strain=IS-98 STD1
+AF481864.1	Genbank	CDS	97	465	.	+	0	ID=capsid;Name=capsid;product=capsid
+AF481864.1	Genbank	CDS	466	966	.	+	0	ID=prM;Name=prM;product=prM
+AF481864.1	Genbank	CDS	967	2469	.	+	0	ID=env;Name=env;product=env
+AF481864.1	Genbank	CDS	2470	3525	.	+	0	ID=NS1;Name=NS1;product=NS1
+AF481864.1	Genbank	CDS	3526	4218	.	+	0	ID=NS2A;Name=NS2A;product=NS2A
+AF481864.1	Genbank	CDS	4219	4611	.	+	0	ID=NS2B;Name=NS2B;product=NS2B
+AF481864.1	Genbank	CDS	4612	6468	.	+	0	ID=NS3;Name=NS3;product=NS3
+AF481864.1	Genbank	CDS	6469	6846	.	+	0	ID=NS4A;Name=NS4A;product=NS4A
+AF481864.1	Genbank	CDS	6847	6915	.	+	0	ID=2K;Name=2K;product=2K
+AF481864.1	Genbank	CDS	6916	7680	.	+	0	ID=NS4B;Name=NS4B;product=NS4B
+AF481864.1	Genbank	CDS	7681	10395	.	+	0	ID=NS5;Name=NS5;product=NS5
