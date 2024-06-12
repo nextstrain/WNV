@@ -1,5 +1,5 @@
 {
-  "title": "Washington Focused West Nile Virus Build",
+  "title": "Nextclade dataset for West Nile Virus in the Americas",
   "colorings": [
     {"key": "gt", "title": "Genotype", "type": "categorical"},
     {"key": "num_date", "title": "Sampling Date", "type": "continuous"},
@@ -7,9 +7,7 @@
     {"key": "state", "title": "State", "type": "categorical"},
     {"key": "division", "title": "Division", "type": "categorical"},
     {"key": "location", "title": "Location", "type": "categorical"},
-    {"key": "lineage", "title": "Strain", "type": "categorical"},
-    {"key": "clade_membership", "title": "Clade", "type": "categorical"},
-    {"key": "author", "title": "Authors", "type": "categorical"},
+    {"key": "clade_membership", "title": "Clade Membership", "type": "categorical"},
     {"key": "host", "title": "Host Species", "type": "categorical"}
   ],
   "geo_resolutions": [
@@ -18,20 +16,18 @@
     "location"
   ],
   "maintainers": [
-    {"name": "Marcela Torres", "url": "https://github.com/NW-PaGe/WNV-nextstrain"},
-    {"name": "NW-PaGe", "url": "https://github.com/NW-PaGe/WNV-nextstrain"},
+    {"name": "Marcela Torres", "url": "https://github.com/DOH-LMT2303"},
+    {"name": "NW-PaGe", "url": "https://github.com/NW-PaGe"},
     {"name": "Nextstrain Team", "url": "https://next.nextstrain.org/"}
   ],
   "filters": [
     "country",
     "state",
     "location",
-    "authors",
-    "lineage",
     "clade_membership"
   ],
   "display_defaults": {
-    "color_by": "state",
+    "color_by": "clade_membership",
     "map_triplicate": false,
     "geo_resolution": "state"
  }

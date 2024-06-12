@@ -20,8 +20,8 @@ See Augur's usage docs for these commands for more details.
 
 rule filter_manual:
     input:
-        metadata = "data/metadata_all.tsv",
-        sequences = "data/sequences_all.fasta"
+        metadata = "../ingest/data/metadata_all.tsv",
+        sequences = "../ingest/data/sequences_all.fasta"
     output:
         sequences = "results/sequences_filtered.fasta",
         metadata = "results/metadata_filtered.tsv"

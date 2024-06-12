@@ -23,7 +23,6 @@ See Augur's usage docs for these commands for more details.
 rule tree:
     message: "Building tree"
     input:
-        #alignment = rules.align.output.alignment
         alignment = "results/aligned.fasta"
     output:
         tree = "results/tree_raw.nwk"
@@ -34,7 +33,6 @@ rule tree:
         augur tree \
             --alignment {input.alignment} \
             --output {output.tree} \
-            --method raxml \
             --nthreads {threads}
         """
 
@@ -50,7 +48,7 @@ rule refine:
     input:
         tree = "results/tree_raw.nwk",
         alignment = "results/aligned.fasta",
-        metadata = "results/metadata_filtered.tsv"
+        metadata = "data/metadata_all.tsv"
     output:
         tree = "results/tree.nwk",
         node_data = "results/branch_lengths.json"
@@ -58,7 +56,7 @@ rule refine:
         coalescent = "opt",
         date_inference = "marginal",
         clock_filter_iqd = 4,
-        root = "AF481864"
+        root = "AF481864" # pre-NY99
     shell:
         """
         augur refine \
