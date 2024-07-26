@@ -37,7 +37,7 @@ rule export_v2:
         aa_muts = "results/aa_muts.json",
         colors = "results/colors.tsv",
         lat_longs = "results/lat_longs.tsv",
-        auspice_config = "config/auspice_config_v2.json"
+        auspice_config = "defaults/auspice_config_v2.json"
     output:
         auspice = "auspice/WNV-nextstrain_NA.json"
     shell:

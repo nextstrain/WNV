@@ -5,8 +5,8 @@ However, this configurable subsampling allows for tierred subsampling based on v
 
 REQUIRED INPUTS:
 
-    metadata    = data/metadata.tsv
-    sequences   = data/sequences.fasta
+    metadata    = results/metadata.tsv
+    sequences   = results/equences.fasta
 
 OUTPUTS:
 
@@ -24,8 +24,8 @@ ruleorder: extract_subsampled_sequences_and_metadata > filter_manual
 
 rule subsample:
     input:
-        metadata = "../ingest/data/metadata_all.tsv",
-        sequences = "../ingest/data/sequences_all.fasta"
+        metadata = "../ingest/results/metadata_all.tsv",
+        sequences = "../ingest/results/sequences_all.fasta"
     output:
         subsampled_strains = "results/subsampled_strains_{subsample}.txt",
     params:
@@ -43,8 +43,8 @@ rule subsample:
 
 rule extract_subsampled_sequences_and_metadata:
     input:
-        sequences = "../ingest/data/sequences_all.fasta",
-        metadata = "../ingest/data/metadata_all.tsv",
+        sequences = "../ingest/results/sequences_all.fasta",
+        metadata = "../ingest/results/metadata_all.tsv",
         subsampled_strains = expand("results/subsampled_strains_{subsample}.txt", subsample=list(config.get("subsampling", {}).keys()))
     output:
         #sequences = "results/subsampled_sequences.fasta",
