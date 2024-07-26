@@ -3,7 +3,7 @@ workdir: workflow.current_basedir
 
 if not config:
 
-    configfile: "config/defaults.yaml"
+    configfile: "defaults/config.yaml"
 
 
 send_slack_notifications = config.get("send_slack_notifications", False)
@@ -14,7 +14,7 @@ serotypes = ["all"]
 def _get_all_targets(wildcards):
     # Default targets are the metadata TSV and sequences FASTA files
     all_targets = expand(
-        ["data/sequences_{serotype}.fasta.zst", "data/metadata_{serotype}.tsv.zst"],
+        ["results/sequences_{serotype}.fasta.zst", "results/metadata_{serotype}.tsv.zst"],
         serotype=serotypes,
     )
 
@@ -70,20 +70,6 @@ rule all:
         _get_all_targets,
 
 
-include: "rules/fetch_sequences.smk"
+include: "rules/fetch_from_ncbi.smk"
 include: "rules/curate.smk"
 include: "rules/nextclade.smk"
-
-if config.get("upload"):
-
-    include: "rules/upload.smk"
-
-
-if send_slack_notifications:
-
-    include: "rules/slack_notifications.smk"
-
-
-if config.get("trigger_rebuild"):
-
-    include: "rules/trigger_rebuild.smk"

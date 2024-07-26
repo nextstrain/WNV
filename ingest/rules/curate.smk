@@ -6,8 +6,8 @@ formats and expects input file
 
 This will produce output files as
 
-    metadata = "data/metadata_{serotype}.tsv"
-    sequences = "data/sequences_{serotype}.fasta"
+    metadata = "results/metadata_{serotype}.tsv"
+    sequences = "results/sequences_{serotype}.fasta"
 
 Parameters are expected to be defined in `config.curate`.
 """
@@ -43,8 +43,8 @@ rule curate:
         all_geolocation_rules="data/all-geolocation-rules.tsv",
         annotations=config["curate"]["annotations"],
     output:
-        metadata="data/raw_metadata_{serotype}.tsv",
-        sequences="data/sequences_{serotype}.fasta",
+        metadata="results/raw_metadata_{serotype}.tsv",
+        sequences="results/sequences_{serotype}.fasta",
     log:
         "logs/curate_{serotype}.txt",
     params:
@@ -66,32 +66,32 @@ rule curate:
     shell:
         """
         (cat {input.sequences_ndjson} \
-            | ./bin/transform-field-names \
+            | ./scripts/transform-field-names \
                 --field-map {params.field_map} \
             | augur curate normalize-strings \
-            | ./bin/transform-strain-names \
+            | ./scripts/transform-strain-names \
                 --strain-regex {params.strain_regex} \
                 --backup-fields {params.strain_backup_fields} \
-            | ./bin/transform-date-fields \
+            | ./scripts/transform-date-fields \
                 --date-fields {params.date_fields} \
                 --expected-date-formats {params.expected_date_formats} \
-            | ./bin/transform-genbank-location \
-            | ./bin/transform-string-fields \
+            | ./scripts/transform-genbank-location \
+            | ./scripts/transform-string-fields \
                 --titlecase-fields {params.titlecase_fields} \
                 --articles {params.articles} \
                 --abbreviations {params.abbreviations} \
-            | ./bin/transform-authors \
+            | ./scripts/transform-authors \
                 --authors-field {params.authors_field} \
                 --default-value {params.authors_default_value:q} \
                 --abbr-authors-field {params.abbr_authors_field} \
-            | ./bin/apply-geolocation-rules \
+            | ./scripts/apply-geolocation-rules \
                 --geolocation-rules {input.all_geolocation_rules} \
-            | ./bin/transform-state-names \
-            | ./bin/post_process_metadata.py \
-            | ./bin/merge-user-metadata \
+            | ./scripts/transform-state-names \
+            | ./scripts/post_process_metadata.py \
+            | ./scripts/merge-user-metadata \
                 --annotations {input.annotations} \
                 --id-field {params.annotations_id} \
-            | ./bin/ndjson-to-tsv-and-fasta \
+            | ./scripts/ndjson-to-tsv-and-fasta \
                 --metadata-columns {params.metadata_columns} \
                 --metadata {output.metadata} \
                 --fasta {output.sequences} \

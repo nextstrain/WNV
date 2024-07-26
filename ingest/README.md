@@ -1,87 +1,87 @@
-# nextstrain.org/zika/ingest
+# Ingest
 
-This is the ingest pipeline for Zika virus sequences.
+This workflow ingests public data from NCBI and outputs curated metadata and
+sequences that can be used as input for the phylogenetic workflow.
 
-## Usage
+If you have another data source or private data that needs to be formatted for
+the phylogenetic workflow, then you can use a similar workflow to curate your
+own data.
 
-> NOTE: All command examples assume you are within the `ingest` directory.
-> If running commands from the outer `zika` directory, please replace the `.` with `ingest`
+## Workflow Usage
 
-Fetch sequences with
-
-```sh
-nextstrain build --cpus 1 . data/sequences_all.ndjson
+The workflow can be run from the top level pathogen repo directory:
+```
+nextstrain build ingest
 ```
 
-Run the complete ingest pipeline with
-
-```sh
-nextstrain build --cpus 1 .
+Alternatively, the workflow can also be run from within the ingest directory:
+```
+cd ingest
+nextstrain build .
 ```
 
-This will produce two files (within the `ingest` directory):
+This produces the default outputs of the ingest workflow:
 
-- data/metadata_all.tsv
-- data/sequences_all.fasta
+- metadata      = results/metadata_all.tsv
+- sequences     = results/sequences_all.fasta
 
-Run the complete ingest pipeline and upload results to AWS S3 with
+### Dumping the full raw metadata from NCBI Datasets
 
-```sh
-nextstrain build . --configfiles config/config.yaml config/optional.yaml
+The workflow has a target for dumping the full raw metadata from NCBI Datasets.
+
+```
+nextstrain build ingest dump_ncbi_dataset_report
 ```
 
-### Adding new sequences not from GenBank
+This will produce the file `ingest/data/ncbi_dataset_report_raw.tsv`,
+which you can inspect to determine what fields and data to use if you want to
+configure the workflow for your pathogen.
 
-#### Static Files
+## Defaults
 
-Do the following to include sequences from static FASTA files.
+The defaults directory contains all of the default configurations for the ingest workflow.
 
-1. Convert the FASTA files to NDJSON files with:
+[defaults/config.yaml](defaults/config.yaml) contains all of the default configuration parameters
+used for the ingest workflow. Use Snakemake's `--configfile`/`--config`
+options to override these default values.
 
-    ```sh
-    ./ingest/bin/fasta-to-ndjson \
-        --fasta {path-to-fasta-file} \
-        --fields {fasta-header-field-names} \
-        --separator {field-separator-in-header} \
-        --exclude {fields-to-exclude-in-output} \
-        > ingest/data/{file-name}.ndjson
-    ```
+## Snakefile and rules
 
-2. Add the following to the `.gitignore` to allow the file to be included in the repo:
+The rules directory contains separate Snakefiles (`*.smk`) as modules of the core ingest workflow.
+The modules of the workflow are in separate files to keep the main ingest [Snakefile](Snakefile) succinct and organized.
 
-    ```gitignore
-    !ingest/data/{file-name}.ndjson
-    ```
+The `workdir` is hardcoded to be the ingest directory so all filepaths for
+inputs/outputs should be relative to the ingest directory.
 
-3. Add the `file-name` (without the `.ndjson` extension) as a source to `ingest/config/config.yaml`. This will tell the ingest pipeline to concatenate the records to the GenBank sequences and run them through the same transform pipeline.
+Modules are all [included](https://snakemake.readthedocs.io/en/stable/snakefiles/modularization.html#includes)
+in the main Snakefile in the order that they are expected to run.
 
-## Configuration
+### Nextclade
 
-Configuration takes place in `config/config.yaml` by default.
-Optional configs for uploading files and Slack notifications are in `config/optional.yaml`.
+Nextstrain is pushing to standardize ingest workflows with Nextclade runs to include Nextclade outputs in our publicly
+hosted data. However, if a Nextclade dataset does not already exist, it requires curated data as input, so we are making
+Nextclade steps optional here.
 
-### Environment Variables
+If Nextclade config values are included, the Nextclade rules will create the final metadata TSV by joining the Nextclade
+output with the metadata. If Nextclade configs are not included, we rename the subset metadata TSV to the final metadata TSV.
 
-The complete ingest pipeline with AWS S3 uploads and Slack notifications uses the following environment variables:
+To run Nextclade rules, include the `defaults/nextclade_config.yaml` config file with:
 
-#### Required
+```
+nextstrain build ingest --configfile defaults/nextclade_config.yaml
+```
 
-- `AWS_DEFAULT_REGION`
-- `AWS_ACCESS_KEY_ID`
-- `AWS_SECRET_ACCESS_KEY`
-- `SLACK_TOKEN`
-- `SLACK_CHANNELS`
+> [!TIP]
+> If the Nextclade dataset is stable and you always want to run the Nextclade rules as part of ingest, we recommend
+moving the Nextclade related config parameters from the `defaults/nextclade_config.yaml` file to the default config file
+`defaults/config.yaml`.
 
-#### Optional
+## Build configs
 
-These are optional environment variables used in our automated pipeline for providing detailed Slack notifications.
+The build-configs directory contains custom configs and rules that override and/or
+extend the default workflow.
 
-- `GITHUB_RUN_ID` - provided via [`github.run_id` in a GitHub Action workflow](https://docs.github.com/en/actions/learn-github-actions/contexts#github-context)
-- `AWS_BATCH_JOB_ID` - provided via [AWS Batch Job environment variables](https://docs.aws.amazon.com/batch/latest/userguide/job_env_vars.html)
+- [nextstrain-automation](build-configs/nextstrain-automation/) - automated internal Nextstrain builds.
 
-## Input data
 
-### GenBank data
 
-GenBank sequences and metadata are fetched via NCBI Virus.
-The exact URL used to fetch data is constructed in `bin/genbank-url`.

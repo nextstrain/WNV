@@ -61,7 +61,7 @@ rule append_nextclade_columns:
         metadata="data/raw_metadata_all.tsv",
         nextclade_subtypes="data/nextclade_clades.tsv",
     output:
-        metadata_all="data/metadata_all.tsv",
+        metadata_all="results/metadata_all.tsv",
     params:
         id_field=config["curate"]["id_field"],
         nextclade_field="clade_membership",
