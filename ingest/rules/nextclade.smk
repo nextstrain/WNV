@@ -18,7 +18,7 @@ rule nextclade_classify:
     Classifies sequences into clades using Nextclade
     """
     input:
-        sequences="data/sequences_all.fasta",
+        sequences="results/sequences_all.fasta",
         dataset="../nextclade/dataset",
     output:
         nextclade_tsv="data/nextclade_results/nextclade.tsv",
