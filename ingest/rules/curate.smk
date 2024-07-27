@@ -43,7 +43,7 @@ rule curate:
         all_geolocation_rules="data/all-geolocation-rules.tsv",
         annotations=config["curate"]["annotations"],
     output:
-        metadata="results/raw_metadata_{serotype}.tsv",
+        metadata="data/raw_metadata_{serotype}.tsv",
         sequences="results/sequences_{serotype}.fasta",
     log:
         "logs/curate_{serotype}.txt",
@@ -53,6 +53,7 @@ rule curate:
         strain_backup_fields=config["curate"]["strain_backup_fields"],
         date_fields=config["curate"]["date_fields"],
         expected_date_formats=config["curate"]["expected_date_formats"],
+        genbank_location_field=config["curate"]["genbank_location_field"],
         articles=config["curate"]["titlecase"]["articles"],
         abbreviations=config["curate"]["titlecase"]["abbreviations"],
         titlecase_fields=config["curate"]["titlecase"]["fields"],
@@ -66,29 +67,30 @@ rule curate:
     shell:
         """
         (cat {input.sequences_ndjson} \
-            | ./scripts/transform-field-names \
+            | augur curate rename \
                 --field-map {params.field_map} \
             | augur curate normalize-strings \
-            | ./scripts/transform-strain-names \
+            | augur curate transform-strain-name \
                 --strain-regex {params.strain_regex} \
                 --backup-fields {params.strain_backup_fields} \
-            | ./scripts/transform-date-fields \
+            | augur curate format-dates \
                 --date-fields {params.date_fields} \
                 --expected-date-formats {params.expected_date_formats} \
-            | ./scripts/transform-genbank-location \
-            | ./scripts/transform-string-fields \
+            | augur curate parse-genbank-location \
+                --location-field {params.genbank_location_field} \
+            | augur curate titlecase \
                 --titlecase-fields {params.titlecase_fields} \
                 --articles {params.articles} \
                 --abbreviations {params.abbreviations} \
-            | ./scripts/transform-authors \
+            | augur curate abbreviate-authors \
                 --authors-field {params.authors_field} \
                 --default-value {params.authors_default_value:q} \
                 --abbr-authors-field {params.abbr_authors_field} \
-            | ./scripts/apply-geolocation-rules \
+            | augur curate apply-geolocation-rules \
                 --geolocation-rules {input.all_geolocation_rules} \
             | ./scripts/transform-state-names \
             | ./scripts/post_process_metadata.py \
-            | ./scripts/merge-user-metadata \
+            | augur curate apply-record-annotations \
                 --annotations {input.annotations} \
                 --id-field {params.annotations_id} \
             | ./scripts/ndjson-to-tsv-and-fasta \
