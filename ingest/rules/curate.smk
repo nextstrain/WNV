@@ -43,7 +43,7 @@ rule curate:
         all_geolocation_rules="data/all-geolocation-rules.tsv",
         annotations=config["curate"]["annotations"],
     output:
-        metadata="data/raw_metadata_{serotype}.tsv",
+        metadata="data/raw_metadata_{serotype}_curated.tsv",
         sequences="results/sequences_{serotype}.fasta",
     log:
         "logs/curate_{serotype}.txt",
@@ -90,17 +90,29 @@ rule curate:
                 --geolocation-rules {input.all_geolocation_rules} \
             | ./scripts/transform-state-names \
             | ./scripts/post_process_metadata.py \
+            | ./scripts/add-field-names \
+                --metadata-columns {params.metadata_columns} \
             | augur curate apply-record-annotations \
                 --annotations {input.annotations} \
                 --id-field {params.annotations_id} \
-            | ./scripts/ndjson-to-tsv-and-fasta \
-                --metadata-columns {params.metadata_columns} \
-                --metadata {output.metadata} \
-                --fasta {output.sequences} \
-                --id-field {params.id_field} \
-                --sequence-field {params.sequence_field} ) 2>> {log}
+                --output-metadata {output.metadata} \
+                --output-fasta {output.sequences} \
+                --output-id-field {params.id_field} \
+                --output-seq-field {params.sequence_field} ) 2>> {log}
         """
 
+rule subset_metadata:
+    input:
+        metadata="data/raw_metadata_{serotype}_curated.tsv",
+    output:
+        metadata="data/raw_metadata_{serotype}.tsv",
+    params:
+        metadata_fields=",".join(config["curate"]["metadata_columns"]),
+    shell:
+        """
+        tsv-select -H -f {params.metadata_fields} \
+            {input.metadata} > {output.metadata}
+        """
 
 rule compress:
     input:
