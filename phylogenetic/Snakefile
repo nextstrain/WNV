@@ -6,7 +6,7 @@ workflow and define its default output(s).
 workdir: workflow.current_basedir
 
 # Use default configuration values. Override with Snakemake's --configfile/--config options.
-configfile: "defaults/defaults.yaml"
+configfile: "defaults/config.yaml"
 
 
 # This is the default rule that Snakemake will run when there are no specified targets.
