@@ -14,25 +14,35 @@ Produces final output as
 """
 workflow.global_resources.setdefault("concurrent_deploys", 2)
 
-def download_serotype(wildcards):
-    serotype = {
-        'all': '11082',
-    }
-    return serotype[wildcards.serotype]
-
-
 rule fetch_ncbi_dataset_package:
     output:
         dataset_package = temp("data/ncbi_dataset.zip")
     retries: 5 # Requires snakemake 7.7.0 or later
     benchmark:
         "benchmarks/fetch_ncbi_dataset_package.txt"
+    params:
+        ncbi_taxon_id = config["ncbi_taxon_id"]
     shell:
         """
-        datasets download virus genome taxon 11082 \
+        datasets download virus genome taxon {params.ncbi_taxon_id} \
             --no-progressbar \
             --filename {output.dataset_package}
         """
+
+# Note: This rule is not part of the default workflow!
+# It is intended to be used as a specific target for users to be able
+# to inspect and explore the full raw metadata from NCBI Datasets.
+rule dump_ncbi_dataset_report:
+    input:
+        dataset_package="data/ncbi_dataset.zip",
+    output:
+        ncbi_dataset_tsv="data/ncbi_dataset_report_raw.tsv",
+    shell:
+        """
+        dataformat tsv virus-genome \
+            --package {input.dataset_package} > {output.ncbi_dataset_tsv}
+        """
+
 rule extract_ncbi_dataset_sequences:
     input:
         dataset_package = "data/ncbi_dataset.zip"
@@ -46,57 +56,29 @@ rule extract_ncbi_dataset_sequences:
             ncbi_dataset/data/genomic.fna > {output.ncbi_dataset_sequences}
         """
 
-
-def _get_ncbi_dataset_field_mnemonics(wildcards) -> str:
-    """
-    Return list of NCBI Dataset report field mnemonics for fields that we want
-    to parse out of the dataset report. The column names in the output TSV
-    are different from the mnemonics.
-    See NCBI Dataset docs for full list of available fields and their column
-    names in the output:
-    https://www.ncbi.nlm.nih.gov/datasets/docs/v2/reference-docs/command-line/dataformat/tsv/dataformat_tsv_virus-genome/#fields
-    """
-    fields = [
-        "accession",
-        "sourcedb",
-        "isolate-lineage",
-        "geo-region",
-        "geo-location",
-        "isolate-collection-date",
-        "release-date",
-        "update-date",
-        "length",
-        "host-name",
-        "isolate-lineage-source",
-        "bioprojects",
-        "biosample-acc",
-        "sra-accs",
-        "submitter-names",
-        "submitter-affiliation",
-    ]
-    return ",".join(fields)
-
-
 rule format_ncbi_dataset_report:
     # Formats the headers to be the same as before we used NCBI Datasets
     # The only fields we do not have equivalents for are "title" and "publications"
     input:
         dataset_package = "data/ncbi_dataset.zip",
-        ncbi_field_map = "defaults/ncbi-dataset-field-map.tsv"
     output:
         ncbi_dataset_tsv = temp("data/ncbi_dataset_report.tsv")
     params:
-        fields_to_include = _get_ncbi_dataset_field_mnemonics
+        ncbi_dataset_fields = ",".join(config["ncbi_datasets_fields"]),
     benchmark:
         "benchmarks/format_ncbi_dataset_report.txt"
     shell:
         """
         dataformat tsv virus-genome \
             --package {input.dataset_package} \
-            --fields {params.fields_to_include:q} \
-            | csvtk -tl rename2 -F -f '*' -p '(.+)' -r '{{kv}}' -k {input.ncbi_field_map} \
-            | csvtk -tl mutate -f genbank_accession_rev -n genbank_accession -p "^(.+?)\." \
-            | tsv-select -H -f genbank_accession --rest last \
+            --fields {params.ncbi_dataset_fields:q} \
+            --elide-header \
+            | csvtk fix-quotes -Ht \
+            | csvtk add-header -t -l -n {params.ncbi_dataset_fields} \
+            | csvtk rename -t -f accession -n accession_version \
+            | csvtk -t mutate -f accession_version -n accession -p "^(.+?)\." \
+            | csvtk del-quotes -t \
+            | tsv-select -H -f accession --rest last \
             > {output.ncbi_dataset_tsv}
         """
 
@@ -116,23 +98,9 @@ rule format_ncbi_datasets_ndjson:
         augur curate passthru \
             --metadata {input.ncbi_dataset_tsv} \
             --fasta {input.ncbi_dataset_sequences} \
-            --seq-id-column genbank_accession_rev \
+            --seq-id-column accession_version \
             --seq-field sequence \
             --unmatched-reporting warn \
             --duplicate-reporting warn \
             2> {log} > {output.ndjson}
         """
-
-#def _get_all_sources(wildcards):
-    #return [f"data/{source}_{wildcards.serotype}.ndjson" for source in config["sources"]]
-
-
-#rule fetch_all_sequences:
-    #input:
-        #all_sources=_get_all_sources,
-    #output:
-        #sequences_ndjson="data/sequences_{serotype}.ndjson",
-    #shell:
-        #"""
-        #cat {input.all_sources} > {output.sequences_ndjson}
-        #"""

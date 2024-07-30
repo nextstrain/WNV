@@ -35,6 +35,11 @@ rule concat_geolocation_rules:
         cat {input.general_geolocation_rules} {input.local_geolocation_rules} >> {output.all_geolocation_rules}
         """
 
+def format_field_map(field_map: dict[str, str]) -> str:
+    """
+    Format dict to `"key1"="value1" "key2"="value2"...` for use in shell commands.
+    """
+    return " ".join([f'"{key}"="{value}"' for key, value in field_map.items()])
 
 rule curate:
     input:
@@ -48,7 +53,7 @@ rule curate:
     log:
         "logs/curate_{serotype}.txt",
     params:
-        field_map=config["curate"]["field_map"],
+        field_map=format_field_map(config["curate"]["field_map"]),
         strain_regex=config["curate"]["strain_regex"],
         strain_backup_fields=config["curate"]["strain_backup_fields"],
         date_fields=config["curate"]["date_fields"],
@@ -62,8 +67,8 @@ rule curate:
         abbr_authors_field=config["curate"]["abbr_authors_field"],
         annotations_id=config["curate"]["annotations_id"],
         metadata_columns=config["curate"]["metadata_columns"],
-        id_field=config["curate"]["id_field"],
-        sequence_field=config["curate"]["sequence_field"],
+        id_field=config["curate"]["output_id_field"],
+        sequence_field=config["curate"]["output_sequence_field"],
     shell:
         """
         (cat {input.sequences_ndjson} \
