@@ -9,6 +9,8 @@ if not config:
 send_slack_notifications = config.get("send_slack_notifications", False)
 
 serotypes = ["all"]
+wildcard_constraints:
+    serotype = "|".join(serotypes)
 
 
 def _get_all_targets(wildcards):
