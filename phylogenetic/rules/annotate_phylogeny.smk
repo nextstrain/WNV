@@ -86,8 +86,8 @@ rule traits:
         augur traits \
             --tree {input.tree} \
             --metadata {input.metadata} \
-            --metadata-id-columns {params.metadata_columns} \
+            --metadata-id-columns {params.metadata_id_columns} \
             --output {output.node_data} \
-            --columns {params.metadata_columns} \
+            --columns {params.metadata_columns:q} \
             --confidence
         """

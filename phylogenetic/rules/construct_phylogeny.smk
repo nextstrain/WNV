@@ -69,10 +69,10 @@ rule refine:
             --metadata-id-columns {params.metadata_id_columns} \
             --output-tree {output.tree} \
             --output-node-data {output.node_data} \
+            --root {params.root} \
             --timetree \
             --coalescent {params.coalescent} \
             --date-confidence \
-            --date-inference {params.date_inference} \
-            --clock-filter-iqd {params.clock_filter_iqd} \
-            --root {params.root}
+            # --date-inference {params.date_inference} \
+            # --clock-filter-iqd {params.clock_filter_iqd}
         """
