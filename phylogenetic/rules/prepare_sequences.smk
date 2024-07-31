@@ -65,7 +65,7 @@ rule align:
         """
     input:
         sequences = "results/sequences_filtered.fasta",
-        reference = files.reference
+        reference = config["reference"]
     output:
         alignment = "results/aligned.fasta"
     params:

@@ -59,7 +59,7 @@ rule translate:
         tree = "results/tree.nwk",
         #node_data = rules.ancestral.output.node_data,
         node_data = "results/nt_muts.json",
-        reference = files.reference
+        reference = config["reference"]
     output:
         node_data = "results/aa_muts.json"
     shell:
@@ -72,21 +72,22 @@ rule translate:
         """
 
 rule traits:
-    message: "Inferring ancestral traits for {params.columns!s}"
+    message: "Inferring ancestral traits for {params.metadata_columns!s}"
     input:
         tree = "results/tree.nwk",
         metadata = "results/metadata_filtered.tsv"
     output:
         node_data = "results/traits.json",
     params:
-        columns = "country division state location clade_membership"
+        metadata_id_columns = config["strain_id_field"],
+        metadata_columns = config["traits"]["metadata_columns"],
     shell:
         """
         augur traits \
             --tree {input.tree} \
             --metadata {input.metadata} \
-            --metadata-id-columns "accession" \
+            --metadata-id-columns {params.metadata_columns} \
             --output {output.node_data} \
-            --columns {params.columns} \
+            --columns {params.metadata_columns} \
             --confidence
         """

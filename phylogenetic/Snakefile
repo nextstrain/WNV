@@ -33,13 +33,6 @@ rule all:
 # custom_rules imported below to ensure that the core workflow is not complicated
 # by build specific rules.
 
-rule files:
-    params:
-        reference = "defaults/reference.gb",
-        auspice_config = "defaults/auspice_config.json"
-
-files = rules.files.params
-
 include: "rules/subsampling_manual.smk"
 
 if config.get("subsampling", False):
@@ -49,8 +42,6 @@ include: "rules/prepare_sequences.smk"
 include: "rules/construct_phylogeny.smk"
 include: "rules/annotate_phylogeny.smk"
 include: "rules/export.smk"
-
-
 
 rule clean:
     message: "Removing directories: {params}"

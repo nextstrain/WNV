@@ -24,8 +24,8 @@ ruleorder: extract_subsampled_sequences_and_metadata > filter_manual
 
 rule subsample:
     input:
-        metadata = "../ingest/results/metadata_all.tsv",
-        sequences = "../ingest/results/sequences_all.fasta"
+        metadata = config["input_metadata"],
+        sequences = config["input_sequences"],
     output:
         subsampled_strains = "results/subsampled_strains_{subsample}.txt",
     params:
@@ -43,8 +43,8 @@ rule subsample:
 
 rule extract_subsampled_sequences_and_metadata:
     input:
-        sequences = "../ingest/results/sequences_all.fasta",
-        metadata = "../ingest/results/metadata_all.tsv",
+        sequences = config["input_sequences"],
+        metadata = config["input_metadata"],
         subsampled_strains = expand("results/subsampled_strains_{subsample}.txt", subsample=list(config.get("subsampling", {}).keys()))
     output:
         #sequences = "results/subsampled_sequences.fasta",

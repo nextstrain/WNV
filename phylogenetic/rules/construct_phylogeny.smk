@@ -28,7 +28,7 @@ rule tree:
     output:
         tree = "results/tree_raw.nwk"
     params:
-        threads = workflow.cores
+        threads = workflow.cores,
     shell:
         """
         augur tree \
@@ -50,26 +50,29 @@ rule refine:
     input:
         tree = "results/tree_raw.nwk",
         alignment = "results/aligned.fasta",
-        metadata = "results/metadata_filtered.tsv"
+        metadata = "results/metadata_filtered.tsv",
     output:
         tree = "results/tree.nwk",
-        node_data = "results/branch_lengths.json"
+        node_data = "results/branch_lengths.json",
     params:
-        coalescent = "opt",
+        metadata_id_columns = config["strain_id_field"],
+        root = config["root"],
         date_inference = "marginal",
+        coalescent = "opt",
         clock_filter_iqd = 4,
-        root = "AF481864"
     shell:
         """
         augur refine \
             --tree {input.tree} \
             --alignment {input.alignment} \
             --metadata {input.metadata} \
-            --metadata-id-columns "accession" \
+            --metadata-id-columns {params.metadata_id_columns} \
             --output-tree {output.tree} \
             --output-node-data {output.node_data} \
             --timetree \
             --coalescent {params.coalescent} \
             --date-confidence \
+            --date-inference {params.date_inference} \
+            --clock-filter-iqd {params.clock_filter_iqd} \
             --root {params.root}
         """
