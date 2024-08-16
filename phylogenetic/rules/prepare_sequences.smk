@@ -21,8 +21,6 @@ This part of the workflow usually includes the following steps:
 See Augur's usage docs for these commands for more details.
 """
 rule create_colors:
-    message:
-        "Creating custom color scale in {output.colors}"
     input:
         metadata = "results/metadata_filtered.tsv"
     output:
@@ -33,8 +31,6 @@ rule create_colors:
         """
 
 rule create_lat_longs:
-    message:
-        "Creating lat/longs in {output.lat_longs}"
     input:
         metadata = "results/metadata_filtered.tsv"
     output:
@@ -45,11 +41,6 @@ rule create_lat_longs:
         """
 
 rule align:
-    message:
-        """
-        Aligning sequences to {input.reference}
-          - filling gaps with N
-        """
     input:
         sequences = "results/sequences_filtered.fasta",
         reference = config["reference"]

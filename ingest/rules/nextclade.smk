@@ -14,9 +14,7 @@ https://docs.nextstrain.org/projects/nextclade/page/user/nextclade-cli.html
 """
 
 rule nextclade_classify:
-    """
-    Classifies sequences into clades using Nextclade
-    """
+    #Classifies sequences into clades using Nextclade
     input:
         sequences="results/sequences_all.fasta",
         dataset=config["nextclade"]["nextclade_dataset_path"],
@@ -32,9 +30,7 @@ rule nextclade_classify:
         """
 
 rule select_nextclade_columns:
-    """
-    Select the relevant columns from the nextclade results
-    """
+    #Select the relevant columns from the nextclade results
     input:
         nextclade_tsv="data/nextclade_results/nextclade.tsv",
     output:
@@ -54,9 +50,7 @@ rule select_nextclade_columns:
         """
 
 rule append_nextclade_columns:
-    """
-    Append the nextclade results to the metadata
-    """
+    #Append the nextclade results to the metadata
     input:
         metadata="data/raw_metadata_all.tsv",
         nextclade_subtypes="data/nextclade_clades.tsv",

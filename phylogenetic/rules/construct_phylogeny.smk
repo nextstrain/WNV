@@ -21,7 +21,6 @@ See Augur's usage docs for these commands for more details.
 
 
 rule tree:
-    message: "Building tree"
     input:
         #alignment = rules.align.output.alignment
         alignment = "results/aligned.fasta"
@@ -39,14 +38,6 @@ rule tree:
         """
 
 rule refine:
-    message:
-        """
-        Refining tree
-          - estimate timetree
-          - use {params.coalescent} coalescent timescale
-          - estimate {params.date_inference} node dates
-          - filter tips more than {params.clock_filter_iqd} IQDs from clock expectation
-        """
     input:
         tree = "results/tree_raw.nwk",
         alignment = "results/aligned.fasta",

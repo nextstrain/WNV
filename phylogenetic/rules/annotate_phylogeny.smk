@@ -33,7 +33,6 @@ to the ones produced by Augur commands.
 
 
 rule ancestral:
-    message: "Reconstructing ancestral sequences and mutations"
     input:
         #tree = rules.refine.output.tree,
         tree = "results/tree.nwk",
@@ -53,7 +52,6 @@ rule ancestral:
         """
 
 rule translate:
-    message: "Translating amino acid sequences"
     input:
         #tree = rules.refine.output.tree,
         tree = "results/tree.nwk",
@@ -72,7 +70,6 @@ rule translate:
         """
 
 rule traits:
-    message: "Inferring ancestral traits for {params.metadata_columns!s}"
     input:
         tree = "results/tree.nwk",
         metadata = "results/metadata_filtered.tsv"

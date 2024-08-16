@@ -27,7 +27,6 @@ See Augur's usage docs for these commands for more details.
 
 
 rule export:
-    message: "Exporting data files for for auspice using V2 JSON schema"
     input:
         tree = "results/tree.nwk",
         metadata = "results/metadata_filtered.tsv",
