@@ -37,7 +37,7 @@ curate:
   geolocation_rules_url: "https://raw.githubusercontent.com/nextstrain/ncov-ingest/master/source-data/gisaid_geoLocationRules.tsv"
   # The path to the local geolocation rules within the pathogen repo
   # The path should be relative to the ingest directory.
-  local_geolocation_rules: "defaults/geolocation_rules.tsv"
+  local_geolocation_rules: "defaults/geolocation-rules.tsv"
   # The original field names should match the ncbi_datasets_fields provided above.
   # This is the first step in the pipeline, so any references to field names in the configs below should use the new field names
   field_map:
