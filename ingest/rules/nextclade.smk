@@ -18,8 +18,8 @@ rule nextclade_classify:
     Classifies sequences into clades using Nextclade
     """
     input:
-        sequences="data/sequences_all.fasta",
-        dataset="../nextclade/dataset",
+        sequences="results/sequences_all.fasta",
+        dataset=config["nextclade"]["nextclade_dataset_path"],
     output:
         nextclade_tsv="data/nextclade_results/nextclade.tsv",
     shell:
@@ -40,8 +40,8 @@ rule select_nextclade_columns:
     output:
         nextclade_subtypes="data/nextclade_clades.tsv",
     params:
-        id_field=config["curate"]["id_field"],
-        nextclade_field="clade_membership",
+        id_field=config["curate"]["output_id_field"],
+        nextclade_field=config["nextclade"]["nextclade_field"],
     shell:
         """
         echo "{params.id_field},{params.nextclade_field}" \
@@ -63,8 +63,8 @@ rule append_nextclade_columns:
     output:
         metadata_all="results/metadata_all.tsv",
     params:
-        id_field=config["curate"]["id_field"],
-        nextclade_field="clade_membership",
+        id_field=config["curate"]["output_id_field"],
+        nextclade_field=config["nextclade"]["nextclade_field"],
     shell:
         """
         tsv-join -H \

@@ -26,7 +26,7 @@ See Augur's usage docs for these commands for more details.
 """
 
 
-rule export_v2:
+rule export:
     message: "Exporting data files for for auspice using V2 JSON schema"
     input:
         tree = "results/tree.nwk",
@@ -37,7 +37,7 @@ rule export_v2:
         aa_muts = "results/aa_muts.json",
         colors = "results/colors.tsv",
         lat_longs = "results/lat_longs.tsv",
-        auspice_config = "defaults/auspice_config_v2.json"
+        auspice_config = config["export"]["auspice_config"],
     output:
         auspice = "auspice/WNV-nextstrain_NA.json"
     shell:

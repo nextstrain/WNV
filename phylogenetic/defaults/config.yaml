@@ -1,5 +1,13 @@
 strain_id_field: "accession"
-# root: "A/Sample/2009"
+# Use 'NY99' as the reference since it should be basel to the USA sequences
+reference: "defaults/reference.gb"
+# Use 'IS88' as the root strain on the phylogenetic tree
+# To place samples within the global context
+root: "AF481864"
+
+# Pull in metadata and sequences from the ingest workflow
+input_metadata: "../ingest/results/metadata_all.tsv"
+input_sequences: "../ingest/results/sequences_all.fasta"
 
 #subsampling:
   #all: --min-length '9800' --query "country == 'USA' & accession != 'NC_009942'"
@@ -53,9 +61,21 @@ strain_id_field: "accession"
 # This command excludes all strains by default and then forces the inclusion of
 # the strains selected by the subsampling logic defined above.
 subsampling:
-   state: --query "state == 'WA'" --min-length '9800' --subsample-max-sequences 5000
-   neighboring_state: --query "state in ['CA', 'ID', 'OR', 'NV']" --group-by state year --min-length '9800' --subsample-max-sequences 5000
-   region: --query "state in ['AZ','NM', 'CO', 'UT', 'WY', 'MT']" --group-by state year --min-length '9800' --subsample-max-sequences 5000
-   country: --query "country == 'USA' and state not in ['WA', 'CA', 'ID', 'OR', 'NV','AZ','NM', 'CO', 'UT', 'WY', 'MT'] and accession != 'NC_009942'" --group-by state year --subsample-max-sequences 300 --min-length '9800'
-   force_include: --exclude-all --include ../nextclade/defaults/include.txt
+  state: --query "state == 'WA'" --min-length '9800' --subsample-max-sequences 5000
+  neighboring_state: --query "state in ['CA', 'ID', 'OR', 'NV']" --group-by state year --min-length '9800' --subsample-max-sequences 5000
+  region: --query "state in ['AZ','NM', 'CO', 'UT', 'WY', 'MT']" --group-by state year --min-length '9800' --subsample-max-sequences 5000
+  country: --query "country == 'USA' and state not in ['WA', 'CA', 'ID', 'OR', 'NV','AZ','NM', 'CO', 'UT', 'WY', 'MT'] and accession != 'NC_009942'" --group-by state year --subsample-max-sequences 300 --min-length '9800'
+  force_include: --exclude-all --include ../nextclade/defaults/include.txt
    #global: --query "country != 'USA'" --group-by country year --subsample-max-sequences 200
+
+traits:
+  metadata_columns: [
+    'country',
+    'division',
+    'location',
+    'clade_membership',
+    'host'
+  ]
+
+export:
+  auspice_config: "defaults/auspice_config_v2.json"

@@ -20,19 +20,6 @@ This part of the workflow usually includes the following steps:
 
 See Augur's usage docs for these commands for more details.
 """
-
-rule add_authors:
-    message:
-        "Adding authors to {input.metadata} -> {output.metadata} by collecting info from ENTREZ"
-    input:
-        metadata = "results/metadata_filtered.tsv"
-    output:
-        metadata = "results/metadata.tsv"
-    shell:
-        """
-        python ./scripts/add_authors.py {input.metadata} {output.metadata}
-        """
-
 rule create_colors:
     message:
         "Creating custom color scale in {output.colors}"
@@ -65,7 +52,7 @@ rule align:
         """
     input:
         sequences = "results/sequences_filtered.fasta",
-        reference = files.reference
+        reference = config["reference"]
     output:
         alignment = "results/aligned.fasta"
     params:

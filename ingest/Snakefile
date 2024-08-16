@@ -1,75 +1,39 @@
 # The workflow filepaths are written relative to this Snakefile's base directory
 workdir: workflow.current_basedir
 
-if not config:
-
-    configfile: "defaults/config.yaml"
-
-
-send_slack_notifications = config.get("send_slack_notifications", False)
+# Use default configuration values. Override with Snakemake's --configfile/--config options.
+configfile: "defaults/config.yaml"
 
 serotypes = ["all"]
+wildcard_constraints:
+    serotype = "|".join(serotypes)
 
-
-def _get_all_targets(wildcards):
-    # Default targets are the metadata TSV and sequences FASTA files
-    all_targets = expand(
-        ["results/sequences_{serotype}.fasta.zst", "results/metadata_{serotype}.tsv.zst"],
-        serotype=serotypes,
-    )
-
-    # Add additional targets based on upload config
-    upload_config = config.get("upload", {})
-
-    for target, params in upload_config.items():
-        files_to_upload = params.get("files_to_upload", [])
-        remote_file_names = params.get("remote_file_names", [])
-
-        if len(files_to_upload) != len(remote_file_names):
-            print(
-                f"Skipping file upload for {target!r} because the number of",
-                "files to upload does not match the number of remote file names.",
-            )
-        elif len(remote_file_names) != len(set(remote_file_names)):
-            print(
-                f"Skipping file upload for {target!r} because there are duplicate remote file names."
-            )
-        elif not params.get("dst"):
-            print(
-                f"Skipping file upload for {target!r} because the destintion was not defined."
-            )
-        else:
-            all_targets.extend(
-                expand(
-                    [
-                        f"data/upload/{target}/{{file_to_upload}}-to-{{remote_file_name}}.done"
-                    ],
-                    zip,
-                    file_to_upload=files_to_upload,
-                    remote_file_name=remote_file_names,
-                )
-            )
-
-    # Add additional targets for Nextstrain's internal Slack notifications
-    if send_slack_notifications:
-        all_targets.extend(
-            [
-                "data/notify/genbank-record-change.done",
-                "data/notify/metadata-diff.done",
-            ]
-        )
-
-    if config.get("trigger_rebuild"):
-        all_targets.append("data/trigger/rebuild.done")
-
-    return all_targets
-
-
+# This is the default rule that Snakemake will run when there are no specified targets.
+# The default output of the ingest workflow is usually the curated metadata and sequences.
 rule all:
     input:
-        _get_all_targets,
+        sequences=expand("results/sequences_{serotype}.fasta", serotype=serotypes),
+        metadata=expand("results/metadata_{serotype}.tsv", serotype=serotypes),
 
-
+# Include smk files that contain the core steps necessary for building the curated metadata and sequence files.
+# If there are build-specific customizations, they should be added with the
+# custom_rules imported below to ensure that the core workflow is not complicated
+# by build-specific rules.
 include: "rules/fetch_from_ncbi.smk"
 include: "rules/curate.smk"
 include: "rules/nextclade.smk"
+
+# Allow users to import custom rules provided via the config.
+# This allows users to run custom rules that can extend or override the workflow.
+# A concrete example of using custom rules is the extension of the workflow with
+# rules to support the Nextstrain automation that uploads files and sends internal
+# Slack notifications.
+# For extensions, the user will have to specify the custom rule targets when
+# running the workflow.
+# For overrides, the custom Snakefile will have to use the `ruleorder` directive
+# to allow Snakemake to handle ambiguous rules
+# https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html#handling-ambiguous-rules
+if "custom_rules" in config:
+    for rule_file in config["custom_rules"]:
+
+        include: rule_file

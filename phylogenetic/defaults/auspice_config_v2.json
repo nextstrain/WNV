@@ -26,13 +26,15 @@
     "country",
     "state",
     "location",
-    "authors",
-    "lineage",
-    "clade_membership"
+    "author",
+    "clade_membership",
+    "host",
+    "lineage"
   ],
   "display_defaults": {
-    "color_by": "state",
-    "map_triplicate": false,
-    "geo_resolution": "state"
+    "color_by": "clade_membership",
+    "map_triplicate": true,
+    "geo_resolution": "state",
+    "distance_measure": "div"
  }
 }
