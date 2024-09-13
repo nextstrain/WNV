@@ -35,6 +35,7 @@ rule export:
         nt_muts = "results/nt_muts.json",
         aa_muts = "results/aa_muts.json",
         colors = "results/colors.tsv",
+        description = config["export"]["description"],
         lat_longs = "results/lat_longs.tsv",
         auspice_config = config["export"]["auspice_config"],
     output:
@@ -48,6 +49,7 @@ rule export:
             --node-data {input.branch_lengths} {input.traits} {input.nt_muts} {input.aa_muts} \
             --colors {input.colors} \
             --lat-longs {input.lat_longs} \
+            --description {input.description} \
             --auspice-config {input.auspice_config} \
             --output {output.auspice}
         """
