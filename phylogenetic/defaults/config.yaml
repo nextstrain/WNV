@@ -79,4 +79,4 @@ traits:
 
 export:
   description: "defaults/description.md"
-  auspice_config: "defaults/auspice_config_v2.json"
+  auspice_config: "defaults/auspice_config.json"
