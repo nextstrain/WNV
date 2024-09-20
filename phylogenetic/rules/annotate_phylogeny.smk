@@ -34,9 +34,7 @@ to the ones produced by Augur commands.
 
 rule ancestral:
     input:
-        #tree = rules.refine.output.tree,
         tree = "results/tree.nwk",
-        #alignment = rules.align.output
         alignment = "results/aligned.fasta"
     output:
         node_data = "results/nt_muts.json"
@@ -53,9 +51,7 @@ rule ancestral:
 
 rule translate:
     input:
-        #tree = rules.refine.output.tree,
         tree = "results/tree.nwk",
-        #node_data = rules.ancestral.output.node_data,
         node_data = "results/nt_muts.json",
         reference = config["reference"]
     output:

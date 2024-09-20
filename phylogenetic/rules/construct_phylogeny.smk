@@ -22,7 +22,6 @@ See Augur's usage docs for these commands for more details.
 
 rule tree:
     input:
-        #alignment = rules.align.output.alignment
         alignment = "results/aligned.fasta"
     output:
         tree = "results/tree_raw.nwk"

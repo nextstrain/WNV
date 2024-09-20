@@ -43,7 +43,6 @@ def format_field_map(field_map: dict[str, str]) -> str:
 
 rule curate:
     input:
-        #sequences_ndjson="data/sequences_{serotype}.ndjson",
         sequences_ndjson="data/genbank_all.ndjson",
         all_geolocation_rules="data/all-geolocation-rules.tsv",
         annotations=config["curate"]["annotations"],

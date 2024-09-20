@@ -47,8 +47,6 @@ rule extract_subsampled_sequences_and_metadata:
         metadata = config["input_metadata"],
         subsampled_strains = expand("results/subsampled_strains_{subsample}.txt", subsample=list(config.get("subsampling", {}).keys()))
     output:
-        #sequences = "results/subsampled_sequences.fasta",
-        #metadata = "results/subsampled_metadata.tsv",
         sequences = "results/sequences_filtered.fasta",
         metadata = "results/metadata_filtered.tsv",
     params:

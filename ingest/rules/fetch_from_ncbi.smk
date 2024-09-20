@@ -57,8 +57,6 @@ rule extract_ncbi_dataset_sequences:
         """
 
 rule format_ncbi_dataset_report:
-    # Formats the headers to be the same as before we used NCBI Datasets
-    # The only fields we do not have equivalents for are "title" and "publications"
     input:
         dataset_package = "data/ncbi_dataset.zip",
     output:
