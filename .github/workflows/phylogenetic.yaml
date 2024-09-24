@@ -26,8 +26,8 @@ on:
       trial_name:
         description: |
           Trial name for deploying builds.
-          If not set, builds will overwrite existing builds at s3://nextstrain-data/lassa*
-          If set, builds will be deployed to s3://nextstrain-staging/lassa_trials_<trial_name>_*
+          If not set, builds will overwrite existing builds at s3://nextstrain-data/wnv*
+          If set, builds will be deployed to s3://nextstrain-staging/wnv_trials_<trial_name>_*
         required: false
         type: string
       sequences_url:
@@ -57,7 +57,7 @@ jobs:
           config=""
 
           if [[ "$TRIAL_NAME" ]]; then
-            config+=" deploy_url='s3://nextstrain-staging/lassa_trials_"$TRIAL_NAME"_'"
+            config+=" deploy_url='s3://nextstrain-staging/wnv_trials_"$TRIAL_NAME"_'"
           fi
 
           if [[ "$SEQUENCES_URL" ]]; then

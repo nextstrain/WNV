@@ -65,8 +65,8 @@ jobs:
           AWS_DEFAULT_REGION: ${{ vars.AWS_DEFAULT_REGION }}
         run: |
           s3_urls=(
-            "s3://nextstrain-data/files/workflows/lassa/all/metadata.tsv.zst"
-            "s3://nextstrain-data/files/workflows/lassa/all/sequences.fasta.zst"
+            "s3://nextstrain-data/files/workflows/wnv/all/metadata.tsv.zst"
+            "s3://nextstrain-data/files/workflows/wnv/all/sequences.fasta.zst"
           )
 
           # Code below is modified from ingest/upload-to-s3
