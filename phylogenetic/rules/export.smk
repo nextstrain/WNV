@@ -40,6 +40,10 @@ rule export:
         auspice_config = config["export"]["auspice_config"],
     output:
         auspice = "auspice/WNV-nextstrain_NA.json"
+    log:
+        "logs/export.txt",
+    benchmark:
+        "benchmarks/export.txt"
     shell:
         """
         augur export v2 \
@@ -51,5 +55,5 @@ rule export:
             --lat-longs {input.lat_longs} \
             --description {input.description} \
             --auspice-config {input.auspice_config} \
-            --output {output.auspice}
+            --output {output.auspice} 2>&1 | tee {log}
         """

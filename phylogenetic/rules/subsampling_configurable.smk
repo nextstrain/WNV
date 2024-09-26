@@ -28,6 +28,10 @@ rule subsample:
         sequences = config["input_sequences"],
     output:
         subsampled_strains = "results/subsampled_strains_{subsample}.txt",
+    log:
+        "logs/{subsample}/subsampled_strains.txt",
+    benchmark:
+        "benchmarks/{subsample}/subsampled_strains.txt",
     params:
         filters = lambda wildcards: config.get("subsampling", {}).get(wildcards.subsample, ""),
         id_column = config["strain_id_field"],
@@ -38,7 +42,7 @@ rule subsample:
             --metadata {input.metadata} \
             --metadata-id-columns {params.id_column} \
             {params.filters} \
-            --output-strains {output.subsampled_strains}
+            --output-strains {output.subsampled_strains} 2>&1 | tee {log}
         """
 
 rule extract_subsampled_sequences_and_metadata:
@@ -49,6 +53,10 @@ rule extract_subsampled_sequences_and_metadata:
     output:
         sequences = "results/sequences_filtered.fasta",
         metadata = "results/metadata_filtered.tsv",
+    log:
+        "logs/extract_subsampled_sequences_and_metadata.txt",
+    benchmark:
+        "benchmarks/extract_subsampled_sequences_and_metadata.txt",
     params:
         id_column = config["strain_id_field"],
     shell:
@@ -60,5 +68,5 @@ rule extract_subsampled_sequences_and_metadata:
             --exclude-all \
             --include {input.subsampled_strains} \
             --output-sequences {output.sequences} \
-            --output-metadata {output.metadata}
+            --output-metadata {output.metadata} 2>&1 | tee {log}
         """

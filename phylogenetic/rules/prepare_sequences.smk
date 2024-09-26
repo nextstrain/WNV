@@ -25,9 +25,13 @@ rule create_colors:
         metadata = "results/metadata_filtered.tsv"
     output:
         colors = "results/colors.tsv"
+    log:
+            "logs/colors.txt",
+    benchmark:
+            "benchmarks/colors.txt"
     shell:
         """
-        python ./scripts/make_colors.py {input.metadata} {output.colors}
+        python ./scripts/make_colors.py {input.metadata} {output.colors} 2>&1 | tee {log}
         """
 
 rule create_lat_longs:
@@ -35,9 +39,13 @@ rule create_lat_longs:
         metadata = "results/metadata_filtered.tsv"
     output:
         lat_longs = "results/lat_longs.tsv"
+    log:
+        "logs/lat_longs.txt",
+    benchmark:
+        "benchmarks/lat_longs.txt"
     shell:
         """
-        python ./scripts/create_lat_longs.py {input.metadata} {output.lat_longs}
+        python ./scripts/create_lat_longs.py {input.metadata} {output.lat_longs} 2>&1 | tee {log}
         """
 
 rule align:
@@ -46,6 +54,10 @@ rule align:
         reference = config["reference"]
     output:
         alignment = "results/aligned.fasta"
+    log:
+        "logs/align.txt",
+    benchmark:
+        "benchmarks/align.txt"
     params:
         threads = workflow.cores
     shell:
@@ -55,5 +67,5 @@ rule align:
             --output {output.alignment} \
             --fill-gaps \
             --reference-sequence {input.reference} \
-            --nthreads {threads}
+            --nthreads {threads} 2>&1 | tee {log}
         """

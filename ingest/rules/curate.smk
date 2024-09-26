@@ -51,6 +51,8 @@ rule curate:
         sequences="results/sequences_{serotype}.fasta",
     log:
         "logs/curate_{serotype}.txt",
+    benchmark:
+        "benchmarks/curate_{serotype}.txt",
     params:
         field_map=format_field_map(config["curate"]["field_map"]),
         strain_regex=config["curate"]["strain_regex"],
