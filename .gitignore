@@ -5,6 +5,7 @@ data/
 results/
 logs/
 benchmarks/
+*RAxML*
 
 # Sensitive environment variables
 environment*

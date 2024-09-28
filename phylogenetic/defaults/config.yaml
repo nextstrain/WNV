@@ -6,8 +6,8 @@ reference: "defaults/reference.gb"
 root: "AF481864"
 
 # Pull in metadata and sequences from the ingest workflow
-input_metadata: "../ingest/results/metadata_all.tsv"
-input_sequences: "../ingest/results/sequences_all.fasta"
+input_metadata: "../ingest/results/metadata.tsv"
+input_sequences: "../ingest/results/sequences.fasta"
 
 #subsampling:
   #all: --min-length '9800' --query "country == 'USA' & accession != 'NC_009942'"
