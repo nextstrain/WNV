@@ -29,7 +29,7 @@ rule upload_to_s3:
         cloudfront_domain=config["cloudfront_domain"],
     shell:
         """
-        ./vendored/upload-to-s3 \
+        ./scripts/upload-to-s3 \
             {params.quiet} \
             {input.file_to_upload:q} \
             {params.s3_dst:q}/{wildcards.remote_file:q} \
