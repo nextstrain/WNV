@@ -39,6 +39,10 @@ rule ancestral:
         alignment = "results/aligned.fasta"
     output:
         node_data = "results/nt_muts.json"
+    log:
+        "logs/ancestral.txt",
+    benchmark:
+        "benchmarks/ancestral.txt"
     params:
         inference = "joint"
     shell:
@@ -47,7 +51,7 @@ rule ancestral:
             --tree {input.tree} \
             --alignment {input.alignment} \
             --output-node-data {output.node_data} \
-            --inference {params.inference}
+            --inference {params.inference} 2>&1 | tee {log}
         """
 
 rule translate:
@@ -58,13 +62,17 @@ rule translate:
         reference = "defaults/reference.gb"
     output:
         node_data = "results/aa_muts.json"
+    log:
+        "logs/translate.txt",
+    benchmark:
+        "benchmarks/translate.txt"
     shell:
         """
         augur translate \
             --tree {input.tree} \
             --ancestral-sequences {input.node_data} \
             --reference-sequence {input.reference} \
-            --output {output.node_data} \
+            --output {output.node_data} 2>&1 | tee {log}
         """
 
 rule traits:
@@ -74,6 +82,10 @@ rule traits:
         metadata = "data/metadata_all.tsv"
     output:
         node_data = "results/traits.json",
+    log:
+        "logs/traits.txt",
+    benchmark:
+        "benchmarks/traits.txt"
     params:
         columns = "country division state location clade_membership"
     shell:
@@ -84,5 +96,5 @@ rule traits:
             --metadata-id-columns "accession" \
             --output {output.node_data} \
             --columns {params.columns} \
-            --confidence
+            --confidence 2>&1 | tee {log}
         """

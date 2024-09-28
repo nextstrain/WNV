@@ -25,6 +25,10 @@ rule filter_manual:
     output:
         sequences = "results/sequences_filtered.fasta",
         metadata = "results/metadata_filtered.tsv"
+    log:
+        "logs/filter_manual.txt",
+    benchmark:
+        "benchmarks/filter_manual.txt",
     shell:
         """
         augur filter \
@@ -34,5 +38,5 @@ rule filter_manual:
             --min-length '9800' \
             --output {output.sequences} \
             --query "country == 'USA' & accession != 'NC_009942'"  \
-            --output-metadata {output.metadata}
+            --output-metadata {output.metadata} 2>&1 | tee {log}
         """

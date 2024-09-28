@@ -22,10 +22,13 @@ See Augur's usage docs for these commands for more details.
 
 rule tree:
     input:
-        #alignment = rules.align.output.alignment
         alignment = "results/aligned.fasta"
     output:
         tree = "results/tree_raw.nwk"
+    log:
+        "logs/tree.txt",
+    benchmark:
+        "benchmarks/tree.txt"
     params:
         threads = workflow.cores,
     shell:
@@ -34,7 +37,7 @@ rule tree:
             --alignment {input.alignment} \
             --output {output.tree} \
             --method raxml \
-            --nthreads {threads}
+            --nthreads {threads} 2>&1 | tee {log}
         """
 
 rule refine:
@@ -45,6 +48,10 @@ rule refine:
     output:
         tree = "results/tree.nwk",
         node_data = "results/branch_lengths.json",
+    log:
+        "logs/refine.txt",
+    benchmark:
+        "benchmarks/refine.txt"
     params:
         metadata_id_columns = config["strain_id_field"],
         root = config["root"],
@@ -64,6 +71,7 @@ rule refine:
             --timetree \
             --coalescent {params.coalescent} \
             --date-confidence \
-            # --date-inference {params.date_inference} \
+            --date-inference {params.date_inference} \
+            2>&1 | tee {log}
             # --clock-filter-iqd {params.clock_filter_iqd}
         """

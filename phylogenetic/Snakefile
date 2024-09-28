@@ -17,8 +17,6 @@ configfile: "defaults/config.yaml"
 
 rule all:
     input:
-        #auspice_tree = "auspice/WNV_NA_tree.json",
-        #auspice_meta = "auspice/WNV_NA_meta.json",
         auspice = "auspice/WNV-nextstrain_NA.json"
 
 

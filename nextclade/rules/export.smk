@@ -39,6 +39,10 @@ rule export_v2:
         auspice_config = "defaults/auspice_config.json"
     output:
         auspice = "auspice/tree.json"
+    log:
+        "logs/export.txt",
+    benchmark:
+        "benchmarks/export.txt"
     shell:
         """
         augur export v2 \
@@ -48,5 +52,5 @@ rule export_v2:
             --node-data {input.branch_lengths} {input.traits} {input.nt_muts} {input.aa_muts} \
             --colors {input.colors} \
             --auspice-config {input.auspice_config} \
-            --output {output.auspice}
+            --output {output.auspice} 2>&1 | tee {log}
         """

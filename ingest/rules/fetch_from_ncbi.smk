@@ -18,6 +18,8 @@ rule fetch_ncbi_dataset_package:
     output:
         dataset_package = temp("data/ncbi_dataset.zip")
     retries: 5 # Requires snakemake 7.7.0 or later
+    log:
+        "logs/fetch_ncbi_dataset_package.txt"
     benchmark:
         "benchmarks/fetch_ncbi_dataset_package.txt"
     params:
@@ -26,7 +28,7 @@ rule fetch_ncbi_dataset_package:
         """
         datasets download virus genome taxon {params.ncbi_taxon_id} \
             --no-progressbar \
-            --filename {output.dataset_package}
+            --filename {output.dataset_package} 2>&1 | tee {log}
         """
 
 # Note: This rule is not part of the default workflow!
@@ -57,8 +59,6 @@ rule extract_ncbi_dataset_sequences:
         """
 
 rule format_ncbi_dataset_report:
-    # Formats the headers to be the same as before we used NCBI Datasets
-    # The only fields we do not have equivalents for are "title" and "publications"
     input:
         dataset_package = "data/ncbi_dataset.zip",
     output:

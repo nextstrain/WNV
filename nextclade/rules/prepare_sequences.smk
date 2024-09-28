@@ -28,9 +28,13 @@ rule create_colors:
         metadata = "data/metadata_all.tsv"
     output:
         colors = "results/colors.tsv"
+    log:
+        "logs/colors.txt",
+    benchmark:
+        "benchmarks/colors.txt"
     shell:
         """
-        python ../phylogenetic/scripts/make_colors.py {input.metadata} {output.colors}
+        python ../phylogenetic/scripts/make_colors.py {input.metadata} {output.colors} 2>&1 | tee {log}
         """
 
 rule align:
@@ -43,6 +47,10 @@ rule align:
         sequences = "data/sequences_all.fasta",
     output:
         alignment = "results/aligned.fasta"
+    log:
+        "logs/align.txt",
+    benchmark:
+        "benchmarks/align.txt"
     params:
         threads = workflow.cores,
         root = "AF481864" # pre-NY99
@@ -53,5 +61,5 @@ rule align:
             --output {output.alignment} \
             --fill-gaps \
             --reference-name {params.root} \
-            --nthreads {threads}
+            --nthreads {threads} 2>&1 | tee {log}
         """
