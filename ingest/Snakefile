@@ -4,16 +4,12 @@ workdir: workflow.current_basedir
 # Use default configuration values. Override with Snakemake's --configfile/--config options.
 configfile: "defaults/config.yaml"
 
-serotypes = ["all"]
-wildcard_constraints:
-    serotype = "|".join(serotypes)
-
 # This is the default rule that Snakemake will run when there are no specified targets.
 # The default output of the ingest workflow is usually the curated metadata and sequences.
 rule all:
     input:
-        sequences=expand("results/sequences_{serotype}.fasta", serotype=serotypes),
-        metadata=expand("results/metadata_{serotype}.tsv", serotype=serotypes),
+        sequences="results/sequences.fasta",
+        metadata="results/metadata.tsv",
 
 # Include smk files that contain the core steps necessary for building the curated metadata and sequence files.
 # If there are build-specific customizations, they should be added with the

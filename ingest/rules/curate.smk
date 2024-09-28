@@ -43,16 +43,16 @@ def format_field_map(field_map: dict[str, str]) -> str:
 
 rule curate:
     input:
-        sequences_ndjson="data/genbank_all.ndjson",
+        sequences_ndjson="data/genbank.ndjson",
         all_geolocation_rules="data/all-geolocation-rules.tsv",
         annotations=config["curate"]["annotations"],
     output:
-        metadata="data/raw_metadata_{serotype}_curated.tsv",
-        sequences="results/sequences_{serotype}.fasta",
+        metadata="data/raw_metadata_curated.tsv",
+        sequences="results/sequences.fasta",
     log:
-        "logs/curate_{serotype}.txt",
+        "logs/curate.txt",
     benchmark:
-        "benchmarks/curate_{serotype}.txt",
+        "benchmarks/curate.txt",
     params:
         field_map=format_field_map(config["curate"]["field_map"]),
         strain_regex=config["curate"]["strain_regex"],
@@ -109,9 +109,9 @@ rule curate:
 
 rule subset_metadata:
     input:
-        metadata="data/raw_metadata_{serotype}_curated.tsv",
+        metadata="data/raw_metadata_curated.tsv",
     output:
-        metadata="data/raw_metadata_{serotype}.tsv",
+        metadata="data/raw_metadata.tsv",
     params:
         metadata_fields=",".join(config["curate"]["metadata_columns"]),
     shell:

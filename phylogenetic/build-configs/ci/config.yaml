@@ -2,8 +2,8 @@
 # for the CI workflow to run with the example data.
 
 # Pull in metadata and sequences from the example_data directory
-input_metadata: "example_data/metadata_all.tsv"
-input_sequences: "example_data/sequences_all.fasta"
+input_metadata: "example_data/metadata.tsv"
+input_sequences: "example_data/sequences.fasta"
 
 ## Custom rules to run as part of the CI automated workflow
 ## The paths should be relative to the phylogenetic directory.

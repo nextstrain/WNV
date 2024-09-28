@@ -9,7 +9,7 @@ file must exist as a static file in the repo.
 
 Produces final output as
 
-    sequences_ndjson = "data/sequences_{serotype}.ndjson"
+    sequences_ndjson = "data/sequences.ndjson"
 
 """
 workflow.global_resources.setdefault("concurrent_deploys", 2)
@@ -88,7 +88,7 @@ rule format_ncbi_datasets_ndjson:
         ncbi_dataset_sequences = "data/ncbi_dataset_sequences.fasta",
         ncbi_dataset_tsv = "data/ncbi_dataset_report.tsv",
     output:
-        ndjson = "data/genbank_all.ndjson",
+        ndjson = "data/genbank.ndjson",
     log:
         "logs/format_ncbi_datasets_ndjson.txt"
     benchmark:

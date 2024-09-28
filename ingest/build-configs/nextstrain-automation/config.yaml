@@ -16,5 +16,5 @@ s3_dst: "s3://nextstrain-data/files/workflows/wnv"
 
 # Mapping of files to upload
 files_to_upload:
-  metadata.tsv.zst: results/metadata_all.tsv
-  sequences.fasta.zst: results/sequences_all.fasta
+  metadata.tsv.zst: results/metadata.tsv
+  sequences.fasta.zst: results/sequences.fasta
