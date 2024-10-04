@@ -17,7 +17,7 @@ configfile: "defaults/config.yaml"
 
 rule all:
     input:
-        auspice = "auspice/WNV.json"
+        auspice = "auspice/WNV_genome.json"
 
 
 # These rules are imported in the order that they are expected to run.

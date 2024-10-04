@@ -39,7 +39,7 @@ rule export:
         lat_longs = "results/lat_longs.tsv",
         auspice_config = config["export"]["auspice_config"],
     output:
-        auspice = "auspice/WNV.json"
+        auspice = "auspice/WNV_genome.json"
     log:
         "logs/export.txt",
     benchmark:
