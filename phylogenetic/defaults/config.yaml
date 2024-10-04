@@ -5,9 +5,14 @@ reference: "defaults/reference.gb"
 # To place samples within the global context
 root: "AF481864"
 
+# Sequences must be FASTA and metadata must be TSV
+# Both files must be zstd compressed
+sequences_url: "https://data.nextstrain.org/files/workflows/wnv/sequences.fasta.zst"
+metadata_url: "https://data.nextstrain.org/files/workflows/wnv/metadata.tsv.zst"
+
 # Pull in metadata and sequences from the ingest workflow
-input_metadata: "../ingest/results/metadata.tsv"
-input_sequences: "../ingest/results/sequences.fasta"
+input_metadata: "data/metadata.tsv"
+input_sequences: "data/sequences.fasta"
 
 #subsampling:
   #all: --min-length '9800' --query "country == 'USA' & accession != 'NC_009942'"
