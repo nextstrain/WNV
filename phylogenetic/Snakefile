@@ -17,7 +17,7 @@ configfile: "defaults/config.yaml"
 
 rule all:
     input:
-        auspice = "auspice/WNV-nextstrain_NA.json"
+        auspice = "auspice/WNV.json"
 
 
 # These rules are imported in the order that they are expected to run.
