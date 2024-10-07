@@ -1,5 +1,4 @@
-#!/bin/bash
-# Originally copied from nextstrain/ncov-ingest
+#!/usr/bin/env bash
 set -euo pipefail
 
 : "${SLACK_TOKEN:?The SLACK_TOKEN environment variable is required.}"
@@ -38,15 +37,15 @@ slack_message=""
 
 if [[ $added_records -gt 0 ]]; then
     echo "Notifying Slack about added records (n=$added_records)"
-    slack_message="📈 New monkeypox records (n=$added_records) found on $source_name."
+    slack_message="📈 New records (n=$added_records) found on $source_name."
 
 elif [[ $added_records -lt 0 ]]; then
     echo "Notifying Slack about fewer records (n=$added_records)"
-    slack_message="📉 Fewer monkeypox records (n=$added_records) found on $source_name."
+    slack_message="📉 Fewer records (n=$added_records) found on $source_name."
 
 else
     echo "Notifying Slack about same number of records"
-    slack_message="⛔ No new monkeypox records found on $source_name."
+    slack_message="⛔ No new records found on $source_name."
 fi
 
 slack_message+=" (Total record count: $src_record_count)"
