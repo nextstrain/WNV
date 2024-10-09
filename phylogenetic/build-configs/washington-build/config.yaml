@@ -1,0 +1,18 @@
+# This configuration file contains the custom configurations parameters
+# for the CI workflow to run with the example data.
+custom_rules:
+  - build-configs/ci/washington_specific_rules.smk
+
+# Pull in metadata and sequences from the ingest directory after it has been annotated with washington specific information
+input_metadata: "../ingest/results/metadata.tsv"
+input_sequences: "../ingest/results/sequences.fasta"
+
+# This command excludes all strains by default and then forces the inclusion of
+# the strains selected by the subsampling logic defined above.
+subsampling:
+  state: --query "state == 'WA'" --min-length '9800' --subsample-max-sequences 5000
+  neighboring_state: --query "state in ['CA', 'ID', 'OR', 'NV']" --group-by state year --min-length '9800' --subsample-max-sequences 5000
+  region: --query "state in ['AZ','NM', 'CO', 'UT', 'WY', 'MT']" --group-by state year --min-length '9800' --subsample-max-sequences 5000
+  country: --query "country == 'USA' and state not in ['WA', 'CA', 'ID', 'OR', 'NV','AZ','NM', 'CO', 'UT', 'WY', 'MT'] and accession != 'NC_009942'" --group-by state year --subsample-max-sequences 300 --min-length '9800'
+  force_include: --exclude-all --include ../nextclade/defaults/include.txt
+   #global: --query "country != 'USA'" --group-by country year --subsample-max-sequences 200
