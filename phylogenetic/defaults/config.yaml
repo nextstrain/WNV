@@ -66,7 +66,7 @@ input_sequences: "data/sequences.fasta"
 # This command excludes all strains by default and then forces the inclusion of
 # the strains selected by the subsampling logic defined above.
 subsampling:
-  global: --query "is_lab_host != 'true'" --query-columns is_lab_host:str --min-length '9800'
+  global: --query "is_lab_host != 'true'" --query-columns is_lab_host:str --min-length '9800' --exclude defaults/exclude.txt
   force_include: --exclude-all --include ../nextclade/defaults/include.txt
 
 traits:
