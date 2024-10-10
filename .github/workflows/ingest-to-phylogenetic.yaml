@@ -65,8 +65,8 @@ jobs:
           AWS_DEFAULT_REGION: ${{ vars.AWS_DEFAULT_REGION }}
         run: |
           s3_urls=(
-            "s3://nextstrain-data/files/workflows/WNV/all/metadata.tsv.zst"
-            "s3://nextstrain-data/files/workflows/WNV/all/sequences.fasta.zst"
+            "s3://nextstrain-data/files/workflows/WNV/metadata.tsv.zst"
+            "s3://nextstrain-data/files/workflows/WNV/sequences.fasta.zst"
           )
 
           # Code below is modified from ingest/upload-to-s3
@@ -80,6 +80,11 @@ jobs:
             key="${s3path#*/}"
 
             s3_hash="$(aws s3api head-object --no-sign-request --bucket "$bucket" --key "$key" --query Metadata.sha256sum --output text 2>/dev/null || echo "$no_hash")"
+
+            if [[ "${s3_hash}" == "${no_hash}" ]]; then
+              echo "No Metadata.sha256sum found for ${s3_url}" >> "$GITHUB_STEP_SUMMARY"
+            fi
+
             echo "${s3_hash}" | tee -a ingest-output-sha256sum
           done
 
