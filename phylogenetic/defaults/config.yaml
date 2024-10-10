@@ -7,8 +7,8 @@ root: "AF481864"
 
 # Sequences must be FASTA and metadata must be TSV
 # Both files must be zstd compressed
-sequences_url: "https://data.nextstrain.org/files/workflows/wnv/sequences.fasta.zst"
-metadata_url: "https://data.nextstrain.org/files/workflows/wnv/metadata.tsv.zst"
+sequences_url: "https://data.nextstrain.org/files/workflows/WNV/sequences.fasta.zst"
+metadata_url: "https://data.nextstrain.org/files/workflows/WNV/metadata.tsv.zst"
 
 # Pull in metadata and sequences from the ingest workflow
 input_metadata: "data/metadata.tsv"

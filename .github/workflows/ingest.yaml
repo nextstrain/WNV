@@ -26,8 +26,8 @@ on:
       trial_name:
         description: |
           Trial name for outputs.
-          If not set, outputs will overwrite files at s3://nextstrain-data/files/workflows/wnv/
-          If set, outputs will be uploaded to s3://nextstrain-data/files/workflows/wnv/trials/<trial_name>/
+          If not set, outputs will overwrite files at s3://nextstrain-data/files/workflows/WNV/
+          If set, outputs will be uploaded to s3://nextstrain-data/files/workflows/WNV/trials/<trial_name>/
         required: false
         type: string
 
@@ -43,7 +43,7 @@ jobs:
           config=""
           if [[ "$TRIAL_NAME" ]]; then
             config+="--config"
-            config+=" s3_dst='s3://nextstrain-data/files/workflows/wnv/trials/"$TRIAL_NAME"'"
+            config+=" s3_dst='s3://nextstrain-data/files/workflows/WNV/trials/"$TRIAL_NAME"'"
           fi
 
           echo "config=$config" >> "$GITHUB_OUTPUT"
