@@ -36,8 +36,8 @@ rule tree:
         augur tree \
             --alignment {input.alignment} \
             --output {output.tree} \
-            --method raxml \
-            --nthreads {threads} 2>&1 | tee {log}
+            #--method raxml \
+            #--nthreads {threads} 2>&1 | tee {log}
         """
 
 rule refine:
@@ -72,6 +72,6 @@ rule refine:
             --coalescent {params.coalescent} \
             --date-confidence \
             --date-inference {params.date_inference} \
-            --clock-filter-iqd {params.clock_filter_iqd} \
+            #--clock-filter-iqd {params.clock_filter_iqd} \
             2>&1 | tee {log}
         """
