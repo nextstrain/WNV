@@ -3,7 +3,7 @@ strain_id_field: "accession"
 reference: "defaults/reference.gb"
 # Use 'IS88' as the root strain on the phylogenetic tree
 # To place samples within the global context
-root: "AF481864"
+root: "mid_point"
 
 # Sequences must be FASTA and metadata must be TSV
 # Both files must be zstd compressed
@@ -66,7 +66,7 @@ input_sequences: "data/sequences.fasta"
 # This command excludes all strains by default and then forces the inclusion of
 # the strains selected by the subsampling logic defined above.
 subsampling:
-  global: --query "is_lab_host != 'true'" --query-columns is_lab_host:str --min-length '9800' --exclude defaults/exclude.txt
+  global: --query "is_lab_host != 'true' and region in ['South America', 'North America']" --query-columns is_lab_host:str --min-length '9800' --exclude defaults/exclude.txt --group-by region year --subsample-max-sequences 3000
   force_include: --exclude-all --include ../nextclade/defaults/include.txt
 
 traits:
