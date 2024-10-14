@@ -17,3 +17,5 @@ HC467807 # 11029 bp PAT 21-APR-2010
 HH961658 # 10975 bp PAT 31-OCT-2010
 HH961659 # 11029 bp PAT 31-OCT-2010
 HV572312 # 11029 bp PAT 31-MAY-2012
+OP846974 # Suspected recombinant sequences from Mencattelli et al, 2023 https://www.nature.com/articles/s41467-023-42185-7
+OK239667 # Suspected recombinant sequences from Mencattelli et al, 2023 https://www.nature.com/articles/s41467-023-42185-7
