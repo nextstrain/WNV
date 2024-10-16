@@ -34,7 +34,6 @@ rule export:
         traits = "results/traits.json",
         nt_muts = "results/nt_muts.json",
         aa_muts = "results/aa_muts.json",
-        colors = "results/colors.tsv",
         description = config["export"]["description"],
         auspice_config = config["export"]["auspice_config"],
     output:
@@ -50,7 +49,6 @@ rule export:
             --metadata {input.metadata} \
             --metadata-id-columns "accession" \
             --node-data {input.branch_lengths} {input.traits} {input.nt_muts} {input.aa_muts} \
-            --colors {input.colors} \
             --description {input.description} \
             --auspice-config {input.auspice_config} \
             --output {output.auspice} 2>&1 | tee {log}
