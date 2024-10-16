@@ -1,4 +1,5 @@
 # accession lineage
+AY268133 # Outgroup
 AF481864 # pre-NY
 MH166901 # NY99
 MH166903 # NY99
