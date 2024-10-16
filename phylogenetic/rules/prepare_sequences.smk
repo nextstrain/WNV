@@ -68,7 +68,6 @@ rule create_colors:
 rule align:
     input:
         sequences = "results/sequences_filtered.fasta",
-        reference = config["reference"]
     output:
         alignment = "results/aligned.fasta"
     log:
@@ -76,13 +75,15 @@ rule align:
     benchmark:
         "benchmarks/align.txt"
     params:
-        threads = workflow.cores
+        threads = workflow.cores,
+        reference = config["root"]
     shell:
         """
         augur align \
             --sequences {input.sequences} \
             --output {output.alignment} \
             --fill-gaps \
-            --reference-sequence {input.reference} \
-            --nthreads {threads} 2>&1 | tee {log}
+            --reference-name {params.reference} \
+            --nthreads {params.threads} \
+            2>&1 | tee {log}
         """
