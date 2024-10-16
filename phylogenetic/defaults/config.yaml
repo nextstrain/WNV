@@ -66,6 +66,7 @@ input_sequences: "data/sequences.fasta"
 # the strains selected by the subsampling logic defined above.
 subsampling:
   region: --query "is_lab_host != 'true'" --query-columns is_lab_host:str --min-length '9800' --group-by region year --subsample-max-sequences 3000
+  force_include: --exclude-all --include defaults/include.txt
 
 traits:
   metadata_columns: [
