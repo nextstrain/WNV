@@ -3,6 +3,12 @@
 custom_rules:
   - build-configs/ci/washington_specific_rules.smk
 
+# Use 'NY99' as the reference since it should be basel to the USA sequences
+reference: "defaults/reference.gb"
+# Use 'IS88' as the root strain on the phylogenetic tree
+# To place samples within the global context
+root: "AF481864"
+
 # Pull in metadata and sequences from the ingest directory after it has been annotated with washington specific information
 input_metadata: "../ingest/results/metadata.tsv"
 input_sequences: "../ingest/results/sequences.fasta"
