@@ -19,6 +19,9 @@ subsampling:
   country: --query "country == 'USA' and state not in ['WA', 'CA', 'ID', 'OR', 'NV','AZ','NM', 'CO', 'UT', 'WY', 'MT'] and accession != 'NC_009942'" --group-by state year --subsample-max-sequences 300 --min-length '9800'
   force_include: --exclude-all --include ../nextclade/defaults/include.txt
 
+refine:
+  treetime_params: --coalescent opt --clock-filter-iqd 4 --date-inference marginal --date-confidence
+
 traits:
   metadata_columns: [
     'country',

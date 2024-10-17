@@ -2,7 +2,7 @@ strain_id_field: "accession"
 # Use 'Egypt 1951' as the reference and root, following Mencattelli et al, 2023
 # https://www.nature.com/articles/s41467-023-42185-7
 reference: "defaults/reference_global.gb"
-root: "AF260968_REF"
+root: "AF260968"
 
 # Sequences must be FASTA and metadata must be TSV
 # Both files must be zstd compressed
@@ -67,6 +67,9 @@ input_sequences: "data/sequences.fasta"
 subsampling:
   region: --query "is_lab_host != 'true'" --query-columns is_lab_host:str --min-length '9800' --group-by region year --subsample-max-sequences 3000 --exclude defaults/exclude.txt
   force_include: --exclude-all --include defaults/include.txt
+
+refine:
+  treetime_params: --coalescent opt --date-inference marginal --date-confidence
 
 traits:
   metadata_columns: [
