@@ -23,7 +23,8 @@ auspice -help
 ```
 
 ## Run the build
-The build can be run at once or by workflows. Running the build by workflows can be helpful when troubleshooting or when testing modifications.
+This build can process and output global or Washington state focused WNV information. The build can also be run by workflows which is helpful when troubleshoting or all at once.
+
 To run the build by workflows first run the ingest workflow
 ```bash
 nextstrain build ingest
@@ -31,20 +32,29 @@ nextstrain build ingest
 Inside the ingest folder there should be two output files: metadata_all.tsv and sequences_all.tsv
 
 Run the phylogenetic workflow
+Execute the global build
 ```bash
 nextstrain build phylogenetic
 ```
+Or execute the Washington focused build 
+```bash
+nextstrain build phylogenetic --configfile build-configs/washington-state/config.yaml
+```
 Inside the phylogenetic folder there should be at least one output file: WNV-nextstrain_NA.json
 
-Run the build all at once
+Run the build all at once. This option defaults to the global build.
 ```bash
 nextstrain build
 ```
+
 ## File Structure
 This Nextstrain build follows the structure detailed in the [Pathogen Repo Guide](https://github.com/nextstrain/pathogen-repo-guide)
 
 ## Decision Points
 The following are critical decisions that were made during the development of the WNV build that should be kept in mind when analyzing the data.
+
+### Global and Washington Focused Outputs
+This build can process and output global or Washington state focused WNV information. To accomplish this, a washington-state.yaml file was added to the build-configs which specifies Washington subsampling preferences. This file can be adopted and mofidied to accomodate other sampling references appropiate to other regions or states.
 
 ### Root Selection
 The Global and the Washington focused WNV builds use different roots.
