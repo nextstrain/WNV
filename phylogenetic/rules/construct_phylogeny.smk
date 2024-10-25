@@ -55,9 +55,7 @@ rule refine:
     params:
         metadata_id_columns = config["strain_id_field"],
         root = config["root"],
-        date_inference = "marginal",
-        coalescent = "opt",
-        clock_filter_iqd = 4,
+        treetime_params = config["refine"]["treetime_params"],
     shell:
         """
         augur refine \
@@ -69,9 +67,6 @@ rule refine:
             --output-node-data {output.node_data} \
             --root {params.root} \
             --timetree \
-            --coalescent {params.coalescent} \
-            --date-confidence \
-            --date-inference {params.date_inference} \
-            --clock-filter-iqd {params.clock_filter_iqd} \
+            {params.treetime_params} \
             2>&1 | tee {log}
         """

@@ -1,0 +1,31 @@
+{
+  "title": "Global West Nile Virus Build",
+  "colorings": [
+    {"key": "gt", "title": "Genotype", "type": "categorical"},
+    {"key": "num_date", "title": "Sampling Date", "type": "continuous"},
+    {"key": "region", "title": "Region", "type": "categorical"},
+    {"key": "country", "title": "Country", "type": "categorical"},
+    {"key": "author", "title": "Authors", "type": "categorical"},
+    {"key": "host", "title": "Host Species", "type": "categorical"}
+  ],
+  "geo_resolutions": [
+    "region",
+    "country"
+  ],
+  "maintainers": [
+    {"name": "Marcela Torres", "url": "https://github.com/NW-PaGe/WNV-nextstrain"},
+    {"name": "NW-PaGe", "url": "https://github.com/NW-PaGe/WNV-nextstrain"},
+    {"name": "Nextstrain Team", "url": "https://next.nextstrain.org/"}
+  ],
+  "filters": [
+    "region",
+    "country",
+    "author",
+    "host"
+  ],
+  "display_defaults": {
+    "color_by": "region",
+    "map_triplicate": true,
+    "geo_resolution": "country"
+ }
+}
