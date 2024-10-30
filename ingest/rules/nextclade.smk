@@ -22,7 +22,7 @@ rule nextclade_classify:
         nextclade_tsv="data/nextclade_results/nextclade.tsv",
     shell:
         """
-        nextclade run \
+        nextclade3 run \
           --input-dataset {input.dataset} \
           --output-tsv {output.nextclade_tsv} \
           --silent \

@@ -64,7 +64,7 @@ rule test:
         output=directory("test_out"),
     shell:
         """
-        nextclade run \
+        nextclade3 run \
             --input-dataset {input.dataset} \
             --output-all {output.output} \
             {input.sequences}
