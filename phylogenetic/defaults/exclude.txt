@@ -53,3 +53,4 @@ OM202905 # Clusters below PAT FV537222
 OM202932 # Clusters below PAT FV537222
 FV537223 # Clusters below PAT FV537222
 FV537222 # Clusters below PAT FV537222
+AY688948 # Laboratory strain Sarafend based on https://pmc.ncbi.nlm.nih.gov/articles/PMC3320449/
