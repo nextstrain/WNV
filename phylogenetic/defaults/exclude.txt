@@ -1,3 +1,4 @@
+AF260968 # Egypt 1951 will added back in during augur align reference
 HW816192 # 11029 bp PAT 27-MAY-2015
 CS543188 # 11029 bp PAT 20-APR-2007
 CS568914 # 11029 bp PAT 18-MAY-2007
