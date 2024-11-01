@@ -1,6 +1,6 @@
-LOCUS       AF260968_REF               11029 bp    RNA     linear   VRL 27-AUG-2000
+LOCUS       AF260968               11029 bp    RNA     linear   VRL 27-AUG-2000
 DEFINITION  West Nile virus strain Eg101, complete genome.
-ACCESSION   AF260968_REF
+ACCESSION   AF260968
 VERSION     AF260968.1
 KEYWORDS    .
 SOURCE      West Nile virus (WNV)

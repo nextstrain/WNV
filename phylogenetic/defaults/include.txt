@@ -1,4 +1,4 @@
-AF260968 # Egypt 1951
+# AF260968 # Egypt 1951 will be used as augur align reference
 NC_001563 # Lineage 2 reference
 NC_009942 # Lineage 1 reference
 HM051416 # Isreal 1953
@@ -68,3 +68,24 @@ KJ501222 # SW03
 MG004537 # SW03
 MF175866 # SW03
 MG004540 # SW03
+MW383507 # Lineage 2
+HM147822 # Lineage 2
+GQ903680 # Lineage 2
+DQ176636 # Lineage 2
+KU978767 # Lineage 2
+HM147823 # Lineage 2
+PP445212 # Lineage 3
+AY765264 # Lineage 3
+AY277251 # Lineage 4
+FJ159131 # Lineage 4
+FJ159129 # Lineage 4
+FJ159130 # Lineage 4
+KJ831223 # Lineage 4
+KU978770 # Lineage 5
+DQ256376 # Lineage 5
+JX041632 # Lineage 5
+GQ851604 # Lineage 5
+GQ851605 # Lineage 5
+KY703855 # Lineage 7
+OP846972 # Lineage 7
+KY703856 # Lineage 8

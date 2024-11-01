@@ -20,7 +20,7 @@ subsampling:
   force_include: --exclude-all --include ../nextclade/defaults/include.txt
 
 refine:
-  treetime_params: --coalescent opt --clock-filter-iqd 4 --date-inference marginal --date-confidence
+  treetime_params: --coalescent opt --clock-filter-iqd 4 --date-inference marginal --date-confidence --clock-rate 0.000653
 
 traits:
   metadata_columns: [
