@@ -69,7 +69,7 @@ subsampling:
   force_include: --exclude-all --include defaults/include.txt
 
 refine:
-  treetime_params: --coalescent opt --date-inference marginal --date-confidence
+  treetime_params: --coalescent opt --date-inference marginal --date-confidence --keep-polytomies --clock-rate 0.000755
 
 traits:
   metadata_columns: [
