@@ -10,7 +10,9 @@
     {"key": "lineage", "title": "Pathoplexus lineage", "type": "categorical"},
     {"key": "clade_membership", "title": "Clade", "type": "categorical"},
     {"key": "author", "title": "Authors", "type": "categorical"},
-    {"key": "host", "title": "Host Species", "type": "categorical"}
+    {"key": "host", "title": "Host Species", "type": "categorical"},
+    {"key": "host_genus", "title": "Host Genus", "type": "categorical"},
+    {"key": "host_type", "title": "Host Type", "type": "categorical"}
   ],
   "geo_resolutions": [
     "state",
@@ -29,6 +31,8 @@
     "author",
     "clade_membership",
     "host",
+    "host_genus",
+    "host_type",
     "lineage"
   ],
   "display_defaults": {
