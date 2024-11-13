@@ -132,3 +132,8 @@ curate:
 nextclade:
   nextclade_dataset_path: '../nextclade/dataset'
   nextclade_field: 'clade_membership'
+
+pathoplexus:
+  URL: 'https://lapis.pathoplexus.org/west-nile/sample/details'
+  fields: 'insdcAccessionBase,lineage'
+  accession_field: 'insdcAccessionBase'
