@@ -112,6 +112,8 @@ curate:
     'location',
     'state',
     'host',
+    'host_genus',
+    'host_type',
     'is_lab_host',
     #'date_submitted',
     #'sra_accession',

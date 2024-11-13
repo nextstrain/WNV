@@ -46,6 +46,7 @@ rule curate:
         sequences_ndjson="data/genbank.ndjson",
         all_geolocation_rules="data/all-geolocation-rules.tsv",
         annotations=config["curate"]["annotations"],
+        manual_mapping="defaults/host_hostgenus_hosttype_map.tsv",
     output:
         metadata="data/raw_metadata_curated.tsv",
         sequences="results/sequences.fasta",
@@ -98,6 +99,12 @@ rule curate:
             | ./scripts/post_process_metadata.py \
             | ./scripts/add-field-names \
                 --metadata-columns {params.metadata_columns} \
+            | ./scripts/transform-new-fields \
+                --map-tsv {input.manual_mapping} \
+                --map-id host \
+                --metadata-id host \
+                --map-fields host_genus host_type \
+                --pass-through true \
             | augur curate apply-record-annotations \
                 --annotations {input.annotations} \
                 --id-field {params.annotations_id} \
