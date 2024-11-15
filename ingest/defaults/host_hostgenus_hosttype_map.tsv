@@ -1,285 +1,284 @@
-"host"	"host_genus"	"host_type"
-"Homo sapiens"	"Homo"	"Human"
-"Aedeomyia madagascarica"	"Aedeomyia"	"Mosquito"
-"Aedes albopictus"	"Aedes"	"Mosquito"
-"Aedes cinereus"	"Aedes"	"Mosquito"
-"Aedes dalzieli"	"Aedes"	"Mosquito"
-"Aedes japonicus"	"Aedes"	"Mosquito"
-"Aedes rossicus"	"Aedes"	"Mosquito"
-"Aedes sp."	"Aedes"	"Mosquito"
-"Aedes vexans"	"Aedes"	"Mosquito"
-"Anopheles atroparvus"	"Anopheles"	"Mosquito"
-"Anopheles bancroftii"	"Anopheles"	"Mosquito"
-"Anopheles coustani"	"Anopheles"	"Mosquito"
-"Anopheles farauti"	"Anopheles"	"Mosquito"
-"Anopheles hyrcanus"	"Anopheles"	"Mosquito"
-"Anopheles maculipennis"	"Anopheles"	"Mosquito"
-"Anopheles messeae"	"Anopheles"	"Mosquito"
-"Anopheles pauliani"	"Anopheles"	"Mosquito"
-"Anopheles plumbeus"	"Anopheles"	"Mosquito"
-"Anopheles sp."	"Anopheles"	"Mosquito"
-"Anopheles stephensi"	"Anopheles"	"Mosquito"
-"Coquillettidia perturbans"	"Coquillettidia"	"Mosquito"
-"Coquillettidia richiardii"	"Coquillettidia"	"Mosquito"
-"Coquillettidia"	"Coquillettidia"	"Mosquito"
-"Culex annulirostris"	"Culex"	"Mosquito"
-"Culex antennatus"	"Culex"	"Mosquito"
-"Culex bitaeniorhynchus"	"Culex"	"Mosquito"
-"Culex erraticus"	"Culex"	"Mosquito"
-"Culex erythrothorax"	"Culex"	"Mosquito"
-"Culex gelidus"	"Culex"	"Mosquito"
-"Culex interrogator"	"Culex"	"Mosquito"
-"Culex modestus"	"Culex"	"Mosquito"
-"Culex neavei"	"Culex"	"Mosquito"
-"Culex nigripalpus"	"Culex"	"Mosquito"
-"Culex perexiguus"	"Culex"	"Mosquito"
-"Culex perfuscus"	"Culex"	"Mosquito"
-"Culex pipiens complex"	"Culex"	"Mosquito"
-"Culex pipiens pipiens"	"Culex"	"Mosquito"
-"Culex pipiens sensu lato"	"Culex"	"Mosquito"
-"Culex pipiens"	"Culex"	"Mosquito"
-"Culex poicilipes"	"Culex"	"Mosquito"
-"Culex pseudovishnui"	"Culex"	"Mosquito"
-"Culex pullus"	"Culex"	"Mosquito"
-"Culex quinquefasciatus"	"Culex"	"Mosquito"
-"Culex restuans"	"Culex"	"Mosquito"
-"Culex salinarius"	"Culex"	"Mosquito"
-"Culex sitiens"	"Culex"	"Mosquito"
-"Culex squamosus"	"Culex"	"Mosquito"
-"Culex stigmatosoma"	"Culex"	"Mosquito"
-"Culex tarsalis"	"Culex"	"Mosquito"
-"Culex theileri"	"Culex"	"Mosquito"
-"Culex tritaeniorhynchus"	"Culex"	"Mosquito"
-"Culex univittatus"	"Culex"	"Mosquito"
-"Culex vishnui"	"Culex"	"Mosquito"
-"Culex whitmorei"	"Culex"	"Mosquito"
-"Culex"	"Culex"	"Mosquito"
-"Culicidae"	"Culicidae"	"Mosquito"
-"Culiseta inornata"	"Culiseta"	"Mosquito"
-"Culiseta longiareolata"	"Culiseta"	"Mosquito"
-"Culiseta melanura"	"Culiseta"	"Mosquito"
-"Culiseta morsitans"	"Culiseta"	"Mosquito"
-"Culiseta"	"Culiseta"	"Mosquito"
-"Mansonia uniformis"	"Mansonia"	"Mosquito"
-"Ochlerotatus canadensis"	"Ochlerotatus"	"Mosquito"
-"Ochlerotatus cantator"	"Ochlerotatus"	"Mosquito"
-"Ochlerotatus caspius"	"Ochlerotatus"	"Mosquito"
-"Ochlerotatus communis"	"Ochlerotatus"	"Mosquito"
-"Ochlerotatus dorsalis"	"Ochlerotatus"	"Mosquito"
-"Ochlerotatus flavescens"	"Ochlerotatus"	"Mosquito"
-"Ochlerotatus sollicitans"	"Ochlerotatus"	"Mosquito"
-"Ochlerotatus spencerii"	"Ochlerotatus"	"Mosquito"
-"Ochlerotatus sticticus"	"Ochlerotatus"	"Mosquito"
-"Ochlerotatus triseriatus"	"Ochlerotatus"	"Mosquito"
-"Ochlerotatus trivittatus"	"Ochlerotatus"	"Mosquito"
-"Psorophora ferox"	"Psorophora"	"Mosquito"
-"Psorophora"	"Psorophora"	"Mosquito"
-"Uranotaenia unguiculata"	"Uranotaenia"	"Mosquito"
-"Uranotaenia"	"Uranotaenia"	"Mosquito"
-"Dermacentor marginatus"	"Dermacentor"	"Tick"
-"Hyalomma marginatum marginatum"	"Hyalomma"	"Tick"
-"Hyalomma marginatum"	"Hyalomma"	"Tick"
-"Hyalomma plumbeum plumbeum"	"Hyalomma"	"Tick"
-"Hyalomma scupense"	"Hyalomma"	"Tick"
-"Hyalomma"	"Hyalomma"	"Tick"
-"Rhipicephalus guilhoni"	"Rhipicephalus"	"Tick"
-"Rhipicephalus pulchellus"	"Rhipicephalus"	"Tick"
-"Alectorobius capensis"	"Alectorobius"	"Tick"
-"Accipiter cooperii"	"Accipiter"	"Bird"
-"Accipiter gentilis"	"Accipiter"	"Bird"
-"Accipiter nisus"	"Accipiter"	"Bird"
-"Accipiter striatus"	"Accipiter"	"Bird"
-"Accipiter"	"Accipiter"	"Bird"
-"Aphelocoma californica"	"Aphelocoma"	"Bird"
-"Aphelocoma"	"Aphelocoma"	"Bird"
-"Corvus brachyrhynchos"	"Corvus"	"Bird"
-"Corvus corax"	"Corvus"	"Bird"
-"Corvus cornix"	"Corvus"	"Bird"
-"Corvus corone"	"Corvus"	"Bird"
-"Corvus frugilegus"	"Corvus"	"Bird"
-"Corvus ossifragus"	"Corvus"	"Bird"
-"Corvus"	"Corvus"	"Bird"
-"Cuculus canorus"	"Cuculus"	"Bird"
-"Cyanocitta cristata"	"Cyanocitta"	"Bird"
-"Falco columbarius"	"Falco"	"Bird"
-"Falco peregrinus"	"Falco"	"Bird"
-"Falco punctatus"	"Falco"	"Bird"
-"Falco sparverius"	"Falco"	"Bird"
-"Falco tinnunculus"	"Falco"	"Bird"
-"Falco"	"Falco"	"Bird"
-"Pica hudsonia"	"Pica"	"Bird"
-"Pica nuttalli"	"Pica"	"Bird"
-"Pica pica"	"Pica"	"Bird"
-"Accipitridae"	"Accipitridae"	"Bird"
-"Acrocephalus dumetorum"	"Acrocephalus"	"Bird"
-"Actitis macularius"	"Actitis"	"Bird"
-"Aegithalos caudatus"	"Aegithalos"	"Bird"
-"Aegypius monachus"	"Aegypius"	"Bird"
-"Agelaius phoeniceus"	"Agelaius"	"Bird"
-"Alopochen aegyptiaca"	"Alopochen"	"Bird"
-"Anas platyrhynchos"	"Anas"	"Bird"
-"Anatidae"	"Anatidae"	"Bird"
-"Anser"	"Anser"	"Bird"
-"Apus apus"	"Apus"	"Bird"
-"Aquila adalberti"	"Aquila"	"Bird"
-"Aquila chrysaetos"	"Aquila"	"Bird"
-"Aquila fasciata"	"Aquila"	"Bird"
-"Ardeidae"	"Ardeidae"	"Bird"
-"Asio flammeus"	"Asio"	"Bird"
-"Asio otus"	"Asio"	"Bird"
-"Athene noctua"	"Athene"	"Bird"
-"Aves"	"Aves"	"Bird"
-"Baeolophus bicolor"	"Baeolophus"	"Bird"
-"Baeolophus inornatus"	"Baeolophus"	"Bird"
-"Bombycilla garrulus"	"Bombycilla"	"Bird"
-"Bonasa umbellus"	"Bonasa"	"Bird"
-"Branta canadensis"	"Branta"	"Bird"
-"Bubo scandiacus"	"Bubo"	"Bird"
-"Bubo virginianus"	"Bubo"	"Bird"
-"Bubulcus ibis"	"Bubulcus"	"Bird"
-"Buteo buteo"	"Buteo"	"Bird"
-"Buteo jamaicensis"	"Buteo"	"Bird"
-"Buteo lineatus"	"Buteo"	"Bird"
-"Buteo regalis"	"Buteo"	"Bird"
-"Buteo swainsoni"	"Buteo"	"Bird"
-"Buteo"	"Buteo"	"Bird"
-"Cardinalis cardinalis"	"Cardinalis"	"Bird"
-"Cardinalis"	"Cardinalis"	"Bird"
-"Corvidae"	"Corvidae"	"Bird"
-"Strigidae"	"Strigidae"	"Bird"
-"Strix aluco"	"Strix"	"Bird"
-"Strix nebulosa lapponica"	"Strix"	"Bird"
-"Strix nebulosa"	"Strix"	"Bird"
-"Sturnidae"	"Sturnidae"	"Bird"
-"Sturnus vulgaris"	"Sturnus"	"Bird"
-"Sylvia atricapilla"	"Sylvia"	"Bird"
-"Toxostoma rufum"	"Toxostoma"	"Bird"
-"Trichoglossus haematodus"	"Trichoglossus"	"Bird"
-"Trichoglossus moluccanus"	"Trichoglossus"	"Bird"
-"Turdus merula"	"Turdus"	"Bird"
-"Turdus migratorius"	"Turdus"	"Bird"
-"Turdus philomelos"	"Turdus"	"Bird"
-"Tyto alba"	"Tyto"	"Bird"
-"Zenaida macroura"	"Zenaida"	"Bird"
-"Gallus gallus"	"Gallus"	"Bird"
-"Pheucticus melanocephalus"	"Pheucticus"	"Bird"
-"Phoenicoparrus andinus"	"Phoenicoparrus"	"Bird"
-"Phoenicopterus chilensis"	"Phoenicopterus"	"Bird"
-"Phoenicopterus roseus"	"Phoenicopterus"	"Bird"
-"Phoenicopterus ruber"	"Phoenicopterus"	"Bird"
-"Phoenicopterus sp."	"Phoenicopterus"	"Bird"
-"Equus caballus x Equus asinus"	"Equus"	"Horse"
-"Equus caballus"	"Equus"	"Horse"
-"Equus asinus"	"Equus"	"Horse"
-"Equus ferus"	"Equus"	"Horse"
-"Equus"	"Equus"	"Horse"
-"Bos taurus"	"Bos"	"Other"
-"Butorides virescens"	"Butorides"	"Other"
-"Calidris alba"	"Calidris"	"Other"
-"Calypte costae"	"Calypte"	"Other"
-"Camelus bactrianus"	"Camelus"	"Other"
-"Camelus dromedarius"	"Camelus"	"Other"
-"Canis lupus familiaris"	"Canis"	"Other"
-"Charadrius melodus"	"Charadrius"	"Other"
-"Chiroptera"	"Chiroptera"	"Other"
-"Chroicocephalus ridibundus"	"Chroicocephalus"	"Other"
-"Ciconiidae"	"Ciconiidae"	"Other"
-"Clanga pomarina"	"Clanga"	"Other"
-"Colaptes auratus"	"Colaptes"	"Other"
-"Coloeus monedula"	"Coloeus"	"Other"
-"Columba livia"	"Columba"	"Other"
-"Columba palumbus"	"Columba"	"Other"
-"Columbidae"	"Columbidae"	"Other"
-"Coracopsis vasa"	"Coracopsis"	"Other"
-"Coragyps atratus"	"Coragyps"	"Other"
-"Cricetinae"	"Cricetinae"	"Other"
-"Crocodylus moreletii"	"Crocodylus"	"Other"
-"Crocodylus niloticus"	"Crocodylus"	"Other"
-"Crocodylus porosus"	"Crocodylus"	"Other"
-"Curruca conspicillata"	"Curruca"	"Other"
-"Cyanistes caeruleus"	"Cyanistes"	"Other"
-"Cygnus buccinator"	"Cygnus"	"Other"
-"Cygnus olor"	"Cygnus"	"Other"
-"Dumetella"	"Dumetella"	"Other"
-"Egretta garzetta"	"Egretta"	"Other"
-"Euphagus cyanocephalus"	"Euphagus"	"Other"
-"Fulica"	"Fulica"	"Other"
-"Galliformes"	"Galliformes"	"Other"
-"Garrulus glandarius"	"Garrulus"	"Other"
-"Giraffa giraffa"	"Giraffa"	"Other"
-"Gymnogyps californianus"	"Gymnogyps"	"Other"
-"Haemorhous mexicanus"	"Haemorhous"	"Other"
-"Haliaeetus albicilla"	"Haliaeetus"	"Other"
-"Haliaeetus leucocephalus"	"Haliaeetus"	"Other"
-"Hirundinidae"	"Hirundinidae"	"Other"
-"Hirundo rustica"	"Hirundo"	"Other"
-"Hylocichla mustelina"	"Hylocichla"	"Other"
-"Ichthyaetus leucophthalmus"	"Ichthyaetus"	"Other"
-"Ictinia mississippiensis"	"Ictinia"	"Other"
-"Ixodoidea"	"Ixodoidea"	"Other"
-"Lanius ludovicianus"	"Lanius"	"Other"
-"Laridae"	"Laridae"	"Other"
-"Larus crassirostris"	"Larus"	"Other"
-"Larus delawarensis"	"Larus"	"Other"
-"Larus michahellis"	"Larus"	"Other"
-"Larus smithsonianus"	"Larus"	"Other"
-"Lathamus discolor"	"Lathamus"	"Other"
-"Loriini"	"Loriini"	"Other"
-"Mastomys erythroleucus"	"Mastomys"	"Other"
-"Meleagris gallopavo"	"Meleagris"	"Other"
-"Mephitis mephitis"	"Mephitis"	"Other"
-"Mergus squamatus"	"Mergus"	"Other"
-"Mesocricetus auratus"	"Mesocricetus"	"Other"
-"Mimus polyglottos"	"Mimus"	"Other"
-"Mimus"	"Mimus"	"Other"
-"Molothrus ater"	"Molothrus"	"Other"
-"Mus musculus"	"Mus"	"Other"
-"Nestor notabilis"	"Nestor"	"Other"
-"Oena capensis"	"Oena"	"Other"
-"Orcinus orca"	"Orcinus"	"Other"
-"Oriolus flavocinctus"	"Oriolus"	"Other"
-"Ovis aries"	"Ovis"	"Other"
-"Pandion haliaetus"	"Pandion"	"Other"
-"Panthera leo"	"Panthera"	"Other"
-"Parulidae"	"Parulidae"	"Other"
-"Parus major"	"Parus"	"Other"
-"Passer domesticus"	"Passer"	"Other"
-"Passer sp."	"Passer"	"Other"
-"Passeridae"	"Passeridae"	"Other"
-"Pelecanus erythrorhynchos"	"Pelecanus"	"Other"
-"Pelecanus occidentalis"	"Pelecanus"	"Other"
-"Pelecanus"	"Pelecanus"	"Other"
-"Pelophylax ridibundus"	"Pelophylax"	"Other"
-"Phalacrocoracidae"	"Phalacrocoracidae"	"Other"
-"Phalacrocorax auritus"	"Phalacrocorax"	"Other"
-"Phalacrocorax carbo"	"Phalacrocorax"	"Other"
-"Phasianinae"	"Phasianinae"	"Other"
-"Phasianus colchicus"	"Phasianus"	"Other"
-"Phylloscopus collybita"	"Phylloscopus"	"Other"
-"Platycercus"	"Platycercus"	"Other"
-"Pluvialis apricaria"	"Pluvialis"	"Other"
-"Podiceps cristatus"	"Podiceps"	"Other"
-"Poecile atricapillus"	"Poecile"	"Other"
-"Poecile carolinensis"	"Poecile"	"Other"
-"Prunella modularis"	"Prunella"	"Other"
-"Pyrrhocorax graculus"	"Pyrrhocorax"	"Other"
-"Quelea quelea"	"Quelea"	"Other"
-"Quiscalus major"	"Quiscalus"	"Other"
-"Quiscalus quiscula"	"Quiscalus"	"Other"
-"Quiscalus"	"Quiscalus"	"Other"
-"Rallus aquaticus"	"Rallus"	"Other"
-"Rodentia"	"Rodentia"	"Other"
-"Rousettus leschenaultii"	"Rousettus"	"Other"
-"Sciuridae"	"Sciuridae"	"Other"
-"Sciurus carolinensis"	"Sciurus"	"Other"
-"Sciurus niger"	"Sciurus"	"Other"
-"Serinus canaria"	"Serinus"	"Other"
-"Spatula querquedula"	"Spatula"	"Other"
-"Spheniscus humboldti"	"Spheniscus"	"Other"
-"Spinus tristis"	"Spinus"	"Other"
-"Sternula antillarum"	"Sternula"	"Other"
-"Sternula"	"Sternula"	"Other"
-"Streptopelia capicola"	"Streptopelia"	"Other"
-"Streptopelia decaocto"	"Streptopelia"	"Other"
-"Syncerus caffer"	"Syncerus"	"Other"
-"Vicugna pacos"	"Vicugna"	"Other"
+host	host_genus	host_type
+Homo sapiens	Homo	Human
+Aedeomyia madagascarica	Aedeomyia	Mosquito
+Aedes albopictus	Aedes	Mosquito
+Aedes cinereus	Aedes	Mosquito
+Aedes dalzieli	Aedes	Mosquito
+Aedes rossicus	Aedes	Mosquito
+Aedes sp.	Aedes	Mosquito
+Aedes vexans	Aedes	Mosquito
+Anopheles atroparvus	Anopheles	Mosquito
+Anopheles bancroftii	Anopheles	Mosquito
+Anopheles coustani	Anopheles	Mosquito
+Anopheles farauti	Anopheles	Mosquito
+Anopheles hyrcanus	Anopheles	Mosquito
+Anopheles maculipennis	Anopheles	Mosquito
+Anopheles messeae	Anopheles	Mosquito
+Anopheles pauliani	Anopheles	Mosquito
+Anopheles plumbeus	Anopheles	Mosquito
+Anopheles sp.	Anopheles	Mosquito
+Anopheles stephensi	Anopheles	Mosquito
+Coquillettidia	Coquillettidia	Mosquito
+Coquillettidia perturbans	Coquillettidia	Mosquito
+Coquillettidia richiardii	Coquillettidia	Mosquito
+Culex	Culex	Mosquito
+Culex annulirostris	Culex	Mosquito
+Culex antennatus	Culex	Mosquito
+Culex bitaeniorhynchus	Culex	Mosquito
+Culex erraticus	Culex	Mosquito
+Culex erythrothorax	Culex	Mosquito
+Culex gelidus	Culex	Mosquito
+Culex interrogator	Culex	Mosquito
+Culex modestus	Culex	Mosquito
+Culex neavei	Culex	Mosquito
+Culex nigripalpus	Culex	Mosquito
+Culex perexiguus	Culex	Mosquito
+Culex perfuscus	Culex	Mosquito
+Culex pipiens	Culex	Mosquito
+Culex pipiens complex	Culex	Mosquito
+Culex pipiens pipiens	Culex	Mosquito
+Culex pipiens sensu lato	Culex	Mosquito
+Culex poicilipes	Culex	Mosquito
+Culex pseudovishnui	Culex	Mosquito
+Culex pullus	Culex	Mosquito
+Culex quinquefasciatus	Culex	Mosquito
+Culex restuans	Culex	Mosquito
+Culex salinarius	Culex	Mosquito
+Culex sitiens	Culex	Mosquito
+Culex squamosus	Culex	Mosquito
+Culex stigmatosoma	Culex	Mosquito
+Culex tarsalis	Culex	Mosquito
+Culex theileri	Culex	Mosquito
+Culex tritaeniorhynchus	Culex	Mosquito
+Culex univittatus	Culex	Mosquito
+Culex vishnui	Culex	Mosquito
+Culex whitmorei	Culex	Mosquito
+Culicidae	Culicidae	Mosquito
+Culiseta	Culiseta	Mosquito
+Culiseta inornata	Culiseta	Mosquito
+Culiseta longiareolata	Culiseta	Mosquito
+Culiseta melanura	Culiseta	Mosquito
+Culiseta morsitans	Culiseta	Mosquito
+Mansonia uniformis	Mansonia	Mosquito
+Ochlerotatus canadensis	Ochlerotatus	Mosquito
+Ochlerotatus cantator	Ochlerotatus	Mosquito
+Ochlerotatus caspius	Ochlerotatus	Mosquito
+Ochlerotatus communis	Ochlerotatus	Mosquito
+Ochlerotatus dorsalis	Ochlerotatus	Mosquito
+Ochlerotatus flavescens	Ochlerotatus	Mosquito
+Ochlerotatus sollicitans	Ochlerotatus	Mosquito
+Ochlerotatus spencerii	Ochlerotatus	Mosquito
+Ochlerotatus sticticus	Ochlerotatus	Mosquito
+Ochlerotatus triseriatus	Ochlerotatus	Mosquito
+Ochlerotatus trivittatus	Ochlerotatus	Mosquito
+Psorophora	Psorophora	Mosquito
+Psorophora ferox	Psorophora	Mosquito
+Uranotaenia	Uranotaenia	Mosquito
+Uranotaenia unguiculata	Uranotaenia	Mosquito
+Accipiter	Accipiter	Bird
+Accipiter cooperii	Accipiter	Bird
+Accipiter gentilis	Accipiter	Bird
+Accipiter nisus	Accipiter	Bird
+Accipiter striatus	Accipiter	Bird
+Accipitridae	Accipitridae	Bird
+Acrocephalus dumetorum	Acrocephalus	Bird
+Actitis macularius	Actitis	Bird
+Aegithalos caudatus	Aegithalos	Bird
+Aegypius monachus	Aegypius	Bird
+Agelaius phoeniceus	Agelaius	Bird
+Alopochen aegyptiaca	Alopochen	Bird
+Anas platyrhynchos	Anas	Bird
+Anatidae	Anatidae	Bird
+Anser	Anser	Bird
+Aphelocoma	Aphelocoma	Bird
+Aphelocoma californica	Aphelocoma	Bird
+Apus apus	Apus	Bird
+Aquila adalberti	Aquila	Bird
+Aquila chrysaetos	Aquila	Bird
+Aquila fasciata	Aquila	Bird
+Ardeidae	Ardeidae	Bird
+Asio flammeus	Asio	Bird
+Asio otus	Asio	Bird
+Athene noctua	Athene	Bird
+Aves	Aves	Bird
+Baeolophus bicolor	Baeolophus	Bird
+Baeolophus inornatus	Baeolophus	Bird
+Bombycilla garrulus	Bombycilla	Bird
+Bonasa umbellus	Bonasa	Bird
+Branta canadensis	Branta	Bird
+Bubo scandiacus	Bubo	Bird
+Bubo virginianus	Bubo	Bird
+Bubulcus ibis	Bubulcus	Bird
+Buteo	Buteo	Bird
+Buteo buteo	Buteo	Bird
+Buteo jamaicensis	Buteo	Bird
+Buteo lineatus	Buteo	Bird
+Buteo regalis	Buteo	Bird
+Buteo swainsoni	Buteo	Bird
+Butorides virescens	Butorides	Bird
+Calidris alba	Calidris	Bird
+Calypte costae	Calypte	Bird
+Cardinalis	Cardinalis	Bird
+Cardinalis cardinalis	Cardinalis	Bird
+Charadrius melodus	Charadrius	Bird
+Chroicocephalus ridibundus	Chroicocephalus	Bird
+Ciconiidae	Ciconiidae	Bird
+Clanga pomarina	Clanga	Bird
+Colaptes auratus	Colaptes	Bird
+Coloeus monedula	Coloeus	Bird
+Columba livia	Columba	Bird
+Columba palumbus	Columba	Bird
+Columbidae	Columbidae	Bird
+Coracopsis vasa	Coracopsis	Bird
+Coragyps atratus	Coragyps	Bird
+Corvidae	Corvidae	Bird
+Corvus	Corvus	Bird
+Corvus brachyrhynchos	Corvus	Bird
+Corvus corax	Corvus	Bird
+Corvus cornix	Corvus	Bird
+Corvus corone	Corvus	Bird
+Corvus frugilegus	Corvus	Bird
+Corvus ossifragus	Corvus	Bird
+Cuculus canorus	Cuculus	Bird
+Curruca conspicillata	Curruca	Bird
+Cyanistes caeruleus	Cyanistes	Bird
+Cyanocitta cristata	Cyanocitta	Bird
+Cygnus buccinator	Cygnus	Bird
+Cygnus olor	Cygnus	Bird
+Dumetella	Dumetella	Bird
+Egretta garzetta	Egretta	Bird
+Euphagus cyanocephalus	Euphagus	Bird
+Falco	Falco	Bird
+Falco columbarius	Falco	Bird
+Falco peregrinus	Falco	Bird
+Falco punctatus	Falco	Bird
+Falco sparverius	Falco	Bird
+Falco tinnunculus	Falco	Bird
+Fulica	Fulica	Bird
+Galliformes	Galliformes	Bird
+Gallus gallus	Gallus	Bird
+Garrulus glandarius	Garrulus	Bird
+Gymnogyps californianus	Gymnogyps	Bird
+Haemorhous mexicanus	Haemorhous	Bird
+Haliaeetus albicilla	Haliaeetus	Bird
+Haliaeetus leucocephalus	Haliaeetus	Bird
+Hirundinidae	Hirundinidae	Bird
+Hirundo rustica	Hirundo	Bird
+Hylocichla mustelina	Hylocichla	Bird
+Ichthyaetus leucophthalmus	Ichthyaetus	Bird
+Ictinia mississippiensis	Ictinia	Bird
+Lanius ludovicianus	Lanius	Bird
+Larus crassirostris	Larus	Bird
+Larus delawarensis	Larus	Bird
+Larus michahellis	Larus	Bird
+Larus smithsonianus	Larus	Bird
+Lathamus discolor	Lathamus	Bird
+Loriini	Loriini	Bird
+Meleagris gallopavo	Meleagris	Bird
+Mergus squamatus	Mergus	Bird
+Mimus	Mimus	Bird
+Mimus polyglottos	Mimus	Bird
+Molothrus ater	Molothrus	Bird
+Nestor notabilis	Nestor	Bird
+Oena capensis	Oena	Bird
+Oriolus flavocinctus	Oriolus	Bird
+Pandion haliaetus	Pandion	Bird
+Parulidae	Parulidae	Bird
+Parus major	Parus	Bird
+Passer domesticus	Passer	Bird
+Passer sp.	Passer	Bird
+Passeridae	Passeridae	Bird
+Pelecanus	Pelecanus	Bird
+Pelecanus erythrorhynchos	Pelecanus	Bird
+Pelecanus occidentalis	Pelecanus	Bird
+Phalacrocoracidae	Phalacrocoracidae	Bird
+Phalacrocorax auritus	Phalacrocorax	Bird
+Phalacrocorax carbo	Phalacrocorax	Bird
+Phasianinae	Phasianinae	Bird
+Phasianus colchicus	Phasianus	Bird
+Pheucticus melanocephalus	Pheucticus	Bird
+Phoenicoparrus andinus	Phoenicoparrus	Bird
+Phoenicopterus chilensis	Phoenicopterus	Bird
+Phoenicopterus roseus	Phoenicopterus	Bird
+Phoenicopterus ruber	Phoenicopterus	Bird
+Phoenicopterus sp.	Phoenicopterus	Bird
+Phylloscopus collybita	Phylloscopus	Bird
+Pica hudsonia	Pica	Bird
+Pica nuttalli	Pica	Bird
+Pica pica	Pica	Bird
+Pluvialis apricaria	Pluvialis	Bird
+Podiceps cristatus	Podiceps	Bird
+Poecile atricapillus	Poecile	Bird
+Poecile carolinensis	Poecile	Bird
+Prunella modularis	Prunella	Bird
+Pyrrhocorax graculus	Pyrrhocorax	Bird
+Quelea quelea	Quelea	Bird
+Quiscalus	Quiscalus	Bird
+Quiscalus major	Quiscalus	Bird
+Quiscalus quiscula	Quiscalus	Bird
+Rallus aquaticus	Rallus	Bird
+Serinus canaria	Serinus	Bird
+Spatula querquedula	Spatula	Bird
+Spheniscus humboldti	Spheniscus	Bird
+Spinus tristis	Spinus	Bird
+Sternula	Sternula	Bird
+Sternula antillarum	Sternula	Bird
+Streptopelia capicola	Streptopelia	Bird
+Streptopelia decaocto	Streptopelia	Bird
+Strigidae	Strigidae	Bird
+Strix aluco	Strix	Bird
+Strix nebulosa	Strix	Bird
+Strix nebulosa lapponica	Strix	Bird
+Sturnidae	Sturnidae	Bird
+Sturnus vulgaris	Sturnus	Bird
+Sylvia atricapilla	Sylvia	Bird
+Toxostoma rufum	Toxostoma	Bird
+Trichoglossus haematodus	Trichoglossus	Bird
+Trichoglossus moluccanus	Trichoglossus	Bird
+Turdus merula	Turdus	Bird
+Turdus migratorius	Turdus	Bird
+Turdus philomelos	Turdus	Bird
+Tyto alba	Tyto	Bird
+Zenaida macroura	Zenaida	Bird
+Equus caballus	Equus	Horse
+Equus caballus x Equus asinus	Equus	Horse
+Alectorobius capensis	Alectorobius	Tick
+Dermacentor marginatus	Dermacentor	Tick
+Hyalomma	Hyalomma	Tick
+Hyalomma marginatum	Hyalomma	Tick
+Hyalomma marginatum marginatum	Hyalomma	Tick
+Hyalomma plumbeum plumbeum	Hyalomma	Tick
+Hyalomma scupense	Hyalomma	Tick
+Ixodoidea	Ixodoidea	Tick
+Rhipicephalus guilhoni	Rhipicephalus	Tick
+Rhipicephalus pulchellus	Rhipicephalus	Tick
+Bos taurus	Bos	Other
+Camelus bactrianus	Camelus	Other
+Camelus dromedarius	Camelus	Other
+Canis lupus familiaris	Canis	Other
+Chiroptera	Chiroptera	Other
+Cricetinae	Cricetinae	Other
+Crocodylus moreletii	Crocodylus	Other
+Crocodylus niloticus	Crocodylus	Other
+Crocodylus porosus	Crocodylus	Other
+Equus	Equus	Other
+Equus asinus	Equus	Other
+Equus ferus	Equus	Other
+Giraffa giraffa	Giraffa	Other
+Laridae	Laridae	Other
+Mastomys erythroleucus	Mastomys	Other
+Mephitis mephitis	Mephitis	Other
+Mesocricetus auratus	Mesocricetus	Other
+Mus musculus	Mus	Other
+Orcinus orca	Orcinus	Other
+Ovis aries	Ovis	Other
+Panthera leo	Panthera	Other
+Pelophylax ridibundus	Pelophylax	Other
+Platycercus	Platycercus	Other
+Rodentia	Rodentia	Other
+Rousettus leschenaultii	Rousettus	Other
+Sciuridae	Sciuridae	Other
+Sciurus carolinensis	Sciurus	Other
+Sciurus niger	Sciurus	Other
+Syncerus caffer	Syncerus	Other
+Vicugna pacos	Vicugna	Other
