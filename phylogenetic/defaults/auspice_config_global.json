@@ -1,5 +1,11 @@
 {
   "title": "Global West Nile Virus Build",
+  "data_provenance": [
+    {
+      "name": "GenBank",
+      "url": "https://www.ncbi.nlm.nih.gov/genbank/"
+    }
+  ],
   "colorings": [
     {"key": "gt", "title": "Genotype", "type": "categorical"},
     {"key": "num_date", "title": "Sampling Date", "type": "continuous"},
