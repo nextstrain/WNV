@@ -66,6 +66,9 @@ The Washington focused WNV build uses the sequence [AF481864](https://www.ncbi.n
 _Hadfield J, Brito AF, Swetnam DM, Vogels CBF, Tokarz RE, Andersen KG, Smith RC, Bedford T, Grubaugh ND. Twenty years of West Nile virus spread and evolution in the Americas visualized by Nextstrain. PLoS Pathog. 2019 Oct 31;15(10):e1008042. doi: 10.1371/journal.ppat.1008042. PMID: 31671157; PMCID: PMC6822705._
 
 ### Subsampling
-The Washington focused WNV build pulls all the WNV sequences available in NCBI and filters the data in the phylogenetic workflow based on criteria defined in the config.yml file that is located inside the defaults folder. The subsampling criteria focuses on geographic location selecting all sequences from Washington, neighboring states, and region but up to a maximum of 5,000 sequences; and up to 300 sequences selected randomly from the rest of the states. All sequences have to meet a minimum genome length that is also specified as part of the subsampling criteria. There is more information about how to subsample data in Nextstrain here [Filter and Subsampling](https://docs.nextstrain.org/en/latest/guides/bioinformatics/filtering-and-subsampling.html) 
+The Washington focused WNV build pulls all the WNV sequences available in NCBI and filters the data in the phylogenetic workflow based on criteria defined in the config.yml file that is located inside the defaults folder. The subsampling criteria focuses on geographic location selecting all sequences from Washington, neighboring states, and region but up to a maximum of 5,000 sequences; and up to 300 sequences selected randomly from the rest of the states. All sequences have to meet a minimum genome length that is also specified as part of the subsampling criteria. There is more information about how to subsample data in Nextstrain here [Filter and Subsampling](https://docs.nextstrain.org/en/latest/guides/bioinformatics/filtering-and-subsampling.html)
+
+### Lineage Designation
+For global lineage designations, we query [pathoplexus](https://pathoplexus.org/)
 
 
