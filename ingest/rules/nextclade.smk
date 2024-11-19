@@ -65,11 +65,13 @@ rule nextclade_classify:
         dataset=config["nextclade"]["nextclade_dataset_path"],
     output:
         nextclade_tsv="data/nextclade_results/nextclade.tsv",
+    threads: workflow.cores,
     shell:
         """
         nextclade3 run \
           --input-dataset {input.dataset} \
           --output-tsv {output.nextclade_tsv} \
+          --jobs {threads:q} \
           --silent \
           {input.sequences}
         """
