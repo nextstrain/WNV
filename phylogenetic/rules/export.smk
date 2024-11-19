@@ -51,5 +51,6 @@ rule export:
             --node-data {input.branch_lengths} {input.traits} {input.nt_muts} {input.aa_muts} \
             --description {input.description} \
             --auspice-config {input.auspice_config} \
+            --include-root-sequence-inline \
             --output {output.auspice} 2>&1 | tee {log}
         """
