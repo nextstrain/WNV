@@ -29,15 +29,14 @@ rule tree:
         "logs/tree.txt",
     benchmark:
         "benchmarks/tree.txt"
-    params:
-        threads = workflow.cores,
+    threads: workflow.cores
     shell:
         """
         augur tree \
             --alignment {input.alignment} \
             --output {output.tree} \
             --method raxml \
-            --nthreads {threads} 2>&1 | tee {log}
+            --nthreads {threads:q} 2>&1 | tee {log}
         """
 
 rule refine:

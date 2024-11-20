@@ -61,8 +61,7 @@ rule align:
         "logs/align.txt",
     benchmark:
         "benchmarks/align.txt"
-    params:
-        threads = workflow.cores
+    threads: workflow.cores
     shell:
         """
         augur align \
@@ -70,5 +69,5 @@ rule align:
             --output {output.alignment} \
             --fill-gaps \
             --reference-sequence {input.reference} \
-            --nthreads {threads} 2>&1 | tee {log}
+            --nthreads {threads:q} 2>&1 | tee {log}
         """
