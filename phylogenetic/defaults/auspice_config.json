@@ -46,5 +46,18 @@
     "map_triplicate": true,
     "geo_resolution": "state",
     "distance_measure": "div"
- }
+  },
+  "extensions": {
+    "nextclade": {
+      "pathogen": {
+        "schemaVersion":"3.0.0",
+        "defaultCds": "env",
+        "attributes": {
+          "name": "West Nile Virus Washington-State-Focused Tree",
+          "reference name": "IS88",
+          "reference accession": "AF481864"
+        }
+      }
+    }
+  }
 }

@@ -69,6 +69,7 @@ rule export_washington_build:
             --lat-longs {input.lat_longs} \
             --description {input.description} \
             --auspice-config {input.auspice_config} \
+            --include-root-sequence-inline \
             --output {output.auspice} 2>&1 | tee {log}
         """
 

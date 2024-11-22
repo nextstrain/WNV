@@ -74,7 +74,8 @@ refine:
 traits:
   metadata_columns: [
     'region',
-    'country'
+    'country',
+    'lineage',
   ]
 
 export:

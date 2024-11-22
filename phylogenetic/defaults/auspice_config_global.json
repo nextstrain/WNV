@@ -39,5 +39,25 @@
     "color_by": "region",
     "map_triplicate": true,
     "geo_resolution": "country"
- }
+ },
+  "extensions": {
+    "nextclade": {
+      "clade_node_attrs": [
+        {
+          "name": "lineage",
+          "displayName": "Pathoplexus lineage",
+          "description": "Global WNV lineages based on pathoplexus results."
+        }
+      ],
+      "pathogen": {
+        "schemaVersion":"3.0.0",
+        "defaultCds": "env",
+        "attributes": {
+          "name": "West Nile Virus Global Tree",
+          "reference name": "Reconstructed ancestor from global tree",
+          "reference accession": "none"
+        }
+      }
+    }
+  }
 }
