@@ -71,4 +71,7 @@ The Washington focused WNV build pulls all the WNV sequences available in NCBI a
 ### Lineage Designation
 For global lineage designations, we query [pathoplexus](https://pathoplexus.org/)
 
+### Host mapping to Host Genus and Host Type
+We further refined the information in the NCBI Host column by categorizing it into **Host_Genus** and **Host_Type**, creating broader groupings for more effective data analysis. For example, the **Host** _Homo sapiens_ is classified under **Host_Genus** as _Homo_ and **Host_Type** as Human. This broader categorization is particularly useful for visualizing the phylogenetic tree. Instead of distinguishing between individual mosquito species, you can use the broader categories like **Host_Genus** _Culex_ or the higher-level category **Host_Type** Mosquito to color the tips of the tree.
+
 
