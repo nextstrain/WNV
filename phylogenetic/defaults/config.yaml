@@ -65,7 +65,7 @@ input_sequences: "data/sequences.fasta"
 # This command excludes all strains by default and then forces the inclusion of
 # the strains selected by the subsampling logic defined above.
 subsampling:
-  region: --query "is_lab_host != 'true'" --query-columns is_lab_host:str --min-length '9800' --group-by region year --subsample-max-sequences 3000 --exclude defaults/exclude.txt
+  region: --query "is_lab_host != 'true'" --query-columns is_lab_host:str --min-length '8200' --group-by region year --subsample-max-sequences 3000 --exclude defaults/exclude.txt
   force_include: --exclude-all --include defaults/include.txt
 
 refine:
