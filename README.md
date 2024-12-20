@@ -44,7 +44,7 @@ Inside the phylogenetic folder there should be at least one output file: WNV-nex
 
 Run the build all at once. This option defaults to the global build.
 ```bash
-nextstrain build
+nextstrain build phylogenetic
 ```
 
 ## File Structure
