@@ -30,6 +30,7 @@
   "filters": [
     "region",
     "country",
+    "division",
     "author",
     "host",
     "host_genus",
@@ -39,7 +40,12 @@
     "color_by": "region",
     "map_triplicate": true,
     "geo_resolution": "country"
- },
+  },
+  "metadata_columns": [
+    "accession",
+    "division",
+    "url"
+  ],
   "extensions": {
     "nextclade": {
       "clade_node_attrs": [

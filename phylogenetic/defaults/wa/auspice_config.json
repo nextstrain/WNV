@@ -47,6 +47,10 @@
     "geo_resolution": "state",
     "distance_measure": "div"
   },
+  "metadata_columns": [
+    "accession",
+    "url"
+  ],
   "extensions": {
     "nextclade": {
       "pathogen": {
