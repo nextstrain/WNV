@@ -10,6 +10,8 @@ root: "AF481864"
 input_metadata: "../ingest/results/metadata.tsv"
 input_sequences: "../ingest/results/sequences.fasta"
 
+builds: ['wa']
+
 # This command excludes all strains by default and then forces the inclusion of
 # the strains selected by the subsampling logic defined above.
 subsampling:

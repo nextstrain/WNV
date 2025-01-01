@@ -13,6 +13,8 @@ metadata_url: "https://data.nextstrain.org/files/workflows/WNV/metadata.tsv.zst"
 input_metadata: "data/metadata.tsv"
 input_sequences: "data/sequences.fasta"
 
+builds: ['global']
+
 #subsampling:
   #all: --min-length '9800' --query "country == 'USA' & accession != 'NC_009942'"
 

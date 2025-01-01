@@ -28,20 +28,20 @@ See Augur's usage docs for these commands for more details.
 
 rule export:
     input:
-        tree = "results/tree.nwk",
-        metadata = "results/metadata_filtered.tsv",
-        branch_lengths = "results/branch_lengths.json",
-        traits = "results/traits.json",
-        nt_muts = "results/nt_muts.json",
-        aa_muts = "results/aa_muts.json",
+        tree = "results/{build}/tree.nwk",
+        metadata = "results/{build}/metadata_filtered.tsv",
+        branch_lengths = "results/{build}/branch_lengths.json",
+        traits = "results/{build}/traits.json",
+        nt_muts = "results/{build}/nt_muts.json",
+        aa_muts = "results/{build}/aa_muts.json",
         description = config["export"]["description"],
         auspice_config = config["export"]["auspice_config"],
     output:
-        auspice = "auspice/WNV_genome.json"
+        auspice = "auspice/WNV_{build}.json"
     log:
-        "logs/export.txt",
+        "logs/{build}/export.txt",
     benchmark:
-        "benchmarks/export.txt"
+        "benchmarks/{build}/export.txt"
     shell:
         """
         augur export v2 \
