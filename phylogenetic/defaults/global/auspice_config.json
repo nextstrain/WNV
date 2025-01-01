@@ -38,8 +38,14 @@
   "display_defaults": {
     "color_by": "region",
     "map_triplicate": true,
-    "geo_resolution": "country"
- },
+    "geo_resolution": "country",
+    "tip_label": "strain"
+  },
+  "metadata_columns": [
+    "accession",
+    "strain",
+    "url"
+  ],
   "extensions": {
     "nextclade": {
       "clade_node_attrs": [
