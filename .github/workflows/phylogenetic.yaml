@@ -76,7 +76,7 @@ jobs:
     outputs:
       config_overrides: ${{ steps.config.outputs.config }}
 
-  phylogenetic:
+  phylogenetic_global:
     needs: [set_config_overrides]
     permissions:
       id-token: write
@@ -99,6 +99,36 @@ jobs:
       # Specifying artifact name to differentiate ingest build outputs from
       # the phylogenetic build outputs
       artifact-name: phylogenetic-build-output
+      artifact-paths: |
+        phylogenetic/auspice/
+        phylogenetic/results/
+        phylogenetic/benchmarks/
+        phylogenetic/logs/
+        phylogenetic/.snakemake/log/
+
+  phylogenetic_wa:
+    needs: [set_config_overrides]
+    permissions:
+      id-token: write
+    uses: nextstrain/.github/.github/workflows/pathogen-repo-build.yaml@master
+    secrets: inherit
+    with:
+      # Starting with the default docker runtime
+      # We can migrate to AWS Batch when/if we need to for more resources or if
+      # the job runs longer than the GH Action limit of 6 hours.
+      runtime: docker
+      env: |
+        NEXTSTRAIN_DOCKER_IMAGE: ${{ inputs.image }}
+        CONFIG_OVERRIDES: ${{ needs.set_config_overrides.outputs.config_overrides }}
+      run: |
+        nextstrain build \
+          phylogenetic \
+            deploy_all \
+            --configfile build-configs/nextstrain-automation/config.yaml build-configs/washington-state/config.yaml build-configs/washington-state/config-public.yaml \
+            $CONFIG_OVERRIDES
+      # Specifying artifact name to differentiate ingest build outputs from
+      # the phylogenetic build outputs
+      artifact-name: phylogenetic-wa-build-output
       artifact-paths: |
         phylogenetic/auspice/
         phylogenetic/results/

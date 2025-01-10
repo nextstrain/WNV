@@ -1,0 +1,9 @@
+# Use public data for the public tree
+sequences_url: "https://data.nextstrain.org/files/workflows/WNV/sequences.fasta.zst"
+metadata_url: "https://data.nextstrain.org/files/workflows/WNV/metadata.tsv.zst"
+input_metadata: "data/metadata.tsv"
+input_sequences: "data/sequences.fasta"
+
+custom_rules:
+  - build-configs/nextstrain-automation/deploy.smk
+  - build-configs/washington-state/washington-state-rules.smk
