@@ -76,7 +76,7 @@ jobs:
     outputs:
       config_overrides: ${{ steps.config.outputs.config }}
 
-  phylogenetic:
+  phylogenetic_global:
     needs: [set_config_overrides]
     permissions:
       id-token: write
@@ -99,6 +99,46 @@ jobs:
       # Specifying artifact name to differentiate ingest build outputs from
       # the phylogenetic build outputs
       artifact-name: phylogenetic-build-output
+      artifact-paths: |
+        phylogenetic/auspice/
+        phylogenetic/results/
+        phylogenetic/benchmarks/
+        phylogenetic/logs/
+        phylogenetic/.snakemake/log/
+
+  phylogenetic_wa:
+    needs: [set_config_overrides]
+    permissions:
+      id-token: write
+    uses: nextstrain/.github/.github/workflows/pathogen-repo-build.yaml@master
+    secrets: inherit
+    with:
+      # Starting with the default docker runtime
+      # We can migrate to AWS Batch when/if we need to for more resources or if
+      # the job runs longer than the GH Action limit of 6 hours.
+      runtime: docker
+      env: |
+        NEXTSTRAIN_DOCKER_IMAGE: ${{ inputs.image }}
+        CONFIG_OVERRIDES: ${{ needs.set_config_overrides.outputs.config_overrides }}
+      run: |
+        # If CONFIG_OVERRIDES is set, modify it to remove '--config' if present since only one '--config' flag is valid
+        if [[ "$CONFIG_OVERRIDES" =~ ^--config ]]; then
+          CONFIG_OVERRIDES="${CONFIG_OVERRIDES#--config }"
+        fi
+
+        nextstrain build \
+          phylogenetic \
+            deploy_all \
+            --configfile build-configs/nextstrain-automation/config.yaml  build-configs/washington-state/config.yaml \
+            --config custom_rules="['build-configs/nextstrain-automation/deploy.smk', 'build-configs/washington-state/washington-state-rules.smk']" \
+            input_metadata="data/metadata.tsv" \
+            input_sequences="data/sequences.fasta" \
+            sequences_url="https://data.nextstrain.org/files/workflows/WNV/sequences.fasta.zst" \
+            metadata_url="https://data.nextstrain.org/files/workflows/WNV/metadata.tsv.zst" \
+            $CONFIG_OVERRIDES
+      # Specifying artifact name to differentiate ingest build outputs from
+      # the phylogenetic build outputs
+      artifact-name: phylogenetic-wa-build-output
       artifact-paths: |
         phylogenetic/auspice/
         phylogenetic/results/
