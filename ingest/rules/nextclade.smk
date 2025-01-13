@@ -91,7 +91,7 @@ rule select_nextclade_columns:
         | tr ',' '\t' \
         > {output.nextclade_subtypes}
 
-        tsv-select -H -f "seqName,clade" {input} \
+        csvtk cut -t -f "seqName,clade" {input} \
         | awk 'NR>1 {{print}}' \
         >> {output.nextclade_subtypes}
         """
