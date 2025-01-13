@@ -31,17 +31,6 @@ def _set_url(record):
     return "https://www.ncbi.nlm.nih.gov/nuccore/" + str(record["accession"])
 
 
-def _set_paper_url(record):
-    """Set paper_url from a comma separate list of PubMed IDs in publication. Only use the first ID."""
-    if (not record["publications"]):
-        return ""
-
-    return (
-        "https://www.ncbi.nlm.nih.gov/pubmed/"
-        + str(record["publications"]).split(",")[0]
-    )
-
-
 def main():
     args = parse_args()
 
@@ -49,9 +38,6 @@ def main():
         record = json.loads(record)
         record["strain"] = _set_strain_name(record)
         record["url"] = _set_url(record)
-        #record["paper_url"] = _set_paper_url(record)
-        # record["serotype"] = _set_dengue_serotype(record) # WNV
-        record["authors"] = record["abbr_authors"]
         stdout.write(json.dumps(record) + "\n")
 
 
