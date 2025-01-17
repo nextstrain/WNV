@@ -121,20 +121,10 @@ jobs:
         NEXTSTRAIN_DOCKER_IMAGE: ${{ inputs.image }}
         CONFIG_OVERRIDES: ${{ needs.set_config_overrides.outputs.config_overrides }}
       run: |
-        # If CONFIG_OVERRIDES is set, modify it to remove '--config' if present since only one '--config' flag is valid
-        if [[ "$CONFIG_OVERRIDES" =~ ^--config ]]; then
-          CONFIG_OVERRIDES="${CONFIG_OVERRIDES#--config }"
-        fi
-
         nextstrain build \
           phylogenetic \
             deploy_all \
-            --configfile build-configs/nextstrain-automation/config.yaml  build-configs/washington-state/config.yaml \
-            --config custom_rules="['build-configs/nextstrain-automation/deploy.smk', 'build-configs/washington-state/washington-state-rules.smk']" \
-            input_metadata="data/metadata.tsv" \
-            input_sequences="data/sequences.fasta" \
-            sequences_url="https://data.nextstrain.org/files/workflows/WNV/sequences.fasta.zst" \
-            metadata_url="https://data.nextstrain.org/files/workflows/WNV/metadata.tsv.zst" \
+            --configfile build-configs/nextstrain-automation/config.yaml build-configs/washington-state/config.yaml build-configs/washington-state/config-public.yaml \
             $CONFIG_OVERRIDES
       # Specifying artifact name to differentiate ingest build outputs from
       # the phylogenetic build outputs
