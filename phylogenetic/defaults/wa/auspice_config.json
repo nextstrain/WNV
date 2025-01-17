@@ -45,8 +45,14 @@
     "color_by": "clade_membership",
     "map_triplicate": true,
     "geo_resolution": "state",
-    "distance_measure": "div"
+    "distance_measure": "div",
+    "tip_label": "strain"
   },
+  "metadata_columns": [
+    "accession",
+    "strain",
+    "url"
+  ],
   "extensions": {
     "nextclade": {
       "pathogen": {

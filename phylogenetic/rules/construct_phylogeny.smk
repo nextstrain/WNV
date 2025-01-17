@@ -22,13 +22,13 @@ See Augur's usage docs for these commands for more details.
 
 rule tree:
     input:
-        alignment = "results/aligned.fasta"
+        alignment = "results/{build}/aligned.fasta"
     output:
-        tree = "results/tree_raw.nwk"
+        tree = "results/{build}/tree_raw.nwk"
     log:
-        "logs/tree.txt",
+        "logs/{build}/tree.txt",
     benchmark:
-        "benchmarks/tree.txt"
+        "benchmarks/{build}/tree.txt"
     threads: workflow.cores
     shell:
         """
@@ -40,16 +40,16 @@ rule tree:
 
 rule refine:
     input:
-        tree = "results/tree_raw.nwk",
-        alignment = "results/aligned.fasta",
-        metadata = "results/metadata_filtered.tsv",
+        tree = "results/{build}/tree_raw.nwk",
+        alignment = "results/{build}/aligned.fasta",
+        metadata = "results/{build}/metadata_filtered.tsv",
     output:
-        tree = "results/tree.nwk",
-        node_data = "results/branch_lengths.json",
+        tree = "results/{build}/tree.nwk",
+        node_data = "results/{build}/branch_lengths.json",
     log:
-        "logs/refine.txt",
+        "logs/{build}/refine.txt",
     benchmark:
-        "benchmarks/refine.txt"
+        "benchmarks/{build}/refine.txt"
     params:
         metadata_id_columns = config["strain_id_field"],
         root = config["root"],

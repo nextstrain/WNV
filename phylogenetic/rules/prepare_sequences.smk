@@ -53,14 +53,14 @@ rule decompress:
 
 rule align:
     input:
-        sequences = "results/sequences_filtered.fasta",
+        sequences = "results/{build}/sequences_filtered.fasta",
         reference = config["reference"]
     output:
-        alignment = "results/aligned.fasta"
+        alignment = "results/{build}/aligned.fasta"
     log:
-        "logs/align.txt",
+        "logs/{build}/align.txt",
     benchmark:
-        "benchmarks/align.txt"
+        "benchmarks/{build}/align.txt"
     threads: workflow.cores
     shell:
         """

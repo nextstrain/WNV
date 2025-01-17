@@ -7,13 +7,13 @@ rule create_lat_longs:
     This rule creates an averaged lat_longs.tsv file from the metadata_filtered.tsv file, but this requires a USA state annotation. This rule fails on global datasets.
     """
     input:
-        metadata = "results/metadata_filtered.tsv"
+        metadata = "results/{build}/metadata_filtered.tsv"
     output:
-        lat_longs = "results/lat_longs.tsv"
+        lat_longs = "results/{build}/lat_longs.tsv"
     log:
-        "logs/lat_longs.txt",
+        "logs/{build}/lat_longs.txt",
     benchmark:
-        "benchmarks/lat_longs.txt"
+        "benchmarks/{build}/lat_longs.txt"
     shell:
         """
         python ./scripts/create_lat_longs.py {input.metadata} {output.lat_longs} 2>&1 | tee {log}
@@ -22,13 +22,13 @@ rule create_lat_longs:
 
 rule create_colors:
     input:
-        metadata = "results/metadata_filtered.tsv"
+        metadata = "results/{build}/metadata_filtered.tsv"
     output:
-        colors = "results/colors.tsv"
+        colors = "results/{build}/colors.tsv"
     log:
-            "logs/colors.txt",
+            "logs/{build}/colors.txt",
     benchmark:
-            "benchmarks/colors.txt"
+            "benchmarks/{build}/colors.txt"
     shell:
         """
         python ./scripts/make_colors.py {input.metadata} {output.colors} 2>&1 | tee {log}
@@ -42,22 +42,22 @@ rule export_washington_build:
     This includes incorporating the lat_long.tsv annotation.
     """
     input:
-        tree = "results/tree.nwk",
-        metadata = "results/metadata_filtered.tsv",
-        branch_lengths = "results/branch_lengths.json",
-        traits = "results/traits.json",
-        nt_muts = "results/nt_muts.json",
-        aa_muts = "results/aa_muts.json",
-        colors = "results/colors.tsv",
+        tree = "results/{build}/tree.nwk",
+        metadata = "results/{build}/metadata_filtered.tsv",
+        branch_lengths = "results/{build}/branch_lengths.json",
+        traits = "results/{build}/traits.json",
+        nt_muts = "results/{build}/nt_muts.json",
+        aa_muts = "results/{build}/aa_muts.json",
+        colors = "results/{build}/colors.tsv",
         description = config["export"]["description"],
-        lat_longs = "results/lat_longs.tsv",
+        lat_longs = "results/{build}/lat_longs.tsv",
         auspice_config = config["export"]["auspice_config"],
     output:
-        auspice = "auspice/WNV_genome.json"
+        auspice = "auspice/WNV_{build}.json"
     log:
-        "logs/export.txt",
+        "logs/{build}/export.txt",
     benchmark:
-        "benchmarks/export.txt"
+        "benchmarks/{build}/export.txt"
     shell:
         """
         augur export v2 \
