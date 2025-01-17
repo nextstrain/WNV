@@ -97,7 +97,9 @@ rule select_nextclade_columns:
         """
 
 rule append_nextclade_columns:
-    #Append the nextclade results to the metadata
+    """
+    Append the nextclade results to the metadata
+    """
     input:
         metadata="data/raw_metadata.tsv",
         nextclade_subtypes="data/nextclade_clades.tsv",
@@ -105,16 +107,18 @@ rule append_nextclade_columns:
         metadata_all="data/metadata_nextclade.tsv",
     params:
         id_field=config["curate"]["output_id_field"],
-        nextclade_field=config["nextclade"]["nextclade_field"],
+        nextclade_id_field=config["nextclade"]["nextclade_id"],
     shell:
-        """
-        tsv-join -H \
-            --filter-file {input.nextclade_subtypes} \
-            --key-fields {params.id_field} \
-            --append-fields {params.nextclade_field} \
-            --write-all ? \
-            {input.metadata} \
-        > {output.metadata_all}
+        r"""
+        augur merge \
+            --metadata \
+                metadata={input.metadata:q} \
+                nextclade={input.nextclade_subtypes:q} \
+            --metadata-id-columns \
+                metadata={params.id_field:q} \
+                nextclade={params.nextclade_id_field:q} \
+            --output-metadata {output.metadata_all:q} \
+            --no-source-columns
         """
 
 rule append_pathoplexus_columns:
