@@ -2,13 +2,15 @@
 # for the Washington State phylogenetic build with custom rules and metadata
 
 # Use 'NY99' as the reference since it should be basel to the USA sequences
-reference: "defaults/reference.gb"
+reference: "defaults/wa/reference.gb"
 # Use 'IS88' as the root strain on the phylogenetic tree to place samples within the global context
 root: "AF481864"
 
 # Pull in metadata and sequences from the ingest directory after it has been annotated with washington-state specific metadata
 input_metadata: "../ingest/results/metadata.tsv"
 input_sequences: "../ingest/results/sequences.fasta"
+
+builds: ['wa']
 
 # This command excludes all strains by default and then forces the inclusion of
 # the strains selected by the subsampling logic defined above.
@@ -32,7 +34,7 @@ traits:
   ]
 
 export:
-  auspice_config: "defaults/auspice_config.json"
+  auspice_config: "defaults/wa/auspice_config.json"
 
 ## Custom rules to run as part of the CI automated workflow
 ## The paths should be relative to the phylogenetic directory.
