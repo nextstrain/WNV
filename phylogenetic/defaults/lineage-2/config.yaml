@@ -1,0 +1,85 @@
+strain_id_field: "accession"
+# Use 'Egypt 1951' as the reference and root, following Mencattelli et al, 2023
+# https://www.nature.com/articles/s41467-023-42185-7
+reference: "defaults/global/reference.gb"
+root: "mid_point"
+
+# Sequences must be FASTA and metadata must be TSV
+# Both files must be zstd compressed
+sequences_url: "https://data.nextstrain.org/files/workflows/WNV/sequences.fasta.zst"
+metadata_url: "https://data.nextstrain.org/files/workflows/WNV/metadata.tsv.zst"
+
+# Pull in metadata and sequences from the ingest workflow
+input_metadata: "data/metadata.tsv"
+input_sequences: "data/sequences.fasta"
+
+builds: ['global']
+
+#subsampling:
+  #all: --min-length '9800' --query "country == 'USA' & accession != 'NC_009942'"
+
+# Define named subsampling groups below (e.g., "state", "country", "region",
+# etc.). The workflow will run an `augur filter` command with the arguments
+# defined by each named group. Each `augur filter` command operates on all
+# available metadata and sequences and produces a text file containing the list
+# of strain names that passed the filters. The workflow will collect the union
+# of all strain names from the subsampling files and output the corresponding
+# subset of metadata and sequences that will be used to build the phylogeny.
+#
+# As an example, we could define two named subsampling groups like the
+# following:
+#
+# ```
+# subsampling:
+#   state: --query "division == 'WA'" --subsample-max-sequences 5000
+#   neighboring_state: --query "division in ['CA', 'ID', 'OR', 'NV']" --subsample-max-sequences 5000
+# ```
+#
+# These named subsampling groups will translate to the following two `augur filter` commands:
+#
+# ```
+# augur filter \
+#   --sequences data/sequences_all.fasta \
+#   --metadata data/metadata_all.tsv \
+#   --query "division == 'WA'" --subsample-max-sequences 5000 \
+#   --output-strains results/subsampled_strains_state.txt
+#
+# augur filter \
+#   --sequences data/sequences_all.fasta \
+#   --metadata data/metadata_all.tsv \
+#   --query "division in ['CA', 'ID', 'OR', 'NV']" --subsample-max-sequences 5000 \
+#   --output-strains results/subsampled_strains_neighboring_state.txt
+# ```
+#
+# Then, the workflow will collect the strains from each command to extract the
+# corresponding metadata and sequences with the following command:
+#
+# ```
+# augur filter \
+#   --sequences data/sequences_all.fasta \
+#   --metadata data/metadata_all.tsv \
+#   --exclude-all \
+#   --include results/subsampled_strains_state.txt results/subsampled_strains_neighboring_state.txt \
+#   --output-sequences results/sequences_filtered.fasta \
+#   --output-metadata results/metadata_filtered.tsv
+# ```
+#
+# This command excludes all strains by default and then forces the inclusion of
+# the strains selected by the subsampling logic defined above.
+subsampling:
+  region: --query "is_lab_host != 'true'" --query-columns is_lab_host:str --min-length '8200' --group-by region year --subsample-max-sequences 3000 --exclude defaults/exclude.txt
+  force_include: --exclude-all --include defaults/include.txt
+
+refine:
+  treetime_params: --coalescent opt --date-inference marginal --date-confidence --keep-polytomies --clock-rate 0.000755
+
+traits:
+  metadata_columns: [
+    'region',
+    'country',
+    'lineage',
+  ]
+
+export:
+  description: "defaults/description.md"
+  auspice_config: "defaults/global/auspice_config.json"
