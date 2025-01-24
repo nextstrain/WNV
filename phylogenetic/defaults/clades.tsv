@@ -1,0 +1,5 @@
+# Define clade-defining mutations
+clade	gene	site	alt
+SW3	NS4A	85	T
+SW3	NS5	314	R
+WN02	E	159	A
