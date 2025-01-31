@@ -48,6 +48,7 @@ rule export_washington_build:
         traits = "results/{build}/traits.json",
         nt_muts = "results/{build}/nt_muts.json",
         aa_muts = "results/{build}/aa_muts.json",
+        clades = "results/{build}/clades.json",
         colors = "results/{build}/colors.tsv",
         description = config["export"]["description"],
         lat_longs = "results/{build}/lat_longs.tsv",
@@ -64,7 +65,7 @@ rule export_washington_build:
             --tree {input.tree} \
             --metadata {input.metadata} \
             --metadata-id-columns "accession" \
-            --node-data {input.branch_lengths} {input.traits} {input.nt_muts} {input.aa_muts} \
+            --node-data {input.branch_lengths} {input.traits} {input.nt_muts} {input.aa_muts} {input.clades} \
             --colors {input.colors} \
             --lat-longs {input.lat_longs} \
             --description {input.description} \

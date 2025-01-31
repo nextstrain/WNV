@@ -1,5 +1,13 @@
 # Define clade-defining mutations
 clade	gene	site	alt
-SW3	NS4A	85	T
-SW3	NS5	314	R
+Lineage1A	NS3	175	I
+NY99	clade	Lineage1A
+NY99	NS3	521	D
+NY99	nuc	1005	A
+SW03	NS4A	85	T
+SW03	NS5	314	R
 WN02	env	159	A
+WN02	nuc	2466	T
+# 2466T,
+#NS3
+#Unique (1):V175I
