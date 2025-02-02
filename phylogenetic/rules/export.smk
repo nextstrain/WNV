@@ -34,6 +34,7 @@ rule export:
         traits = "results/{build}/traits.json",
         nt_muts = "results/{build}/nt_muts.json",
         aa_muts = "results/{build}/aa_muts.json",
+        clades = "results/{build}/clades.json",
         description = config["export"]["description"],
         auspice_config = config["export"]["auspice_config"],
     output:
@@ -48,7 +49,7 @@ rule export:
             --tree {input.tree} \
             --metadata {input.metadata} \
             --metadata-id-columns "accession" \
-            --node-data {input.branch_lengths} {input.traits} {input.nt_muts} {input.aa_muts} \
+            --node-data {input.branch_lengths} {input.traits} {input.nt_muts} {input.aa_muts} {input.clades} \
             --description {input.description} \
             --auspice-config {input.auspice_config} \
             --include-root-sequence-inline \

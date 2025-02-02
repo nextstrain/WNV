@@ -96,3 +96,21 @@ rule traits:
             --columns {params.metadata_columns:q} \
             --confidence 2>&1 | tee {log}
         """
+
+rule clades:
+    """Annotating serotypes / genotypes"""
+    input:
+        tree = "results/{build}/tree.nwk",
+        nt_muts = "results/{build}/nt_muts.json",
+        aa_muts = "results/{build}/aa_muts.json",
+        clade_defs = "defaults/clades.tsv",
+    output:
+        clades = "results/{build}/clades.json"
+    shell:
+        """
+        augur clades \
+            --tree {input.tree} \
+            --mutations {input.nt_muts} {input.aa_muts} \
+            --clades {input.clade_defs} \
+            --output {output.clades}
+        """
