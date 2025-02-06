@@ -79,3 +79,10 @@ The average genome length of WNV is 10,948 bp. Nextstrain's phylogenetic workflo
 * To modify the minimum length of nucleotide sequence in the WNV global build enter the desired threshold in the --min-length <MIN_LENGTH> paremeter that is listed in the [defaults/config.yaml](https://github.com/nextstrain/WNV/blob/main/phylogenetic/defaults/config.yaml) file
 * To modify the minimum length of nucleotide sequence in the WNV Washington focused build enter the desired threshold in the --min-length <MIN_LENGTH> paremeter that is listed in the [washington-state/config.yaml](https://github.com/nextstrain/WNV/blob/main/phylogenetic/build-configs/washington-state/config.yaml) file
 
+### Map Specific Locations
+We have added the option to map specific locations using coordinates. The sample data for this feature is available in the file `ingest/defaults/annotations.tsv`. this file is in long data format and contains information for six randomly selected places unrelated to WNV data. 
+This feature is useful for states or agencies that need to map the locations of mosquito traps, for example. If the data is sensitive, we recomend modifying the annotations.tsv file locally when running the build. 
+To visualize the locations in Auspice:
+1. Navigate to the **Map** options in the left panel.
+2. In the **Geographic resolution** dropdown menu, select the level of data you entered in the `annotations.tsv` file. For example, the sample data maps to location.
+
