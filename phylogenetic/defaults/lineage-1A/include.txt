@@ -1,3 +1,4 @@
+KX394399 # Lineage 1B outgroup
 NC_009942 # Lineage 1 reference
 AF481864 # pre-NY
 MH166901 # NY99
