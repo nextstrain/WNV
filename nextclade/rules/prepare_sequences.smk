@@ -3,7 +3,7 @@ This part of the workflow prepares sequences for constructing the phylogenetic t
 
 REQUIRED INPUTS:
 
-    metadata    = data/metadata.tsv
+    metadata    = data/all_metadata_added.tsv
     sequences   = data/sequences.fasta
     reference   = ../shared/reference.fasta
 
@@ -25,7 +25,7 @@ rule create_colors:
     message:
         "Creating custom color scale in {output.colors}"
     input:
-        metadata = "data/metadata_all.tsv"
+        metadata = "data/all_metadata_added.tsv"
     output:
         colors = "results/colors.tsv"
     log:
