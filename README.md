@@ -1,10 +1,10 @@
 # West Nile Virus (WNV) Global and Washington Focused Builds
 ---
 ## Build Overview
-- **Build Name**: WNV Global
-- **Build Name**: WNV Washington Focused Build
+- **Default Build Name**: WNV Global
+- **State Based Build Name**: WNV Washington Focused Build
 - **Pathogen/Strain**: West Nile Virus
-- **Scope**: [Scope or targeted region/gene segments]
+- **Scope**: Full genome
 - **Purpose**: This repository analyzes West Nile Viral (WNV) genomes using [Nextstrain](https://nextstrain.org/) to understand the circulation and transmission of WNV globally (WNV Global build) and within Washington State (WNV Washington Focused Build). This repository was developed based on the WNV repository used for the Twenty years of West Nile Virus in the Americas [Nextstrain Narrative](https://nextstrain.org/WNV/NA)
 - **Nextstrain Build/s Location/s**: [Insert the URL for the Nextstrain build on Nextstrain Groups] [Insert another URL for instances when more than one Nextstrain build exists]
 
@@ -26,7 +26,7 @@
 ## Getting Started
 Some high-level features and capabilities specific to this build include:
 
-- **Lineage Designation:** We created a Nextclade data set that makes possible clade calling based on [Pathoplexus](https://pathoplexus.org/).
+- **Lineage Designation:** We use [Pathoplexus](https://pathoplexus.org/) for clade calling based off of a Nextclade dataset in this [PR](https://github.com/nextstrain/nextclade_data/pull/197)
 - **Subsampling:** The WNV Washington Focused Build uses a tiered subsampling strategy which allows for filtering NCBI data based on geographic location. The subsampling criteria in the WNV Washington Focused Build is set to select all sequences from Washington, neighboring states, and region, up to a maximum of 5,000 sequences. Additionally, up to 300 sequences are randomly selected from other states. These criteria can be modified as needed.
 - **Mapping Specific Locations:** We have added the option to map specific locations using coordinates in the WNV Washington Focused Build. This feature is useful for jurisdictions that need to map the locations of mosquito traps, for example.
 
