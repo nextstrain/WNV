@@ -48,7 +48,7 @@ rule curate:
         annotations=config["curate"]["annotations"],
         manual_mapping="defaults/host_hostgenus_hosttype_map.tsv",
     output:
-        metadata="data/raw_metadata_curated.tsv",
+        metadata= "data/all_metadata.tsv",
         sequences="results/sequences.fasta",
     log:
         "logs/curate.txt",
@@ -68,7 +68,7 @@ rule curate:
         authors_default_value=config["curate"]["authors_default_value"],
         abbr_authors_field=config["curate"]["abbr_authors_field"],
         annotations_id=config["curate"]["annotations_id"],
-        metadata_columns=config["curate"]["metadata_columns"],
+        added_columns=config["curate"]["added_columns"],
         id_field=config["curate"]["output_id_field"],
         sequence_field=config["curate"]["output_sequence_field"],
     shell:
@@ -98,7 +98,7 @@ rule curate:
             | ./scripts/transform-state-names \
             | ./scripts/post_process_metadata.py \
             | ./scripts/add-field-names \
-                --metadata-columns {params.metadata_columns} \
+                --metadata-columns {params.added_columns} \
             | ./scripts/transform-new-fields \
                 --map-tsv {input.manual_mapping} \
                 --map-id host \
@@ -113,12 +113,31 @@ rule curate:
                 --output-id-field {params.id_field} \
                 --output-seq-field {params.sequence_field} ) 2>> {log}
         """
+rule add_metadata_columns:
+    """Add columns to metadata
+    Notable columns:
+    - [NEW] url: URL linking to the NCBI GenBank record ('https://www.ncbi.nlm.nih.gov/nuccore/*').
+    """
+    input:
+        metadata = "data/all_metadata.tsv"
+    output:
+        metadata = temp("data/all_metadata_added.tsv")
+    params:
+        accession=config['curate']['genbank_accession']
+    shell:
+        """
+        csvtk mutate2 -t \
+          -n url \
+          -e '"https://www.ncbi.nlm.nih.gov/nuccore/" + ${params.accession}' \
+          {input.metadata} \
+        > {output.metadata}
+        """
 
 rule subset_metadata:
     input:
-        metadata="data/raw_metadata_curated.tsv",
+        metadata="data/all_metadata_added.tsv",
     output:
-        metadata="data/raw_metadata.tsv",
+        metadata="data/subset_metadata.tsv",
     params:
         metadata_fields=",".join(config["curate"]["metadata_columns"]),
     shell:
