@@ -2,7 +2,7 @@
 This part of the workflow handles running Nextclade on the curated metadata
 and sequences.
 REQUIRED INPUTS:
-    metadata    = data/raw_metadata_all.tsv
+    metadata    = data/subset_metadata.tsv
     sequences   = data/sequences_all.fasta
     nextclade_datasets = ../nextclade/dataset
 OUTPUTS:
@@ -101,7 +101,7 @@ rule append_nextclade_columns:
     Append the nextclade results to the metadata
     """
     input:
-        metadata="data/raw_metadata.tsv",
+        metadata="data/subset_metadata.tsv",
         nextclade_subtypes="data/nextclade_clades.tsv",
     output:
         metadata_all="data/metadata_nextclade.tsv",

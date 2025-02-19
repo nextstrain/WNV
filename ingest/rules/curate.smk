@@ -68,7 +68,7 @@ rule curate:
         authors_default_value=config["curate"]["authors_default_value"],
         abbr_authors_field=config["curate"]["abbr_authors_field"],
         annotations_id=config["curate"]["annotations_id"],
-        metadata_columns=config["curate"]["metadata_columns"],
+        added_columns=config["curate"]["added_columns"],
         id_field=config["curate"]["output_id_field"],
         sequence_field=config["curate"]["output_sequence_field"],
     shell:
@@ -98,7 +98,7 @@ rule curate:
             | ./scripts/transform-state-names \
             | ./scripts/post_process_metadata.py \
             | ./scripts/add-field-names \
-                --metadata-columns {params.metadata_columns} \
+                --metadata-columns {params.added_columns} \
             | ./scripts/transform-new-fields \
                 --map-tsv {input.manual_mapping} \
                 --map-id host \

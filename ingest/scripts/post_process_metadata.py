@@ -26,18 +26,12 @@ def _set_strain_name(record):
     )
 
 
-def _set_url(record):
-    """Set url column from accession"""
-    return "https://www.ncbi.nlm.nih.gov/nuccore/" + str(record["accession"])
-
-
 def main():
     args = parse_args()
 
     for index, record in enumerate(stdin):
         record = json.loads(record)
         record["strain"] = _set_strain_name(record)
-        record["url"] = _set_url(record)
         stdout.write(json.dumps(record) + "\n")
 
 
