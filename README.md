@@ -1,16 +1,51 @@
-# About
+# West Nile Virus (WNV) Global and Washington Focused Builds
 ---
+## Build Overview
+- **Default Build Name**: WNV Global
+- **State Based Build Name**: WNV Washington Focused Build
+- **Pathogen/Strain**: West Nile Virus
+- **Scope**: Full genome
+- **Purpose**: This repository analyzes West Nile Viral (WNV) genomes using [Nextstrain](https://nextstrain.org/) to understand the circulation and transmission of WNV globally (WNV Global build) and within Washington State (WNV Washington Focused Build). This repository was developed based on the WNV repository used for the Twenty years of West Nile Virus in the Americas [Nextstrain Narrative](https://nextstrain.org/WNV/NA)
+- **Nextstrain Build/s Location/s**: [Insert the URL for the Nextstrain build on Nextstrain Groups] [Insert another URL for instances when more than one Nextstrain build exists]
 
-This repository analyzes West Nile Viral (WNV) genomes using [Nextstrain](https://nextstrain.org/) to understand the circulation and transmission of WNV within the United States. This repository was developed based on the WNV repository used for the Twenty years of West Nile Virus in the Americas [Nextstrain Narrative](https://nextstrain.org/WNV/NA)
+## Table of Contents
+- [Getting Started](#getting-started)
+  - [Data Sources & Inputs](#data-sources--inputs)
+  - [Setup & Dependencies](#setup--dependencies)
+    - [Installation](#installation)
+    - [Clone the repository](#clone-the-repository)
+- [Run the Build](#run-the-build)
+- [Repository File Structure Overview](#repository-file-structure-overview)
+- [Expected Outputs](#expected-outputs)
+- [Scientific Decisions](#scientific-decisions)
+- [Adapting for Another Jurisdiction](#adapting-for-another-jurisdiction)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
 
-## Data
+## Getting Started
+Some high-level features and capabilities specific to this build include:
+
+- **Lineage Designation:** We use [Pathoplexus](https://pathoplexus.org/) for clade calling based off of a Nextclade dataset in this [PR](https://github.com/nextstrain/nextclade_data/pull/197)
+- **Subsampling:** The WNV Washington Focused Build uses a tiered subsampling strategy which allows for filtering NCBI data based on geographic location. The subsampling criteria in the WNV Washington Focused Build is set to select all sequences from Washington, neighboring states, and region, up to a maximum of 5,000 sequences. Additionally, up to 300 sequences are randomly selected from other states. These criteria can be modified as needed.
+- **Mapping Specific Locations:** We have added the option to map specific locations using coordinates in the WNV Washington Focused Build. This feature is useful for jurisdictions that need to map the locations of mosquito traps, for example.
+
+### Data Sources & Inputs
 
 This build pulls WNV genomes that are publicly available from NCBI.
 
-## Installation
+- **Sequence and Metadata Data**: [NCBI](https://docs.nextstrain.org/en/latest/install.html](https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?SeqType_s=Nucleotide&CollectionDate_dr=1950-01-01T00:00:00Z%20TO%20NOW&CreateDate_dt=1950-01-01T00:00:00Z%20TO%20NOW&VirusLineage_ss=West%20Nile%20virus,%20taxid:11082))
+- **Expected Inputs**:
+    - `ingest/data/sequences.fasta` (containing WNV genome sequences)
+    - `ingest/data/metadata.tsv` (with relevant sample information)
+- **Private geolocation data, if applicable**:
+    - `phylogenetic/defaults/wa/annotations.tsv` (containing location name, latitude, and longitude information)
+    
+### Setup & Dependencies
+#### Installation
 Follow the [standard installation instructions](https://docs.nextstrain.org/en/latest/install.html) for Nextstrain's suite of software tools. 
 
-Clone this repository
+#### Clone the repository
 ```bash
 git clone https://github.com/nextstrain/WNV.git
 cd WNV
@@ -47,10 +82,19 @@ Run the build all at once. This option defaults to the global build.
 nextstrain build phylogenetic
 ```
 
-## File Structure
-This Nextstrain build follows the structure detailed in the [Pathogen Repo Guide](https://github.com/nextstrain/pathogen-repo-guide)
+## Repository File Structure Overview
+This Nextstrain build follows the structure detailed in the [Pathogen Repo Guide](https://github.com/nextstrain/pathogen-repo-guide).
+Mainly, this build contains two workflows for the analysis of WNV data:
+- [ingest/](https://github.com/nextstrain/WNV/tree/main/ingest) Download data from NCBI, clean, format, curate it, and assign clades.
+- [phylogenetic/](https://github.com/nextstrain/WNV/tree/main/phylogenetic) Subsample data and make phylogenetic trees for use in nextstrain.
 
-## Decision Points
+## Expected Outputs
+After successfully running the build there will be two output folders containing the build results.
+
+- `phylogenetic/auspice/` folder contains: a file called `WNV_genome.json`
+- `results/` folder contains: multiple files which include the aligned sequences, subsampled sequences, and phylogenetic trees in .nwk format
+
+## Scientific Decisions
 The following are critical decisions that were made during the development of the WNV build that should be kept in mind when analyzing the data.
 
 ### Global and Washington Focused Outputs
@@ -79,3 +123,23 @@ The average genome length of WNV is 10,948 bp. Nextstrain's phylogenetic workflo
 * To modify the minimum length of nucleotide sequence in the WNV global build enter the desired threshold in the --min-length <MIN_LENGTH> paremeter that is listed in the [defaults/config.yaml](https://github.com/nextstrain/WNV/blob/main/phylogenetic/defaults/config.yaml) file
 * To modify the minimum length of nucleotide sequence in the WNV Washington focused build enter the desired threshold in the --min-length <MIN_LENGTH> paremeter that is listed in the [washington-state/config.yaml](https://github.com/nextstrain/WNV/blob/main/phylogenetic/build-configs/washington-state/config.yaml) file
 
+### Map Specific Locations
+We have added the option to map specific locations using coordinates. The sample data for this feature is available in the file `ingest/defaults/annotations.tsv`. this file is in long data format and contains information for six randomly selected places unrelated to WNV data. 
+This feature is useful for states or agencies that need to map the locations of mosquito traps, for example. If the data is sensitive, we recomend modifying the annotations.tsv file locally when running the build. 
+To visualize the locations in Auspice:
+1. Navigate to the **Map** options in the left panel.
+2. In the **Geographic resolution** dropdown menu, select the level of data you entered in the `annotations.tsv` file. For example, the sample data maps to location.
+
+## Adapting for Another Jurisdiction
+ *[Brief overview on how to adapt this build for another jurisdiction, such as a state, city, county, or country. Including links to Readmes in other sections that contain detailed instructions on what and how to modify the files]*
+
+## Contributing
+For any questions please submit them to our [Discussions](insert link here) page otherwise software issues and requests can be logged as a Git [Issue](insert link here).
+
+## License
+This project is licensed under a modified GPL-3.0 License.
+You may use, modify, and distribute this work, but commercial use is strictly prohibited without prior written permission.
+
+## Acknowledgements
+
+*[add acknowledgements to those who have contributed to this work]*
