@@ -6,6 +6,13 @@ root: "mid_point"
 
 # Sequences must be FASTA and metadata must be TSV
 # Both files must be zstd compressed
+inputs:
+  - name: ncbi
+    metadata: "https://data.nextstrain.org/files/workflows/WNV/sequences.fasta.zst"
+    sequences: "https://data.nextstrain.org/files/workflows/WNV/metadata.tsv.zst"
+  - name: private-lat-longs
+    metadata: "data-private/metadata.tsv"
+
 sequences_url: "https://data.nextstrain.org/files/workflows/WNV/sequences.fasta.zst"
 metadata_url: "https://data.nextstrain.org/files/workflows/WNV/metadata.tsv.zst"
 
