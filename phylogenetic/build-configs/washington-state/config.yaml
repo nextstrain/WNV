@@ -6,9 +6,17 @@ reference: "defaults/wa/reference.gb"
 # Use 'IS88' as the root strain on the phylogenetic tree to place samples within the global context
 root: "AF481864"
 
-# Pull in metadata and sequences from the ingest directory after it has been annotated with washington-state specific metadata
-input_metadata: "../ingest/results/metadata.tsv"
-input_sequences: "../ingest/results/sequences.fasta"
+# Sequences must be FASTA and metadata must be TSV
+# Both files must be zstd compressed
+inputs:
+  - name: ncbi
+    metadata: "s3://nextstrain-data/files/workflows/WNV/metadata.tsv.zst"
+    sequences: "s3://nextstrain-data/files/workflows/WNV/sequences.fasta.zst"
+
+additional_inputs:
+  - name: private-lat-longs
+    metadata: "data-private/metadata.tsv"
+    sequences: "data-private/sequences.fasta"
 
 builds: ['wa']
 
