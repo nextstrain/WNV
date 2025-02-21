@@ -34,12 +34,10 @@ rule all:
 # custom_rules imported below to ensure that the core workflow is not complicated
 # by build specific rules.
 
+include: "rules/prepare_sequences.smk"
 include: "rules/subsampling_manual.smk"
-
 if config.get("subsampling", False):
     include: "rules/subsampling_configurable.smk"
-
-include: "rules/prepare_sequences.smk"
 include: "rules/construct_phylogeny.smk"
 include: "rules/annotate_phylogeny.smk"
 include: "rules/export.smk"

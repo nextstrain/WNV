@@ -20,8 +20,8 @@ See Augur's usage docs for these commands for more details.
 
 rule filter_manual:
     input:
-        metadata = config["input_metadata"],
-        sequences = config["input_sequences"],
+        metadata = input_metadata,
+        sequences = input_sequences,
     output:
         sequences = "results/{build}/sequences_filtered.fasta",
         metadata = "results/{build}/metadata_filtered.tsv"
