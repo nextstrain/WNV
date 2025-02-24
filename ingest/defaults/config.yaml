@@ -99,11 +99,6 @@ curate:
   output_sequence_field: "sequence"
   # The field in the NDJSON record that contains the actual GenBank accession
   genbank_accession: 'accession'
-  # Added metadata columns
-  added_columns: [
-    'longitude',
-    'latitude'
-  ]
 
   # The list of metadata columns to keep in the final output of the curation pipeline.
   metadata_columns: [
@@ -128,8 +123,6 @@ curate:
     #'full_authors',
     #'reverse',
     'authors',
-    'latitude',
-    'longitude',
     #'institution',
     #'title',
     #'journal',
