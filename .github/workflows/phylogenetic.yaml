@@ -124,7 +124,7 @@ jobs:
         nextstrain build \
           phylogenetic \
             deploy_all \
-            --configfile build-configs/nextstrain-automation/config.yaml build-configs/washington-state/config.yaml build-configs/washington-state/config-public.yaml \
+            --configfile build-configs/nextstrain-automation/config.yaml build-configs/washington-state/config.yaml \
             $CONFIG_OVERRIDES
       # Specifying artifact name to differentiate ingest build outputs from
       # the phylogenetic build outputs
