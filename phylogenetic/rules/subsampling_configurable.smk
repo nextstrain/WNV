@@ -24,8 +24,8 @@ ruleorder: extract_subsampled_sequences_and_metadata > filter_manual
 
 rule subsample:
     input:
-        metadata = config["input_metadata"],
-        sequences = config["input_sequences"],
+        metadata = input_metadata,
+        sequences = input_sequences,
     output:
         subsampled_strains = "results/{build}/subsampled_strains_{subsample}.txt",
     log:
@@ -47,8 +47,8 @@ rule subsample:
 
 rule extract_subsampled_sequences_and_metadata:
     input:
-        sequences = config["input_sequences"],
-        metadata = config["input_metadata"],
+        sequences = input_sequences,
+        metadata = input_metadata,
         subsampled_strains = expand("results/{build}/subsampled_strains_{subsample}.txt", build=builds, subsample=list(config.get("subsampling", {}).keys()))
     output:
         sequences = "results/{build}/sequences_filtered.fasta",

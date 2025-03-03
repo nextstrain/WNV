@@ -68,7 +68,6 @@ rule curate:
         authors_default_value=config["curate"]["authors_default_value"],
         abbr_authors_field=config["curate"]["abbr_authors_field"],
         annotations_id=config["curate"]["annotations_id"],
-        added_columns=config["curate"]["added_columns"],
         id_field=config["curate"]["output_id_field"],
         sequence_field=config["curate"]["output_sequence_field"],
     shell:
@@ -97,8 +96,6 @@ rule curate:
                 --geolocation-rules {input.all_geolocation_rules} \
             | ./scripts/transform-state-names \
             | ./scripts/post_process_metadata.py \
-            | ./scripts/add-field-names \
-                --metadata-columns {params.added_columns} \
             | ./scripts/transform-new-fields \
                 --map-tsv {input.manual_mapping} \
                 --map-id host \
