@@ -156,6 +156,7 @@ Falco peregrinus	Falco	Bird
 Falco punctatus	Falco	Bird
 Falco sparverius	Falco	Bird
 Falco tinnunculus	Falco	Bird
+Fringillidae	Fringillidae	Bird
 Fulica	Fulica	Bird
 Galliformes	Galliformes	Bird
 Gallus gallus	Gallus	Bird
@@ -175,6 +176,7 @@ Larus delawarensis	Larus	Bird
 Larus michahellis	Larus	Bird
 Larus smithsonianus	Larus	Bird
 Lathamus discolor	Lathamus	Bird
+Locustella naevia	Locustella	Bird
 Loriini	Loriini	Bird
 Meleagris gallopavo	Meleagris	Bird
 Mergus squamatus	Mergus	Bird
@@ -190,6 +192,7 @@ Parus major	Parus	Bird
 Passer domesticus	Passer	Bird
 Passer sp.	Passer	Bird
 Passeridae	Passeridae	Bird
+Passeriformes	Passeridae	Bird
 Pelecanus	Pelecanus	Bird
 Pelecanus erythrorhynchos	Pelecanus	Bird
 Pelecanus occidentalis	Pelecanus	Bird
@@ -254,6 +257,7 @@ Hyalomma scupense	Hyalomma	Tick
 Ixodoidea	Ixodoidea	Tick
 Rhipicephalus guilhoni	Rhipicephalus	Tick
 Rhipicephalus pulchellus	Rhipicephalus	Tick
+Rhipicephalus rossicus	Rhipicephalus	Tick
 Bos taurus	Bos	Other
 Camelus bactrianus	Camelus	Other
 Camelus dromedarius	Camelus	Other
