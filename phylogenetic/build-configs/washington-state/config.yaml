@@ -48,3 +48,4 @@ export:
 ## The paths should be relative to the phylogenetic directory.
 custom_rules:
   - build-configs/washington-state/washington-state-rules.smk
+  - build-configs/nextstrain-automation/deploy.smk
