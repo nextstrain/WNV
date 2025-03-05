@@ -58,7 +58,7 @@ auspice -help
 ```
 
 ## Run the build
-This build can process and output global or Washington state focused WNV information. The build can also be run by workflows which is helpful when troubleshoting or all at once.
+This build can process and output global or Washington state focused WNV information. The build can also be run all at once or by workflows which is helpful when troubleshooting.
 
 To run the build by workflows first run the ingest workflow
 ```bash
@@ -98,7 +98,7 @@ After successfully running the build there will be two output folders containing
 The following are critical decisions that were made during the development of the WNV build that should be kept in mind when analyzing the data.
 
 ### Global and Washington Focused Outputs
-This build can process and output global or Washington state focused WNV information. To accomplish this, a washington-state.yaml file was added to the build-configs which specifies Washington subsampling preferences. This file can be adopted and mofidied to accomodate other sampling references appropiate to other regions or states.
+This build can process and output global or Washington state focused WNV information. To accomplish this, a washington-state.yaml file was added to the build-configs which specifies Washington subsampling preferences. This file can be adopted and modified to accommodate other sampling references appropriate to other regions or states.
 
 ### Root Selection
 The Global and the Washington focused WNV builds use different roots.
@@ -118,14 +118,14 @@ For global lineage designations, we query [pathoplexus](https://pathoplexus.org/
 ### Host mapping to Host Genus and Host Type
 We further refined the information in the NCBI Host column by categorizing it into **Host_Genus** and **Host_Type**, creating broader groupings for more effective data analysis. For example, the **Host** _Homo sapiens_ is classified under **Host_Genus** as _Homo_ and **Host_Type** as Human. This broader categorization is particularly useful for visualizing the phylogenetic tree. Instead of distinguishing between individual mosquito species, you can use the broader categories like **Host_Genus** _Culex_ or the higher-level category **Host_Type** Mosquito to color the tips of the tree.
 
-### Determination of Mininum Genome Length
+### Determination of Minimum Genome Length
 The average genome length of WNV is 10,948 bp. Nextstrain's phylogenetic workflow defaults to excluding sequences with less than 90% genome coverage, as the alignment of short sequences can be unreliable. However, due to the limited number of WNV sequences available in NCBI, we evaluated minimum genome length thresholds of 90% (9,800 bp), 80% (8,700 bp), 75% (8,200 bp), and 70% (7,700 bp). For each threshold, we ran the Washington-focused build and compared: (1) the number of sequences included, (2) data gap locations in the alignment files using an alignment viewer, and (3) the topology and lineage assignments from the phylogenetic tree outputs to determine the optimal threshold. We concluded that a minimum genome length of 75% (8,200 bp) included a higher number of sequences while balancing alignment quality. Lastly, we validated this threshold using the global build.
-* To modify the minimum length of nucleotide sequence in the WNV global build enter the desired threshold in the --min-length <MIN_LENGTH> paremeter that is listed in the [defaults/config.yaml](https://github.com/nextstrain/WNV/blob/main/phylogenetic/defaults/config.yaml) file
-* To modify the minimum length of nucleotide sequence in the WNV Washington focused build enter the desired threshold in the --min-length <MIN_LENGTH> paremeter that is listed in the [washington-state/config.yaml](https://github.com/nextstrain/WNV/blob/main/phylogenetic/build-configs/washington-state/config.yaml) file
+* To modify the minimum length of nucleotide sequence in the WNV global build enter the desired threshold in the --min-length <MIN_LENGTH> parameter that is listed in the [defaults/config.yaml](https://github.com/nextstrain/WNV/blob/main/phylogenetic/defaults/config.yaml) file
+* To modify the minimum length of nucleotide sequence in the WNV Washington focused build enter the desired threshold in the --min-length <MIN_LENGTH> parameter that is listed in the [washington-state/config.yaml](https://github.com/nextstrain/WNV/blob/main/phylogenetic/build-configs/washington-state/config.yaml) file
 
 ### Map Specific Locations
 We have added the option to map specific locations using coordinates. The sample data for this feature is available in the file `ingest/defaults/annotations.tsv`. this file is in long data format and contains information for six randomly selected places unrelated to WNV data. 
-This feature is useful for states or agencies that need to map the locations of mosquito traps, for example. If the data is sensitive, we recomend modifying the annotations.tsv file locally when running the build. 
+This feature is useful for states or agencies that need to map the locations of mosquito traps, for example. If the data is sensitive, we recommend modifying the annotations.tsv file locally when running the build. 
 To visualize the locations in Auspice:
 1. Navigate to the **Map** options in the left panel.
 2. In the **Geographic resolution** dropdown menu, select the level of data you entered in the `annotations.tsv` file. For example, the sample data maps to location.
