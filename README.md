@@ -28,7 +28,7 @@ Some high-level features and capabilities specific to this build include:
 
 - **Lineage Designation:** We use [Pathoplexus](https://pathoplexus.org/) for clade calling based off of a Nextclade dataset in this [PR](https://github.com/nextstrain/nextclade_data/pull/197)
 - **Subsampling:** The WNV Washington Focused Build uses a tiered subsampling strategy which allows for filtering NCBI data based on geographic location. The subsampling criteria in the WNV Washington Focused Build is set to select all sequences from Washington, neighboring states, and region, up to a maximum of 5,000 sequences. Additionally, up to 300 sequences are randomly selected from other states. These criteria can be modified as needed.
-- **Mapping Specific Locations:** We have added the option to map specific locations using coordinates in the WNV Washington Focused Build. This feature is useful for jurisdictions that need to map the locations of mosquito traps, for example.
+- **Mapping Specific Locations:** We have added the option to map specific locations using coordinates in the WNV Washington Focused Build. This feature is useful for a state that needs to map the locations of mosquito traps, for example.
 
 ### Data Sources & Inputs
 
@@ -121,13 +121,13 @@ The average genome length of WNV is 10,948 bp. Nextstrain's phylogenetic workflo
 * To modify the minimum length of nucleotide sequence in the WNV Washington focused build enter the desired threshold in the --min-length <MIN_LENGTH> parameter that is listed in the [washington-state/config.yaml](https://github.com/nextstrain/WNV/blob/main/phylogenetic/build-configs/washington-state/config.yaml) file.
 
 ## Customization for Local Adaptation
-This build can be customized for use by other jurisdictions, including as states, cities, counties, or countries.
+This build can be customized for use by other demes, including as states, cities, counties, or countries.
 
 ### Subsampling
 The Washington focused WNV build retrieves all available WNV sequences from NCBI and filters the data within the phylogenetic workflow based on criteria defined in the config.yaml file, located in the [build-configs/washington-state](https://github.com/nextstrain/WNV/blob/main/phylogenetic/build-configs/washington-state/config.yaml) folder. For details on the current subsampling configuration and instructions on modifying the criteria, refer to the [phylogenetic/build-configs/washington-state README.md](https://github.com/nextstrain/WNV/blob/main/phylogenetic/build-configs/washington-state/README.md).
 
 ### Incorporating Additional Metadata
-We have added the option to integrate additional metadata, which can include either public or sensitive information. This feature is especially useful for jurisdictions that need to annotate the phylogenetic trees or map visualizations in Auspice. For example, in the Washington focused WNV build, we mapped the centroids of zip codes where mosquito traps are located. This information is within the phylogenetic workflow in the metadata.tsv file, located in the [phylogenetic/data-private](https://github.com/nextstrain/WNV/tree/main/phylogenetic/data-private) folder. For more details on the current metadata configuration and instructions on modifying it, refer to the [phylogenetic/data-private README.md](https://github.com/nextstrain/WNV/tree/main/phylogenetic/data-private).
+We have added the option to integrate additional metadata, which can include either public or sensitive information. This feature is especially useful for state health departments that need to annotate the phylogenetic trees or map visualizations in Auspice. For example, in the Washington focused WNV build, we mapped the centroids of zip codes where mosquito traps are located. This information is within the phylogenetic workflow in the metadata.tsv file, located in the [phylogenetic/data-private](https://github.com/nextstrain/WNV/tree/main/phylogenetic/data-private) folder. For more details on the current metadata configuration and instructions on modifying it, refer to the [phylogenetic/data-private README.md](https://github.com/nextstrain/WNV/tree/main/phylogenetic/data-private).
 
 ## Contributing
 For any questions please submit them to our [Discussions](insert link here) page otherwise software issues and requests can be logged as a Git [Issue](insert link here).
