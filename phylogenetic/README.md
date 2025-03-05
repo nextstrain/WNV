@@ -5,9 +5,14 @@ that can be visualized in Auspice.
 
 ## Workflow Usage
 
-The workflow can be run from the top level directory:
+The workflow to execute the global build can be run from the top level directory:
 ```
 nextstrain build phylogenetic
+```
+
+The workflow to execute the Washington focused build can also be run from the top level directory:
+```
+nextstrain build phylogenetic --configfile build-configs/washington-state/config.yaml
 ```
 
 Alternatively, the workflow can also be run from within the phylogenetic directory:
