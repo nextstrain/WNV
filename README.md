@@ -101,7 +101,14 @@ The Global and the Washington focused WNV builds use different references.
 The Global WNV build uses the reference sequence [AF260968](https://www.ncbi.nlm.nih.gov/nuccore/AF260968.1) which is the first WNV L1 (cluster 1) strain recovered in Egypt from 1951.
 _Mencattelli, G., Ndione, M.H.D., Silverj, A. et al. Spatial and temporal dynamics of West Nile virus between Africa and Europe. Nat Commun 14, 6440 (2023). https://doi.org/10.1038/s41467-023-42185-7_
 
-The Washington focused WNV build uses the reference sequence [AF481864](https://www.ncbi.nlm.nih.gov/nuccore/AF481864) as this is the sequence that is most closely related to the sequences isolated from New York in 1999. 
+The Washington focused WNV build uses the earliest USA-based sequence [NC_009942](https://www.ncbi.nlm.nih.gov/nuccore/NC_009942.1) as the reference sequence. This sequence was isolated from the first WNV outbreak in the Americas, which occured in New York in 1999._Hadfield J, Brito AF, Swetnam DM, Vogels CBF, Tokarz RE, Andersen KG, Smith RC, Bedford T, Grubaugh ND. Twenty years of West Nile virus spread and evolution in the Americas visualized by Nextstrain. PLoS Pathog. 2019 Oct 31;15(10):e1008042. doi: 10.1371/journal.ppat.1008042. PMID: 31671157; PMCID: PMC6822705._
+
+### Root Selection
+The Global and the Washington focused WNV phylogenetic trees use different root node sequences.
+
+The Global WNV build uses the global midpoint as the root node.
+
+The Washington focused WNV build uses [AF481864](https://www.ncbi.nlm.nih.gov/nuccore/AF481864) as the root node sequence. This is the sequence that is most closely related to the sequences isolated from New York in 1999. 
 _Hadfield J, Brito AF, Swetnam DM, Vogels CBF, Tokarz RE, Andersen KG, Smith RC, Bedford T, Grubaugh ND. Twenty years of West Nile virus spread and evolution in the Americas visualized by Nextstrain. PLoS Pathog. 2019 Oct 31;15(10):e1008042. doi: 10.1371/journal.ppat.1008042. PMID: 31671157; PMCID: PMC6822705._
 
 ### Lineage Designation
