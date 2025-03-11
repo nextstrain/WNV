@@ -1,0 +1,70 @@
+{
+  "title": "West Nile Virus Build (lineage-2)",
+  "data_provenance": [
+    {
+      "name": "GenBank",
+      "url": "https://www.ncbi.nlm.nih.gov/genbank/"
+    }
+  ],
+  "colorings": [
+    {"key": "gt", "title": "Genotype", "type": "categorical"},
+    {"key": "num_date", "title": "Sampling Date", "type": "continuous"},
+    {"key": "region", "title": "Region", "type": "categorical"},
+    {"key": "country", "title": "Country", "type": "categorical"},
+    {"key": "lineage", "title": "Pathoplexus lineage", "type": "categorical"},
+    {"key": "clade_membership", "title": "Clade", "type": "categorical"},
+    {"key": "author", "title": "Authors", "type": "categorical"},
+    {"key": "host", "title": "Host Species", "type": "categorical"},
+    {"key": "host_genus", "title": "Host Genus", "type": "categorical"},
+    {"key": "host_type", "title": "Host Type", "type": "categorical"}
+  ],
+  "geo_resolutions": [
+    "region",
+    "country"
+  ],
+  "maintainers": [
+    {"name": "Marcela Torres", "url": "https://github.com/NW-PaGe/WNV-nextstrain"},
+    {"name": "NW-PaGe", "url": "https://github.com/NW-PaGe/WNV-nextstrain"},
+    {"name": "Nextstrain Team", "url": "https://next.nextstrain.org/"}
+  ],
+  "filters": [
+    "region",
+    "country",
+    "division",
+    "author",
+    "host",
+    "host_genus",
+    "host_type"
+  ],
+  "display_defaults": {
+    "color_by": "region",
+    "map_triplicate": true,
+    "geo_resolution": "country",
+    "distance_measure": "div"
+  },
+  "metadata_columns": [
+    "accession",
+    "division",
+    "url"
+  ],
+  "extensions": {
+    "nextclade": {
+      "clade_node_attrs": [
+        {
+          "name": "lineage",
+          "displayName": "Pathoplexus lineage",
+          "description": "Lineage 2 WNV lineages based on pathoplexus results."
+        }
+      ],
+      "pathogen": {
+        "schemaVersion":"3.0.0",
+        "defaultCds": "env",
+        "attributes": {
+          "name": "West Nile Virus Lineage 2 Tree",
+          "reference name": "Reconstructed ancestor from global tree",
+          "reference accession": "none"
+        }
+      }
+    }
+  }
+}
