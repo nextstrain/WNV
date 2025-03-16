@@ -12,7 +12,7 @@
     {"key": "region", "title": "Region", "type": "categorical"},
     {"key": "country", "title": "Country", "type": "categorical"},
     {"key": "division", "title": "Division", "type": "categorical"},
-    {"key": "lineage", "title": "Pathoplexus lineage", "type": "categorical"},
+    {"key": "lineage", "title": "Lineage", "type": "categorical"},
     {"key": "clade_membership", "title": "Clade", "type": "categorical"},
     {"key": "author", "title": "Authors", "type": "categorical"},
     {"key": "host", "title": "Host Species", "type": "categorical"},
@@ -54,7 +54,7 @@
       "clade_node_attrs": [
         {
           "name": "lineage",
-          "displayName": "Pathoplexus lineage",
+          "displayName": "Lineage",
           "description": "Global WNV lineages based on pathoplexus results."
         }
       ],
