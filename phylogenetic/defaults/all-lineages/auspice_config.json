@@ -6,6 +6,7 @@
       "url": "https://www.ncbi.nlm.nih.gov/genbank/"
     }
   ],
+  "build_url": "https://github.com/nextstrain/WNV",
   "colorings": [
     {"key": "gt", "title": "Genotype", "type": "categorical"},
     {"key": "num_date", "title": "Sampling Date", "type": "continuous"},
