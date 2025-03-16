@@ -39,7 +39,7 @@
     "host_type"
   ],
   "display_defaults": {
-    "color_by": "region",
+    "color_by": "lineage",
     "map_triplicate": true,
     "geo_resolution": "country",
     "distance_measure": "div"
