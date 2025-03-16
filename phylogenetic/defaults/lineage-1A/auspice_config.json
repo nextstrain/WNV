@@ -11,6 +11,7 @@
     {"key": "num_date", "title": "Sampling Date", "type": "continuous"},
     {"key": "region", "title": "Region", "type": "categorical"},
     {"key": "country", "title": "Country", "type": "categorical"},
+    {"key": "division", "title": "Division", "type": "categorical"},
     {"key": "lineage", "title": "Pathoplexus lineage", "type": "categorical"},
     {"key": "clade_membership", "title": "Clade", "type": "categorical"},
     {"key": "author", "title": "Authors", "type": "categorical"},
@@ -20,7 +21,8 @@
   ],
   "geo_resolutions": [
     "region",
-    "country"
+    "country",
+    "division"
   ],
   "maintainers": [
     {"name": "Marcela Torres", "url": "https://github.com/NW-PaGe/WNV-nextstrain"},
