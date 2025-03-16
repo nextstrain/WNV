@@ -21,7 +21,8 @@ wildcard_constraints:
 
 rule all:
     input:
-        auspice = expand("auspice/WNV_{build}.json", build=builds)
+        auspice = expand("auspice/WNV_{build}.json", build=builds),
+        tip_frequencies_json= expand("auspice/WNV_{build}_tip-frequencies.json", build=builds)
 
 # These rules are imported in the order that they are expected to run.
 # Each Snakefile will have documented inputs and outputs that should be kept as

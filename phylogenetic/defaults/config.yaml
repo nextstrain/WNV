@@ -78,6 +78,14 @@ traits:
     'lineage',
   ]
 
+tip_frequencies:
+  # 2000 since there is an increase in WNV at that time
+  min_date: "2000-01-01"
+  max_date: "6M"
+  # Quarterly narrow_bandwidth or every 3 months (3 /12.0 = 0.25)
+  narrow_bandwidth: 0.25
+  proportion_wide: 0.0
+
 export:
   description: "defaults/description.md"
   auspice_config: "defaults/all-lineages/auspice_config.json"
