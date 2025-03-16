@@ -78,6 +78,12 @@ traits:
     'lineage',
   ]
 
+tip_frequencies:
+  min_date: "1980-01-01"
+  max_date: "6M"
+  narrow_bandwidth: 0.2
+  wide_bandwidth: 0.6
+
 export:
   description: "defaults/description.md"
   auspice_config: "defaults/all-lineages/auspice_config.json"
