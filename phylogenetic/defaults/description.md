@@ -4,7 +4,7 @@ Special thanks to individuals at the [Northwest Pathogen Genomics Center of Exce
 
 **We maintain four views of WNV evolution:**
 
-The first view is [`wnv/global`](https://next.nextstrain.org/WNV/global/), which focuses on the broader viral diversity for all WNV sequences submitted to GenBank that contain at least 75% of the genome length. Sequences are aligned to the reference sequence [AF260968](https://www.ncbi.nlm.nih.gov/nuccore/AF260968), which is the first WNV L1 (cluster 1) strain recovered in Egypt from 1951 ([Mencattelli, et al, 2023](https://doi.org/10.1038/s41467-023-42185-7)).
+The first view is [`wnv/all-lineages`](https://next.nextstrain.org/WNV/all-lineages/), which focuses on the broader viral diversity for all WNV sequences submitted to GenBank that contain at least 75% of the genome length. Sequences are aligned to the reference sequence [AF260968](https://www.ncbi.nlm.nih.gov/nuccore/AF260968), which is the first WNV L1 (cluster 1) strain recovered in Egypt from 1951 ([Mencattelli, et al, 2023](https://doi.org/10.1038/s41467-023-42185-7)).
 
 The second view is [`wnv/wa`](https://next.nextstrain.org/WNV/wa/), which focuses on WNV sequences from Washington State, with tiered subsampling from Washington, surrounding states, and across the USA. Sequences are aligned to reference sequence [AF481864](https://www.ncbi.nlm.nih.gov/nuccore/AF481864), a non-USA WNV sequence most closely related to the sequences isolated from New York in 1999 ([Hadfield et al, 2019](https://doi.org/10.1371/journal.ppat.1008042))
 

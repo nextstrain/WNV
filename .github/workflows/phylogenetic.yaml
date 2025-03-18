@@ -76,7 +76,7 @@ jobs:
     outputs:
       config_overrides: ${{ steps.config.outputs.config }}
 
-  phylogenetic_global:
+  phylogenetic_all_lineages:
     needs: [set_config_overrides]
     permissions:
       id-token: write

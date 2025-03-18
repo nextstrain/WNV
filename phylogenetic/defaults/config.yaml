@@ -1,7 +1,7 @@
 strain_id_field: "accession"
 # Use 'Egypt 1951' as the reference and root, following Mencattelli et al, 2023
 # https://www.nature.com/articles/s41467-023-42185-7
-reference: "defaults/global/reference.gb"
+reference: "defaults/all-lineages/reference.gb"
 root: "mid_point"
 
 # Sequences must be FASTA and metadata must be TSV
@@ -11,7 +11,7 @@ inputs:
     metadata: "s3://nextstrain-data/files/workflows/WNV/metadata.tsv.zst"
     sequences: "s3://nextstrain-data/files/workflows/WNV/sequences.fasta.zst"
 
-builds: ['global']
+builds: ['all-lineages']
 
 #subsampling:
   #all: --min-length '9800' --query "country == 'USA' & accession != 'NC_009942'"
@@ -80,4 +80,4 @@ traits:
 
 export:
   description: "defaults/description.md"
-  auspice_config: "defaults/global/auspice_config.json"
+  auspice_config: "defaults/all-lineages/auspice_config.json"
