@@ -4,6 +4,7 @@ We use this CHANGELOG to document breaking changes, new features, bug fixes, and
 
 ## 2025
 
+* 24 March 2025: Add frequencies panel @j23414
 * 21 March 2025: Migrated WA specific config to NW-PaGe [PR#90] @j23414, @DOH-LMT2303, @DOH-PNT0303
 * 18 March 2025: Rename "global" to "all-lineages, update various auspice_config settings @j23414
 * 14 March 2025: Pushed from staging to live @j23414
