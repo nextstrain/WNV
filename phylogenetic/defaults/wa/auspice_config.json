@@ -1,19 +1,19 @@
 {
-  "title": "Genomic epidemiology of West Nile Virus lineage 2",
+  "title": "Washington Focused West Nile Virus Build",
   "data_provenance": [
     {
       "name": "GenBank",
       "url": "https://www.ncbi.nlm.nih.gov/genbank/"
     }
   ],
-  "build_url": "https://github.com/nextstrain/WNV",
   "colorings": [
     {"key": "gt", "title": "Genotype", "type": "categorical"},
     {"key": "num_date", "title": "Sampling Date", "type": "continuous"},
-    {"key": "region", "title": "Region", "type": "categorical"},
     {"key": "country", "title": "Country", "type": "categorical"},
+    {"key": "state", "title": "State", "type": "categorical"},
     {"key": "division", "title": "Division", "type": "categorical"},
-    {"key": "lineage", "title": "Lineage", "type": "categorical"},
+    {"key": "location", "title": "Location", "type": "categorical"},
+    {"key": "lineage", "title": "Pathoplexus lineage", "type": "categorical"},
     {"key": "clade_membership", "title": "Clade", "type": "categorical"},
     {"key": "author", "title": "Authors", "type": "categorical"},
     {"key": "host", "title": "Host Species", "type": "categorical"},
@@ -21,52 +21,45 @@
     {"key": "host_type", "title": "Host Type", "type": "categorical"}
   ],
   "geo_resolutions": [
-    "region",
-    "country",
-    "division"
+    "state",
+    "division",
+    "location"
   ],
   "maintainers": [
-    {"name": "Jennifer Chang", "url": "https://bedford.io/team/jennifer-chang/"},
     {"name": "Marcela Torres", "url": "https://github.com/NW-PaGe/WNV-nextstrain"},
     {"name": "NW-PaGe", "url": "https://github.com/NW-PaGe/WNV-nextstrain"},
     {"name": "Nextstrain Team", "url": "https://next.nextstrain.org/"}
   ],
   "filters": [
-    "region",
     "country",
-    "division",
+    "state",
+    "location",
     "author",
+    "clade_membership",
     "host",
     "host_genus",
-    "host_type"
+    "host_type",
+    "lineage"
   ],
   "display_defaults": {
-    "color_by": "lineage",
+    "color_by": "clade_membership",
     "map_triplicate": true,
-    "geo_resolution": "country",
+    "geo_resolution": "state",
     "distance_measure": "div"
   },
   "metadata_columns": [
     "accession",
-    "division",
     "url"
   ],
   "extensions": {
     "nextclade": {
-      "clade_node_attrs": [
-        {
-          "name": "lineage",
-          "displayName": "Lineage",
-          "description": "Lineage 2 WNV lineages based on pathoplexus results."
-        }
-      ],
       "pathogen": {
         "schemaVersion":"3.0.0",
         "defaultCds": "env",
         "attributes": {
-          "name": "West Nile Virus Lineage 2 Tree",
-          "reference name": "Reconstructed ancestor from global tree",
-          "reference accession": "none"
+          "name": "West Nile Virus Washington-State-Focused Tree",
+          "reference name": "IS88",
+          "reference accession": "AF481864"
         }
       }
     }

@@ -1,6 +1,6 @@
-LOCUS       NC_009942_REF              11029 bp    RNA     linear   VRL 24-AUG-2016
+LOCUS       NC_009942              11029 bp    RNA     linear   VRL 24-AUG-2016
 DEFINITION  West Nile virus lineage 1, complete genome.
-ACCESSION   NC_009942_REF
+ACCESSION   NC_009942
 VERSION     NC_009942.1
 DBLINK      BioProject: PRJNA30293
 KEYWORDS    RefSeq.
