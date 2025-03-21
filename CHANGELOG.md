@@ -4,6 +4,7 @@ We use this CHANGELOG to document breaking changes, new features, bug fixes, and
 
 ## 2025
 
+* 19 March 2025: Add frequencies panel @j23414
 * 18 March 2025: Rename "global" to "all-lineages, update various auspice_config settings @j23414
 * 14 March 2025: Pushed from staging to live @j23414
 * 11 March 2025: Added lineage-1A and lineage-2 phylogenetic trees [PR#61](https://github.com/nextstrain/WNV/pull/61) @j23414

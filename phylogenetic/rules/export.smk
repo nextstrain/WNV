@@ -54,3 +54,32 @@ rule export:
             --include-root-sequence-inline \
             --output {output.auspice} 2>&1 | tee {log}
         """
+
+rule tip_frequencies:
+    """
+    Estimating KDE frequencies for tips
+    """
+    input:
+        tree = "results/{build}/tree.nwk",
+        metadata = "results/{build}/metadata_filtered.tsv",
+    output:
+        tip_freq = "auspice/WNV_{build}_tip-frequencies.json"
+    params:
+        strain_id = config["strain_id_field"],
+        min_date = config["tip_frequencies"]["min_date"],
+        max_date = config["tip_frequencies"]["max_date"],
+        narrow_bandwidth = config["tip_frequencies"]["narrow_bandwidth"],
+        proportion_wide = config["tip_frequencies"]["proportion_wide"]
+    shell:
+        r"""
+        augur frequencies \
+            --method kde \
+            --tree {input.tree} \
+            --metadata {input.metadata} \
+            --metadata-id-columns {params.strain_id} \
+            --min-date {params.min_date} \
+            --max-date {params.max_date} \
+            --narrow-bandwidth {params.narrow_bandwidth} \
+            --proportion-wide {params.proportion_wide} \
+            --output {output.tip_freq}
+        """

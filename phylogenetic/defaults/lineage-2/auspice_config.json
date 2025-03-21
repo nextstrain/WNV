@@ -40,6 +40,12 @@
     "host_genus",
     "host_type"
   ],
+  "panels": [
+    "tree",
+    "map",
+    "entropy",
+    "frequencies"
+  ],
   "display_defaults": {
     "color_by": "lineage",
     "map_triplicate": true,

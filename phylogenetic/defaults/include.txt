@@ -1,4 +1,4 @@
-# AF260968 # Egypt 1951 will be used as augur align reference
+AF260968 # Egypt 1951 all-lineages reference
 NC_001563 # Lineage 2 reference
 NC_009942 # Lineage 1 reference
 HM051416 # Isreal 1953
