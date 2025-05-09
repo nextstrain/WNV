@@ -46,16 +46,16 @@ rule select_USA_potential_samples:
     params:
         id_field=config["curate"]["output_id_field"],
     shell:
-        """
+        r"""
         tsv-filter -H \
-          --not-regex 'lineage:1B|[2,3,4,5,6,7,8]' \
+          --not-regex 'lineage:^(1B|2|3|4|5|6|7|8)$' \
           {input.pathoplexus_tsv} \
         > {output.potential_1A_samples}
 
         augur filter \
             --sequences {input.sequences} \
             --metadata {output.potential_1A_samples} \
-            --metadata-id-column {params.id_field} \
+            --metadata-id-columns {params.id_field} \
             --output-sequences {output.sequences}
         """
 
