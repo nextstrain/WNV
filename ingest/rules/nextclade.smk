@@ -25,8 +25,9 @@ rule pathoplexus_classify:
         accession_field=config["pathoplexus"]["accession_field"],
         id_field=config["curate"]["output_id_field"],
     shell:
-        """
+        r"""
         curl "{params.URL}?dataFormat=TSV&downloadAsFile=false&fields={params.fields}" \
+        | tsv-filter -H --not-empty {params.accession_field} \
         | uniq \
         | csvtk -t rename -f {params.accession_field} -n {params.id_field} \
         >  {output.pathoplexus_tsv}
