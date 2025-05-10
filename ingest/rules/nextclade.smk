@@ -25,8 +25,9 @@ rule pathoplexus_classify:
         accession_field=config["pathoplexus"]["accession_field"],
         id_field=config["curate"]["output_id_field"],
     shell:
-        """
+        r"""
         curl "{params.URL}?dataFormat=TSV&downloadAsFile=false&fields={params.fields}" \
+        | tsv-filter -H --not-empty {params.accession_field} \
         | uniq \
         | csvtk -t rename -f {params.accession_field} -n {params.id_field} \
         >  {output.pathoplexus_tsv}
@@ -45,16 +46,16 @@ rule select_USA_potential_samples:
     params:
         id_field=config["curate"]["output_id_field"],
     shell:
-        """
+        r"""
         tsv-filter -H \
-          --not-regex 'lineage:1B|[2,3,4,5,6,7,8]' \
+          --not-regex 'lineage:^(1B|2|3|4|5|6|7|8)$' \
           {input.pathoplexus_tsv} \
         > {output.potential_1A_samples}
 
         augur filter \
             --sequences {input.sequences} \
             --metadata {output.potential_1A_samples} \
-            --metadata-id-column {params.id_field} \
+            --metadata-id-columns {params.id_field} \
             --output-sequences {output.sequences}
         """
 
