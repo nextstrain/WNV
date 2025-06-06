@@ -26,8 +26,8 @@
     "location"
   ],
   "maintainers": [
-    {"name": "Marcela Torres", "url": "https://github.com/NW-PaGe/WNV-nextstrain"},
-    {"name": "NW-PaGe", "url": "https://github.com/NW-PaGe/WNV-nextstrain"},
+    {"name": "Marcela Torres", "url": "https://github.com/NW-PaGe/WNV"},
+    {"name": "NW-PaGe", "url": "https://github.com/NW-PaGe/WNV"},
     {"name": "Nextstrain Team", "url": "https://next.nextstrain.org/"}
   ],
   "filters": [
