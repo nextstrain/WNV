@@ -4,6 +4,8 @@ We use this CHANGELOG to document breaking changes, new features, bug fixes, and
 
 ## 2025
 
+* TBD: [breaking] Switch to use `augur subsample` @victorlin
+    * A new `subsample` configuration section replaces the previous `subsampling` section. The new syntax defines samples in native YAML rather than a long string of `augur filter` arguments.
 * TBD: Configuration resolved at run time is now written to a file `results/run_config.yaml`. @victorlin
 * 18 March 2025: Rename "global" to "all-lineages, update various auspice_config settings @j23414
 * 14 March 2025: Pushed from staging to live @j23414
