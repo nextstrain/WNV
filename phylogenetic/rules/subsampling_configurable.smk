@@ -15,58 +15,38 @@ OUTPUTS:
 
 This part of the workflow usually includes one or more of the following steps:
 
-    - augur filter
+    - augur subsample
 
 See Augur's usage docs for these commands for more details.
 """
 
-ruleorder: extract_subsampled_sequences_and_metadata > filter_manual
+ruleorder: subsample > filter_manual
 
 rule subsample:
     input:
-        metadata = input_metadata,
-        sequences = input_sequences,
-    output:
-        subsampled_strains = f"results/{build}/subsampled_strains_{{subsample}}.txt",
-    log:
-        f"logs/{build}/{{subsample}}/subsampled_strains.txt",
-    benchmark:
-        f"benchmarks/{build}/{{subsample}}/subsampled_strains.txt",
-    params:
-        filters = lambda wildcards: config.get("subsampling", {}).get(wildcards.subsample, ""),
-        id_column = config["strain_id_field"],
-    shell:
-        """
-        augur filter \
-            --sequences {input.sequences} \
-            --metadata {input.metadata} \
-            --metadata-id-columns {params.id_column} \
-            {params.filters} \
-            --output-strains {output.subsampled_strains} 2>&1 | tee {log}
-        """
-
-rule extract_subsampled_sequences_and_metadata:
-    input:
         sequences = input_sequences,
         metadata = input_metadata,
-        subsampled_strains = expand("results/{build}/subsampled_strains_{subsample}.txt", build=build, subsample=list(config.get("subsampling", {}).keys()))
+        config = f"results/{build}/run_config.yaml",
     output:
         sequences = f"results/{build}/sequences_filtered.fasta",
         metadata = f"results/{build}/metadata_filtered.tsv",
     log:
-        f"logs/{build}/extract_subsampled_sequences_and_metadata.txt",
+        f"logs/{build}/subsample.txt",
     benchmark:
-        f"benchmarks/{build}/extract_subsampled_sequences_and_metadata.txt",
+        f"benchmarks/{build}/subsample.txt",
     params:
         id_column = config["strain_id_field"],
+        config_root = "subsample",
+    threads: workflow.cores
     shell:
         """
-        augur filter \
+        augur subsample \
             --sequences {input.sequences} \
             --metadata {input.metadata} \
             --metadata-id-columns {params.id_column} \
-            --exclude-all \
-            --include {input.subsampled_strains} \
+            --config {input.config} \
+            --config-root {params.config_root} \
+            --nthreads {threads} \
             --output-sequences {output.sequences} \
             --output-metadata {output.metadata} 2>&1 | tee {log}
         """
