@@ -13,24 +13,28 @@ inputs:
 
 builds: ['all-lineages']
 
-#subsampling:
-  #all: --min-length '9800' --query "country == 'USA' & accession != 'NC_009942'"
+# subsample:
+#   samples:
+#     all:
+#       min_length: 9800
+#       query: country == 'USA' & accession != 'NC_009942'
 
 # Define named subsampling groups below (e.g., "state", "country", "region",
-# etc.). The workflow will run an `augur filter` command with the arguments
-# defined by each named group. Each `augur filter` command operates on all
-# available metadata and sequences and produces a text file containing the list
-# of strain names that passed the filters. The workflow will collect the union
-# of all strain names from the subsampling files and output the corresponding
-# subset of metadata and sequences that will be used to build the phylogeny.
+# etc.). The workflow will run an `augur subsample` command with the
+# configuration passed into the `--config`.
 #
 # As an example, we could define two named subsampling groups like the
 # following:
 #
 # ```
-# subsampling:
-#   state: --query "division == 'WA'" --subsample-max-sequences 5000
-#   neighboring_state: --query "division in ['CA', 'ID', 'OR', 'NV']" --subsample-max-sequences 5000
+# subsample:
+#   samples:
+#     state:
+#       query: division == 'WA'
+#       subsample_max_sequences: 5000
+#     neighboring_state:
+#       query: division in ['CA', 'ID', 'OR', 'NV']
+#       subsample_max_sequences: 5000
 # ```
 #
 # These named subsampling groups will translate to the following two `augur filter` commands:
