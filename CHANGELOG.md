@@ -4,6 +4,7 @@ We use this CHANGELOG to document breaking changes, new features, bug fixes, and
 
 ## 2025
 
+* TBD: Configuration resolved at run time is now written to a file `results/{build}/run_config.yaml`. @victorlin
 * 24 March 2025: Add frequencies panel @j23414
 * 21 March 2025: Migrated WA specific config to NW-PaGe [PR#90] @j23414, @DOH-LMT2303, @DOH-PNT0303
 * 18 March 2025: Rename "global" to "all-lineages, update various auspice_config settings @j23414

@@ -24,6 +24,7 @@ rule all:
     input:
         auspice = f"auspice/WNV_{build}.json",
         tip_frequencies_json= f"auspice/WNV_{build}_tip-frequencies.json",
+        run_config = f"results/{build}/run_config.yaml",
 
 # These rules are imported in the order that they are expected to run.
 # Each Snakefile will have documented inputs and outputs that should be kept as
@@ -36,6 +37,7 @@ rule all:
 # custom_rules imported below to ensure that the core workflow is not complicated
 # by build specific rules.
 
+include: "rules/write_config.smk"
 include: "rules/merge_additional_inputs.smk"
 include: "rules/prepare_sequences.smk"
 include: "rules/subsampling_manual.smk"

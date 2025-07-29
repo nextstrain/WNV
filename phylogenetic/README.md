@@ -21,9 +21,11 @@ cd phylogenetic
 nextstrain build .
 ```
 
-This produces the default outputs of the phylogenetic workflow:
+This produces files for an Auspice dataset and configuration values used at run time:
 
-- auspice_json(s) = auspice/*.json
+- auspice/WNV_{build}.json
+- auspice/WNV_{build}_tip-frequencies.json
+- results/{build}/run_config.yaml
 
 ## Data Requirements
 
