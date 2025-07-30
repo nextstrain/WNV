@@ -12,10 +12,15 @@ subsample:
     focal:
       query: division == 'WA'
       subsample_max_sequences: 300
-    contextual:
+    contextual_similar:
       query: country == 'USA' & division != 'WA'
       proximity_target: focal
-      subsample_max_sequences: 50
+      subsample_max_sequences: 25
+    contextual_other:
+      query: country == 'USA' & division != 'WA'
+      subsample_max_sequences: 25
+      exclude_samples:
+        - contextual_similar
     background:
       query: country != 'USA'
       group_by:
@@ -24,5 +29,6 @@ subsample:
       subsample_max_sequences: 50
   output:
     - background
-    - contextual
+    - contextual_similar
+    - contextual_other
     - focal
