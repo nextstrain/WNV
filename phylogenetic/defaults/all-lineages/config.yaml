@@ -21,3 +21,7 @@ subsample:
         - country
         - month
       subsample_max_sequences: 50
+  output:
+    - background
+    - contextual
+    - focal
