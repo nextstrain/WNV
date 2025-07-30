@@ -14,6 +14,7 @@ subsample:
       subsample_max_sequences: 300
     contextual:
       query: country == 'USA' & division != 'WA'
+      proximity_target: focal
       subsample_max_sequences: 50
     background:
       query: country != 'USA'
