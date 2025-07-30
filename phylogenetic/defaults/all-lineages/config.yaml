@@ -9,8 +9,15 @@ subsample:
     include:
       - defaults/include.txt
   samples:
-    region:
+    focal:
+      query: division == 'WA'
+      subsample_max_sequences: 300
+    contextual:
+      query: country == 'USA' & division != 'WA'
+      subsample_max_sequences: 50
+    background:
+      query: country != 'USA'
       group_by:
-        - region
-        - year
-      subsample_max_sequences: 3000
+        - country
+        - month
+      subsample_max_sequences: 50
