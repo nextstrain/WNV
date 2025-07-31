@@ -21,8 +21,6 @@ additional_inputs:
 
 builds: ['wa']
 
-# This command excludes all strains by default and then forces the inclusion of
-# the strains selected by the subsampling logic defined above.
 subsampling:
   state: --query "state == 'WA'" --min-length '8200' --subsample-max-sequences 5000
   neighboring_state: --query "state in ['CA', 'ID', 'OR', 'NV']" --group-by state year --min-length '8200' --subsample-max-sequences 5000
