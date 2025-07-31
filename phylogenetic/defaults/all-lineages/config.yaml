@@ -1,17 +1,16 @@
 subsample:
+  defaults:
+    query: is_lab_host != 'true'
+    query_columns:
+      - is_lab_host:str
+    min_length: 8200
+    exclude:
+      - defaults/exclude.txt
+    include:
+      - defaults/include.txt
   samples:
     region:
-      query: is_lab_host != 'true'
-      query_columns:
-        - is_lab_host:str
-      min_length: 8200
       group_by:
         - region
         - year
       subsample_max_sequences: 3000
-      exclude:
-        - defaults/exclude.txt
-    force_include:
-      exclude_all: true
-      include:
-        - defaults/include.txt
