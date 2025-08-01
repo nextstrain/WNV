@@ -3,7 +3,14 @@ root: "KX394399"
 builds: ['lineage-1A']
 
 subsampling:
-  region: --query "is_lab_host != 'true' & lineage == '1A'" --query-columns is_lab_host:str --min-length '8200' --group-by region year --subsample-max-sequences 3000 --exclude defaults/exclude.txt --include defaults/lineage-1A/include.txt
+  region: >-
+    --query "is_lab_host != 'true' & lineage == '1A'"
+    --query-columns is_lab_host:str
+    --min-length '8200'
+    --group-by region year
+    --subsample-max-sequences 3000
+    --exclude defaults/exclude.txt
+    --include defaults/lineage-1A/include.txt
 
 # Clock rate from Table 1 of May et al, 2010: https://pmc.ncbi.nlm.nih.gov/articles/PMC3067944/
 refine:
