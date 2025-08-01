@@ -94,7 +94,7 @@ jobs:
         nextstrain build \
           phylogenetic \
             deploy_all \
-            --configfile build-configs/nextstrain-automation/config.yaml \
+            --configfile build-configs/nextstrain-automation/config.yaml defaults/all-lineages/config.yaml \
             $CONFIG_OVERRIDES
       # Specifying artifact name to differentiate ingest build outputs from
       # the phylogenetic build outputs
