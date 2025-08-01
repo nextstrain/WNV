@@ -1,0 +1,3 @@
+subsampling:
+  region: --query "is_lab_host != 'true'" --query-columns is_lab_host:str --min-length '8200' --group-by region year --subsample-max-sequences 3000 --exclude defaults/exclude.txt
+  force_include: --exclude-all --include defaults/include.txt
