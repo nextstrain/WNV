@@ -3,8 +3,7 @@ root: "best"
 builds: ['lineage-2']
 
 subsampling:
-  region: --query "is_lab_host != 'true' & lineage == '2'" --query-columns is_lab_host:str --min-length '8200' --group-by region year --subsample-max-sequences 3000 --exclude defaults/exclude.txt
-  force_include: --exclude-all --include defaults/lineage-2/include.txt
+  region: --query "is_lab_host != 'true' & lineage == '2'" --query-columns is_lab_host:str --min-length '8200' --group-by region year --subsample-max-sequences 3000 --exclude defaults/exclude.txt --include defaults/lineage-2/include.txt
 
 # Clock rate from McMullen et al, 2013: https://pmc.ncbi.nlm.nih.gov/articles/PMC3709619/
 refine:
