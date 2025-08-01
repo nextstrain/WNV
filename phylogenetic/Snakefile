@@ -8,6 +8,10 @@ workdir: workflow.current_basedir
 # Use default configuration values. Override with Snakemake's --configfile/--config options.
 configfile: "defaults/config.yaml"
 
+# Run the all-lineages build if unspecified.
+if "build" not in config:
+    configfile: "defaults/all-lineages/config.yaml"
+
 build = config['build']
 
 wildcard_constraints:

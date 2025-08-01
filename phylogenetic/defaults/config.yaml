@@ -1,8 +1,4 @@
 strain_id_field: "accession"
-# Use 'Egypt 1951' as the reference and root, following Mencattelli et al, 2023
-# https://www.nature.com/articles/s41467-023-42185-7
-reference: "defaults/all-lineages/reference.gb"
-root: "mid_point"
 
 # Sequences must be FASTA and metadata must be TSV
 # Both files must be zstd compressed
@@ -10,23 +6,6 @@ inputs:
   - name: ncbi
     metadata: "s3://nextstrain-data/files/workflows/WNV/metadata.tsv.zst"
     sequences: "s3://nextstrain-data/files/workflows/WNV/sequences.fasta.zst"
-
-build: "all-lineages"
-
-# See Nextstrain documentation for an explanation of how subsampling configuration works:
-# <https://docs.nextstrain.org/en/latest/guides/bioinformatics/filtering-and-subsampling.html#generalizing-subsampling-in-a-workflow>
-subsampling:
-  region: >-
-    --query "is_lab_host != 'true'"
-    --query-columns is_lab_host:str
-    --min-length '8200'
-    --group-by region year
-    --subsample-max-sequences 3000
-    --exclude defaults/exclude.txt
-    --include defaults/include.txt
-
-refine:
-  treetime_params: --coalescent opt --date-inference marginal --date-confidence --keep-polytomies --clock-rate 0.000755
 
 traits:
   metadata_columns: [
@@ -45,4 +24,3 @@ tip_frequencies:
 
 export:
   description: "defaults/description.md"
-  auspice_config: "defaults/all-lineages/auspice_config.json"
