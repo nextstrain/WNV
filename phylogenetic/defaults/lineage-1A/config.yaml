@@ -1,6 +1,6 @@
 reference: "defaults/lineage-1A/reference.gb"
 root: "KX394399"
-builds: ['lineage-1A']
+build: "lineage-1A"
 
 subsampling:
   region: --query "is_lab_host != 'true' & lineage == '1A'" --query-columns is_lab_host:str --min-length '8200' --group-by region year --subsample-max-sequences 3000 --exclude defaults/exclude.txt
