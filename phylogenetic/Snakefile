@@ -8,10 +8,10 @@ workdir: workflow.current_basedir
 # Use default configuration values. Override with Snakemake's --configfile/--config options.
 configfile: "defaults/config.yaml"
 
-builds = config['builds']
+build = config['build']
 
 wildcard_constraints:
-    build = "|".join(builds)
+    build = build
 
 # This is the default rule that Snakemake will run when there are no specified targets.
 # The default output of the phylogenetic workflow is usually the final
@@ -21,8 +21,8 @@ wildcard_constraints:
 
 rule all:
     input:
-        auspice = expand("auspice/WNV_{build}.json", build=builds),
-        tip_frequencies_json= expand("auspice/WNV_{build}_tip-frequencies.json", build=builds)
+        auspice = f"auspice/WNV_{build}.json",
+        tip_frequencies_json= f"auspice/WNV_{build}_tip-frequencies.json",
 
 # These rules are imported in the order that they are expected to run.
 # Each Snakefile will have documented inputs and outputs that should be kept as

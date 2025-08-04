@@ -1,6 +1,6 @@
 reference: "defaults/lineage-1A/reference.gb"
 root: "KX394399"
-builds: ['lineage-1A']
+build: "lineage-1A"
 
 subsampling:
   region: >-

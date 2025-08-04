@@ -1,6 +1,6 @@
 reference: "defaults/lineage-2/reference.gb"
 root: "best"
-builds: ['lineage-2']
+build: "lineage-2"
 
 subsampling:
   region: >-

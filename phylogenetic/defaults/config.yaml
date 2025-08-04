@@ -11,7 +11,7 @@ inputs:
     metadata: "s3://nextstrain-data/files/workflows/WNV/metadata.tsv.zst"
     sequences: "s3://nextstrain-data/files/workflows/WNV/sequences.fasta.zst"
 
-builds: ['all-lineages']
+build: "all-lineages"
 
 # See Nextstrain documentation for an explanation of how subsampling configuration works:
 # <https://docs.nextstrain.org/en/latest/guides/bioinformatics/filtering-and-subsampling.html#generalizing-subsampling-in-a-workflow>
