@@ -14,9 +14,6 @@ if "build" not in config:
 
 build = config['build']
 
-wildcard_constraints:
-    build = build
-
 # This is the default rule that Snakemake will run when there are no specified targets.
 # The default output of the phylogenetic workflow is usually the final
 # Nexstrain dataset(s) or Auspice JSON(s) that is output from `rules/export.smk`

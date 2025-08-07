@@ -28,20 +28,20 @@ See Augur's usage docs for these commands for more details.
 
 rule export:
     input:
-        tree = "results/{build}/tree.nwk",
-        metadata = "results/{build}/metadata_filtered.tsv",
-        branch_lengths = "results/{build}/branch_lengths.json",
-        traits = "results/{build}/traits.json",
-        nt_muts = "results/{build}/nt_muts.json",
-        aa_muts = "results/{build}/aa_muts.json",
+        tree = f"results/{build}/tree.nwk",
+        metadata = f"results/{build}/metadata_filtered.tsv",
+        branch_lengths = f"results/{build}/branch_lengths.json",
+        traits = f"results/{build}/traits.json",
+        nt_muts = f"results/{build}/nt_muts.json",
+        aa_muts = f"results/{build}/aa_muts.json",
         description = config["export"]["description"],
         auspice_config = config["export"]["auspice_config"],
     output:
-        auspice = "auspice/WNV_{build}.json"
+        auspice = f"auspice/WNV_{build}.json"
     log:
-        "logs/{build}/export.txt",
+        f"logs/{build}/export.txt",
     benchmark:
-        "benchmarks/{build}/export.txt"
+        f"benchmarks/{build}/export.txt"
     shell:
         """
         augur export v2 \
@@ -60,10 +60,10 @@ rule tip_frequencies:
     Estimating KDE frequencies for tips
     """
     input:
-        tree = "results/{build}/tree.nwk",
-        metadata = "results/{build}/metadata_filtered.tsv",
+        tree = f"results/{build}/tree.nwk",
+        metadata = f"results/{build}/metadata_filtered.tsv",
     output:
-        tip_freq = "auspice/WNV_{build}_tip-frequencies.json"
+        tip_freq = f"auspice/WNV_{build}_tip-frequencies.json"
     params:
         strain_id = config["strain_id_field"],
         min_date = config["tip_frequencies"]["min_date"],

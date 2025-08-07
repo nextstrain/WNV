@@ -27,11 +27,11 @@ rule subsample:
         metadata = input_metadata,
         sequences = input_sequences,
     output:
-        subsampled_strains = "results/{build}/subsampled_strains_{subsample}.txt",
+        subsampled_strains = f"results/{build}/subsampled_strains_{{subsample}}.txt",
     log:
-        "logs/{build}/{subsample}/subsampled_strains.txt",
+        f"logs/{build}/{{subsample}}/subsampled_strains.txt",
     benchmark:
-        "benchmarks/{build}/{subsample}/subsampled_strains.txt",
+        f"benchmarks/{build}/{{subsample}}/subsampled_strains.txt",
     params:
         filters = lambda wildcards: config.get("subsampling", {}).get(wildcards.subsample, ""),
         id_column = config["strain_id_field"],
@@ -51,12 +51,12 @@ rule extract_subsampled_sequences_and_metadata:
         metadata = input_metadata,
         subsampled_strains = expand("results/{build}/subsampled_strains_{subsample}.txt", build=build, subsample=list(config.get("subsampling", {}).keys()))
     output:
-        sequences = "results/{build}/sequences_filtered.fasta",
-        metadata = "results/{build}/metadata_filtered.tsv",
+        sequences = f"results/{build}/sequences_filtered.fasta",
+        metadata = f"results/{build}/metadata_filtered.tsv",
     log:
-        "logs/{build}/extract_subsampled_sequences_and_metadata.txt",
+        f"logs/{build}/extract_subsampled_sequences_and_metadata.txt",
     benchmark:
-        "benchmarks/{build}/extract_subsampled_sequences_and_metadata.txt",
+        f"benchmarks/{build}/extract_subsampled_sequences_and_metadata.txt",
     params:
         id_column = config["strain_id_field"],
     shell:
