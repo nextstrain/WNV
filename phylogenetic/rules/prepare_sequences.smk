@@ -23,14 +23,14 @@ See Augur's usage docs for these commands for more details.
 
 rule align:
     input:
-        sequences = "results/{build}/sequences_filtered.fasta",
+        sequences = f"results/{build}/sequences_filtered.fasta",
         reference = config["reference"]
     output:
-        alignment = "results/{build}/aligned.fasta"
+        alignment = f"results/{build}/aligned.fasta"
     log:
-        "logs/{build}/align.txt",
+        f"logs/{build}/align.txt",
     benchmark:
-        "benchmarks/{build}/align.txt"
+        f"benchmarks/{build}/align.txt"
     threads: workflow.cores
     shell:
         """

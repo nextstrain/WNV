@@ -34,14 +34,14 @@ to the ones produced by Augur commands.
 
 rule ancestral:
     input:
-        tree = "results/{build}/tree.nwk",
-        alignment = "results/{build}/aligned.fasta"
+        tree = f"results/{build}/tree.nwk",
+        alignment = f"results/{build}/aligned.fasta"
     output:
-        node_data = "results/{build}/nt_muts.json"
+        node_data = f"results/{build}/nt_muts.json"
     log:
-        "logs/{build}/ancestral.txt",
+        f"logs/{build}/ancestral.txt",
     benchmark:
-        "benchmarks/{build}/ancestral.txt"
+        f"benchmarks/{build}/ancestral.txt"
     params:
         inference = "joint"
     shell:
@@ -55,15 +55,15 @@ rule ancestral:
 
 rule translate:
     input:
-        tree = "results/{build}/tree.nwk",
-        node_data = "results/{build}/nt_muts.json",
+        tree = f"results/{build}/tree.nwk",
+        node_data = f"results/{build}/nt_muts.json",
         reference = config["reference"]
     output:
-        node_data = "results/{build}/aa_muts.json"
+        node_data = f"results/{build}/aa_muts.json"
     log:
-        "logs/{build}/translate.txt",
+        f"logs/{build}/translate.txt",
     benchmark:
-        "benchmarks/{build}/translate.txt"
+        f"benchmarks/{build}/translate.txt"
     shell:
         """
         augur translate \
@@ -75,14 +75,14 @@ rule translate:
 
 rule traits:
     input:
-        tree = "results/{build}/tree.nwk",
-        metadata = "results/{build}/metadata_filtered.tsv"
+        tree = f"results/{build}/tree.nwk",
+        metadata = f"results/{build}/metadata_filtered.tsv"
     output:
-        node_data = "results/{build}/traits.json",
+        node_data = f"results/{build}/traits.json",
     log:
-        "logs/{build}/traits.txt",
+        f"logs/{build}/traits.txt",
     benchmark:
-        "benchmarks/{build}/traits.txt"
+        f"benchmarks/{build}/traits.txt"
     params:
         metadata_id_columns = config["strain_id_field"],
         metadata_columns = config["traits"]["metadata_columns"],

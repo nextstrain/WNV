@@ -23,12 +23,12 @@ rule filter_manual:
         metadata = input_metadata,
         sequences = input_sequences,
     output:
-        sequences = "results/{build}/sequences_filtered.fasta",
-        metadata = "results/{build}/metadata_filtered.tsv"
+        sequences = f"results/{build}/sequences_filtered.fasta",
+        metadata = f"results/{build}/metadata_filtered.tsv"
     log:
-        "logs/{build}/filter_manual.txt",
+        f"logs/{build}/filter_manual.txt",
     benchmark:
-        "benchmarks/{build}/filter_manual.txt",
+        f"benchmarks/{build}/filter_manual.txt",
     shell:
         """
         augur filter \
