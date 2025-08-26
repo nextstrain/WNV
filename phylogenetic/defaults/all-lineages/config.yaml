@@ -14,7 +14,7 @@ subsample:
       group_by:
         - region
         - year
-      subsample_max_sequences: 3000
+      max_sequences: 3000
       exclude:
         - defaults/exclude.txt
       include:
