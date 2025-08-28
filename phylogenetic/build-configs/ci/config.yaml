@@ -7,9 +7,8 @@ inputs:
     metadata: "example_data/metadata.tsv"
     sequences: "example_data/sequences.fasta"
 
-builds:
-  lineage-1A: ~
-  lineage-2: ~
+builds_to_run:
+  - all-lineages
 
 ## Custom rules to run as part of the CI automated workflow
 ## The paths should be relative to the phylogenetic directory.
