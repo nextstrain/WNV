@@ -4,8 +4,6 @@ We use this CHANGELOG to document breaking changes, new features, bug fixes, and
 
 ## 2025
 
-* TBD: [breaking] Switch to use `augur subsample` @victorlin
-    * A new `subsample` configuration section replaces the previous `subsampling` section. The new syntax defines samples in native YAML rather than a long string of `augur filter` arguments.
 * TBD: Configuration resolved at run time is now written to a file `results/{build}/run_config.yaml`. @victorlin
 * 24 March 2025: Add frequencies panel @j23414
 * 21 March 2025: Migrated WA specific config to NW-PaGe [PR#90] @j23414, @DOH-LMT2303, @DOH-PNT0303
