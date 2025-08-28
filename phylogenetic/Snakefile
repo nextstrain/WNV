@@ -8,7 +8,7 @@ workdir: workflow.current_basedir
 # Use default configuration values. Override with Snakemake's --configfile/--config options.
 configfile: "defaults/config.yaml"
 
-builds = [build for build in config['builds'] if config['builds'][build] is not None]
+builds = config['builds_to_run']
 
 wildcard_constraints:
     build = "|".join(builds)

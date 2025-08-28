@@ -7,6 +7,11 @@ inputs:
     metadata: "s3://nextstrain-data/files/workflows/WNV/metadata.tsv.zst"
     sequences: "s3://nextstrain-data/files/workflows/WNV/sequences.fasta.zst"
 
+builds_to_run:
+  - all-lineages
+  - lineage-1A
+  - lineage-2
+
 builds:
   all-lineages:
     # Use 'Egypt 1951' as the reference and root, following Mencattelli et al, 2023
