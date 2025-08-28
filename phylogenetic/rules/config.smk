@@ -12,9 +12,13 @@ from datetime import datetime
 from textwrap import dedent
 
 
+timestamp = datetime.now().astimezone().strftime("%Y-%m-%dT%H%M%S.%f")
+RUN_CONFIG = f"results/run_configs/{timestamp}.yaml"
+
+
 def main():
     validate_config()
-    write_config()
+    write_config(RUN_CONFIG)
 
 
 def validate_config():
@@ -38,16 +42,25 @@ def validate_config():
             """))
         exit(1)
 
+    # Check for deprecated 'subsampling' keys
+    for build in config["builds"]:
+        if "subsampling" in config["build_params"][build]:
+            print(dedent(f"""\
+                ERROR: The 'subsampling' configuration key is no longer supported.
 
-def write_config():
+                Please rename it to 'subsample' and update the format to match
+                the augur subsample --config structure:
+
+                    <https://docs.nextstrain.org/projects/augur/en/stable/usage/cli/subsample.html#configuration>"""))
+            exit(1)
+
+
+def write_config(path):
     """
     Write Snakemake's 'config' variable to a file.
 
-    This is useful for debugging purposes.
+    This is used for the subsample rule and is generally useful for debugging.
     """
-    timestamp = datetime.now().astimezone().strftime("%Y-%m-%dT%H%M%S.%f")
-    path = f"results/run_configs/{timestamp}.yaml"
-
     os.makedirs(os.path.dirname(path), exist_ok=True)
 
     with open(path, 'w') as f:
