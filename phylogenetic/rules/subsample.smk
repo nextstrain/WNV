@@ -20,8 +20,6 @@ This part of the workflow usually includes one or more of the following steps:
 See Augur's usage docs for these commands for more details.
 """
 
-ruleorder: extract_subsampled_sequences_and_metadata > filter_manual
-
 rule subsample:
     input:
         metadata = input_metadata,
