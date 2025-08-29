@@ -8,7 +8,7 @@ workdir: workflow.current_basedir
 # Use default configuration values. Override with Snakemake's --configfile/--config options.
 configfile: "defaults/config.yaml"
 
-builds = config['builds']
+builds = config['builds_to_run']
 
 wildcard_constraints:
     build = "|".join(builds)
@@ -35,11 +35,10 @@ rule all:
 # custom_rules imported below to ensure that the core workflow is not complicated
 # by build specific rules.
 
+include: "rules/write_config.smk"
 include: "rules/merge_additional_inputs.smk"
 include: "rules/prepare_sequences.smk"
-include: "rules/subsampling_manual.smk"
-if config.get("subsampling", False):
-    include: "rules/subsampling_configurable.smk"
+include: "rules/subsample.smk"
 include: "rules/construct_phylogeny.smk"
 include: "rules/annotate_phylogeny.smk"
 include: "rules/export.smk"
