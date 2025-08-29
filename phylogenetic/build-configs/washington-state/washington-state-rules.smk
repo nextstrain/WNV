@@ -51,7 +51,7 @@ rule export_washington_build:
         colors = "results/{build}/colors.tsv",
         description = config["export"]["description"],
         lat_longs = "results/{build}/lat_longs.tsv",
-        auspice_config = config["export"]["auspice_config"],
+        auspice_config = lambda w: config["export"][w.build]["auspice_config"],
     output:
         auspice = "auspice/WNV_{build}.json"
     log:
