@@ -4,6 +4,7 @@ We use this CHANGELOG to document breaking changes, new features, bug fixes, and
 
 ## 2025
 
+* TBD: Configuration resolved at run time is now written to a file `results/run_config.yaml`. [PR #102](https://github.com/nextstrain/WNV/pull/102) @victorlin
 * TBD: The phylogenetic workflow configuration now expects a new structure with most configuration defined under a build-specific key. See `phylogenetic/defaults/config.yaml` as an example. **This is a breaking change.** [PR #102](https://github.com/nextstrain/WNV/pull/102) @victorlin
 * TBD: The phylogenetic workflow now runs all Nextstrain-maintained builds by default. This can be adjusted by a new configuration option, `builds`. **This is a breaking change.** [PR #102](https://github.com/nextstrain/WNV/pull/102) @victorlin
 * TBD: Support for manual subsampling by editing the file `phylogenetic/rules/subsampling_manual.smk` is no longer supported. **This is a breaking change.** [PR #102](https://github.com/nextstrain/WNV/pull/102) @victorlin
