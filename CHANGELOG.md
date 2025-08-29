@@ -4,6 +4,7 @@ We use this CHANGELOG to document breaking changes, new features, bug fixes, and
 
 ## 2025
 
+* 8 September 2025: Support for manual subsampling by editing the file `phylogenetic/rules/subsampling_manual.smk` is no longer supported. **This is a breaking change.** [PR #102](https://github.com/nextstrain/WNV/pull/102) @victorlin
 * 24 March 2025: Add frequencies panel @j23414
 * 21 March 2025: Migrated WA specific config to NW-PaGe [PR#90] @j23414, @DOH-LMT2303, @DOH-PNT0303
 * 18 March 2025: Rename "global" to "all-lineages, update various auspice_config settings @j23414

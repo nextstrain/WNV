@@ -37,9 +37,7 @@ rule all:
 
 include: "rules/merge_additional_inputs.smk"
 include: "rules/prepare_sequences.smk"
-include: "rules/subsampling_manual.smk"
-if config.get("subsampling", False):
-    include: "rules/subsampling_configurable.smk"
+include: "rules/subsample.smk"
 include: "rules/construct_phylogeny.smk"
 include: "rules/annotate_phylogeny.smk"
 include: "rules/export.smk"

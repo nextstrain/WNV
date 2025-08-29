@@ -1,8 +1,6 @@
 """
 This part of the workflow subsamples sequences for constructing the phylogenetic tree.
 
-However, this configurable subsampling allows for tierred subsampling based on values placed in the config file.
-
 REQUIRED INPUTS:
 
     metadata    = results/metadata.tsv
@@ -20,8 +18,6 @@ This part of the workflow usually includes one or more of the following steps:
 See Augur's usage docs for these commands for more details.
 """
 
-ruleorder: extract_subsampled_sequences_and_metadata > filter_manual
-
 rule subsample:
     input:
         metadata = input_metadata,
@@ -33,7 +29,7 @@ rule subsample:
     benchmark:
         "benchmarks/{build}/{subsample}/subsampled_strains.txt",
     params:
-        filters = lambda wildcards: config.get("subsampling", {}).get(wildcards.subsample, ""),
+        filters = lambda w: config["subsampling"][w.subsample],
         id_column = config["strain_id_field"],
     shell:
         """
@@ -49,7 +45,7 @@ rule extract_subsampled_sequences_and_metadata:
     input:
         sequences = input_sequences,
         metadata = input_metadata,
-        subsampled_strains = expand("results/{build}/subsampled_strains_{subsample}.txt", build=builds, subsample=list(config.get("subsampling", {}).keys()))
+        subsampled_strains = expand("results/{build}/subsampled_strains_{subsample}.txt", build=builds, subsample=list(config["subsampling"].keys()))
     output:
         sequences = "results/{build}/sequences_filtered.fasta",
         metadata = "results/{build}/metadata_filtered.tsv",
