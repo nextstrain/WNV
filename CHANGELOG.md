@@ -5,7 +5,8 @@ We use this CHANGELOG to document breaking changes, new features, bug fixes, and
 ## 2025
 
 * TBD: Configuration resolved at run time is now written to a file `results/run_config.yaml`. [PR #102](https://github.com/nextstrain/WNV/pull/102) @victorlin
-* TBD: The phylogenetic workflow config file now includes configuration for Nextstrain-maintained datasets in `phylogenetic/defaults/config.yaml`, and will run all by default. This can be adjusted by a new configuration option, `builds_to_run`. **This is a breaking change.** [PR #102](https://github.com/nextstrain/WNV/pull/102) @victorlin
+* TBD: Build-specific configuration is now expected under the configuration path `builds.<build>`. See `phylogenetic/build-configs/nextstrain/config.yaml` for an example. **This is a breaking change.** [PR #102](https://github.com/nextstrain/WNV/pull/102) @victorlin
+* TBD: Nextstrain-specific configuration has been removed from `phylogenetic/defaults/config.yaml`. [PR #102](https://github.com/nextstrain/WNV/pull/102) @victorlin
 * TBD: Support for manual subsampling by editing the file `phylogenetic/rules/subsampling_manual.smk` is no longer supported. **This is a breaking change.** [PR #102](https://github.com/nextstrain/WNV/pull/102) @victorlin
 * 24 March 2025: Add frequencies panel @j23414
 * 21 March 2025: Migrated WA specific config to NW-PaGe [PR#90] @j23414, @DOH-LMT2303, @DOH-PNT0303

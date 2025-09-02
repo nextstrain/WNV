@@ -7,8 +7,26 @@ inputs:
     metadata: "example_data/metadata.tsv"
     sequences: "example_data/sequences.fasta"
 
-builds_to_run:
-  - all-lineages
+builds:
+  all-lineages:
+    reference: "defaults/all-lineages/reference.gb"
+    root: "mid_point"
+
+    subsampling:
+      region: >-
+        --query "is_lab_host != 'true'"
+        --query-columns is_lab_host:str
+        --min-length '8200'
+        --group-by region year
+        --subsample-max-sequences 3000
+        --exclude defaults/exclude.txt
+        --include defaults/all-lineages/include.txt
+
+    refine:
+      treetime_params: --coalescent opt --date-inference marginal --date-confidence --keep-polytomies --clock-rate 0.000755
+
+    export:
+      auspice_config: "defaults/all-lineages/auspice_config.json"
 
 ## Custom rules to run as part of the CI automated workflow
 ## The paths should be relative to the phylogenetic directory.

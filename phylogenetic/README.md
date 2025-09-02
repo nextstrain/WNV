@@ -7,7 +7,7 @@ that can be visualized in Auspice.
 
 The workflow to execute the global build can be run from the top level directory:
 ```
-nextstrain build phylogenetic
+nextstrain build phylogenetic --configfile build-configs/nextstrain/config.yaml
 ```
 
 The workflow to execute the Washington focused build can also be run from the top level directory:
@@ -18,7 +18,7 @@ nextstrain build phylogenetic --configfile build-configs/washington-state/config
 Alternatively, the workflow can also be run from within the phylogenetic directory:
 ```
 cd phylogenetic
-nextstrain build .
+nextstrain build . --configfile build-configs/nextstrain/config.yaml
 ```
 
 This produces the default outputs of the phylogenetic workflow:
@@ -62,5 +62,7 @@ The build-configs directory contains custom configs and rules that override and/
 extend the default workflow.
 
 - [ci](build-configs/ci/) - CI build that runs with example data
+- [nextstrain](build-configs/nextstrain/) - configuration for internal Nextstrain builds
+- [nextstrain-automation](build-configs/nextstrain-automation/) - automation for internal Nextstrain builds
 
 [Nextstrain datasets]: https://docs.nextstrain.org/en/latest/reference/glossary.html#term-dataset
