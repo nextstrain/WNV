@@ -22,6 +22,7 @@ builds:
 
     export:
       auspice_config: "build-configs/nextstrain/all-lineages/auspice_config.json"
+      description: "build-configs/nextstrain/description.md"
 
   lineage-1A:
     reference: "build-configs/nextstrain/lineage-1A/reference.gb"
@@ -43,6 +44,7 @@ builds:
 
     export:
       auspice_config: "build-configs/nextstrain/lineage-1A/auspice_config.json"
+      description: "build-configs/nextstrain/description.md"
 
   lineage-2:
     reference: "build-configs/nextstrain/lineage-2/reference.gb"
@@ -64,3 +66,4 @@ builds:
 
     export:
       auspice_config: "build-configs/nextstrain/lineage-2/auspice_config.json"
+      description: "build-configs/nextstrain/description.md"

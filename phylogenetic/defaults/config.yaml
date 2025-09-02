@@ -21,6 +21,3 @@ tip_frequencies:
   # Quarterly narrow_bandwidth or every 3 months (3 /12.0 = 0.25)
   narrow_bandwidth: 0.25
   proportion_wide: 0.0
-
-export:
-  description: "defaults/description.md"

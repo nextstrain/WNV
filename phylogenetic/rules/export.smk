@@ -34,7 +34,7 @@ rule export:
         traits = "results/{build}/traits.json",
         nt_muts = "results/{build}/nt_muts.json",
         aa_muts = "results/{build}/aa_muts.json",
-        description = config["export"]["description"],
+        description = lambda w: config["builds"][w.build]["export"]["description"],
         auspice_config = lambda w: config["builds"][w.build]["export"]["auspice_config"],
     output:
         auspice = "auspice/WNV_{build}.json"
