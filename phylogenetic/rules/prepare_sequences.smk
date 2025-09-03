@@ -24,7 +24,7 @@ See Augur's usage docs for these commands for more details.
 rule align:
     input:
         sequences = "results/{build}/sequences_filtered.fasta",
-        reference = config["reference"]
+        reference = lambda w: config["build_params"][w.build]["reference"]
     output:
         alignment = "results/{build}/aligned.fasta"
     log:

@@ -29,7 +29,7 @@ rule subsample:
     benchmark:
         "benchmarks/{build}/{subsample}/subsampled_strains.txt",
     params:
-        filters = lambda w: config["subsampling"][w.subsample],
+        filters = lambda w: config["build_params"][w.build]["subsampling"][w.subsample],
         id_column = config["strain_id_field"],
     shell:
         """
@@ -45,7 +45,7 @@ rule extract_subsampled_sequences_and_metadata:
     input:
         sequences = input_sequences,
         metadata = input_metadata,
-        subsampled_strains = expand("results/{build}/subsampled_strains_{subsample}.txt", build=builds, subsample=list(config["subsampling"].keys()))
+        subsampled_strains = lambda w: expand("results/{build}/subsampled_strains_{subsample}.txt", build=w.build, subsample=list(config["build_params"][w.build]["subsampling"].keys()))
     output:
         sequences = "results/{build}/sequences_filtered.fasta",
         metadata = "results/{build}/metadata_filtered.tsv",
