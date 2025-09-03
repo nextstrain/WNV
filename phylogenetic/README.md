@@ -5,7 +5,7 @@ that can be visualized in Auspice.
 
 ## Workflow Usage
 
-The workflow to execute the global build can be run from the top level directory:
+The workflow to execute all Nextstrain builds can be run from the top level directory:
 ```
 nextstrain build phylogenetic
 ```

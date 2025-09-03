@@ -34,8 +34,8 @@ rule export:
         traits = "results/{build}/traits.json",
         nt_muts = "results/{build}/nt_muts.json",
         aa_muts = "results/{build}/aa_muts.json",
-        description = config["export"]["description"],
-        auspice_config = config["export"]["auspice_config"],
+        description = lambda w: config["build_params"][w.build]["export"]["description"],
+        auspice_config = lambda w: config["build_params"][w.build]["export"]["auspice_config"],
     output:
         auspice = "auspice/WNV_{build}.json"
     log:
@@ -66,10 +66,10 @@ rule tip_frequencies:
         tip_freq = "auspice/WNV_{build}_tip-frequencies.json"
     params:
         strain_id = config["strain_id_field"],
-        min_date = config["tip_frequencies"]["min_date"],
-        max_date = config["tip_frequencies"]["max_date"],
-        narrow_bandwidth = config["tip_frequencies"]["narrow_bandwidth"],
-        proportion_wide = config["tip_frequencies"]["proportion_wide"]
+        min_date = lambda w: config["build_params"][w.build]["tip_frequencies"]["min_date"],
+        max_date = lambda w: config["build_params"][w.build]["tip_frequencies"]["max_date"],
+        narrow_bandwidth = lambda w: config["build_params"][w.build]["tip_frequencies"]["narrow_bandwidth"],
+        proportion_wide = lambda w: config["build_params"][w.build]["tip_frequencies"]["proportion_wide"]
     shell:
         r"""
         augur frequencies \

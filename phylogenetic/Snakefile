@@ -8,6 +8,24 @@ workdir: workflow.current_basedir
 # Use default configuration values. Override with Snakemake's --configfile/--config options.
 configfile: "defaults/config.yaml"
 
+# Validate 'builds'
+from textwrap import dedent
+
+def indented_list(xs, prefix):
+    return f"\n{prefix}".join(xs)
+
+if invalid_builds := set(config["builds"]) - set(config["build_params"]):
+    print(dedent(f"""\
+        ERROR: The following names in 'builds' are not defined in 'build_params':
+
+            {indented_list(invalid_builds, "            ")}
+
+        Available builds are:
+
+            {indented_list(config['build_params'], "            ")}
+        """))
+    exit(1)
+
 builds = config['builds']
 
 wildcard_constraints:
