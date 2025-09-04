@@ -57,7 +57,7 @@ rule translate:
     input:
         tree = "results/{build}/tree.nwk",
         node_data = "results/{build}/nt_muts.json",
-        reference = config["reference"]
+        reference = lambda w: config["build_params"][w.build]["reference"]
     output:
         node_data = "results/{build}/aa_muts.json"
     log:
@@ -85,7 +85,7 @@ rule traits:
         "benchmarks/{build}/traits.txt"
     params:
         metadata_id_columns = config["strain_id_field"],
-        metadata_columns = config["traits"]["metadata_columns"],
+        metadata_columns = lambda w: config["build_params"][w.build]["traits"]["metadata_columns"],
     shell:
         """
         augur traits \

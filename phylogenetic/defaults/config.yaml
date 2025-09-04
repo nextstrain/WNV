@@ -1,8 +1,4 @@
 strain_id_field: "accession"
-# Use 'Egypt 1951' as the reference and root, following Mencattelli et al, 2023
-# https://www.nature.com/articles/s41467-023-42185-7
-reference: "defaults/all-lineages/reference.gb"
-root: "mid_point"
 
 # Sequences must be FASTA and metadata must be TSV
 # Both files must be zstd compressed
@@ -11,38 +7,122 @@ inputs:
     metadata: "s3://nextstrain-data/files/workflows/WNV/metadata.tsv.zst"
     sequences: "s3://nextstrain-data/files/workflows/WNV/sequences.fasta.zst"
 
-builds: ['all-lineages']
+builds:
+  - all-lineages
+  - lineage-1A
+  - lineage-2
 
-# See Nextstrain documentation for an explanation of how subsampling configuration works:
-# <https://docs.nextstrain.org/en/latest/guides/bioinformatics/filtering-and-subsampling.html#generalizing-subsampling-in-a-workflow>
-subsampling:
-  region: >-
-    --query "is_lab_host != 'true'"
-    --query-columns is_lab_host:str
-    --min-length '8200'
-    --group-by region year
-    --subsample-max-sequences 3000
-    --exclude defaults/exclude.txt
-    --include defaults/include.txt
+build_params:
+  all-lineages:
+    # Use 'Egypt 1951' as the reference and root, following Mencattelli et al, 2023
+    # https://www.nature.com/articles/s41467-023-42185-7
+    reference: "defaults/all-lineages/reference.gb"
+    root: "mid_point"
 
-refine:
-  treetime_params: --coalescent opt --date-inference marginal --date-confidence --keep-polytomies --clock-rate 0.000755
+    # See Nextstrain documentation for an explanation of how subsampling configuration works:
+    # <https://docs.nextstrain.org/en/latest/guides/bioinformatics/filtering-and-subsampling.html#generalizing-subsampling-in-a-workflow>
+    subsampling:
+      region: >-
+        --query "is_lab_host != 'true'"
+        --query-columns is_lab_host:str
+        --min-length '8200'
+        --group-by region year
+        --subsample-max-sequences 3000
+        --exclude defaults/exclude.txt
+        --include defaults/all-lineages/include.txt
 
-traits:
-  metadata_columns: [
-    'region',
-    'country',
-    'lineage',
-  ]
+    refine:
+      treetime_params: --coalescent opt --date-inference marginal --date-confidence --keep-polytomies --clock-rate 0.000755
 
-tip_frequencies:
-  # 2000 since there is an increase in WNV at that time
-  min_date: "2000-01-01"
-  max_date: "6M"
-  # Quarterly narrow_bandwidth or every 3 months (3 /12.0 = 0.25)
-  narrow_bandwidth: 0.25
-  proportion_wide: 0.0
+    traits:
+      metadata_columns: [
+        'region',
+        'country',
+        'lineage',
+      ]
 
-export:
-  description: "defaults/description.md"
-  auspice_config: "defaults/all-lineages/auspice_config.json"
+    tip_frequencies:
+      # 2000 since there is an increase in WNV at that time
+      min_date: "2000-01-01"
+      max_date: "6M"
+      # Quarterly narrow_bandwidth or every 3 months (3 /12.0 = 0.25)
+      narrow_bandwidth: 0.25
+      proportion_wide: 0.0
+
+    export:
+      description: "defaults/description.md"
+      auspice_config: "defaults/all-lineages/auspice_config.json"
+
+  lineage-1A:
+    reference: "defaults/lineage-1A/reference.gb"
+    root: "KX394399"
+
+    subsampling:
+      region: >-
+        --query "is_lab_host != 'true' & lineage == '1A'"
+        --query-columns is_lab_host:str
+        --min-length '8200'
+        --group-by region year
+        --subsample-max-sequences 3000
+        --exclude defaults/exclude.txt
+        --include defaults/lineage-1A/include.txt
+
+    # Clock rate from Table 1 of May et al, 2010: https://pmc.ncbi.nlm.nih.gov/articles/PMC3067944/
+    refine:
+      treetime_params: --coalescent opt --date-inference marginal --date-confidence --keep-polytomies --clock-rate 0.00106 --remove-outgroup
+
+    traits:
+      metadata_columns: [
+        'region',
+        'country',
+        'lineage',
+      ]
+
+    tip_frequencies:
+      # 2000 since there is an increase in WNV at that time
+      min_date: "2000-01-01"
+      max_date: "6M"
+      # Quarterly narrow_bandwidth or every 3 months (3 /12.0 = 0.25)
+      narrow_bandwidth: 0.25
+      proportion_wide: 0.0
+
+    export:
+      description: "defaults/description.md"
+      auspice_config: "defaults/lineage-1A/auspice_config.json"
+
+  lineage-2:
+    reference: "defaults/lineage-2/reference.gb"
+    root: "best"
+
+    subsampling:
+      region: >-
+        --query "is_lab_host != 'true' & lineage == '2'"
+        --query-columns is_lab_host:str
+        --min-length '8200'
+        --group-by region year
+        --subsample-max-sequences 3000
+        --exclude defaults/exclude.txt
+        --include defaults/lineage-2/include.txt
+
+    # Clock rate from McMullen et al, 2013: https://pmc.ncbi.nlm.nih.gov/articles/PMC3709619/
+    refine:
+      treetime_params: --coalescent opt --date-inference marginal --date-confidence --keep-polytomies --clock-rate 0.000273
+
+    traits:
+      metadata_columns: [
+        'region',
+        'country',
+        'lineage',
+      ]
+
+    tip_frequencies:
+      # 2000 since there is an increase in WNV at that time
+      min_date: "2000-01-01"
+      max_date: "6M"
+      # Quarterly narrow_bandwidth or every 3 months (3 /12.0 = 0.25)
+      narrow_bandwidth: 0.25
+      proportion_wide: 0.0
+
+    export:
+      description: "defaults/description.md"
+      auspice_config: "defaults/lineage-2/auspice_config.json"

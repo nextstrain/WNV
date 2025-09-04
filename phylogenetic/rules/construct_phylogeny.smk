@@ -52,8 +52,8 @@ rule refine:
         "benchmarks/{build}/refine.txt"
     params:
         metadata_id_columns = config["strain_id_field"],
-        root = config["root"],
-        treetime_params = config["refine"]["treetime_params"],
+        root = lambda w: config["build_params"][w.build]["root"],
+        treetime_params = lambda w: config["build_params"][w.build]["refine"]["treetime_params"],
     shell:
         """
         augur refine \
