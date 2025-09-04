@@ -5,12 +5,17 @@ that can be visualized in Auspice.
 
 ## Workflow Usage
 
-The workflow to execute the global build can be run from the top level directory:
+Execute an example build:
+```
+nextstrain build phylogenetic
+```
+
+Execute all Nextstrain builds:
 ```
 nextstrain build phylogenetic --configfile build-configs/nextstrain/config.yaml
 ```
 
-The workflow to execute the Washington focused build can also be run from the top level directory:
+Execute a Washington-focused build:
 ```
 nextstrain build phylogenetic --configfile build-configs/washington-state/config.yaml
 ```
@@ -18,7 +23,7 @@ nextstrain build phylogenetic --configfile build-configs/washington-state/config
 Alternatively, the workflow can also be run from within the phylogenetic directory:
 ```
 cd phylogenetic
-nextstrain build . --configfile build-configs/nextstrain/config.yaml
+nextstrain build .
 ```
 
 This produces the default outputs of the phylogenetic workflow:
