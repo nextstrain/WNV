@@ -49,9 +49,9 @@ rule export_washington_build:
         nt_muts = "results/{build}/nt_muts.json",
         aa_muts = "results/{build}/aa_muts.json",
         colors = "results/{build}/colors.tsv",
-        description = config["export"]["description"],
+        description = lambda w: config["build_params"][w.build]["export"]["description"],
         lat_longs = "results/{build}/lat_longs.tsv",
-        auspice_config = config["export"]["auspice_config"],
+        auspice_config = lambda w: config["build_params"][w.build]["export"]["auspice_config"],
     output:
         auspice = "auspice/WNV_{build}.json"
     log:
