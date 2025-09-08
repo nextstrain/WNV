@@ -8,6 +8,24 @@ workdir: workflow.current_basedir
 # Use default configuration values. Override with Snakemake's --configfile/--config options.
 configfile: "defaults/config.yaml"
 
+# Validate 'builds'
+from textwrap import dedent
+
+def indented_list(xs, prefix):
+    return f"\n{prefix}".join(xs)
+
+if invalid_builds := set(config["builds"]) - set(config["build_params"]):
+    print(dedent(f"""\
+        ERROR: The following names in 'builds' are not defined in 'build_params':
+
+            {indented_list(invalid_builds, "            ")}
+
+        Available builds are:
+
+            {indented_list(config['build_params'], "            ")}
+        """))
+    exit(1)
+
 builds = config['builds']
 
 wildcard_constraints:
@@ -35,11 +53,10 @@ rule all:
 # custom_rules imported below to ensure that the core workflow is not complicated
 # by build specific rules.
 
+include: "rules/write_config.smk"
 include: "rules/merge_additional_inputs.smk"
 include: "rules/prepare_sequences.smk"
-include: "rules/subsampling_manual.smk"
-if config.get("subsampling", False):
-    include: "rules/subsampling_configurable.smk"
+include: "rules/subsample.smk"
 include: "rules/construct_phylogeny.smk"
 include: "rules/annotate_phylogeny.smk"
 include: "rules/export.smk"
