@@ -2,11 +2,13 @@
 This is the main phylogenetic Snakefile that orchestrates the full phylogenetic
 workflow and define its default output(s).
 """
-# The workflow filepaths are written relative to this Snakefile's base directory
-workdir: workflow.current_basedir
+# Utility functions shared across all workflows.
+include: "../shared/vendored/snakemake/config.smk"
 
-# Use default configuration values. Override with Snakemake's --configfile/--config options.
-configfile: "defaults/config.yaml"
+configfile: os.path.join(workflow.basedir, "defaults/config.yaml")
+
+if os.path.exists("config.yaml"):
+    configfile: "config.yaml"
 
 include: "rules/config.smk"
 
@@ -65,4 +67,4 @@ rule clean:
 if "custom_rules" in config:
     for rule_file in config["custom_rules"]:
 
-        include: rule_file
+        include: os.path.join(os.getcwd(), rule_file)

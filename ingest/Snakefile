@@ -1,8 +1,12 @@
-# The workflow filepaths are written relative to this Snakefile's base directory
-workdir: workflow.current_basedir
+# Utility functions shared across all workflows.
+include: "../shared/vendored/snakemake/config.smk"
 
-# Use default configuration values. Override with Snakemake's --configfile/--config options.
-configfile: "defaults/config.yaml"
+# Use default configuration values. Extend with Snakemake's --configfile/--config options.
+configfile: os.path.join(workflow.basedir, "defaults/config.yaml")
+
+# Use custom configuration from analysis directory (i.e. working dir), if any.
+if os.path.exists("config.yaml"):
+    configfile: "config.yaml"
 
 # This is the default rule that Snakemake will run when there are no specified targets.
 # The default output of the ingest workflow is usually the curated metadata and sequences.
@@ -31,5 +35,10 @@ include: "rules/nextclade.smk"
 # https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html#handling-ambiguous-rules
 if "custom_rules" in config:
     for rule_file in config["custom_rules"]:
-
-        include: rule_file
+        # Relative custom rule paths in the config are relative to the analysis
+        # directory (i.e. the current working directory, or workdir, usually
+        # given by --directory), but the "include" directive treats relative
+        # paths as relative to the workflow (e.g. workflow.current_basedir).
+        # Convert to an absolute path based on the analysis/current directory
+        # to avoid this mismatch of expectations.
+        include: os.path.join(os.getcwd(), rule_file)

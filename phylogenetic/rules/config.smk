@@ -14,6 +14,7 @@ from textwrap import dedent
 
 def main():
     validate_config()
+    resolve_config_paths()
     write_config()
 
 
@@ -37,6 +38,31 @@ def validate_config():
                 {indented_list(config['build_params'], "            ")}
             """))
         exit(1)
+
+
+def resolve_config_paths():
+    """
+    Update all file paths in config by passing them through resolve_config_path()
+    """
+    global config
+
+    for build_name, build_config in config["build_params"].items():
+        # config.<build>.reference
+        build_config["reference"] = resolve_config_path(build_config["reference"])({})
+
+        # config.<build>.export
+        for key in ["description", "auspice_config"]:
+            build_config["export"][key] = resolve_config_path(build_config["export"][key])({})
+
+        # config.<build>.subsample
+        subsample_path_keys = ["exclude", "include", "group_by_weights"]
+        for sample_name, sample_config in build_config["subsample"].items():
+            for key in subsample_path_keys:
+                if key in sample_config:
+                    if isinstance(sample_config[key], list):
+                        sample_config[key] = [resolve_config_path(path)({}) for path in sample_config[key]]
+                    else:
+                        sample_config[key] = resolve_config_path(sample_config[key])({})
 
 
 def write_config():
