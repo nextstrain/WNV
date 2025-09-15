@@ -3,13 +3,12 @@ This part of the workflow prepares sequences for constructing the phylogenetic t
 
 REQUIRED INPUTS:
 
-    metadata    = data/metadata.tsv
-    sequences   = data/sequences.fasta
-    reference   = ../shared/reference.fasta
+    sequences   = results/{build}/sequences_filtered.fasta
+    reference   = (from config)
 
 OUTPUTS:
 
-    prepared_sequences = results/prepared_sequences.fasta
+    alignment = results/{build}/aligned.fasta
 
 This part of the workflow usually includes the following steps:
 
