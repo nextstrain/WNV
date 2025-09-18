@@ -3,7 +3,7 @@ This part of the workflow deals with configuration.
 
 OUTPUTS:
 
-    results/run_configs/{timestamp}.yaml
+    results/run_config.yaml
 """
 import os
 import sys
@@ -12,8 +12,7 @@ from datetime import datetime
 from textwrap import dedent
 
 
-timestamp = datetime.now().astimezone().strftime("%Y-%m-%dT%H%M%S.%f")
-RUN_CONFIG = f"results/run_configs/{timestamp}.yaml"
+RUN_CONFIG = f"results/run_config.yaml"
 
 
 def main():

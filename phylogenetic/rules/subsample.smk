@@ -22,6 +22,7 @@ rule subsample:
     input:
         sequences = input_sequences,
         metadata = input_metadata,
+        config = RUN_CONFIG,
     output:
         sequences = "results/{build}/sequences_filtered.fasta",
         metadata = "results/{build}/metadata_filtered.tsv",
@@ -39,7 +40,7 @@ rule subsample:
             --sequences {input.sequences} \
             --metadata {input.metadata} \
             --metadata-id-columns {params.id_column} \
-            --config {RUN_CONFIG} \
+            --config {input.config} \
             --config-section {params.config_section:q} \
             --nthreads {threads} \
             --output-sequences {output.sequences} \
