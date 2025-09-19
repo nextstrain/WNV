@@ -19,8 +19,6 @@ build_params:
     reference: "defaults/all-lineages/reference.gb"
     root: "mid_point"
 
-    # See Nextstrain documentation for an explanation of how subsampling configuration works:
-    # <https://docs.nextstrain.org/en/latest/guides/bioinformatics/filtering-and-subsampling.html#generalizing-subsampling-in-a-workflow>
     subsample:
       samples:
         region:
