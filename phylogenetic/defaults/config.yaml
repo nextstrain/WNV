@@ -19,17 +19,19 @@ build_params:
     reference: "defaults/all-lineages/reference.gb"
     root: "mid_point"
 
-    # See Nextstrain documentation for an explanation of how subsampling configuration works:
-    # <https://docs.nextstrain.org/en/latest/guides/bioinformatics/filtering-and-subsampling.html#generalizing-subsampling-in-a-workflow>
-    subsampling:
-      region: >-
-        --query "is_lab_host != 'true'"
-        --query-columns is_lab_host:str
-        --min-length '8200'
-        --group-by region year
-        --subsample-max-sequences 3000
-        --exclude defaults/exclude.txt
-        --include defaults/all-lineages/include.txt
+    subsample:
+      samples:
+        region:
+          query: is_lab_host != 'true'
+          query_columns:
+            - is_lab_host:str
+          min_length: 8200
+          group_by:
+            - region
+            - year
+          max_sequences: 3000
+          exclude: defaults/exclude.txt
+          include: defaults/all-lineages/include.txt
 
     refine:
       treetime_params: --coalescent opt --date-inference marginal --date-confidence --keep-polytomies --clock-rate 0.000755
@@ -57,15 +59,19 @@ build_params:
     reference: "defaults/lineage-1A/reference.gb"
     root: "KX394399"
 
-    subsampling:
-      region: >-
-        --query "is_lab_host != 'true' & lineage == '1A'"
-        --query-columns is_lab_host:str
-        --min-length '8200'
-        --group-by region year
-        --subsample-max-sequences 3000
-        --exclude defaults/exclude.txt
-        --include defaults/lineage-1A/include.txt
+    subsample:
+      samples:
+        region:
+          query: is_lab_host != 'true' & lineage == '1A'
+          query_columns:
+            - is_lab_host:str
+          min_length: 8200
+          group_by:
+            - region
+            - year
+          max_sequences: 3000
+          exclude: defaults/exclude.txt
+          include: defaults/lineage-1A/include.txt
 
     # Clock rate from Table 1 of May et al, 2010: https://pmc.ncbi.nlm.nih.gov/articles/PMC3067944/
     refine:
@@ -94,15 +100,19 @@ build_params:
     reference: "defaults/lineage-2/reference.gb"
     root: "best"
 
-    subsampling:
-      region: >-
-        --query "is_lab_host != 'true' & lineage == '2'"
-        --query-columns is_lab_host:str
-        --min-length '8200'
-        --group-by region year
-        --subsample-max-sequences 3000
-        --exclude defaults/exclude.txt
-        --include defaults/lineage-2/include.txt
+    subsample:
+      samples:
+        region:
+          query: is_lab_host != 'true' & lineage == '2'
+          query_columns:
+            - is_lab_host:str
+          min_length: 8200
+          group_by:
+            - region
+            - year
+          max_sequences: 3000
+          exclude: defaults/exclude.txt
+          include: defaults/lineage-2/include.txt
 
     # Clock rate from McMullen et al, 2013: https://pmc.ncbi.nlm.nih.gov/articles/PMC3709619/
     refine:
