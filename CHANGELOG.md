@@ -4,7 +4,8 @@ We use this CHANGELOG to document breaking changes, new features, bug fixes, and
 
 ## 2025
 
-* TBD: A new build-specific `subsample` configuration section replaces the previous `subsampling` section. The new syntax defines samples in native YAML rather than a long string of `augur filter` arguments. [PR #96](https://github.com/nextstrain/WNV/pull/96) @victorlin
+* 22 September 2025: The path for configuration resolved at run time has been updated to `results/run_config.yaml`. [PR #96](https://github.com/nextstrain/WNV/pull/96) @victorlin
+* 22 September 2025: A new build-specific `subsample` configuration section replaces the previous `subsampling` section. The new syntax defines samples in native YAML rather than a long string of `augur filter` arguments. **This is a breaking change.** [PR #96](https://github.com/nextstrain/WNV/pull/96) @victorlin
 * 8 September 2025: Configuration resolved at run time is now written to a file under `results/run_configs`. [PR #102](https://github.com/nextstrain/WNV/pull/102) @victorlin
 * 8 September 2025: The phylogenetic workflow configuration now expects a new structure with most configuration defined under a build-specific key. See `phylogenetic/defaults/config.yaml` as an example. **This is a breaking change.** [PR #102](https://github.com/nextstrain/WNV/pull/102) @victorlin
 * 8 September 2025: The phylogenetic workflow now runs all Nextstrain-maintained builds by default. This can be adjusted by the `builds` configuration option. **This is a breaking change.** [PR #102](https://github.com/nextstrain/WNV/pull/102) @victorlin
