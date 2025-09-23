@@ -1,67 +1,59 @@
 """
-This part of the workflow merges additional metadata and sequences.
-
-REQUIRED INPUTS:
-
-    config = "defaults/config.yaml" with an `input` dictionary of metadata and sequence pairs
+This part of the workflow merges inputs based on what is defined in the config.
 
 OUTPUTS:
 
-    merged_sequences = results/sequences_merged.fasta
-    merged_metadata = results/metadata_merged.tsv
+    metadata  = results/metadata.tsv
+    sequences = results/sequences.fasta
 
-This part of the workflow usually includes the following steps:
+The config dict is expected to have a top-level `inputs` list that defines the
+separate inputs' name, metadata, and sequences. Optionally, the config can have
+a top-level `additional-inputs` list that is used to define additional data that
+are combined with the default inputs:
 
-    - augur merge
-See Augur's usage docs for these commands for more details.
+```yaml
+inputs:
+    - name: default
+      metadata: <path-or-url>
+      sequences: <path-or-url>
+
+additional_inputs:
+    - name: private
+      metadata: <path-or-url>
+      sequences: <path-or-url>
+```
+
+Supports any of the compression formats that are supported by `augur read-file`,
+see <https://docs.nextstrain.org/projects/augur/page/usage/cli/read-file.html>
+
+NOTE: The included rules are written for workflows that do not use wildcards
+for defining inputs such as zika. You will need to edit the rules to support wildcards
+
+1. If your workflow needs wildcards for both metadata and sequences,
+e.g. serotypes for dengue, then you will need to edit the `output`, `log`, and
+`benchmark` paths of the metadata and sequences rules.
+The wildcards can then be directly used in the config for inputs:
+
+```yaml
+inputs:
+    - name: default
+      metadata: https://data.nextstrain.org/files/workflows/dengue/metadata_{serotype}.tsv.zst
+      sequences: https://data.nextstrain.org/files/workflows/dengue/sequences_{serotype}.fasta.zst
+
+```
+
+2. If your workflow only needs wildcards for sequences, e.g. segments for influenza,
+then you will only need to edit the paths for the sequences rules.
+The wildcards can then be directly used in the config for inputs:
+
+```yaml
+inputs:
+    - name: default
+      metadata: s3://nextstrain-data-private/files/workflows/avian-flu/metadata.tsv.zst
+      sequences: s3://nextstrain-data-private/files/workflows/avian-flu/{segment}/sequences.fasta.zst
+```
 """
-
-# ------------- helper functions to collect, merge & download input files ------------------- #
-NEXTSTRAIN_PUBLIC_BUCKET = "s3://nextstrain-data/"
-
-def _parse_config_input(input):
-    """
-    Parses information from an individual config-defined input, i.e. an element within `config.inputs` or `config.additional_inputs`
-    and returns information snakemake rules can use to obtain the underlying data.
-
-    The structure of `input` is a dictionary with keys:
-    - name:string (required)
-    - metadata:string (optional) - a s3 URI or a local file path
-    - sequences:string|dict[string,string] (optional) - either a s3 URI or a local file path, in which case
-      it must include a '{segment}' wildcard substring, or a dict of segment → s3 URI or local file path,
-      in which case it must not include the wildcard substring.
-
-    Returns a dictionary with optional keys:
-    - metadata:string - the relative path to the metadata file. If the original data was remote then this represents
-      the output of a rule which downloads the file
-    - metadata_location:string - the URI for the remote file if applicable else `None`
-    - sequences:function. Takes in wildcards and returns the relative path to the sequences FASTA for the provided
-      segment wildcard, or returns `None` if this input doesn't define sequences for the provided segment.
-    - sequences_location:function. Takes in wildcards and returns the URI for the remote file, or `None`, where applicable.
-
-    Raises InvalidConfigError
-    """
-    name = input['name']
-    lambda_none = lambda w: None
-
-    info = {'metadata': None, 'metadata_location': None, 'sequences': lambda_none, 'sequences_location': lambda_none}
-
-    def _source(uri, *,  s3, local):
-        if uri.startswith('s3://'):
-            return s3
-        elif uri.lower().startswith('http://') or uri.lower().startswith('https://'):
-            raise InvalidConfigError("Workflow cannot yet handle HTTP[S] inputs")
-        return local
-
-    if location:=input.get('metadata', False):
-        info['metadata'] = _source(location,  s3=f"data/{name}/metadata.tsv", local=location)
-        info['metadata_location'] = _source(location,  s3=location, local=None)
-
-    if location:=input.get('sequences', False):
-        info['sequences'] = _source(location,  s3=f"data/{name}/sequences.fasta", local=location)
-        info['sequences_location'] = _source(location,  s3=location, local=None)
-
-    return info
+from pathlib import Path
 
 
 def _gather_inputs():
@@ -70,83 +62,123 @@ def _gather_inputs():
     if len(all_inputs)==0:
         raise InvalidConfigError("Config must define at least one element in config.inputs or config.additional_inputs lists")
     if not all([isinstance(i, dict) for i in all_inputs]):
-        raise InvalidConfigError("All of the elements in config.inputs and config.additional_inputs lists must be dictionaries"
+        raise InvalidConfigError("All of the elements in config.inputs and config.additional_inputs lists must be dictionaries. "
             "If you've used a command line '--config' double check your quoting.")
     if len({i['name'] for i in all_inputs})!=len(all_inputs):
         raise InvalidConfigError("Names of inputs (config.inputs and config.additional_inputs) must be unique")
     if not all(['name' in i and ('sequences' in i or 'metadata' in i) for i in all_inputs]):
         raise InvalidConfigError("Each input (config.inputs and config.additional_inputs) must have a 'name' and 'metadata' and/or 'sequences'")
+    if not any(['metadata' in i for i in all_inputs]):
+        raise InvalidConfigError("At least one input must have 'metadata'")
+    if not any (['sequences' in i for i in all_inputs]):
+        raise InvalidConfigError("At least one input must have 'sequences'")
 
-    return {i['name']: _parse_config_input(i) for i in all_inputs}
+    available_keys = set(['name', 'metadata', 'sequences'])
+    if any([len(set(el.keys())-available_keys)>0 for el in all_inputs]):
+        raise InvalidConfigError(f"Each input (config.inputs and config.additional_inputs) can only include keys of {', '.join(available_keys)}")
+
+    return {el['name']: {k:(v if k=='name' else path_or_url(v)) for k,v in el.items()} for el in all_inputs}
 
 input_sources = _gather_inputs()
+_input_metadata = [info['metadata'] for info in input_sources.values() if info.get('metadata', None)]
+_input_sequences = [info['sequences'] for info in input_sources.values() if info.get('sequences', None)]
 
-def input_metadata(wildcards):
-    inputs = [info['metadata'] for info in input_sources.values() if info.get('metadata', None)]
-    return inputs[0] if len(inputs)==1 else "results/metadata_merged.tsv"
 
-def input_sequences(wildcards):
-    inputs = [info['sequences'] for info in input_sources.values() if info.get('sequences', None)]
-    return inputs[0] if len(inputs)==1 else "results/sequences_merged.fasta"
+if len(_input_metadata) == 1:
 
-rule download_s3_sequences:
-    output:
-        sequences = "data/{input_name}/sequences.fasta",
-    params:
-        address = lambda w: input_sources[w.input_name]['sequences_location'],
-        no_sign_request=lambda w: "--no-sign-request" \
-            if input_sources[w.input_name]['sequences_location'].startswith(NEXTSTRAIN_PUBLIC_BUCKET) \
-            else "",
-    shell:
+    rule decompress_metadata:
         """
-        aws s3 cp {params.no_sign_request:q} {params.address:q} - | zstd -d > {output.sequences}
+        This rule is invoked when there is a single metadata input to
+        ensure that we have a decompressed input for downstream rules to match
+        the output of rule.merge_metadata.
         """
+        input:
+            metadata = _input_metadata[0],
+        output:
+            metadata = "results/metadata.tsv",
+        log:
+            "logs/decompress_metadata.txt",
+        benchmark:
+            "benchmarks/decompress_metadata.txt",
+        shell:
+            r"""
+            exec &> >(tee {log:q})
 
-rule download_s3_metadata:
-    output:
-        metadata = "data/{input_name}/metadata.tsv",
-    params:
-        address = lambda w: input_sources[w.input_name]['metadata_location'],
-        no_sign_request=lambda w: "--no-sign-request" \
-            if input_sources[w.input_name]['metadata_location'].startswith(NEXTSTRAIN_PUBLIC_BUCKET) \
-            else "",
-    shell:
-        """
-        aws s3 cp {params.no_sign_request:q} {params.address:q} - | zstd -d > {output.metadata}
-        """
+            augur read-file {input.metadata:q} > {output.metadata:q}
+            """
 
-rule merge_metadata:
-    """
-    This rule should only be invoked if there are multiple defined metadata inputs
-    (config.inputs + config.additional_inputs)
-    """
-    input:
-        **{name: info['metadata'] for name,info in input_sources.items() if info.get('metadata', None)}
-    params:
-        metadata = lambda w, input: list(map("=".join, input.items())),
-        id_field = config['strain_id_field'],
-    output:
-        metadata = "results/metadata_merged.tsv"
-    shell:
-        r"""
-        augur merge \
-            --metadata {params.metadata:q} \
-            --metadata-id-columns {params.id_field} \
-            --output-metadata {output.metadata}
-        """
+else:
 
-rule merge_sequences:
-    """
-    This rule should only be invoked if there are multiple defined sequences inputs
-    (config.inputs + config.additional_inputs) for this particular segment
-    """
-    input:
-        **{name: info['sequences'] for name,info in input_sources.items() if info.get('sequences', None)}
-    output:
-        sequences = "results/sequences_merged.fasta"
-    shell:
-        r"""
-        seqkit rmdup {input:q} > {output.sequences:q}
+    rule merge_metadata:
         """
+        This rule is invoked when there are multiple defined metadata inputs
+        (config.inputs + config.additional_inputs)
+        """
+        input:
+            **{name: info['metadata'] for name,info in input_sources.items() if info.get('metadata', None)}
+        params:
+            metadata = lambda w, input: list(map("=".join, input.items())),
+            id_field = config['strain_id_field'],
+        output:
+            metadata = "results/metadata.tsv"
+        log:
+            "logs/merge_metadata.txt",
+        benchmark:
+            "benchmarks/merge_metadata.txt"
+        shell:
+            r"""
+            exec &> >(tee {log:q})
 
-# -------------------------------------------------------------------------------------------- #
+            augur merge \
+                --metadata {params.metadata:q} \
+                --metadata-id-columns {params.id_field:q} \
+                --output-metadata {output.metadata:q}
+            """
+
+
+if len(_input_sequences) == 1:
+
+    rule decompress_sequences:
+        """
+        This rule is invoked when there is a single sequences input to
+        ensure that we have a decompressed input for downstream rules to match
+        the output of rule.merge_sequences.
+        """
+        input:
+            sequences = _input_sequences[0],
+        output:
+            sequences = "results/sequences.fasta",
+        log:
+            "logs/decompress_sequences.txt",
+        benchmark:
+            "benchmarks/decompress_sequences.txt",
+        shell:
+            r"""
+            exec &> >(tee {log:q})
+
+            augur read-file {input.sequences:q} > {output.sequences:q}
+            """
+
+else:
+
+    rule merge_sequences:
+        """
+        This rule is invoked when there are multiple defined sequences inputs
+        (config.inputs + config.additional_inputs)
+        """
+        input:
+            **{name: info['sequences'] for name,info in input_sources.items() if info.get('sequences', None)}
+        output:
+            sequences = "results/sequences.fasta",
+        log:
+            "logs/merge_sequences.txt",
+        benchmark:
+            "benchmarks/merge_sequences.txt"
+        shell:
+            r"""
+            exec &> >(tee {log:q})
+
+            augur merge \
+                --sequences {input:q} \
+                --output-sequences {output.sequences:q}
+            """
