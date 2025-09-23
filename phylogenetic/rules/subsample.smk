@@ -3,8 +3,8 @@ This part of the workflow subsamples sequences for constructing the phylogenetic
 
 REQUIRED INPUTS:
 
-    metadata   = input_metadata (defined by merge_additional_inputs.smk)
-    sequences  = input_sequences (defined by merge_additional_inputs.smk)
+    metadata   = input_metadata (defined by merge_inputs.smk)
+    sequences  = input_sequences (defined by merge_inputs.smk)
 
 OUTPUTS:
 

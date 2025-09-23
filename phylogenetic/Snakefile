@@ -42,7 +42,7 @@ include: "../shared/vendored/snakemake/remote_files.smk"
 # custom_rules imported below to ensure that the core workflow is not complicated
 # by build specific rules.
 
-include: "rules/merge_additional_inputs.smk"
+include: "rules/merge_inputs.smk"
 include: "rules/prepare_sequences.smk"
 include: "rules/subsample.smk"
 include: "rules/construct_phylogeny.smk"
