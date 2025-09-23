@@ -11,6 +11,9 @@ rule all:
         sequences="results/sequences.fasta",
         metadata="results/metadata.tsv",
 
+# Shared Snakemake files with generic functions are shared across pathogens
+include: "../shared/vendored/snakemake/config.smk"
+
 # Include smk files that contain the core steps necessary for building the curated metadata and sequence files.
 # If there are build-specific customizations, they should be added with the
 # custom_rules imported below to ensure that the core workflow is not complicated

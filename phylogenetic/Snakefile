@@ -26,6 +26,11 @@ rule all:
         auspice = expand("auspice/WNV_{build}.json", build=builds),
         tip_frequencies_json= expand("auspice/WNV_{build}_tip-frequencies.json", build=builds)
 
+# Shared Snakemake files with generic functions are shared across pathogens
+# Use `resolve_config_path` to resolve file paths for config files
+include: "../shared/vendored/snakemake/config.smk"
+include: "../shared/vendored/snakemake/remote_files.smk"
+
 # These rules are imported in the order that they are expected to run.
 # Each Snakefile will have documented inputs and outputs that should be kept as
 # consistent interfaces across pathogen repos. This allows us to define typical
