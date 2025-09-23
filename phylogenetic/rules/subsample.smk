@@ -3,13 +3,13 @@ This part of the workflow subsamples sequences for constructing the phylogenetic
 
 REQUIRED INPUTS:
 
-    metadata    = results/metadata.tsv
-    sequences   = results/equences.fasta
+    metadata   = input_metadata (defined by merge_additional_inputs.smk)
+    sequences  = input_sequences (defined by merge_additional_inputs.smk)
 
 OUTPUTS:
 
-    metadata_subsampled = results/metadata_filtered.tsv
-    sequences_subsampled = results/sequences_filtered.fasta
+    metadata   = results/{build}/metadata_filtered.tsv
+    sequences  = results/{build}/sequences_filtered.fasta
 
 This part of the workflow usually includes one or more of the following steps:
 

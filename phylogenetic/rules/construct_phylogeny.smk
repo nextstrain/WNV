@@ -3,13 +3,13 @@ This part of the workflow constructs the phylogenetic tree.
 
 REQUIRED INPUTS:
 
-    metadata            = data/metadata.tsv
-    prepared_sequences  = results/prepared_sequences.fasta
+    metadata   = results/{build}/metadata_filtered.tsv
+    alignment  = results/{build}/aligned.fasta
 
 OUTPUTS:
 
-    tree            = results/tree.nwk
-    branch_lengths  = results/branch_lengths.json
+    tree            = results/{build}/tree.nwk
+    branch_lengths  = results/{build}/branch_lengths.json
 
 This part of the workflow usually includes the following steps:
 

@@ -4,14 +4,15 @@ export a Nextstrain dataset.
 
 REQUIRED INPUTS:
 
-    metadata        = data/metadata.tsv
-    tree            = results/tree.nwk
-    branch_lengths  = results/branch_lengths.json
-    node_data       = results/*.json
+    metadata        = results/{build}/metadata_filtered.tsv
+    tree            = results/{build}/tree.nwk
+    branch_lengths  = results/{build}/branch_lengths.json
+    node_data       = results/{build}/*.json
 
 OUTPUTS:
 
-    auspice_json = auspice/${build_name}.json
+    auspice_json = auspice/WNV_{build}.json
+    tip_freq     = auspice/WNV_{build}_tip-frequencies.json
 
     There are optional sidecar JSON files that can be exported as part of the dataset.
     See Nextstrain's data format docs for more details on sidecar files:

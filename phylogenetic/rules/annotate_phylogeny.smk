@@ -3,13 +3,13 @@ This part of the workflow creates additonal annotations for the phylogenetic tre
 
 REQUIRED INPUTS:
 
-    metadata            = data/metadata.tsv
-    prepared_sequences  = results/prepared_sequences.fasta
-    tree                = results/tree.nwk
+    metadata   = results/{build}/metadata_filtered.tsv
+    alignment  = results/{build}/aligned.fasta
+    tree       = results/{build}/tree.nwk
 
 OUTPUTS:
 
-    node_data = results/*.json
+    node_data = results/{build}/*.json
 
     There are no required outputs for this part of the workflow as it depends
     on which annotations are created. All outputs are expected to be node data
