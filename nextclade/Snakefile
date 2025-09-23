@@ -18,6 +18,9 @@ rule all:
         dataset = "dataset.zip",
         test_out = "test_out",
 
+# Shared Snakemake files with generic functions are shared across pathogens
+include: "../shared/vendored/snakemake/config.smk"
+
 # These rules are imported in the order that they are expected to run.
 # Each Snakefile will have documented inputs and outputs that should be kept as
 # consistent interfaces across pathogen repos. This allows us to define typical
