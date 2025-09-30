@@ -4,6 +4,7 @@ We use this CHANGELOG to document breaking changes, new features, bug fixes, and
 
 ## 2025
 
+* 29 September 2025: The `inputs` configuration now generally supports any of the compression formats that are supported by [`augur read-file`](https://docs.nextstrain.org/projects/augur/page/usage/cli/read-file.html). [PR #110](https://github.com/nextstrain/WNV/pull/110) @victorlin
 * 22 September 2025: The path for configuration resolved at run time has been updated to `results/run_config.yaml`. [PR #96](https://github.com/nextstrain/WNV/pull/96) @victorlin
 * 22 September 2025: A new build-specific `subsample` configuration section replaces the previous `subsampling` section. The new syntax defines samples in native YAML rather than a long string of `augur filter` arguments. **This is a breaking change.** [PR #96](https://github.com/nextstrain/WNV/pull/96) @victorlin
 * 8 September 2025: Configuration resolved at run time is now written to a file under `results/run_configs`. [PR #102](https://github.com/nextstrain/WNV/pull/102) @victorlin

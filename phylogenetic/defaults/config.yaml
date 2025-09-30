@@ -1,7 +1,6 @@
 strain_id_field: "accession"
 
 # Sequences must be FASTA and metadata must be TSV
-# Both files must be zstd compressed
 inputs:
   - name: ncbi
     metadata: "s3://nextstrain-data/files/workflows/WNV/metadata.tsv.zst"
