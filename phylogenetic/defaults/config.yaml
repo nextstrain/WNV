@@ -15,7 +15,7 @@ build_params:
   all-lineages:
     # Use 'Egypt 1951' as the reference and root, following Mencattelli et al, 2023
     # https://www.nature.com/articles/s41467-023-42185-7
-    reference: "defaults/all-lineages/reference.gb"
+    reference: "all-lineages/reference.gb"
     root: "mid_point"
 
     subsample:
@@ -29,8 +29,8 @@ build_params:
             - region
             - year
           max_sequences: 3000
-          exclude: defaults/exclude.txt
-          include: defaults/all-lineages/include.txt
+          exclude: exclude.txt
+          include: all-lineages/include.txt
 
     refine:
       treetime_params: --coalescent opt --date-inference marginal --date-confidence --keep-polytomies --clock-rate 0.000755
@@ -51,11 +51,11 @@ build_params:
       proportion_wide: 0.0
 
     export:
-      description: "defaults/description.md"
-      auspice_config: "defaults/all-lineages/auspice_config.json"
+      description: "description.md"
+      auspice_config: "all-lineages/auspice_config.json"
 
   lineage-1A:
-    reference: "defaults/lineage-1A/reference.gb"
+    reference: "lineage-1A/reference.gb"
     root: "KX394399"
 
     subsample:
@@ -69,8 +69,8 @@ build_params:
             - region
             - year
           max_sequences: 3000
-          exclude: defaults/exclude.txt
-          include: defaults/lineage-1A/include.txt
+          exclude: exclude.txt
+          include: lineage-1A/include.txt
 
     # Clock rate from Table 1 of May et al, 2010: https://pmc.ncbi.nlm.nih.gov/articles/PMC3067944/
     refine:
@@ -92,11 +92,11 @@ build_params:
       proportion_wide: 0.0
 
     export:
-      description: "defaults/description.md"
-      auspice_config: "defaults/lineage-1A/auspice_config.json"
+      description: "description.md"
+      auspice_config: "lineage-1A/auspice_config.json"
 
   lineage-2:
-    reference: "defaults/lineage-2/reference.gb"
+    reference: "lineage-2/reference.gb"
     root: "best"
 
     subsample:
@@ -110,8 +110,8 @@ build_params:
             - region
             - year
           max_sequences: 3000
-          exclude: defaults/exclude.txt
-          include: defaults/lineage-2/include.txt
+          exclude: exclude.txt
+          include: lineage-2/include.txt
 
     # Clock rate from McMullen et al, 2013: https://pmc.ncbi.nlm.nih.gov/articles/PMC3709619/
     refine:
@@ -133,5 +133,5 @@ build_params:
       proportion_wide: 0.0
 
     export:
-      description: "defaults/description.md"
-      auspice_config: "defaults/lineage-2/auspice_config.json"
+      description: "description.md"
+      auspice_config: "lineage-2/auspice_config.json"
