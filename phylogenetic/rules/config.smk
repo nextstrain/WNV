@@ -11,12 +11,9 @@ import yaml
 from textwrap import dedent
 
 
-RUN_CONFIG = f"results/run_config.yaml"
-
-
 def main():
     validate_config()
-    write_config(RUN_CONFIG)
+    write_config("results/run_config.yaml")
 
 
 def validate_config():

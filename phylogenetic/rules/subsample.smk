@@ -22,7 +22,7 @@ rule subsample:
     input:
         sequences = "results/sequences.fasta",
         metadata = "results/metadata.tsv",
-        config = RUN_CONFIG,
+        config = "results/run_config.yaml",
     output:
         sequences = "results/{build}/sequences_filtered.fasta",
         metadata = "results/{build}/metadata_filtered.tsv",
