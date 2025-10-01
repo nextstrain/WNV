@@ -8,6 +8,9 @@ workdir: workflow.current_basedir
 # Use default configuration values. Override with Snakemake's --configfile/--config options.
 configfile: "defaults/config.yaml"
 
+# Use `resolve_config_path` to resolve file paths for config files
+include: "../shared/vendored/snakemake/config.smk"
+
 include: "rules/config.smk"
 
 builds = config['builds']
@@ -27,8 +30,6 @@ rule all:
         tip_frequencies_json= expand("auspice/WNV_{build}_tip-frequencies.json", build=builds)
 
 # Shared Snakemake files with generic functions are shared across pathogens
-# Use `resolve_config_path` to resolve file paths for config files
-include: "../shared/vendored/snakemake/config.smk"
 include: "../shared/vendored/snakemake/remote_files.smk"
 
 # These rules are imported in the order that they are expected to run.
