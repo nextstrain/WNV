@@ -22,7 +22,7 @@ Then add the latest shared scripts to the pathogen repo by running:
 git subrepo clone https://github.com/nextstrain/shared shared/vendored
 ```
 
-Any future updates of sahred scripts can be pulled in with:
+Any future updates of shared scripts can be pulled in with:
 
 ```
 git subrepo pull shared/vendored
@@ -123,7 +123,7 @@ Potential Nextstrain CLI scripts
 
 Snakemake workflow functions that are shared across many pathogen workflows that don’t really belong in any of our existing tools.
 
-- [config.smk](snakemake/config.smk) - Shared functions for parsing workflow configs.
+- [config.smk](snakemake/config.smk) - Shared functions for handling workflow configs.
 - [remote_files.smk](snakemake/remote_files.smk) - Exposes the `path_or_url` function which will use Snakemake's storage plugins to download/upload files to remote providers as needed.
 
 
