@@ -56,7 +56,7 @@ build_params:
 
   lineage-1A:
     reference: "defaults/lineage-1A/reference.gb"
-    root: "KX394399"
+    root: "PP_0001JCQ"
 
     subsample:
       samples:

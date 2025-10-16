@@ -2,6 +2,10 @@
   "title": "Genomic epidemiology of West Nile Virus",
   "data_provenance": [
     {
+      "name": "Pathoplexus",
+      "url": "https://pathoplexus.org"
+    },
+    {
       "name": "GenBank",
       "url": "https://www.ncbi.nlm.nih.gov/genbank/"
     }
@@ -16,6 +20,7 @@
     {"key": "lineage", "title": "Lineage", "type": "categorical"},
     {"key": "clade_membership", "title": "Clade", "type": "categorical"},
     {"key": "author", "title": "Authors", "type": "categorical"},
+    {"key": "dataUseTerms", "title": "Data use terms", "type": "categorical"},
     {"key": "host", "title": "Host Species", "type": "categorical"},
     {"key": "host_genus", "title": "Host Genus", "type": "categorical"},
     {"key": "host_type", "title": "Host Type", "type": "categorical"}
@@ -52,9 +57,10 @@
     "geo_resolution": "country"
   },
   "metadata_columns": [
-    "accession",
+    "PPX_accession",
+    "INSDC_accession",
     "division",
-    "url"
+    "restrictedUntil"
   ],
   "extensions": {
     "nextclade": {

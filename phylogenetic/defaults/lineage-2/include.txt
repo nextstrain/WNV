@@ -1,7 +1,7 @@
-NC_001563 # Lineage 2 reference
-MW383507 # Lineage 2
-HM147822 # Lineage 2
-GQ903680 # Lineage 2
-DQ176636 # Lineage 2
-KU978767 # Lineage 2
-HM147823 # Lineage 2
+PP_0003ASZ # Lineage 2 reference
+PP_000370M # Lineage 2
+PP_0008CDE # Lineage 2
+PP_000K9BY # Lineage 2
+PP_000JB76 # Lineage 2
+PP_0001H9X # Lineage 2
+PP_0008CEC # Lineage 2
