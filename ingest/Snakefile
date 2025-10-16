@@ -10,6 +10,8 @@ rule all:
     input:
         sequences="results/sequences.fasta",
         metadata="results/metadata.tsv",
+        sequences_open="results/sequences_open.fasta",
+        metadata_open="results/metadata_open.tsv",
 
 # Shared Snakemake files with generic functions are shared across pathogens
 include: "../shared/vendored/snakemake/config.smk"

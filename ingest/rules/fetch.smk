@@ -1,5 +1,5 @@
 """
-This part of the workflow handles fetching sequences and metadata from GenBank.
+This part of the workflow handles fetching sequences and metadata from Pathoplexus.
 
 REQUIRED INPUTS:
 
@@ -7,94 +7,60 @@ REQUIRED INPUTS:
 
 OUTPUTS:
 
-    ndjson = data/genbank.ndjson
+    ndjson = data/sequences.ndjson
 
 """
 workflow.global_resources.setdefault("concurrent_deploys", 2)
 
-rule fetch_ncbi_dataset_package:
+rule download_ppx_seqs:
     output:
-        dataset_package = temp("data/ncbi_dataset.zip")
-    retries: 5 # Requires snakemake 7.7.0 or later
-    log:
-        "logs/fetch_ncbi_dataset_package.txt"
-    benchmark:
-        "benchmarks/fetch_ncbi_dataset_package.txt"
+        sequences= "data/ppx_sequences.fasta",
     params:
-        ncbi_taxon_id = config["ncbi_taxon_id"]
-    shell:
-        """
-        datasets download virus genome taxon {params.ncbi_taxon_id} \
-            --no-progressbar \
-            --filename {output.dataset_package} 2>&1 | tee {log}
-        """
-
-# Note: This rule is not part of the default workflow!
-# It is intended to be used as a specific target for users to be able
-# to inspect and explore the full raw metadata from NCBI Datasets.
-rule dump_ncbi_dataset_report:
-    input:
-        dataset_package="data/ncbi_dataset.zip",
-    output:
-        ncbi_dataset_tsv="data/ncbi_dataset_report_raw.tsv",
-    shell:
-        """
-        dataformat tsv virus-genome \
-            --package {input.dataset_package} > {output.ncbi_dataset_tsv}
-        """
-
-rule extract_ncbi_dataset_sequences:
-    input:
-        dataset_package = "data/ncbi_dataset.zip"
-    output:
-        ncbi_dataset_sequences = temp("data/ncbi_dataset_sequences.fasta")
+        sequences_url=config["ppx_fetch"]["seqs"],
+    # Allow retries in case of network errors
+    retries: 5
     benchmark:
-        "benchmarks/extract_ncbi_dataset_sequences.txt"
-    shell:
-        """
-        unzip -jp {input.dataset_package} \
-            ncbi_dataset/data/genomic.fna > {output.ncbi_dataset_sequences}
-        """
-
-rule format_ncbi_dataset_report:
-    input:
-        dataset_package = "data/ncbi_dataset.zip",
-    output:
-        ncbi_dataset_tsv = temp("data/ncbi_dataset_report.tsv")
-    params:
-        ncbi_dataset_fields = ",".join(config["ncbi_datasets_fields"]),
-    benchmark:
-        "benchmarks/format_ncbi_dataset_report.txt"
-    shell:
-        """
-        dataformat tsv virus-genome \
-            --package {input.dataset_package} \
-            --fields {params.ncbi_dataset_fields:q} \
-            --elide-header \
-            | csvtk fix-quotes -Ht \
-            | csvtk add-header -t -n {params.ncbi_dataset_fields} \
-            | csvtk rename -t -f accession -n accession_version \
-            | csvtk -t mutate -f accession_version -n accession -p "^(.+?)\." --at 1 \
-            > {output.ncbi_dataset_tsv}
-        """
-
-
-rule format_ncbi_datasets_ndjson:
-    input:
-        ncbi_dataset_sequences = "data/ncbi_dataset_sequences.fasta",
-        ncbi_dataset_tsv = "data/ncbi_dataset_report.tsv",
-    output:
-        ndjson = "data/genbank.ndjson",
+        "benchmarks/download_ppx_seqs.txt"
     log:
-        "logs/format_ncbi_datasets_ndjson.txt"
+        "logs/download_ppx_seqs.txt"
+    shell:
+        """
+        curl {params.sequences_url} -o {output.sequences}
+        """
+
+rule download_ppx_meta:
+    output:
+        metadata= "data/ppx_metadata.csv"
+    params:
+        metadata_url=config["ppx_fetch"]["meta"],
+        fields = ",".join(config["ppx_metadata_fields"])
+    # Allow retries in case of network errors
+    retries: 5
     benchmark:
-        "benchmarks/format_ncbi_datasets_ndjson.txt"
+        "benchmarks/download_ppx_meta.txt"
+    log:
+        "logs/download_ppx_meta.txt"
+    shell:
+        """
+        curl '{params.metadata_url}&fields={params.fields}' -o {output.metadata}
+        """
+
+rule format_ppx_ndjson:
+    input:
+        sequences = "data/ppx_sequences.fasta",
+        metadata = "data/ppx_metadata.csv",
+    output:
+        ndjson = "data/sequences.ndjson",
+    log:
+        "logs/format_ppx_ndjson.txt"
+    benchmark:
+        "benchmarks/format_ppx_ndjson.txt"
     shell:
         """
         augur curate passthru \
-            --metadata {input.ncbi_dataset_tsv} \
-            --fasta {input.ncbi_dataset_sequences} \
-            --seq-id-column accession_version \
+            --metadata {input.metadata} \
+            --fasta {input.sequences} \
+            --seq-id-column accessionVersion \
             --seq-field sequence \
             --unmatched-reporting warn \
             --duplicate-reporting warn \
