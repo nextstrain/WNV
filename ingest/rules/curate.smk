@@ -1,15 +1,15 @@
 """
-This part of the workflow handles transforming the data into standardized
-formats and expects input file
+This part of the workflow handles the curation of data from NCBI
 
-    sequences_ndjson = "data/sequences_{serotype}.ndjson"
+REQUIRED INPUTS:
 
-This will produce output files as
+    sequences_ndjson = data/genbank.ndjson
 
-    metadata = "results/metadata_{serotype}.tsv"
-    sequences = "results/sequences_{serotype}.fasta"
+OUTPUTS:
 
-Parameters are expected to be defined in `config.curate`.
+    metadata         = data/subset_metadata.tsv
+    sequences        = results/sequences.fasta
+
 """
 
 

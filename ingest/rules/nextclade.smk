@@ -3,11 +3,10 @@ This part of the workflow handles running Nextclade on the curated metadata
 and sequences.
 REQUIRED INPUTS:
     metadata    = data/subset_metadata.tsv
-    sequences   = data/sequences_all.fasta
-    nextclade_datasets = ../nextclade/dataset
+    sequences   = results/sequences.fasta
+    dataset     = (from config)
 OUTPUTS:
-    metadata        = data/metadata_all.tsv
-    nextclade       = data/nextclade_clades.tsv
+    metadata    = results/metadata.tsv
 See Nextclade docs for more details on usage, inputs, and outputs if you would
 like to customize the rules:
 https://docs.nextstrain.org/projects/nextclade/page/user/nextclade-cli.html

@@ -1,15 +1,13 @@
 """
-This part of the workflow handles fetching sequences from various sources.
-Uses `config.sources` to determine which sequences to include in final output.
+This part of the workflow handles fetching sequences and metadata from GenBank.
 
-Currently only fetches sequences from GenBank, but other sources can be
-defined in the config. If adding other sources, add a new rule upstream
-of rule `fetch_all_sequences` to create the file `data/{source}.ndjson` or the
-file must exist as a static file in the repo.
+REQUIRED INPUTS:
 
-Produces final output as
+    None
 
-    sequences_ndjson = "data/sequences.ndjson"
+OUTPUTS:
+
+    ndjson = data/genbank.ndjson
 
 """
 workflow.global_resources.setdefault("concurrent_deploys", 2)
