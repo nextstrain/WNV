@@ -8,6 +8,9 @@ ppx_fetch:
   seqs: https://lapis.pathoplexus.org/west-nile/sample/unalignedNucleotideSequences?versionStatus=LATEST_VERSION
   meta: https://lapis.pathoplexus.org/west-nile/sample/details?dataFormat=csv&versionStatus=LATEST_VERSION
 
+# Required to fetch from Entrez
+entrez_search_term: "txid11082[Primary Organism]"
+
 # Config parameters related to the curate pipeline
 curate:
   # The path to the local geolocation rules within the pathogen repo
@@ -73,7 +76,7 @@ curate:
     'PPX_accession__url',
     'INSDC_accession',
     'INSDC_accession__url',
-    #'strain',
+    'strain',
     'date',
     #'updated',
     'region',

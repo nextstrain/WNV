@@ -7,10 +7,15 @@ REQUIRED INPUTS:
 
 OUTPUTS:
 
-    ndjson = data/sequences.ndjson
+    data/sequences.ndjson
+    data/ncbi_entrez.ndjson
 
 """
 workflow.global_resources.setdefault("concurrent_deploys", 2)
+
+###########################################################################
+####################### 1. Fetch from Pathoplexus #########################
+###########################################################################
 
 rule download_ppx_seqs:
     output:
@@ -65,4 +70,53 @@ rule format_ppx_ndjson:
             --unmatched-reporting warn \
             --duplicate-reporting warn \
             2> {log} > {output.ndjson}
+        """
+
+###########################################################################
+########################## 2. Fetch from Entrez ###########################
+###########################################################################
+
+
+rule fetch_from_ncbi_entrez:
+    params:
+        term=config["entrez_search_term"],
+    output:
+        genbank="data/genbank.gb",
+    # Allow retries in case of network errors
+    retries: 5
+    benchmark:
+        "benchmarks/fetch_from_ncbi_entrez.txt"
+    log:
+        "logs/fetch_from_ncbi_entrez.txt",
+    shell:
+        r"""
+        exec &> >(tee {log:q})
+
+        {workflow.basedir}/../shared/vendored/scripts/fetch-from-ncbi-entrez \
+            --term {params.term:q} \
+            --output {output.genbank:q}
+        """
+
+
+rule parse_genbank_to_ndjson:
+    input:
+        genbank="data/genbank.gb",
+    output:
+        ndjson="data/ncbi_entrez.ndjson",
+    benchmark:
+        "benchmarks/parse_genbank_to_ndjson.txt"
+    log:
+        "logs/parse_genbank_to_ndjson.txt"
+    shell:
+        r"""
+        exec &> >(tee {log:q})
+
+        bio json --lines {input.genbank:q} \
+          | jq -c '
+              {{
+                accession: .record.accessions[0],
+                strain:    .record.strain[0],
+                isolate:   .record.isolate[0],
+              }}
+            ' > {output.ndjson:q}
         """
