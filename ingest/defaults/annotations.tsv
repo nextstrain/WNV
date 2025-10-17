@@ -272,25 +272,25 @@ ON694341	institution	Centre for Biological Threats, Highly Pathogenic Viruses, R
 ON694342	institution	Centre for Biological Threats, Highly Pathogenic Viruses, Robert Koch Institute, Germany
 ON720848	institution	Microbial Genomics, Hospital General Universitario Gregorio Marañón, Madrid, Spain
 ON720849	institution	Microbial Genomics, Hospital General Universitario Gregorio Marañón, Madrid, Spain
-KT163243	date	1968-XX-XX
-AF260968	date	1951-XX-XX
-AF260968	region	Africa
-AF260968	country	Egypt
-AF260968	host	Homo sapians
-AF196835	host	Phoenicopterus chilensis
-AF196835	date	1999-XX-XX
-AY765264	date	1997-XX-XX
-AY765264	country	Czech Republic
-AY765264	region	Europe
-DQ318020	date	1972-XX-XX
-DQ318020	host	Culex tigripes
-D00246	country	Australia
-D00246	date	1960-XX-XX
-EF631122	date	XXXX-XX-XX
-EF631123	date	XXXX-XX-XX
-DQ116961	date	2004-XX-XX
-AY603654	date	1976-XX-XX
-AM404308	date	1971-XX-XX
-AF260968	date	1951-XX-XX
-AY660002	date	2003-XX-XX
-AY268132	date	2000-XX-XX
+PP_0001F2D	date	1968-XX-XX
+PP_000HJBT	date	1951-XX-XX
+PP_000HJBT	region	Africa
+PP_000HJBT	country	Egypt
+PP_000HJBT	host	Homo sapians
+PP_000HHL9	host	Phoenicopterus chilensis
+PP_000HHL9	date	1999-XX-XX
+PP_000HY01	date	1997-XX-XX
+PP_000HY01	country	Czech Republic
+PP_000HY01	region	Europe
+PP_000JBDU	date	1972-XX-XX
+PP_000JBDU	host	Culex tigripes
+PP_000HZ4S	country	Australia
+PP_000HZ4S	date	1960-XX-XX
+PP_000JSDD	date	XXXX-XX-XX
+PP_000JSEB	date	XXXX-XX-XX
+PP_000J96A	date	2004-XX-XX
+PP_000HXJZ	date	1976-XX-XX
+PP_000HQ6X	date	1971-XX-XX
+PP_000HJBT	date	1951-XX-XX
+PP_000HXRK	date	2003-XX-XX
+PP_000HRSP	date	2000-XX-XX

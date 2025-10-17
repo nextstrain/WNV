@@ -3,16 +3,17 @@ This part of the workflow handles running Nextclade on the curated metadata
 and sequences.
 REQUIRED INPUTS:
     metadata    = data/subset_metadata.tsv
-    sequences   = data/sequences_all.fasta
-    nextclade_datasets = ../nextclade/dataset
+    sequences   = results/sequences.fasta
+    dataset     = (from config)
 OUTPUTS:
-    metadata        = data/metadata_all.tsv
-    nextclade       = data/nextclade_clades.tsv
+    metadata    = results/metadata.tsv
 See Nextclade docs for more details on usage, inputs, and outputs if you would
 like to customize the rules:
 https://docs.nextstrain.org/projects/nextclade/page/user/nextclade-cli.html
 """
 
+# TODO: This separate fetch should not be necessary - 'lineage' can be added
+# to data/subset_metadata.tsv.
 rule pathoplexus_classify:
     """
     Pulls global lineage calls from Pathoplexus API
@@ -26,7 +27,7 @@ rule pathoplexus_classify:
         id_field=config["curate"]["output_id_field"],
     shell:
         r"""
-        curl "{params.URL}?dataFormat=TSV&downloadAsFile=false&fields={params.fields}" \
+        curl "{params.URL}?versionStatus=LATEST_VERSION&dataFormat=TSV&downloadAsFile=false&fields={params.fields}" \
         | tsv-filter -H --not-empty {params.accession_field} \
         | uniq \
         | csvtk -t rename -f {params.accession_field} -n {params.id_field} \

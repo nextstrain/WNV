@@ -10,6 +10,8 @@ rule all:
     input:
         sequences="results/sequences.fasta",
         metadata="results/metadata.tsv",
+        sequences_open="results/sequences_open.fasta",
+        metadata_open="results/metadata_open.tsv",
 
 # Shared Snakemake files with generic functions are shared across pathogens
 include: "../shared/vendored/snakemake/config.smk"
@@ -18,7 +20,7 @@ include: "../shared/vendored/snakemake/config.smk"
 # If there are build-specific customizations, they should be added with the
 # custom_rules imported below to ensure that the core workflow is not complicated
 # by build-specific rules.
-include: "rules/fetch_from_ncbi.smk"
+include: "rules/fetch.smk"
 include: "rules/curate.smk"
 include: "rules/nextclade.smk"
 
