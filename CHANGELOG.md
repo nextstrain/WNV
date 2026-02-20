@@ -2,6 +2,10 @@
 
 We use this CHANGELOG to document breaking changes, new features, bug fixes, and config value changes that may affect both the usage of the workflows and the outputs of the workflows.
 
+## 2026
+
+* TBD: Added date annotations to some sequences from 1998 and 1999. [PR #119](https://github.com/nextstrain/WNV/pull/119) @victorlin
+
 ## 2025
 
 * 29 September 2025: The `inputs` configuration now generally supports any of the compression formats that are supported by [`augur read-file`](https://docs.nextstrain.org/projects/augur/page/usage/cli/read-file.html). [PR #110](https://github.com/nextstrain/WNV/pull/110) @victorlin
