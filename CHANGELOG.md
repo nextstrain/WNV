@@ -4,6 +4,8 @@ We use this CHANGELOG to document breaking changes, new features, bug fixes, and
 
 ## 2026
 
+* 13 October 2026: phylogenetic - support use of cached remote inputs [PR #136](https://github.com/nextstrain/WNV/pull/136) @joverlee521
+    * See https://github.com/nextstrain/shared/pull/87 for more details.
 * 9 March 2026: Added date annotations to some sequences from 1998 and 1999. [PR #120](https://github.com/nextstrain/WNV/pull/120) @victorlin
 
 ## 2025
